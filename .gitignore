@@ -3,6 +3,6 @@
 *.fls
 *.log
 *.fdb_latexmk
-*.run.mxl
+*.run.xml
 *.bcf
 *.toc
