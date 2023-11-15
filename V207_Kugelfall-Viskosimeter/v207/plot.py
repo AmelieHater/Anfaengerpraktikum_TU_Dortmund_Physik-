@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from uncertainties import ufloat
+import uncertainties.unumpy as unp
 
 # Messdaten
 m_kl = 4.4531 # in g (gegeben)
@@ -45,7 +46,7 @@ t_gr_h = ufloat(t_gr_h_mean, t_gr_h_std)
 print (f"Gemittelte Fallzeit (hoch) kl: {t_kl_h}, gr: {t_gr_h}")
 print (f"Gemittelte Fallzeit (runter) kl: {t_kl_r}, gr: {t_gr_r}")
 
-# Apparatekonstanten
+# Apparaturkonstanten
 K_kl = 0.07640 # in m*Pa*cm^3/g (gegeben)
 dichte_wasser = 0.998207 # in g/cm^3 (Internet)
 eta_h = K_kl * (dichte_kl-dichte_wasser) * t_kl_h
@@ -60,7 +61,7 @@ print (f"Apparaturkonstante K_gr_h: {K_gr_h} (in mPa*cm^3/g)")
 print (f"Apparaturkonstante K_gr_r: {K_gr_r} (in mPa*cm^3/g)")
 
 # Reynoldsche Zahl
-Re_kl_h = 100*(dichte_wasser * (10/t_kl_h) * d_gr) / eta_h
+Re_kl_h = 100*(dichte_wasser * (10/ t_kl_h) * d_gr) / eta_h
 Re_kl_r = 100*(dichte_wasser * (10/ t_kl_r) * d_gr) / eta_r
 Re_gr_h = 100*(dichte_wasser * (5/ t_gr_h) * d_gr) / eta_h
 Re_gr_r = 100*(dichte_wasser * (5/ t_gr_r) * d_gr) / eta_r
@@ -71,7 +72,12 @@ print (f"Reynoldsche Zahl Re_gr_h: {Re_gr_h}")
 print (f"Reynoldsche Zahl Re_gr_r: {Re_gr_r}")
 
 # Plot ln
-
+temp, t_h1, t_r1, t_h2, t_r2, dichte = np.genfromtxt("temp.txt", unpack=True)
+temp = unp.uarray(temp+273.15,1)
+t_h = (t_h1 + t_h2) / 2
+t_r = (t_r1 + t_r2) / 2
+dichte_gr = np.ones(10) * dichte_gr
+eta_hT = K_gr_h(dichte_gr-dichte)
 
 # x = np.linspace(0, 10, 1000)
 # y = x ** np.sin(x)
