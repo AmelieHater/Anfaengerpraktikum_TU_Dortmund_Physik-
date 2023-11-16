@@ -77,7 +77,10 @@ temp = unp.uarray(temp+273.15,1)
 t_h = (t_h1 + t_h2) / 2
 t_r = (t_r1 + t_r2) / 2
 dichte_gr = np.ones(10) * dichte_gr
-eta_hT = K_gr_h(dichte_gr-dichte)
+eta_hT = K_gr_h*(dichte_gr-dichte)*t_h
+eta_rT = K_gr_r*(dichte_gr-dichte)*t_r
+
+
 
 # x = np.linspace(0, 10, 1000)
 # y = x ** np.sin(x)
