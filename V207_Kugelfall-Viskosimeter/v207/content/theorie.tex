@@ -5,11 +5,14 @@ Viskosität von destilliertem Wasser zu bestimmen. Dazu wird das Kugelfall-
 Viskosimeter nach Höppler verwendet. Außerdem wird die Reynoldszahl 
 berechnet und benutzt, um herauszufinden ob es sich bei der Strömung um 
 laminare oder turbulente handelt. 
+%
+%
+%
 \section{Theorie}
 \label{sec:Theorie}
 Bewegt sich ein Körper durch ein Medium hindurch, wirkt eine Reibungskraft 
 $\vec{F}$, die unter anderem von der Berührungsfläche und der Geschwindigkeit
-des Körpers abhöngt. Je nach Strömungsart kann diese Kraft 
+des Körpers abhängt. Je nach Strömungsart kann diese Kraft 
 unterschiedliche Abhängigkeiten haben, bei dem Kugelfallviskosimeter nach 
 Höppler ist von einer laminaren Strömung auszugehen. 
 Dies wird in der Auswertung durch die
@@ -18,14 +21,19 @@ Reynoldszahl über ca. 2300 weißt auf eine turbulente Strömung hin, eine die
 darunter liegt auf eine laminare Strömung. Die Reynoldszahl berechnet sich
 über 
 \begin{equation}
-Re = \frac{\rho_{\text{Fl}}\,v\,d}{\eta}\,. \\
+    Re = \frac{\rho_{\text{M}} \cdot \bar{v} \cdot d}{\eta}\,. 
+    \label{equ:Reynoldszahl}
 \end{equation}
-Die Reibungskraft ist bei laminarer Strömung die Stokessche Reibung, hier 
-bereits an die Symmetrie einer Kugel mit Berührungsfläche $6 \pi r$
-angepasst, wobei $r$ der Radius der Kugel ist. 
+Dabei bezeichnet $\rho_{\text{M}}$ die Dichte des Mediums, $\bar{v}$
+die mittlere Geschwindigkeit des Körpers, $d$ die eine charakteristische 
+Länge und $\eta$ die dynamische Viskosität des Mediums. \\
+Die Reibungskraft ist bei laminarer Strömung die Stokessche Reibung
 \begin{equation}
-    F_{R} = 6\,\pi\,\eta\,v\,r. \\
+    F_{R} = 6 \cdot \pi \cdot \eta \cdot v \cdot r \, , 
+    \label{equ:Stokesreibungskraft}
 \end{equation}
+hier bereits an die Symmetrie einer Kugel mit Berührungsfläche 
+$A = 6 \cdot \pi \cdot r$ angepasst, wobei $r$ der Radius der Kugel ist, 
 $\eta$ ist die dynamische Viskosität des Mediums, eine Materialkonstante,
 $v$ ist die Fallgeschwindigkeit des Körpers. 
 %
@@ -52,5 +60,5 @@ Viskosität von destilliertem Wasser, die Andradesche Gleichung
  \eta (T) = A \cdot e^{\frac{B}{T}}
  \label{equ:AndradescheGleichung}
 \end{equation} 
-gilt auch für destilliertes Wasser.
+gilt auch für destilliertes Wasser. $A$ und $B$ sind Konstanten und $T$ ist die Temperatur in Kelvin. 
 %\cite{sample}
