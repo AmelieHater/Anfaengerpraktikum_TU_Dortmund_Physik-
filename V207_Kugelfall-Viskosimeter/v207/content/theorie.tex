@@ -8,7 +8,7 @@ laminare oder turbulente handelt.
 \section{Theorie}
 \label{sec:Theorie}
 Bewegt sich ein Körper durch ein Medium hindurch, wirkt eine Reibungskraft 
-$/vv(F)$, die unter anderem von der Berührungsfläche und der Geschwindigkeit
+$\vec{F}$, die unter anderem von der Berührungsfläche und der Geschwindigkeit
 des Körpers abhöngt. Je nach Strömungsart kann diese Kraft 
 unterschiedliche Abhängigkeiten haben, bei dem Kugelfallviskosimeter nach 
 Höppler ist von einer laminaren Strömung auszugehen. 
@@ -16,25 +16,41 @@ Dies wird in der Auswertung durch die
 Berechnung der Reynoldszahl überprüft. Eine experimentspeziefische 
 Reynoldszahl über ca. 2300 weißt auf eine turbulente Strömung hin, eine die
 darunter liegt auf eine laminare Strömung. Die Reynoldszahl berechnet sich
-über $$Re = \frac{\rho_{\text{Fl}}\,v\,d}{\eta}.$$ \\
+über 
+\begin{equation}
+Re = \frac{\rho_{\text{Fl}}\,v\,d}{\eta}\,. \\
+\end{equation}
 Die Reibungskraft ist bei laminarer Strömung die Stokessche Reibung, hier 
 bereits an die Symmetrie einer Kugel mit Berührungsfläche $6 \pi r$
 angepasst, wobei $r$ der Radius der Kugel ist. 
-$$F_{R} = 6\,\pi\,\eta\,v\,r.$$ \\
-$\eta$ ist die dynamische Viskosität des Mediums, eine Materialkonstante.
-$v$ ist die Fallgeschwindigkeit des Körpers und 
-
+\begin{equation}
+    F_{R} = 6\,\pi\,\eta\,v\,r. \\
+\end{equation}
+$\eta$ ist die dynamische Viskosität des Mediums, eine Materialkonstante,
+$v$ ist die Fallgeschwindigkeit des Körpers. 
+%
 \section{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
 \textbf{Wann bezeichnet man eine Strömung als "laminar"?}\\
+\\
 Eine Strömung ist dann laminar, wenn die einzelnen benachbarten Schichten 
 des Mediums ohne sich gegenseitige Störung aneinander vorbeibewegen und 
-keine Wirbel entstehen. 
+keine Wirbel entstehen. \\ 
+\\
 %
 \textbf{Wie lautet die Dichte und die dynamische Viskosität von 
 destilliertem Wasser als Funktion der Temperatur?}\\
-Die Dichte von destilliertem Wasser kann unterhalb von 100 
-$\units{\celsius}$ nicht als temperaturabhängige Formel beschrieben werden.
-Die Dichte bei 20 $\units{\celsius}$ beträgt $998.207 
-\frac{\units{kilogramm}}{\units{\meter}^3}$.
-\cite{sample}
+\\
+Die Dichte von destilliertem Wasser kann unterhalb von  
+$\SI{100}{\celsius}$ nicht als temperaturabhängige Formel 
+beschrieben werden.
+Die Dichte bei $\SI{20}{\celsius}$ beträgt $998.207$ 
+\unit[per-mode=fraction]{\kilo\gram\per\meter\tothe{3}}.(Quelle ist https://studyflix.de/chemie/dichte-wasser-1574)
+Außerdem gibt es auch keine spezielle Funktion für die dynamische
+Viskosität von destilliertem Wasser, die Andradesche Gleichung 
+\begin{equation}
+ \eta (T) = A \cdot e^{\frac{B}{T}}
+ \label{equ:AndradescheGleichung}
+\end{equation} 
+gilt auch für destilliertes Wasser.
+%\cite{sample}
