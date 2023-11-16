@@ -1,0 +1,8 @@
+# große Kugel, Raumtemperatur
+# Fallzeit in s
+# hoch runter
+34.70 34.61
+34.64 34.78
+35.00 34.69
+34.86 34.87
+34.56 34.69
