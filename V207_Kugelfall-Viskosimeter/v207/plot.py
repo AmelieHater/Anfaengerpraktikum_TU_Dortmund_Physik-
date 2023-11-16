@@ -84,12 +84,41 @@ t_ges_mean = np.mean (t_ges, axis=0)
 
 t_ges = unp.uarray(t_ges_mean, t_ges_st)
 # Viskosität abhängig Temp.
-eta_T = K_gr_h * (dichte_gr - dichte) * t_ges
+dichten = (dichte_gr -dichte).reshape (10,1)
 
-print (f"eta_T {eta_T}")
+eta_T = K_gr_h * (dichten) * t_ges
+
+eta_temp = np.diagonal(eta_T)
+
+print (f"eta_T {eta_temp}")
 
 # Plots
+x = 1/temp
+y = np.log(unp.nominal_values(eta_temp))
 
+print (f"y: {y}")
+params, covariance_matrix = np.polyfit(x, y, deg=1, cov=True)
+#params, covariance_matrix = np.polyfit(x, y, deg=1, cov=True)
+errors = np.sqrt(np.diag(covariance_matrix))
+
+for name, value, error in zip ('ab', params, errors):
+    print(f"{name} = {value:.3f} ± {error:.3f}")
+
+x_plot = np.linspace(0.01,0.03)
+fig, ax = plt.subplots(1,1, layout="constrained")
+
+ax.plot (x, y, "x", label = "Messwerte")
+ax.plot(
+    x_plot,
+    params[0] * x_plot + params[1],
+    label ="Lineare Regression",
+    linewidth=1,
+)
+ax.set_xlabel(r"$frac {1}{T}\; \left [\unit{\per \kelvin} \right ]$")
+ax.set_ylabel(r"$\ln{ \left ( \eta \right )} \; \left [  \unit{\pascal} \cdot \unit {\second} \right ]$")
+ax.legend(loc = "best")
+
+fig.savefig("plot.pdf")
 # t_ges_st = np.std (t_ges, )
 # t_h0 = np.matrix((t_h1, t_h2))
 # t_h_st = np.std(t_h0, axis=0)
