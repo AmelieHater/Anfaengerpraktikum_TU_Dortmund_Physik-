@@ -3,6 +3,7 @@ import numpy as np
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
 
+
 # Messdaten
 m_kl = 4.4531 # in g (gegeben)
 m_gr = 4.9528 # in g (gegeben)
@@ -74,11 +75,41 @@ print (f"Reynoldsche Zahl Re_gr_r: {Re_gr_r}")
 # Plot ln
 temp, t_h1, t_r1, t_h2, t_r2, dichte = np.genfromtxt("temp.txt", unpack=True)
 temp = unp.uarray(temp+273.15,1)
-t_h = (t_h1 + t_h2) / 2
-t_r = (t_r1 + t_r2) / 2
-dichte_gr = np.ones(10) * dichte_gr
-eta_hT = K_gr_h*(dichte_gr-dichte)*t_h
-eta_rT = K_gr_r*(dichte_gr-dichte)*t_r
+t_h0 = np.matrix((t_h1, t_h2))
+t_h_st = np.std(t_h0, axis=0)
+t_h_m = np.mean(t_h0, axis = 0)
+
+t_r0 = np.matrix ((t_r1, t_r2))
+t_r_st = np.std(t_r0, axis = 0)
+t_r_m = np.mean(t_r0, axis = 0)
+# print (f"std hoch : {t_h_st}")
+# print (f"std runter: {t_r_st}")
+t_h = unp.uarray(t_h_m, t_h_st)
+t_r = unp.uarray(t_r_m, t_r_st)
+# print (f"mean hoch : {t_h_m}")
+# print (f"mean runter: {t_r_m}")
+
+print (f"t hoch : {t_h}")
+print (f"t runter: {t_r}")
+# dichte_gr = np.ones(10) * dichte_gr
+# print (f"dichte: {dichte_gr}")
+eta_hT = np.zeros(10)
+eta_rT = np.zeros(10)
+print(dichte)
+print (t_h)
+# for x in range(10):
+#    print(f"x: {x}")
+#    print(dichte_gr)
+#    print(K_gr_h)
+#    print(K_gr_r)
+#    print(eta_hT[x])
+#    print(dichte[x])
+#    print (f"t_h:{t_h[0,x]}")
+#    eta_hT[x] = K_gr_h * (dichte_gr - dichte[x]) * t_h[0,x]
+#    eta_rT[x] = K_gr_r * (dichte_gr - dichte[x]) * t_r[0,x]
+
+# eta_hT = K_gr_h*(dichte_gr-dichte)*t_h
+# eta_rT = K_gr_r*(dichte_gr-dichte)*t_r
 
 
 
