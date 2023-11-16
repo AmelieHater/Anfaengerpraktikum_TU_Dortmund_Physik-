@@ -105,8 +105,8 @@ errors = np.sqrt(np.diag(covariance_matrix))
 for name, value, error in zip ('ab', params, errors):
     print(f"{name} = {value:.3f} ± {error:.3f}")
 
-x_plot = np.linspace(0.01,0.03)
-fig, ax = plt.subplots(1,1, layout="constrained")
+x_plot = np.linspace(31e-4,33e-4,10000)
+# fig, ax = plt.subplots(1,1, layout="constrained")
 
 plt.plot (x, y, "x", label = "Messwerte")
 plt.plot(
@@ -115,11 +115,14 @@ plt.plot(
     label ="Lineare Regression",
     linewidth=1,
 )
-plt.xlabel(r'$\frac{1}{T}\; \left[ \right]$ \si{\per \kelvin} ')
-#ax.set_ylabel(r"$\ln{ \left ( \eta \right )} \; \left [  \unit{\pascal} \cdot \unit {\second} \right ]$")
+plt.grid()
+plt.xlabel(r'$T^{-1}$ [1/K]')
+plt.ylabel(r"$\ln{ \left ( \eta \right )}$ [Pa$\cdot$s]")
 plt.legend(loc = "best")
+plt.margins(0.075)
+plt.savefig("plot.pdf")
 
-fig.savefig("plot.pdf")
+
 # t_ges_st = np.std (t_ges, )
 # t_h0 = np.matrix((t_h1, t_h2))
 # t_h_st = np.std(t_h0, axis=0)
