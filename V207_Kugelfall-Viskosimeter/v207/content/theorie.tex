@@ -11,7 +11,7 @@ laminare oder turbulente handelt.
 \section{Theorie}
 \label{sec:Theorie}
 Bewegt sich ein Körper durch ein Medium hindurch, wirkt eine Reibungskraft 
-$\vec{F}$, die unter anderem von der Berührungsfläche und der Geschwindigkeit
+$\vec{F}_{R}$, die unter anderem von der Berührungsfläche und der Geschwindigkeit
 des Körpers abhängt. Je nach Strömungsart kann diese Kraft 
 unterschiedliche Abhängigkeiten haben, bei dem Kugelfallviskosimeter nach 
 Höppler ist von einer laminaren Strömung auszugehen. 
@@ -29,7 +29,7 @@ die mittlere Geschwindigkeit des Körpers, $d$ die eine charakteristische
 Länge und $\eta$ die dynamische Viskosität des Mediums. \\
 Die Reibungskraft ist bei laminarer Strömung die Stokessche Reibung
 \begin{equation}
-    F_{R} = 6 \cdot \pi \cdot \eta \cdot v \cdot r \, , 
+    \vec{F}_{R} = 6 \cdot \pi \cdot \eta \cdot v \cdot r \, , 
     \label{equ:Stokesreibungskraft}
 \end{equation}
 hier bereits an die Symmetrie einer Kugel mit Berührungsfläche 
@@ -40,13 +40,32 @@ $v$ ist die Fallgeschwindigkeit des Körpers. \\
 %
 %
 \subsection{Kugelfallviskosimeter nach Höppler}
-Diese Theorie ist die Grundlage der Funktionalität des Viskosimeters 
-nach Höppler. Dieses besteht aus einem geschlossenen Glaszylinder, 
+Die beschriebene Theorie ist die Grundlage der Funktionalität des Viskosimeters 
+nach Höppler. Es besteht aus einem geschlossenen Glaszylinder, 
 welcher mit einer leichten Neigung am Fuß befestigt
-ist. Dieser Zylinder ist um 180 \degree drehbar. Innerhalb des 
-Zylinders ist Wasser und ein Termostat, welches das Wasser aufheizen kann.
+ist. Dieser Zylinder ist um 180° drehbar. 
+Innerhalb des Zylinders ist Wasser und ein Termostat, welches das Wasser aufheizen 
+kann.
 Durch den Zylinder durch führt eine Glasröhre, die von außen durch Stöpsel 
-verschlossen werden kann. Auf der Glasröhre  
+verschlossen werden kann. Auf der Glasröhre sind 3 Striche, die jeweils 
+einen Abstand von 5 \unit{\centi\meter} haben. In die innere Röhre kann
+ein Medium und eine Kugel eingefüllt werden. Diese können durch das umliegende Wasser mit dem 
+Termostat erwärmt werden. Dadurch werden Wirbel im inneren Medium vermieden. 
+Bei diesem Experiment hat die größere verwendete Kugel näherungsweise den Durchmesser der Röhre. 
+Die leichte Neigung der Apperatur wurde gewählt, um die unkontrollierte Bewegung zu vermeiden, 
+die bei einer senkrecht herabfallen Kugel entstehen würde. Auf die herabfallende Kugel
+wirken während des Falls drei Kräfte: Die Gravitationskraft $\vec{F}_{G} = m \cdot \vec{g}$, 
+die die Kugel nach unten beschleunigt nach unten, die Auftriebskraft $\vec{F}_{A}$ und die 
+Reibungskraft $\vec{F}_{R}$ entgegengesetzt zur Schwerkraft. Aufgrund der Kräfte beschleunigt
+die Kugel im Medium zuerst bis sie eine konstante Endgeschwindigkeit erreicht, wenn sich das Kräftegleichgewicht 
+$\vec{F}_{G} = \vec{F}_{A} + \vec{F}_{R}$ eingestellt hat.
+Die Viskosität $\eta$ kann durch diese empirische Formel  
+\begin{equation}
+    \eta = K \cdot \left( \rho_{K}\,-\,\rho_{M} \right) \cdot t
+    \label{equ:EmpirischeEtaFunktion}
+\end{equation} 
+beschrieben werden. $K$ ist dabei eine Proportionalitätskonstante, $\rho_{K}$ die Dichte der Kugel und $\rho_{M}$
+die Dichte des Mediums.
 %
 %
 %
