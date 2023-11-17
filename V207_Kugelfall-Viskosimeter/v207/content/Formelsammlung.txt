@@ -1,0 +1,21 @@
+
+        Re = \frac{\rho_{\text{M}} \cdot \bar{v} \cdot d}{\eta}\,. 
+    \label{equ:Reynoldszahl}
+    
+        \vec{F}_{R} = 6 \cdot \pi \cdot \eta \cdot v \cdot r \, , 
+    \label{equ:Stokesreibungskraft}
+    
+        \eta &= K \cdot \left( \rho_{K}\,-\,\rho_{M} \right) \cdot t 
+    \label{equ:EmpirischeEtaFunktion}
+
+        \Leftrightarrow K &= \frac{\eta}{ \left( \rho_{K}\,-\,\rho_{M} \right) \cdot t }
+    \label{eqn:KFunktion}
+
+        \rho_{K} = \frac{m_{K}}{V_{K}}
+    \label{eqn:DichtefunktionKugel}
+            
+        V_{K} = \frac{4}{3} \cdot \pi \cdot \left( \frac{d_{K}}{2} \right)^3
+    \label{eqn:VolumenKugel}
+
+        \eta (T) = A \cdot e^{\frac{B}{T}}  
+    \label{equ:AndradescheGleichung}
