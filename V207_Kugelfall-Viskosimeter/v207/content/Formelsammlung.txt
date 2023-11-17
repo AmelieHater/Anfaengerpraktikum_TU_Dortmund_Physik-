@@ -1,6 +1,6 @@
 
         Re = \frac{\rho_{\text{M}} \cdot \bar{v} \cdot d}{\eta}\,. 
-    \label{equ:Reynoldszahl}
+    \label{eqn:Reynoldszahl}
     
         \vec{F}_{R} = 6 \cdot \pi \cdot \eta \cdot v \cdot r \, , 
     \label{eqn:Stokesreibungskraft}

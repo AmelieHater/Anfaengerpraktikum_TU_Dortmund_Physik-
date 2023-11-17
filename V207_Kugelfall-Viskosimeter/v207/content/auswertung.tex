@@ -29,11 +29,11 @@
 Zunächst wird die Dichte der kleinen Glaskugel $\rho_{\text{kl}}$ durch die Gleichung 
 (\ref{eqn:DichtefunktionKugel}) und Gleichung (\ref{eqn:VolumenKugel}) bestimmt. 
 Dafür werden die gegebene Masse $m_{\text{kl}} = 4.4531\,\unit{\gram}$ und der 
-gemessenen Durchmesser $d_{\text{kl}}= \left(1.5570 \pm 0.0010\right)\,$ \unit{\centi \meter} 
+gemessene Durchmesser $d_{\text{kl}}= \left(1.5570 \pm 0.0010\right)\,$ \unit{\centi \meter} 
 verwendet.
 $$\rho_{\text{kl}} = \left(2.253 \pm 0.004\right)\;\unit[per-mode=fraction]{\gram\per\cubic\centi\meter}$$ 
 %
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Messdaten Kleine Kugel}
   \begin{tblr}{colspec={c c}}
@@ -53,6 +53,7 @@ $$\rho_{\text{kl}} = \left(2.253 \pm 0.004\right)\;\unit[per-mode=fraction]{\gra
       \bottomrule
   \end{tblr}
 \end{table}
+
 Anhand der Messdaten erhält man die folgenden Zeiten, die für die Berechnung der Viskosität benötigt werden. 
 $$t_{\text{kl,r}}\left(12.14\pm0.11\right) \, \unit{\second}$$
 $$t_{\text{kl,h}}\left(12.20\pm0.13\right) \, \unit{\second}$$
@@ -65,10 +66,10 @@ $$\eta_{\text{Runter}} = \left(1.164\pm0.011 \right) \,\unit[inter-unit-product=
 %
 \subsection{Apparaturkonstante der großen Glaskugel}
 Vorab wird erneut mit der Gleichung (\ref{eqn:DichtefunktionKugel}) und der Gleichung (\ref{eqn:VolumenKugel})
-die Dichte der großen Glaskugel bestimmt. Hierbei beträgt die gegebene Masse $\m_{gr}=4.9528\, \unit{\gram}$ und 
-der gemessene Durchmesser $d_{gr}=\left(1.5760\pm0.0010\right)\, \unit{\centi\meter}$.
+die Dichte der großen Glaskugel bestimmt. Hierbei beträgt die gegebene Masse $m_{\text{gr}}= 4.9528 \;\unit{\gram}$ und 
+der gemessene Durchmesser $d_{\text{gr}}=\left(1.5760\pm0.0010\right)\, \unit{\centi\meter}$.
 $$\rho_{\text{gr}} = \left(2.416\pm0.005\right)\;\unit[per-mode=fraction]{\gram\per\cubic\centi\meter}$$ 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Messdaten Große Kugel}
   \begin{tblr}{colspec={c c}}
@@ -83,6 +84,7 @@ $$\rho_{\text{gr}} = \left(2.416\pm0.005\right)\;\unit[per-mode=fraction]{\gram\
       \bottomrule
   \end{tblr}
 \end{table}
+
 Aus den Messdaten werden folgenden Zeiten bestimmt:
 $$t_{\text{gr,r}}\left( 34.73\pm0.09\right) \, \unit{\second}$$
 $$t_{\text{gr,h}}\left(34.75\pm0.16 \right) \, \unit{\second}$$
@@ -91,17 +93,17 @@ Apparaturkonstante der großen Glaskugel bestimmt.
 $$K_{\text{gr,r}} = \left(0.02364\pm0.00025  \right) \, \unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}$$
 $$K_{\text{gr,h}} = \left(0.02374\pm0.00030  \right) \, \unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}$$
 \subsection{Bestimmung der Reynoldschen Zahl}
-Durch einsetzen der Werte in die Gleichung (\label{eqn:Reynoldszahl}) ergeben sich für die 
+Durch einsetzen der Werte in die Gleichung (\ref{eqn:Reynoldszahl}) ergeben sich für die 
 kleine Glaskugel die folgendenen Reynoldszahlen
 $$Re_{\text{kl,r}} = \left(111.3\pm2.0\right)$$
 $$Re_{\text{kl,h}} = \left(110.2\pm2.4\right)$$
 Analog erfogt die Berechnung der Reynoldszahlen für die große Glaskugel.
 $$Re_{\text{gr,r}} = \left(19.46\pm0.19\right)$$
 $$Re_{\text{gr,h}} = \left(19.35\pm0.24\right)$$
-Aus den Reynoldzahlen erschließt sich, dass sowohl bei der keinen als auch bei der Glaskugeln
+Aus den Reynoldzahlen erschließt sich, dass sowohl bei der kleinen als auch bei der großen Glaskugeln
 eine laminare Strömung entsteht.
 \subsection{Temperaturabhängigkeit der Viskosität}
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
   \caption{Plot.}
