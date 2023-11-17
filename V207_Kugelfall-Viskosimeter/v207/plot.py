@@ -12,10 +12,6 @@ d_kl = ufloat(15.57,0.01) * 10**-1 # in cm (gemessen)
 d_gr = ufloat(15.76,0.01) * 10**-1 # in cm (gemessen)
 print (f"Durchmesser kl. Kugel: {d_kl} (in cm)")
 print (f"Durchmesser gr. Kugel: {d_gr} (in cm)")
-# r_kl = (15.57/2) * 10**(-1) # in cm (gemessen) +- 0,01mm
-# r_gr = (15.76/2) * 10**(-1)# in cm (gemessen) +- 0.01mm
-# print (f"Radius der kl. Kugel: {round(r_kl, 4)} und Durchmesser der kl. Kugel: {round(r_kl *2, 3)} (in cm)")
-# print (f"Radius der gr. Kugel: {r_gr} und Durchmesser der gr. Kugel: {r_gr *2} (in cm)")
 
 # Dichte \rho = m/V 
 V_kl = (4/3) * np.pi * (d_kl/2)**3
@@ -83,20 +79,21 @@ t_ges_st = np.std (t_ges, axis=0)
 t_ges_mean = np.mean (t_ges, axis=0)
 
 t_ges = unp.uarray(t_ges_mean, t_ges_st)
+
 # Viskosität abhängig Temp.
 dichten = (dichte_gr -dichte).reshape (10,1)
 
 eta_T = K_gr_h * (dichten) * t_ges
 
-eta_temp = np.diagonal(eta_T)
+eta_T = np.diagonal(eta_T)
 
-print (f"eta_T {eta_temp}")
+print (f"eta_T {eta_T}")
 
 # Plots
 x_err = 1/temp
-y_err = unp.log(eta_temp)
+y_err = unp.log(eta_T)
 x = 1/unp.nominal_values(temp)
-y = np.log(unp.nominal_values(eta_temp))
+y = np.log(unp.nominal_values(eta_T))
 
 print (f"temp: {temp}")
 print (f"y: {y}")
@@ -129,7 +126,7 @@ a = ufloat(1680.367, 30.445)
 b = ufloat (-5.567, 0.097)
 
 print (f"B = {a}")
-print (f"A = {A}")
+print (f"A = {unp.exp(b)}")
 # t_ges_st = np.std (t_ges, )
 # t_h0 = np.matrix((t_h1, t_h2))
 # t_h_st = np.std(t_h0, axis=0)
