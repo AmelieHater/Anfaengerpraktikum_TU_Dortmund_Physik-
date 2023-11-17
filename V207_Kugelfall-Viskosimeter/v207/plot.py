@@ -93,6 +93,8 @@ eta_temp = np.diagonal(eta_T)
 print (f"eta_T {eta_temp}")
 
 # Plots
+x_err = 1/temp
+y_err = unp.log(eta_temp)
 x = 1/unp.nominal_values(temp)
 y = np.log(unp.nominal_values(eta_temp))
 
@@ -108,7 +110,8 @@ for name, value, error in zip ('ab', params, errors):
 x_plot = np.linspace(31e-4,33e-4,10000)
 # fig, ax = plt.subplots(1,1, layout="constrained")
 
-plt.plot (x, y, "x", label = "Messwerte")
+#plt.plot (x, y, "x", label = "Messwerte")
+plt.errorbar(x,y, xerr=unp.std_devs(x_err), yerr=unp.std_devs(y_err), fmt="x", label = "Messwerte")
 plt.plot(
     x_plot,
     params[0] * x_plot + params[1],
@@ -117,12 +120,16 @@ plt.plot(
 )
 plt.grid()
 plt.xlabel(r'$T^{-1}$ [1/K]')
-plt.ylabel(r"$\ln{ \left ( \eta \right )}$ [Pa$\cdot$s]")
+plt.ylabel(r"$\ln{ \left ( \eta \right )}$ [mPa$\cdot$s]")
 plt.legend(loc = "best")
 plt.margins(0.075)
 plt.savefig("plot.pdf")
 
+a = ufloat(1680.367, 30.445)
+b = ufloat (-5.567, 0.097)
 
+print (f"B = {a}")
+print (f"A = {A}")
 # t_ges_st = np.std (t_ges, )
 # t_h0 = np.matrix((t_h1, t_h2))
 # t_h_st = np.std(t_h0, axis=0)
