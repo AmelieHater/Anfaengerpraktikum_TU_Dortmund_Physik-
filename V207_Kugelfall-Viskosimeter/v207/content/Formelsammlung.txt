@@ -3,10 +3,10 @@
     \label{equ:Reynoldszahl}
     
         \vec{F}_{R} = 6 \cdot \pi \cdot \eta \cdot v \cdot r \, , 
-    \label{equ:Stokesreibungskraft}
+    \label{eqn:Stokesreibungskraft}
     
         \eta &= K \cdot \left( \rho_{K}\,-\,\rho_{M} \right) \cdot t 
-    \label{equ:EmpirischeEtaFunktion}
+    \label{eqn:EmpirischeEtaFunktion}
 
         \Leftrightarrow K &= \frac{\eta}{ \left( \rho_{K}\,-\,\rho_{M} \right) \cdot t }
     \label{eqn:KFunktion}
@@ -18,4 +18,4 @@
     \label{eqn:VolumenKugel}
 
         \eta (T) = A \cdot e^{\frac{B}{T}}  
-    \label{equ:AndradescheGleichung}
+    \label{eqn:AndradescheGleichung}
