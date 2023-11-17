@@ -127,8 +127,9 @@ plt.savefig("plot.pdf")
 
 a = ufloat(1680.367, 30.445)
 b = ufloat (-5.567, 0.097)
+
 print (f"B = {a}")
-print (f"A = {unp.exp(b)}")
+print (f"A = {A}")
 # t_ges_st = np.std (t_ges, )
 # t_h0 = np.matrix((t_h1, t_h2))
 # t_h_st = np.std(t_h0, axis=0)
