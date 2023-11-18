@@ -38,7 +38,7 @@ Die betrachteten Fallzeiten der kleinen Kugel sind in dieser Tabelle erfasst:
   \caption{Messdaten der kleinen Kugel}
   \begin{tblr}{colspec={c c}}
       \toprule
-      $t_{\text{Runter}}$ & $t_{\text{Hoch}}$ \\ 
+      $t_{\text{Runter}}\, \left[\unit{\second}\right]$ & $t_{\text{Hoch}}\, \left[\unit{\second}\right]$ \\ 
       \midrule
       12.32 & 12.20\\
       12.18 & 12.35\\
@@ -76,7 +76,7 @@ Die betrachteten Fallzeiten der großen Kugel sind in dieser Tabelle erfasst:
   \caption{Messdaten der großen Kugel}
   \begin{tblr}{colspec={c c}}
       \toprule
-      $t_{\text{Runter}}$ & $t_{\text{Hoch}}$ \\ 
+      $t_{\text{Runter}}\, \left[\unit{\second}\right]$ & $t_{\text{Hoch}}\, \left[\unit{\second}\right]$ \\ 
       \midrule
       34.61 & 34.70 \\
       34.78 & 34.64 \\
@@ -108,6 +108,27 @@ Aus den Reynoldzahlen erschließt sich, dass sowohl bei der kleinen als auch bei
 eine laminare Strömung entsteht, da $Re_{\text{kl,r}},\,Re_{\text{kl,h}},\,Re_{\text{gr,r}},\,{Re_\text{gr,h}} \leq 2300$ gilt.
 %
 \subsection{Temperaturabhängigkeit der Viskosität}
+\begin{table}[H]
+  \centering
+  \caption{Messdaten für die Temperaturabhängigkeit der Viskosität}
+  \begin{tblr}{colspec={c c c c c c}}
+      \toprule
+      $T\, \left[\unit{\celsius}\right]$ & $t_{\text{h1}}\, \left[\unit{\second} \right]$ & $t_{\text{r1}}\, \left[\unit{\second} \right]$ & $t_{\text{h2}}\, \left[\unit{\second} \right]$ & $t_{\text{r2}}\, \left[\unit{\second} \right]$ & $\rho(T)\,\left[\unit[per-mode=fraction]{\gram\per\cubic\centi\meter} \right]$ (ref:Quelle!!!) \\
+      \midrule
+      31 & 28.76 & 28.26 & 28.27 & 28.80 & 0.99534 \\
+      33 & 27.16 & 27.03 & 27.12 & 27.07 & 0.99470 \\
+      34 & 26.76 & 27.01 & 26.75 & 26.76 & 0.99437 \\
+      36 & 26.16 & 26.06 & 26.16 & 26.24 & 0.99369 \\
+      40 & 24.32 & 24.23 & 24.40 & 24.24 & 0.99222 \\
+      42 & 23.52 & 23.46 & 23.36 & 23.36 & 0.99144 \\
+      43 & 22.84 & 22.81 & 22.87 & 23.27 & 0.99104 \\
+      44 & 22.38 & 22.64 & 22.23 & 21.80 & 0.99063 \\
+      47 & 21.32 & 21.69 & 21.38 & 21.24 & 0.98936 \\
+      49 & 20.64 & 20.81 & 20.58 & 20.41 & 0.98848 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+\noindent
 \begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
