@@ -4,6 +4,13 @@
   titlepage=firstiscover, % Titelseite ist Deckblatt
 ]{scrartcl}
 
+%Damit neue Paragraphen nicht eingerückt sind
+\setlength\parindent{0pt}
+
+%Damit die Bildcaptions nicht so groß sind 
+\usepackage{caption}
+\captionsetup[wrapfigure]{font=footnotesize}
+
 % Paket float verbessern
 \usepackage{scrhack}
 
@@ -78,6 +85,9 @@
 \usepackage{float}
 \floatplacement{figure}{htbp}
 \floatplacement{table}{htbp}
+
+%um Text neben Bild darzustellen 
+\usepackage{wrapfig}
 
 % Floats innerhalb einer Section halten
 \usepackage[
