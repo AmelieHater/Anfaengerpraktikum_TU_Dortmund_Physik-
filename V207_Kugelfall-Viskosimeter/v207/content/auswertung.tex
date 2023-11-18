@@ -20,12 +20,14 @@
 % K_kl = 0.07640 (in m*Pa*cm^3/g) (gegeben)
 % dichte_wasser = 0.998207 (in g/cm^3) (Internet)
 % aus Plot:
+% ln(A) = -5.567 ± 0.097
 % B = 1680+/-30
 % A = 0.0038+/-0.0004
 %
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Viskosität von Wasser bei Raumtemperatur}
+\label{sec:Viskosität von Wasser}
 Zunächst wird die Dichte der kleinen Glaskugel $\rho_{\text{kl}}$ durch die Gleichung 
 (\ref{eqn:DichtefunktionKugel}) und Gleichung (\ref{eqn:VolumenKugel}) bestimmt. 
 Dafür werden die gegebene Masse $m_{\text{kl}} = 4.4531\,\unit{\gram}$ und der 
@@ -35,7 +37,7 @@ $$\rho_{\text{kl}} = \left(2.253 \pm 0.004\right)\;\unit[per-mode=fraction]{\gra
 Die betrachteten Fallzeiten der kleinen Kugel sind in dieser Tabelle erfasst:
 \begin{table}[H]
   \centering
-  \caption{Messdaten der kleinen Kugel}
+  \caption{Gemessene Fallzeiten der kleinen Kugel bei einer Strecke von $10\, \unit{\centi\meter}$}
   \begin{tblr}{colspec={c c}}
       \toprule
       $t_{\text{Runter}}\, \left[\unit{\second}\right]$ & $t_{\text{Hoch}}\, \left[\unit{\second}\right]$ \\ 
@@ -64,6 +66,7 @@ $$\eta_{\text{Hoch}} = \left(1.170\pm0.013 \right)\, \unit[inter-unit-product=\c
 $$\eta_{\text{Runter}} = \left(1.164\pm0.011 \right) \,\unit[inter-unit-product=\cdot]{\milli\pascal\second}$$
 %
 \subsection{Apparaturkonstante der großen Glaskugel}
+\label{sec:Appartaurkonstante der großen Glaskugel}
 Vorab wird erneut mit der Gleichung (\ref{eqn:DichtefunktionKugel}) und der Gleichung (\ref{eqn:VolumenKugel})
 die Dichte der großen Glaskugel bestimmt. Hierbei beträgt die gegebene Masse $m_{\text{gr}}= 4.9528 \;\unit{\gram}$ und 
 der gemessene Durchmesser $d_{\text{gr}}=\left(1.5760\pm0.0010\right)\, \unit{\centi\meter}$.
@@ -73,7 +76,7 @@ Die betrachteten Fallzeiten der großen Kugel sind in dieser Tabelle erfasst:
 
 \begin{table}[H]
   \centering
-  \caption{Messdaten der großen Kugel}
+  \caption{Gemessene Fallzeiten der großen Kugel bei einer Strecke von $5\,\unit{\centi\meter}$}
   \begin{tblr}{colspec={c c}}
       \toprule
       $t_{\text{Runter}}\, \left[\unit{\second}\right]$ & $t_{\text{Hoch}}\, \left[\unit{\second}\right]$ \\ 
@@ -86,7 +89,6 @@ Die betrachteten Fallzeiten der großen Kugel sind in dieser Tabelle erfasst:
       \bottomrule
   \end{tblr}
 \end{table}
-\noindent
 Aus den Messdaten werden die folgenden Zeiten bestimmt:
 %
 $$t_{\text{gr,r}}\left( 34.73\pm0.09\right) \, \unit{\second}$$
@@ -104,36 +106,81 @@ $$Re_{\text{kl,h}} = \left(110.2\pm2.4\right)$$
 Analog erfogt die Berechnung der Reynoldszahlen für die große Glaskugel.
 $$Re_{\text{gr,r}} = \left(19.46\pm0.19\right)$$
 $$Re_{\text{gr,h}} = \left(19.35\pm0.24\right)$$
-Aus den Reynoldzahlen erschließt sich, dass sowohl bei der kleinen als auch bei der großen Glaskugeln
-eine laminare Strömung entsteht, da $Re_{\text{kl,r}},\,Re_{\text{kl,h}},\,Re_{\text{gr,r}},\,{Re_\text{gr,h}} \leq 2300$ gilt.
+Aus den Reynoldszahlen erschließt sich, dass sowohl bei der kleinen als auch bei der großen Glaskugeln
+eine laminare Strömung entsteht, da alle Reynoldzahlen deutlich kleiner sind als $Re=2300$.
 %
 \subsection{Temperaturabhängigkeit der Viskosität}
+Für die Auswertung der Temperaturabhängigkeit der Viskosität von Wasser wird der natürliche
+Logarithmus von der Andradeschen Gleichung (\ref{eqn:AndradescheGleichung}) gebildet. Somit ensteht ein
+linearer Zusammenhang zwischen dem Kehrwert von der Temperatur und der natürliche Logarithmus
+von der dynamischen Viskosität $\eta$.
+\begin{align}
+  \begin{split}
+   \eta (T) &= A \cdot e^{\frac{B}{T}}\\
+    \Rightarrow \ln\left(\eta\left(T\right)\right) &= \ln \left(B\right) \cdot \frac{1}{T} + \ln\left(A\right)
+    \label{eqn:lnEta}
+  \end{split}
+\end{align}
+Die gemessenen Fallzeiten der großen Kugel bei variierter Temperatur sind in der folgenden Tabelle
+aufgeführt:
 \begin{table}[H]
   \centering
-  \caption{Messdaten für die Temperaturabhängigkeit der Viskosität}
+  \caption{Gemessene Fallzeiten der großen Kugel bei unterschiedlichen Temperaturen}
   \begin{tblr}{colspec={c c c c c c}}
       \toprule
-      $T\, \left[\unit{\celsius}\right]$ & $t_{\text{h1}}\, \left[\unit{\second} \right]$ & $t_{\text{r1}}\, \left[\unit{\second} \right]$ & $t_{\text{h2}}\, \left[\unit{\second} \right]$ & $t_{\text{r2}}\, \left[\unit{\second} \right]$ & $\rho(T)\,\left[\unit[per-mode=fraction]{\gram\per\cubic\centi\meter} \right]$ (ref:Quelle!!!) \\
+      $T\, \left[\unit{\celsius}\right]$ & $t_{\text{h1}}\, \left[\unit{\second} \right]$ & $t_{\text{r1}}\, \left[\unit{\second} \right]$ & $t_{\text{h2}}\, \left[\unit{\second} \right]$ & $t_{\text{r2}}\, \left[\unit{\second} \right]$ & $\rho(T)\,\left[\unit[per-mode=fraction]{\gram\per\cubic\centi\meter} \right]$ (Q\cite{dichte}) & $\eta\left(T\right)\, \left[ \unit[inter-unit-product=\cdot]{\milli\pascal\second}\right] $\\
       \midrule
-      31 & 28.76 & 28.26 & 28.27 & 28.80 & 0.99534 \\
-      33 & 27.16 & 27.03 & 27.12 & 27.07 & 0.99470 \\
-      34 & 26.76 & 27.01 & 26.75 & 26.76 & 0.99437 \\
-      36 & 26.16 & 26.06 & 26.16 & 26.24 & 0.99369 \\
-      40 & 24.32 & 24.23 & 24.40 & 24.24 & 0.99222 \\
-      42 & 23.52 & 23.46 & 23.36 & 23.36 & 0.99144 \\
-      43 & 22.84 & 22.81 & 22.87 & 23.27 & 0.99104 \\
-      44 & 22.38 & 22.64 & 22.23 & 21.80 & 0.99063 \\
-      47 & 21.32 & 21.69 & 21.38 & 21.24 & 0.98936 \\
-      49 & 20.64 & 20.81 & 20.58 & 20.41 & 0.98848 \\
+      31\pm1 & 28.76 & 28.26 & 28.27 & 28.80 & 0.99534 & 0.962 \pm 0.014 \\
+      33\pm1 & 27.16 & 27.03 & 27.12 & 27.07 & 0.99470 & 0.908 \pm 0.011 \\
+      34\pm1 & 26.76 & 27.01 & 26.75 & 26.76 & 0.99437 & 0.907 \pm 0.012 \\ 
+      36\pm1 & 26.16 & 26.06 & 26.16 & 26.24 & 0.99369 & 0.882 \pm 0.011 \\
+      40\pm1 & 24.32 & 24.23 & 24.40 & 24.24 & 0.99222 & 0.821 \pm 0.010 \\
+      42\pm1 & 23.52 & 23.46 & 23.36 & 23.36 & 0.99144 & 0.795 \pm 0.010 \\
+      43\pm1 & 22.84 & 22.81 & 22.87 & 23.27 & 0.99104 & 0.772 \pm 0.009 \\
+      44\pm1 & 22.38 & 22.64 & 22.23 & 21.80 & 0.99063 & 0.762 \pm 0.010 \\
+      47\pm1 & 21.32 & 21.69 & 21.38 & 21.24 & 0.98936 & 0.729 \pm 0.011 \\
+      49\pm1 & 20.64 & 20.81 & 20.58 & 20.41 & 0.98848 & 0.703 \pm 0.009 \\
       \bottomrule
   \end{tblr}
 \end{table}
-\noindent
+Bei dieser Auswertung werden die Fallrichtungen \glqq hoch\grqq und \glqq runter\grqq nicht mehr getrennt voneinander
+betrachtet, weil bereits im Abschnitt (\ref{sec:Viskosität von Wasser}) festgestellt wird,
+dass die dynamische Viskositäten der beiden Fallrichtungen bei Raumtemperatur keine signifikante 
+Differenz aufweisen. Demnach erhält man für die jeweiligen Temperaturen die folgenden Fallzeite:
+\begin{table}[H]
+  \centering
+  \caption{Fallzeiten der großen Kugel bei unterschiedlichen Temperaturen}
+  \begin{tblr}{colspec={c c c c}}
+      \toprule
+      $T\, \left[\unit{\celsius}\right]$ & $t\, \left[\unit{\second} \right]$ & $\rho(T)\,\left[\unit[per-mode=fraction]{\gram\per\cubic\centi\meter} \right]$ (Q \cite{dichte}) & $\eta\left(T\right)\, \left[ \unit[inter-unit-product=\cdot]{\milli\pascal\second}\right] $\\
+      \midrule
+      31\pm1 & 28.510 \pm 0.250 & 0.99534 & 0.962 \pm 0.014 \\
+      33\pm1 & 27.095 \pm 0.065 & 0.99470 & 0.908 \pm 0.011 \\
+      34\pm1 & 26.885 \pm 0.125 & 0.99437 & 0.907 \pm 0.012 \\  
+      36\pm1 & 26.110 \pm 0.050 & 0.99369 & 0.882 \pm 0.011 \\
+      40\pm1 & 24.275 \pm 0.045 & 0.99222 & 0.821 \pm 0.010 \\
+      42\pm1 & 23.490 \pm 0.030 & 0.99144 & 0.795 \pm 0.010 \\
+      43\pm1 & 22.825 \pm 0.015 & 0.99104 & 0.772 \pm 0.009 \\
+      44\pm1 & 22.510 \pm 0.130 & 0.99063 & 0.762 \pm 0.010 \\
+      47\pm1 & 21.505 \pm 0.185 & 0.98936 & 0.729 \pm 0.011 \\
+      49\pm1 & 20.725 \pm 0.085 & 0.98848 & 0.703 \pm 0.009 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+Mithilfe dieser Daten und der Gleichung (\ref{eqn:lnEta}) lassen sich die Messwerte sowie
+deren Unsicherheiten graphisch darstellen. Anschließend erfolgt eine lineare Regression aus 
+der Andradeschen Gleichung (\ref{eqn:AndradescheGleichung}). 
 \begin{figure}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
+  \includegraphics[width=0.92\textwidth]{plot.pdf}
+  \caption{Lineare Ausgleichsgerade der Andradeschen Gleichung}
   \label{fig:plot}
 \end{figure}
-
+Anhand dieser linearen Regression und der Gleichung (\ref{eqn:lnEta}) werden die Konstanten $A$ und $B$ 
+ermittelt. Hierbei entspricht $A$ dem Ordinatenabschnitt und $B$ der Steigung der 
+linearen Ausgleichsgeraden.
+\begin{align*}
+  \ln\left(A\right) &= -5.567 \pm 0.097 \Longleftrightarrow A = 0.0038\pm0.0004\\
+  B &= 1680\pm30
+\end{align*}
 %Siehe \autoref{fig:plot}!

@@ -1,4 +1,4 @@
-all: build/vXXX.pdf
+all: build/v207.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
@@ -20,7 +20,7 @@ build/vXXX.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	vXXX.tex
+	v207.tex
 
 build:
 	mkdir -p build

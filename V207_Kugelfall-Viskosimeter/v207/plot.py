@@ -79,7 +79,7 @@ t_ges_st = np.std (t_ges, axis=0)
 t_ges_mean = np.mean (t_ges, axis=0)
 
 t_ges = unp.uarray(t_ges_mean, t_ges_st)
-
+print(f"t_ges: {t_ges}")
 # Viskosität abhängig Temp.
 dichten = (dichte_gr -dichte).reshape (10,1)
 
