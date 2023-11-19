@@ -133,25 +133,26 @@ von der dynamischen Viskosität $\eta$.
     \label{eqn:lnEta}
   \end{split}
 \end{align}
-Die gemessenen Fallzeiten der großen Kugel bei variierter Temperatur sind in der folgenden Tabelle
+Mithilfe von Gleichung (\ref{eqn:EmpirischeEtaFunktion}) 
+Die mithilfe von Gleichung (\ref{eqn:EmpirischeEtaFunktion}) gemessenen Fallzeiten der großen Kugel bei variierter Temperatur sind in der folgenden Tabelle
 aufgeführt:
 \begin{table}[H]
   \centering
   \caption{Gemessene Fallzeiten der großen Kugel bei unterschiedlichen Temperaturen}
-  \begin{tblr}{colspec={c c c c c c}}
+  \begin{tblr}{colspec={c c c c c}}
       \toprule
-      $T\, \left[\unit{\celsius}\right]$ & $t_{\text{h1}}\, \left[\unit{\second} \right]$ & $t_{\text{r1}}\, \left[\unit{\second} \right]$ & $t_{\text{h2}}\, \left[\unit{\second} \right]$ & $t_{\text{r2}}\, \left[\unit{\second} \right]$ & $\rho(T)\,\left[\unit[per-mode=fraction]{\gram\per\cubic\centi\meter} \right]$ (Q\cite{dichte}) & $\eta\left(T\right)\, \left[ \unit[inter-unit-product=\cdot]{\milli\pascal\second}\right] $\\
+      $T\, \left[\unit{\celsius}\right]$ & $t_{\text{h1}}\, \left[\unit{\second} \right]$ & $t_{\text{r1}}\, \left[\unit{\second} \right]$ & $t_{\text{h2}}\, \left[\unit{\second} \right]$ & $t_{\text{r2}}\, \left[\unit{\second} \right]$ & $\rho(T)\,\left[\unit[per-mode=fraction]{\gram\per\cubic\centi\meter} \right]$ (Q\cite{dichte})\\
       \midrule
-      31\pm1 & 28.76 & 28.26 & 28.27 & 28.80 & 0.99534 & 0.962 \pm 0.014 \\
-      33\pm1 & 27.16 & 27.03 & 27.12 & 27.07 & 0.99470 & 0.908 \pm 0.011 \\
-      34\pm1 & 26.76 & 27.01 & 26.75 & 26.76 & 0.99437 & 0.907 \pm 0.012 \\ 
-      36\pm1 & 26.16 & 26.06 & 26.16 & 26.24 & 0.99369 & 0.882 \pm 0.011 \\
-      40\pm1 & 24.32 & 24.23 & 24.40 & 24.24 & 0.99222 & 0.821 \pm 0.010 \\
-      42\pm1 & 23.52 & 23.46 & 23.36 & 23.36 & 0.99144 & 0.795 \pm 0.010 \\
-      43\pm1 & 22.84 & 22.81 & 22.87 & 23.27 & 0.99104 & 0.772 \pm 0.009 \\
-      44\pm1 & 22.38 & 22.64 & 22.23 & 21.80 & 0.99063 & 0.762 \pm 0.010 \\
-      47\pm1 & 21.32 & 21.69 & 21.38 & 21.24 & 0.98936 & 0.729 \pm 0.011 \\
-      49\pm1 & 20.64 & 20.81 & 20.58 & 20.41 & 0.98848 & 0.703 \pm 0.009 \\
+      31\pm1 & 28.76 & 28.26 & 28.27 & 28.80 & 0.99534 \\
+      33\pm1 & 27.16 & 27.03 & 27.12 & 27.07 & 0.99470 \\
+      34\pm1 & 26.76 & 27.01 & 26.75 & 26.76 & 0.99437 \\ 
+      36\pm1 & 26.16 & 26.06 & 26.16 & 26.24 & 0.99369 \\
+      40\pm1 & 24.32 & 24.23 & 24.40 & 24.24 & 0.99222 \\
+      42\pm1 & 23.52 & 23.46 & 23.36 & 23.36 & 0.99144 \\
+      43\pm1 & 22.84 & 22.81 & 22.87 & 23.27 & 0.99104 \\
+      44\pm1 & 22.38 & 22.64 & 22.23 & 21.80 & 0.99063 \\
+      47\pm1 & 21.32 & 21.69 & 21.38 & 21.24 & 0.98936 \\
+      49\pm1 & 20.64 & 20.81 & 20.58 & 20.41 & 0.98848 \\
       \bottomrule
   \end{tblr}
 \end{table}
@@ -179,15 +180,18 @@ betrachtet. Demnach erhält man für die jeweiligen Temperaturen die folgenden F
       \bottomrule
   \end{tblr}
 \end{table}
+Die in der Tabelle aufgelisteten dynamischen Viskositäten $\eta\left(T\right)$ sind mit der Gleichung (\ref{eqn:EmpirischeEtaFunktion}) 
+und den temperaturabhängigen Dichten berechnet.
 Mithilfe dieser Daten und der Gleichung (\ref{eqn:lnEta}) lassen sich die Messwerte sowie
-deren Unsicherheiten graphisch darstellen. Anschließend erfolgt eine lineare Regression aus 
-der Andradeschen Gleichung (\ref{eqn:AndradescheGleichung}). 
+deren Unsicherheiten graphisch darstellen. 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.92\textwidth]{plot.pdf}
   \caption{Lineare Ausgleichsgerade der Andradeschen Gleichung}
   \label{fig:plot}
 \end{figure}
+Anschließend erfolgt eine lineare Regression aus 
+der Andradeschen Gleichung (\ref{eqn:AndradescheGleichung}). 
 Anhand dieser linearen Regression und der Gleichung (\ref{eqn:lnEta}) werden die Konstanten $A$ und $B$ 
 ermittelt. Hierbei entspricht $A$ dem Ordinatenabschnitt und $B$ der Steigung der 
 linearen Ausgleichsgeraden.
