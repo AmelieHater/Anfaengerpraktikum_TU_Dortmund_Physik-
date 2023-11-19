@@ -10,8 +10,8 @@
 % Gemittelte Fallzeit (runter) kl: 12.14+/-0.11, gr: 34.73+/-0.09
 % Viskosität hoch: 1.170+/-0.013 (in mPa*s)
 % Viskosität runter: 1.164+/-0.011 (in mPa*s)
-% Apparaturkonstante K_gr_h: 0.02374+/-0.00030 (in mPa*cm^3/g)
-% Apparaturkonstante K_gr_r: 0.02364+/-0.00025 (in mPa*cm^3/g)
+% Apparatekonstante K_gr_h: 0.02374+/-0.00030 (in mPa*cm^3/g)
+% Apparatekonstante K_gr_r: 0.02364+/-0.00025 (in mPa*cm^3/g)
 % Reynoldsche Zahl Re_kl_h: 110.2+/-2.4
 % Reynoldsche Zahl Re_kl_r: 111.3+/-2.0
 % Reynoldsche Zahl Re_gr_h: 19.35+/-0.24
@@ -57,16 +57,20 @@ Die betrachteten Fallzeiten der kleinen Kugel sind in dieser Tabelle erfasst:
 \end{table}
 \noindent
 Anhand dieser Messdaten erhält man die folgenden Zeiten, die für die Berechnung der Viskosität benötigt werden:
-$$t_{\text{kl,r}}\left(12.14\pm0.11\right) \, \unit{\second}$$
-$$t_{\text{kl,h}}\left(12.20\pm0.13\right) \, \unit{\second}$$
+\begin{align*}
+  t_{\text{kl,r}} &= \left(12.14\pm0.11\right) \, \unit{\second}\\
+  t_{\text{kl,h}} &= \left(12.20\pm0.13\right) \, \unit{\second}
+\end{align*}
 Die Viskosität von Wasser bei Raumtemperatur lässt sich mithilfe der Gleichung (\ref{eqn:EmpirischeEtaFunktion}) 
-und der angegebenen Apparturkonstante der kleinen Glaskugel $K_{kl}= 0.0760 \,\unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}$
+und der angegebenen Apparatekonstante der kleinen Glaskugel $K_{kl}= 0.0760 \,\unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}$
 bestimmen.
-$$\eta_{\text{Hoch}} = \left(1.170\pm0.013 \right)\, \unit[inter-unit-product=\cdot]{\milli\pascal\second}$$
-$$\eta_{\text{Runter}} = \left(1.164\pm0.011 \right) \,\unit[inter-unit-product=\cdot]{\milli\pascal\second}$$
+\begin{align*}
+  \eta_{\text{Hoch}} &= \left(1.170\pm0.013 \right)\, \unit[inter-unit-product=\cdot]{\milli\pascal\second}\\
+  \eta_{\text{Runter}} &= \left(1.164\pm0.011 \right) \,\unit[inter-unit-product=\cdot]{\milli\pascal\second}
+\end{align*}
 %
-\subsection{Apparaturkonstante der großen Glaskugel}
-\label{sec:Appartaurkonstante der großen Glaskugel}
+\subsection{Apparatekonstante der großen Glaskugel}
+\label{sec:Apparatekonstante der großen Glaskugel}
 Vorab wird erneut mit der Gleichung (\ref{eqn:DichtefunktionKugel}) und der Gleichung (\ref{eqn:VolumenKugel})
 die Dichte der großen Glaskugel bestimmt. Hierbei beträgt die gegebene Masse $m_{\text{gr}}= 4.9528 \;\unit{\gram}$ und 
 der gemessene Durchmesser $d_{\text{gr}}=\left(1.5760\pm0.0010\right)\, \unit{\centi\meter}$.
@@ -91,28 +95,36 @@ Die betrachteten Fallzeiten der großen Kugel sind in dieser Tabelle erfasst:
 \end{table}
 Aus den Messdaten werden die folgenden Zeiten bestimmt:
 %
-$$t_{\text{gr,r}}\left( 34.73\pm0.09\right) \, \unit{\second}$$
-$$t_{\text{gr,h}}\left(34.75\pm0.16 \right) \, \unit{\second}$$
+\begin{align*}
+  t_{\text{gr,r}} &= \left( 34.73\pm0.09\right) \, \unit{\second}\\
+  t_{\text{gr,h}} &= \left(34.75\pm0.16 \right) \, \unit{\second}
+\end{align*}
 Folglich wird mit der Gleichung (\ref{eqn:KFunktion}) und den zuvor berechneten Viskositäten die 
-Apparaturkonstante der großen Glaskugel bestimmt.
-$$K_{\text{gr,r}} = \left(0.02364\pm0.00025  \right) \, \unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}$$
-$$K_{\text{gr,h}} = \left(0.02374\pm0.00030  \right) \, \unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}$$
+Apparatekonstante der großen Glaskugel bestimmt.
+\begin{align*}
+  K_{\text{gr,r}} &= \left(0.02364\pm0.00025  \right) \, \unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}\\
+  K_{\text{gr,h}} &= \left(0.02374\pm0.00030  \right) \, \unit[per-mode=fraction,inter-unit-product=\cdot]{\milli\pascal\cubic\centi\meter\per\gram}
+\end{align*}
 %
 \subsection{Bestimmung der Reynoldschen Zahl}
 Durch einsetzen der Werte in die Gleichung (\ref{eqn:Reynoldszahl}) ergeben sich für die 
 kleine Glaskugel diese Reynoldszahlen:
-$$Re_{\text{kl,r}} = \left(111.3\pm2.0\right)$$
-$$Re_{\text{kl,h}} = \left(110.2\pm2.4\right)$$
+\begin{align*}
+  Re_{\text{kl,r}} &= \left(111.3\pm2.0\right)\\
+  Re_{\text{kl,h}} &= \left(110.2\pm2.4\right)
+\end{align*}
 Analog erfogt die Berechnung der Reynoldszahlen für die große Glaskugel.
-$$Re_{\text{gr,r}} = \left(19.46\pm0.19\right)$$
-$$Re_{\text{gr,h}} = \left(19.35\pm0.24\right)$$
+\begin{align*}
+  Re_{\text{gr,r}} &= \left(19.46\pm0.19\right)\\
+  Re_{\text{gr,h}} &= \left(19.35\pm0.24\right)
+\end{align*}
 Aus den Reynoldszahlen erschließt sich, dass sowohl bei der kleinen als auch bei der großen Glaskugeln
 eine laminare Strömung entsteht, da alle Reynoldzahlen deutlich kleiner sind als $Re=2300$.
 %
 \subsection{Temperaturabhängigkeit der Viskosität von Wasser}
 Für die Auswertung der Temperaturabhängigkeit der Viskosität von Wasser wird der natürliche
 Logarithmus von der Andradeschen Gleichung (\ref{eqn:AndradescheGleichung}) gebildet. Somit ensteht ein
-linearer Zusammenhang zwischen dem Kehrwert von der Temperatur und der natürliche Logarithmus
+linearer Zusammenhang zwischen dem Kehrwert von der Temperatur und dem natürlichen Logarithmus
 von der dynamischen Viskosität $\eta$.
 \begin{align}
   \begin{split}
@@ -143,12 +155,12 @@ aufgeführt:
       \bottomrule
   \end{tblr}
 \end{table}
-Bei dieser Auswertung werden die Fallrichtungen \glqq hoch\grqq und \glqq runter\grqq nicht mehr getrennt voneinander
-betrachtet, weil bereits im Abschnitt (\ref{sec:Viskosität von Wasser}) festgestellt wird,
-dass die dynamische Viskositäten der beiden Fallrichtungen bei Raumtemperatur keine signifikante 
-Differenz aufweisen. Demnach erhält man für die jeweiligen Temperaturen die folgenden Fallzeite:
+Im Abschnitt \ref{sec:Viskosität von Wasser} wurde bereits festgestellt, dass die dynamischen Viskositäten 
+der beiden Fallrichtungen bei Raumtemperatur keine signifikante Differenz aufweisen. Aus diesem Grund werden
+bei dieser Auswertung die Fallrichtungen \glqq hoch\grqq\,und \glqq runter\grqq\,nicht mehr getrennt voneinander
+betrachtet. Demnach erhält man für die jeweiligen Temperaturen die folgenden Fallzeiten:
 \begin{table}[H]
-  \centering
+  \centering 
   \caption{Fallzeiten der großen Kugel bei unterschiedlichen Temperaturen}
   \begin{tblr}{colspec={c c c c}}
       \toprule
