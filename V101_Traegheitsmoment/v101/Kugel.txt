@@ -1,0 +1,6 @@
+# Kugel Durchmesser in cm
+14.66
+14.59
+14.66
+14.685
+14.71
