@@ -1,0 +1,13 @@
+#für die Berechnung von Trägheitsmoment der Kugel und Scheibe bei festem Phi von 90 Grad
+# 5_Periodendauer_Kugel in s und 5_Periodendauer_Scheibe in s
+# 5T_Kugel 5T_Scheibe
+9.53 9.28
+9.50 9.22
+9.35 9.31
+9.72 9.34
+9.40 9.37
+9.53 9.31
+9.38 9.56
+9.31 9.31
+9.32 9.44
+9.44 9.31
