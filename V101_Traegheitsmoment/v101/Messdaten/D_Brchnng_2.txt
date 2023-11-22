@@ -1,0 +1,13 @@
+#für die Berechnung von D bei festem phi von 90 Grad
+#Abstand r in cm und Kraft in Newton
+# Abstand Kraft
+5 0.81
+10 0.4
+12.5 0.27
+15 0.23
+17.5 0.19
+20 0.188
+22.5 0.162
+25 0.146
+27.5 0.12
+30 0.16
