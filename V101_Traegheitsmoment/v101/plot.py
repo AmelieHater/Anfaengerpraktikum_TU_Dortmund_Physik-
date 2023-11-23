@@ -20,12 +20,14 @@ Abstand_a, T5_Periodendauer= np.genfromtxt("I_D_Brchnng.txt", unpack=True)
 print(Abstand_a)
 a_quadrat = np.square(Abstand_a)
 T_quadrat = np.square(T5_Periodendauer/5)
+print(a_quadrat)
+print(T_quadrat)
 
 
 x = a_quadrat
 y = T_quadrat
 
-x_plot= np.linspace(0, 0.7)
+x_plot= np.linspace(0, 0.1)
 params, covariance_matrix = np.polyfit(x, y, deg=1, cov=True)
 #errors = np.sqrt(np.diag(covariance_matrix))
 
@@ -39,7 +41,7 @@ ax.legend(loc="best")
 fig.savefig("plot.pdf")
 
 I_D = params[0]
-
+print(params[0],params[1])
 
 
 #for name, value, error in zip ('ab', params, errors):
