@@ -1,0 +1,13 @@
+#für die Berechnung von I_D bei festem Phi von 90 Grad
+#Abstand in m und 5 Periodendauer in s
+# Abstand 5T(Periodendauer)
+0.0500 14.40
+0.0750 16.57
+0.1000 18.60
+0.1250 21.41
+0.1500 30.10
+0.1750 26.78
+0.2000 29.94
+0.2250 32.75
+0.2500 36.60
+0.3000 42.5s

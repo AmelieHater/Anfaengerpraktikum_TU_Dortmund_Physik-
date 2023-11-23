@@ -1,4 +1,4 @@
-#für die Berechnung von D bei festem Abstand von ca. 19.975 cm
+#für die Berechnung von D bei festem Abstand von ca. 0.19975 m
 #Winkel Phi in Grad und Kraft in Newton
 # Winkel Kraft
 20 0.026
