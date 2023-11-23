@@ -1,0 +1,12 @@
+
+    I = m \cdot r^2
+\label{eqn:TragheitPunktmasse}
+
+    I = \sum_i r_{i}^{2} \cdot m_{i}
+\label{eqn:GesamttragheitSumme}
+
+    I = \int r^2\,dm 
+\label{eqn:GesamttragheitIntegral}
+
+    I = I_s + m \cdot a^2
+\label{eqn:SatzVonSteiner}
