@@ -8,20 +8,20 @@ Federwaagen_Abstand = 0.19975 #in m
 phi_D, F_D = np.genfromtxt("D_Brchnng.txt", unpack=True)
 #print(F_D * Federwaagen_Abstand)
 D_0 = (F_D * Federwaagen_Abstand)/phi_D #in Nm
-#print(D_0)
+print(D_0)
 D_mean = np.mean(D_0)
 #print(D_mean)
 D_std = np.std(D_0)
 D = ufloat(D_mean, D_std)
-#print(D)
+print(D)
 
 #Eigentraegheitsmoment der Drillachse 
 Abstand_a, T5_Periodendauer= np.genfromtxt("I_D_Brchnng.txt", unpack=True)
-print(Abstand_a)
+#print(Abstand_a)
 a_quadrat = np.square(Abstand_a)
 T_quadrat = np.square(T5_Periodendauer/5)
-print(a_quadrat)
-print(T_quadrat)
+#print(a_quadrat)
+#print(T_quadrat)
 
 
 x = a_quadrat
@@ -40,8 +40,7 @@ ax.set_ylabel(r"Periodendauer $\,\,T^2\,\,[s^2]$")
 ax.legend(loc="best")
 fig.savefig("plot.pdf")
 
-I_D = params[0]
-print(params[0],params[1])
+#print(params[0],params[1])
 
 
 #for name, value, error in zip ('ab', params, errors):
