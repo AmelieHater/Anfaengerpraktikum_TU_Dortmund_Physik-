@@ -2,6 +2,7 @@
 \label{sec:Zielsetzung}
 Das Ziel dieses Versuchs ist das Trägheitsmoment von unterschiedlichen rotierenden Objekten zu bestimmen. 
 Zudem wird der Satz von Steiner überprüft.
+%
 \section{Theorie}
 \label{sec:Theorie}
 Rotationsbewegungen lassen sich mit Hilfe des Drehmoments $M$, des Trägheitsmoment $I$ und 
@@ -35,10 +36,61 @@ Wenn die Drehachse nicht durch den Schwerpunkt des Körpers verläuft und stattd
 mit einem Abstand $a$ zu einer Schwerpunktachse verläuft, dann lässt sich mit Hilfe des Satz von Steiner
 das Trägheitsmoment berechnen.
 \begin{equation}
-    I = I_s + m \cdot a^{2}
+    I = I_{s} + m \cdot a^{2}
     \label{eqn:SatzVonSteiner}
 \end{equation}
 %
-%Formel satz von steiner erklären
+$I_{s}$ beschreibt das Trägheitsmoment, das sich auf die Schwerpunktachse des Körpers bezieht, und $m$
+ist die Masse des Körpers. 
+Das Drehmoment ist beschrieben durch:
+\begin{align}
+    \vec{M} &= \vec{F} \times \vec {r} \text{  bzw.} \label{eqn:DrehmomentVektor} \\
+    M &= F \cdot r \cdot \sin \left(\varphi \right) \,, \label{eqn:DrehmomentSkalar}
+\end{align}
+%
+wobei $\vec{F}$ bzw. $F$ die Kraft angibt, die auf den rotierenen Körper wirkt, $\vec{r}$ 
+bzw. $r$ der Abstand zur Drehachse ist und der Winkel $\varphi$ beschreibt die Auslenkung zur
+Ruhelage. \\
+In einem schwingfähigen System wirkt dem Auslenkungswinkel $\varphi$ ein rücktreibendes Drehmoment entgegen.
+Ein solches System erzeugt eine harmonische Schwindung mit der Schwingungsdauer: 
+\begin{equation}
+    T = 2 \pi \sqrt{\frac{I}{D}}\,,
+    \label{eqn:Schwingungsdauer}
+ \end{equation}
+wobei $D$ die Winkelrichgröße und $I$ das Trägheitsmoment ist. 
+Das wirkende Drehmoment wird mit Hilfe der Winkelrichtgröße $D$ wie folgt ausgedrückt:
+\begin{equation}
+   M = D \cdot \varphi\,.
+   \label{eqn:DrehmomentMitWinkelrichtgröße}
+\end{equation}
+%
+Die Winkelrichtgröße berechnet sich durch: 
+\begin{equation}
+   D = \frac{F \cdot r}{\varphi}\,.
+    \label{eqn:DrehmomentMitWinkelrichtgröße}
+\end{equation}
+%
+\subsection{Spezifische Trägheitsmomente}
+\label{sec:Trägheitsmmente}
+Die umgestellte Gleichung (\ref{eqn:Schwingungsdauer}) nach $I$ ergibt:
+\begin{equation}
+    I = \frac{T^2 \cdot D}{\left(2 \pi\right)^2}\,.
+    \label{eqn:DrehmomentMitWinkelrichtgröße}
+\end{equation}
+%
+Das Trägheitmoment einer Kugel mit Masse $m$ und Radius $r$ wird durch: 
+\begin{equation}
+    I_K = \frac{2}{5}m \cdot r^2 
+    \label{eqn:TragheitKugel}
+\end{equation}
+bestimmt. \\
+Das Trägheitsmoment eines Zylinders mit Masse $m$ und Radius $r$ ist gegeben 
+durch:
+\begin{equation}
+    I_Z = \frac{m \cdot r^2}{2}
+    \label{eqn:TragheitKugel}
+\end{equation}
+
+
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
