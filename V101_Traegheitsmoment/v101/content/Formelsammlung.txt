@@ -10,3 +10,24 @@
 
     I = I_s + m \cdot a^2
 \label{eqn:SatzVonSteiner}
+
+    \vec{M} &= \vec{F} \times \vec {r} \text{  bzw.} 
+\label{eqn:DrehmomentVektor} \\
+
+    M &= F \cdot r \cdot \sin \left(\varphi \right) \,, 
+\label{eqn:DrehmomentSkalar}
+
+    M = D \cdot \varphi\,.
+\label{eqn:DrehmomentMitWinkelrichtgröße}
+
+    D = \frac{F \cdot r}{\varphi}\,.
+\label{eqn:DrehmomentMitWinkelrichtgröße}
+
+    D = \frac{F \cdot r}{\varphi}\,.
+\label{eqn:DrehmomentMitWinkelrichtgröße}
+
+    I = \frac{T^2 \cdot D}{\left(2 \pi\right)^2}\,.
+\label{eqn:DrehmomentMitWinkelrichtgröße}
+
+    I_K = \frac{2}{5}m \cdot r^2 
+\label{eqn:TragheitKugel}
