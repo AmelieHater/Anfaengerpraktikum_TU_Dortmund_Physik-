@@ -1,13 +1,13 @@
 #für die Berechnung von D bei festem Abstand von ca. 0.19975 m
-#Winkel Phi in Grad und Kraft in Newton
+#Winkel Phi in radian(!!!) und Kraft in Newton
 # Winkel Kraft
-20 0.026
-30 0.050
-40 0.068
-50 0.090
-60 0.120
-70 0.136
-80 0.156
-90 0.184
-100 0.20
-110 0.21
+0.349066 0.026
+0.523599 0.050
+0.698132 0.068
+0.872665 0.090
+1.0472 0.120
+1.22173 0.136
+1.39626 0.156
+1.5708 0.184
+1.74533 0.20
+1.91986 0.21
