@@ -17,17 +17,23 @@
     M &= F \cdot r \cdot \sin \left(\varphi \right) \,, 
 \label{eqn:DrehmomentSkalar}
 
+    T = 2 \pi \sqrt{\frac{I}{D}}\,,
+\label{eqn:Schwingungsdauer}
+
     M = D \cdot \varphi\,.
 \label{eqn:DrehmomentMitWinkelrichtgröße}
 
     D = \frac{F \cdot r}{\varphi}\,.
-\label{eqn:DrehmomentMitWinkelrichtgröße}
-
-    D = \frac{F \cdot r}{\varphi}\,.
-\label{eqn:DrehmomentMitWinkelrichtgröße}
+\label{eqn:Winkelrichgröße}
 
     I = \frac{T^2 \cdot D}{\left(2 \pi\right)^2}\,.
-\label{eqn:DrehmomentMitWinkelrichtgröße}
+\label{eqn:TragheitmomentAusSchwingungsdauer}
 
     I_K = \frac{2}{5}m \cdot r^2 
 \label{eqn:TragheitKugel}
+
+    I_{Z} &= \frac{m \cdot r^2}{2} 
+\label{eqn:TragheitZylinder}
+
+    I_{Zh} &= m \left(\frac{r^{2}}{4} + \frac{h^{2}}{12} \right) 
+\label{eqn:TrägheitZylinderQuer}
