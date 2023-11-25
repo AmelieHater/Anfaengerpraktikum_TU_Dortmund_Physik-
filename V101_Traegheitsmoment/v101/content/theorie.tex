@@ -7,7 +7,7 @@ Zudem wird der Satz von Steiner überprüft.
 \label{sec:Theorie}
 Rotationsbewegungen lassen sich mit Hilfe des Drehmoments $M$, des Trägheitsmoment $I$ und 
 der Winkelbeschleunigung $\dot{\omega}$ beschreiben. Das Trägheitsmoment einer Punktmasse, 
-mit der Masse $m$ und dem Abstand $r$ zu einer Drehachse, lässt wie folgt beschreiben:
+mit der Masse $m$ und dem Abstand $r$ zu einer Drehachse, lässt wird wie folgt bestimmt:
 \begin{equation}
     I = m \cdot r^{2}\,.
     \label{eqn:TragheitPunktmasse}
@@ -21,7 +21,7 @@ Winkelbeschleunigung $\dot{\omega}$ um eine feste Drehachse. Dabei gilt für das
 \end{equation}
 %
 Hier beschreibt $r_{i}$ den Abstand der einzelnen Masselemente $m_{i}$ zur festen Drehachse.
-Für infinitisimale Massen gilt für das Gesamtträgheitsmoment:
+Für infinitesimale Massen gilt für das Gesamtträgheitsmoment:
 \begin{equation}
     I = \int r^{2}\,dm \,.
     \label{eqn:GesamttragheitIntegral}
@@ -44,20 +44,20 @@ $I_{s}$ beschreibt das Trägheitsmoment, das sich auf die Schwerpunktachse des K
 ist die Masse des Körpers. 
 Das Drehmoment ist beschrieben durch:
 \begin{align}
-    \vec{M} &= \vec{F} \times \vec {r} \text{  bzw.} \label{eqn:DrehmomentVektor} \\
+    \vec{M} &= \vec{F} \times \vec {r}\, \text{  bzw.} \label{eqn:DrehmomentVektor} \\
     M &= F \cdot r \cdot \sin \left(\varphi \right) \,, \label{eqn:DrehmomentSkalar}
 \end{align}
 %
 wobei $\vec{F}$ bzw. $F$ die Kraft angibt, die auf den rotierenen Körper wirkt, $\vec{r}$ 
-bzw. $r$ der Abstand zur Drehachse ist und der Winkel $\varphi$ beschreibt die Auslenkung zur
-Ruhelage. \\
+bzw. $r$ der Abstand zur Drehachse ist und der Winkel $\varphi$ die Auslenkung zur
+Ruhelage beschreibt. \\
 In einem schwingfähigen System wirkt dem Auslenkungswinkel $\varphi$ ein rücktreibendes Drehmoment entgegen.
-Ein solches System erzeugt eine harmonische Schwindung mit der Schwingungsdauer: 
+Ein solches System erzeugt eine harmonische Schwingung mit der Schwingungsdauer: 
 \begin{equation}
-    T = 2 \pi \sqrt{\frac{I}{D}}\,,
+    T = 2 \pi \sqrt{\frac{I}{D}}\,.
     \label{eqn:Schwingungsdauer}
  \end{equation}
-wobei $D$ die Winkelrichgröße und $I$ das Trägheitsmoment ist. 
+Hier beschreibt $D$ die Winkelrichtgröße und $I$ das Trägheitsmoment.  
 Das wirkende Drehmoment wird mit Hilfe der Winkelrichtgröße $D$ wie folgt ausgedrückt:
 \begin{equation}
    M = D \cdot \varphi\,.
@@ -67,30 +67,55 @@ Das wirkende Drehmoment wird mit Hilfe der Winkelrichtgröße $D$ wie folgt ausg
 Die Winkelrichtgröße berechnet sich durch: 
 \begin{equation}
    D = \frac{F \cdot r}{\varphi}\,.
-    \label{eqn:DrehmomentMitWinkelrichtgröße}
+    \label{eqn:Winkelrichtgröße}
 \end{equation}
 %
 \subsection{Spezifische Trägheitsmomente}
-\label{sec:Trägheitsmmente}
+\label{sec:Trägheitsmomente}
 Die umgestellte Gleichung (\ref{eqn:Schwingungsdauer}) nach $I$ ergibt:
 \begin{equation}
-    I = \frac{T^2 \cdot D}{\left(2 \pi\right)^2}\,.
-    \label{eqn:DrehmomentMitWinkelrichtgröße}
+    I = \frac{T^{2} \cdot D}{\left(2 \pi\right)^{2}}\,.
+    \label{eqn:TragheitmomentAusSchwingungsdauer}
 \end{equation}
 %
-Das Trägheitmoment einer Kugel mit Masse $m$ und Radius $r$ wird durch: 
+Das Trägheitmoment einer Kugel mit der Masse $m$ und dem Radius $r$ wird durch die folgende Gleichung
+bestimmt: 
 \begin{equation}
-    I_K = \frac{2}{5}m \cdot r^2 
+    I_{K} = \frac{2}{5}m \cdot r^{2}\,.
     \label{eqn:TragheitKugel}
 \end{equation}
-bestimmt. \\
-Das Trägheitsmoment eines Zylinders mit Masse $m$ und Radius $r$ ist gegeben 
+Das Trägheitsmoment eines Zylinders mit der Masse $m$ und dem Radius $r$ ist gegeben 
 durch:
-\begin{equation}
-    I_Z = \frac{m \cdot r^2}{2}
-    \label{eqn:TragheitKugel}
-\end{equation}
-
-
+\begin{align}
+    I_{Z} &= \frac{m \cdot r^2}{2} \label{eqn:TragheitZylinder} \\
+    I_{Zh} &= m \left(\frac{r^{2}}{4} + \frac{h^{2}}{12} \right) \label{eqn:TrägheitZylinderQuer}\,.
+\end{align}
+%
+%Evtl Trägheit vom Stab
+%
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
+In der Vorbereitungsaufgabe soll das Drehmoment $M$ zu 10 unterschiedlichen Abständen bestimmt werden. Hierbei wirkt eine Kraft $F= 0.1\,\unit{\newton}$ 
+einmal mit einem Winkel $\varphi = 90°$ und einmal mit einem Winkel $\varphi = 45°$ auf eine Stange. Das Drehmoment wird mit Hilfe der Gleichung 
+(\ref{eqn:DrehmomentSkalar}) berechnet.
+\begin{table}
+    \centering
+    \caption{Vorbereitungsaufgabe}
+    \begin{tblr}{colspec={c c c}}
+        \toprule
+            & $\varphi = 90°$ & $\varphi = 45°$\\
+        $r\,\left[\unit{\meter}\right]$ & $M\, \left[10^{-3}\unit{\newton\meter} \right]$ & $M\, \left[10^{-3}\unit{\newton\meter} \right]$ \\
+        \midrule
+        0.05    & 5     & 3.5355 \\
+        0.07    & 7     & 4.9498 \\
+        0.09    & 9     & 6.3640 \\
+        0.11    & 11    & 7.7782 \\
+        0.13    & 13    & 9.1924 \\
+        0.15    & 15    & 10.6066 \\
+        0.17    & 17    & 12.0208 \\
+        0.19    & 19    & 13.4350 \\
+        0.21    & 21    & 14.8492 \\
+        0.24    & 24    & 16.9706 \\
+        \bottomrule
+    \end{tblr}
+\end{table}
