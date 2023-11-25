@@ -9,7 +9,7 @@ Federwaagen_Abstand = 0.19975 #in m
 phi_D, F_D = np.genfromtxt("D_Brchnng.txt", unpack=True)
 #print(F_D * Federwaagen_Abstand)
 D_0 = (F_D * Federwaagen_Abstand)/phi_D #in Nm
-#print(D_0)
+print(D_0)
 D_mean = np.mean(D_0)
 #print(D_mean)
 D_std = scipy.stats.sem(D_0)
