@@ -10,7 +10,7 @@ phi_D, F_D = np.genfromtxt("D_Brchnng.txt", unpack=True)
 #print(F_D * Federwaagen_Abstand)
 D_0 = (F_D * Federwaagen_Abstand)/phi_D #in Nm
 #print(D_0)
-D_mean = scipy.stats.sem(D_0)
+D_mean = np.mean(D_0)
 #print(D_mean)
 D_std = scipy.stats.sem(D_0)
 D = ufloat(D_mean, D_std)
@@ -58,7 +58,7 @@ Gewicht_Hoehe = ufloat(Gewicht_Hoehe_mean, Gewicht_Hoehe_std)
 #print("Hoehe der Gewichte ist: ",Gewicht_Hoehe)
 #print("b ist: ", params[1])
 
-I_D = (params[1]*D) / (4 * np.pi**2) - 2 * 0.26115 * np.square(Gewichte_Durchmesser/2) - (1/6) * 0.26115 * np.square(Gewicht_Hoehe)
+I_D = (params[1]*D) / (4 * np.pi**2) - 2 * 0.26115 * (np.square(Gewichte_Durchmesser/2)/4 + (1/12) * np.square(Gewicht_Hoehe))
 print("I_D ist ",I_D)
 #Trägkeitsmoment der Kugel ausrechnen 
 #Literaturwert
@@ -77,6 +77,7 @@ T_Kugel_mean = np.mean(T_Kugel0)
 T_Kugel_std = scipy.stats.sem(T_Kugel0)
 T_Kugel = ufloat(T_Kugel_mean, T_Kugel_std)
 I_Kugel_gemessen = (np.square(T_Kugel) * D)/(4 * np.pi**2)
+print("T der Kugel: ",T_Kugel)
 I_K_gemessen = I_Kugel_gemessen # - I_D ohne das, da das Drillding schon in D drin ist???
 print("I_K gemessen: ", I_K_gemessen)
 
@@ -94,6 +95,7 @@ T_Scheibe0 = T5_Scheibe0/5
 T_Scheibe_mean = np.mean(T_Scheibe0)
 T_Scheibe_std = scipy.stats.sem(T_Scheibe0)
 T_Scheibe = ufloat(T_Scheibe_mean, T_Scheibe_std)
+print("T der Scheibe: ",T_Scheibe)
 I_Scheibe_gemessen = (np.square(T_Scheibe) * D)/(4 * np.pi**2)
 I_S_gemessen = I_Scheibe_gemessen # - I_D #ohne das, da das Drillding schon in D drin ist???
 print("I_S gemessen: ", I_S_gemessen)
@@ -103,7 +105,6 @@ Kopf_Hoehe0 , Arme_Hoehe0 , Torso_Hoehe0 , Beine_Hoehe0 = np.genfromtxt("Puppe_H
 Kopf_Durchmesser00 , Arme_Durchmesser0 , Torso_Durchmesser0 , Beine_Durchmesser0  = np.genfromtxt("Puppe_Durchmesser.txt", unpack=True)
 Kopf_Durchmesser0 = Kopf_Durchmesser00[0:5]
 #print(Kopf_Durchmesser)
-T5_phi_90_Position_1_0, T5_phi_120_Position_1_0 ,T5_phi_90_Position_2_0 ,T5_phi_120_Position_2_0 = np.genfromtxt("Puppe_Periodendauer.txt", unpack=True)
 
 # Mittelung der einzelnen Messerte
 Kopf_Hoehe_mean = np.mean(Kopf_Hoehe0)
@@ -118,7 +119,7 @@ Arme_Hoehe_mean = np.mean(Arme_Hoehe0)
 Arme_Hoehe_std = scipy.stats.sem(Arme_Hoehe0)
 Arme_Hoehe = ufloat(Arme_Hoehe_mean, Arme_Hoehe_std)
 print("Armhöhe",Arme_Hoehe)
-print("Arme_Durchmesser0: ", Arme_Durchmesser0)
+#print("Arme_Durchmesser0: ", Arme_Durchmesser0)
 Arme_Durchmesser_mean = np.mean(Arme_Durchmesser0)
 Arme_Durchmesser_std = scipy.stats.sem(Arme_Durchmesser0)
 Arme_Durchmesser = ufloat(Arme_Durchmesser_mean, Arme_Durchmesser_std)
@@ -144,20 +145,100 @@ Puppe_Gesamtmasse = 0.1696 # in kg
 #Annahme, dass Dichte homogen ist im Körper
 #Volumenbestimmung der Puppe
 Volumen_1Arm = np.pi * (Arme_Durchmesser/2)**2 * Arme_Hoehe
-print("Volumen Arm: ",Volumen_1Arm)
+#print("Volumen Arm: ",Volumen_1Arm)
 Volumen_Kopf = np.pi * (Kopf_Durchmesser/2)**2 * Kopf_Hoehe
-print("Volumen Kopf: ",Volumen_Kopf)
+#print("Volumen Kopf: ",Volumen_Kopf)
 Volumen_Torso = np.pi * (Torso_Durchmesser/2)**2 * Torso_Hoehe
-print("Volumen Torso: ",Volumen_Torso)
+#print("Volumen Torso: ",Volumen_Torso)
 Volumen_1Bein = np.pi * (Beine_Durchmesser/2)**2 * Beine_Hoehe
-print("Volumen Bein: ",Volumen_1Bein)
+#print("Volumen Bein: ",Volumen_1Bein)
 Volumen_gesamte_Puppe = 2 * Volumen_1Arm + 2 * Volumen_1Bein + Volumen_Kopf + Volumen_Torso
-print("Volumen der gesamten Puppe: ",Volumen_gesamte_Puppe)
+Volumen_gesamte_Puppe_in_cm = Volumen_gesamte_Puppe * 1000000
+#print("Volumen der gesamten Puppe in cm^3: ",Volumen_gesamte_Puppe_in_cm)
 
-#for name, value, error in zip ('ab', params, errors):
- #   print(f"{name} = {value:.3f} ± {error:.3f}")
-#ax2.plot(x, y, label="Kurve")
-#ax2.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-#ax2.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-#ax2.legend(loc="best")
+#Anteil der einzelnen Volumina am Gesamtvolumen
+Prozent_Arm = Volumen_1Arm/Volumen_gesamte_Puppe
+Masse_Arm = Puppe_Gesamtmasse * Prozent_Arm
+Masse_Arme = 2* Masse_Arm
+#print("Masse Arme:", Masse_Arme)
+
+Prozent_Bein = Volumen_1Bein/Volumen_gesamte_Puppe
+Masse_Bein = Puppe_Gesamtmasse * Prozent_Bein
+Masse_Beine = 2* Masse_Bein
+#print("Masse Beine:", Masse_Beine)
+
+Prozent_Kopf = Volumen_Kopf/Volumen_gesamte_Puppe
+Masse_Kopf = Puppe_Gesamtmasse * Prozent_Kopf
+#print("Masse Kopf:", Masse_Kopf)
+
+Prozent_Torso = Volumen_Torso/Volumen_gesamte_Puppe
+Masse_Torso = Puppe_Gesamtmasse * Prozent_Torso
+#print("Masse Torso:", Masse_Torso)
+#print("Gesamtmasse:", Masse_Arme + Masse_Beine + Masse_Kopf + Masse_Torso)
+
+#I_gesamt der Puppe in Position 1 ausrechnen
+I_Kopf_Position_1 = (1/2) * Masse_Kopf * (Kopf_Durchmesser/2)**2
+I_Torso_Position_1 = (1/2) * Masse_Torso * (Torso_Durchmesser/2)**2
+I_Bein_Position_1 = (1/2) * Masse_Bein * (Beine_Durchmesser/2)**2 + Masse_Bein * (Beine_Durchmesser/2)**2
+I_Beine_Position_1 = 2 * I_Bein_Position_1
+I_Arm_Position_1 = Masse_Arm * ((Arme_Durchmesser**2)/4+(Arme_Hoehe**2)/12) + Masse_Arm * (((Torso_Durchmesser/2) + (Arme_Hoehe)/2))**2
+I_Arme_Position_1 = 2 * I_Arm_Position_1
+I_gesamt_Position_1 = I_Kopf_Position_1 + I_Torso_Position_1 + I_Beine_Position_1 + I_Arme_Position_1
+print("I_Literatur der Puppe in Position 1: ",I_gesamt_Position_1)
+
+#I_gesamt der Puppe in Position 2 ausrechnen
+I_Bein_Position_2 = Masse_Bein * ((Beine_Durchmesser**2)/4+(Beine_Hoehe**2)/12) + Masse_Bein * (Beine_Hoehe/2)**2
+I_Beine_Position_2 = 2 * I_Bein_Position_2
+I_gesamt_Position_2 = I_Kopf_Position_1 + I_Torso_Position_1 + I_Arme_Position_1 + I_Beine_Position_2
+print("I_Literatur der Puppe in Position 2: ",I_gesamt_Position_2)
+
+#I_gesamt der Puppe in Position 1 durch Messung bestimmen: 
+T5_phi_90_Position_1_0, T5_phi_120_Position_1_0 ,T5_phi_90_Position_2_0 ,T5_phi_120_Position_2_0 = np.genfromtxt("Puppe_Periodendauer.txt", unpack=True)
+
+#Mittelwert der Periodendauer von Position 1 bestimmen
+T_phi_90_Position_1_0 = T5_phi_90_Position_1_0/5
+T_phi_90_Position_1_mean = np.mean(T_phi_90_Position_1_0)
+T_phi_90_Position_1_std = scipy.stats.sem(T_phi_90_Position_1_0)
+T_phi_90_Position_1 = ufloat(T_phi_90_Position_1_mean, T_phi_90_Position_1_std)
+print("Mittelwert T bei 90 Grad: ", T_phi_90_Position_1)
+
+T_phi_120_Position_1_0 = T5_phi_120_Position_1_0/5
+T_phi_120_Position_1_mean = np.mean(T_phi_120_Position_1_0)
+T_phi_120_Position_1_std = scipy.stats.sem(T_phi_120_Position_1_0)
+T_phi_120_Position_1 = ufloat(T_phi_120_Position_1_mean, T_phi_120_Position_1_std)
+print("Mittelwert T bei 120 Grad: ",T_phi_120_Position_1)
+
+# Da Mittelwert bei 90 und 120 Grad sehr nah beieinander sind scheint T nicht von Phi abzuhängen, weswegen beide Messungen als eine behandelt werden
+T_Position_1 = (T_phi_90_Position_1 + T_phi_120_Position_1)/2
+print("Neuer allgemeiner Mittelwert von T ist: ", T_Position_1)
+#I wirklich bestimmen
+I_Puppe_Position_1_gemessen = (np.square(T_Position_1) * D)/(4 * np.pi**2)
+print("I_ges gemessen: ", I_Puppe_Position_1_gemessen)
+print(I_D)
+I_Puppe_Position_1_gemessen_mit_I_D_evtl = I_Puppe_Position_1_gemessen - I_D #ohne das, da das Drillding schon in D drin ist???
+print("I_Puppe mit I_D abgezoegen: ",I_Puppe_Position_1_gemessen_mit_I_D_evtl)
+
+#gemessenes Drehmoment der Puppe in 2. Position
+#Mittelwert der Periodendauer von Position 2 bestimmen
+T_phi_90_Position_2_0 = T5_phi_90_Position_2_0/5
+T_phi_90_Position_2_mean = np.mean(T_phi_90_Position_2_0)
+T_phi_90_Position_2_std = scipy.stats.sem(T_phi_90_Position_2_0)
+T_phi_90_Position_2 = ufloat(T_phi_90_Position_2_mean, T_phi_90_Position_2_std)
+print("Mittelwert T bei 90 Grad Position 2: ", T_phi_90_Position_2)
+
+T_phi_120_Position_2_0 = T5_phi_120_Position_2_0/5
+T_phi_120_Position_2_mean = np.mean(T_phi_120_Position_2_0)
+T_phi_120_Position_2_std = scipy.stats.sem(T_phi_120_Position_2_0)
+T_phi_120_Position_2 = ufloat(T_phi_120_Position_2_mean, T_phi_120_Position_2_std)
+print("Mittelwert T bei 120 Grad Position 2: ",T_phi_120_Position_2)
+
+# Da Mittelwert bei 90 und 120 Grad sehr nah beieinander sind scheint T nicht von Phi abzuhängen, weswegen beide Messungen als eine behandelt werden
+T_Position_2 = (T_phi_90_Position_2 + T_phi_120_Position_2)/2
+print("Neuer allgemeiner Mittelwert von T bei Position 2 ist: ", T_Position_2)
+#I wirklich bestimmen
+I_Puppe_Position_2_gemessen = (np.square(T_Position_2) * D)/(4 * np.pi**2)
+print("I_ges Position 2 gemessen: ", I_Puppe_Position_2_gemessen)
+I_Puppe_Position_2_gemessen_mit_I_D_evtl = I_Puppe_Position_2_gemessen - I_D #ohne das, da das Drillding schon in D drin ist???
+print("I_Puppe Position 2 mit I_D abgezoegen: ",I_Puppe_Position_2_gemessen_mit_I_D_evtl)
+
 
