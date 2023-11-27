@@ -1,11 +1,18 @@
 \section{Auswertung}
 \label{sec:Auswertung}
   \subsection{Berechnung der Winkelrichtgröße $D$}
-  Zur Bestimmung der Winkelrichtgröße $D$ wurde die Kraft $F$ in Abhängigkeit des Auslenkungswinkels $\varphi$ bei festem Abstand von 
-  $0,19975 \,\unit{\meter}$ gemessen. Diese Werte sind in Tabelle (\ref{tab:F_von_phi}) zu sehen. Die Winkelrichtgröße $D$ wird durch Gleichung 
+  Um die Winkelrichtgröße $D$ zu bestimmen, wird die Kraft $F$ in Abhängigkeit des Auslenkungswinkels $\varphi$ bei festem Abstand von 
+  $0,19975 \,\unit{\meter}$, vermerkt in Tabelle (\ref{tab:F_von_phi}), verwendet. Die Winkelrichtgröße $D$ wird durch Gleichung 
   (\ref{eqn:Winkelrichtgröße}) bestimmt und ist ebenfalls in Tabelle (\ref{tab:F_von_phi}) eingetragen.
-  Das gemittelte Ergebnis ist 
-  $D = (21,0 \pm 0,8) \cdot 10^{-3} \,\,\unit{\newton\meter}$.
+  Im Folgenden werden Mittelwerte aus einer Messwerttabelle gebildet. Diese Mittelwerte werden durch 
+  $$\bar{x} = \frac{1}{n} \cdot \sum_{i = 1}^{n}x_i$$ berechnet. $n$ ist dabei die Anzahl der Messungen aus der der Mittelwert bestimmt wird.
+  Der Mittelwertsfehler wird durch 
+  $$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - \bar{x})} $$
+  berechnet. Bei Größen, die von mehreren fehlerbehafteten Größen abhängig sind, wird die Gaußsche Fehlerfortpflanzung 
+  $$\Delta f = \sqrt{\sum_{i = 1}^{n} \left( \frac{\partial f}{\partial x_i} \right)^2 \cdot \left(\Delta x_i \right)^2}$$
+  zur Berechnung des Fehlers verwendet. 
+  Das mithilfe dieser Formeln gemittelte Ergebnis von $D$ ist 
+  $\bar{D} = (21,0 \pm 0,8) \cdot 10^{-3} \,\,\unit{\newton\meter}$.
   
   \begin{table}[H]
     \centering 
@@ -55,20 +62,21 @@
     \end{tblr}
   \end{table}
   $I_{\text{Drill}}$ wird durch die Verbindung $$I_{\text{gemessen}} = I_{\text{Drill}} + 2 \cdot I_{\text{Zh, verschoben}}$$ berechnet. 
-  Dabei ist $I_{\text{Zh, verschoben}}$ nach Satz von Steiner: 
-  $$I_{\text{Zh, verschoben}} = I_{\text{Zh}} + m \cdot a^2$$ 
+  Dabei ist $$I_{\text{Zh, verschoben}} = I_{\text{Zh}} + m \cdot a^2$$ nach Satz von Steiner. 
+   
   Mithilfe der Gleichung (\ref{eqn:TragheitmomentAusSchwingungsdauer})
-  können $I_{\text{Drill}}$ und $T^2$ wie folgt ausgedrückt werden:
+  können $I_{\text{Drill}}$ und $T^2$ durch
   \begin{align}
     I_{\text{Drill}} &= \frac{T^{2} \cdot D}{\left(2 \pi\right)^{2}} - 2 \cdot \left(m \left(\frac{r^{2}}{4} + \frac{h^{2}}{12} \right) + m \cdot a^2 \right) \\
-    \Leftrightarrow T^2 &= \frac{8 \pi^2 \cdot m}{D} \cdot a^2 + \frac{4 \pi^2  \cdot m \cdot I_{\text{Drill}}}{D} + \frac{8\pi^2 \cdot m}{D} \cdot \left( \frac{r^2}{4} + \frac{h^2}{12} \right)
+    \Leftrightarrow T^2 &= \frac{8 \pi^2 \cdot m}{D} \cdot a^2 + \frac{4 \pi^2 \cdot I_{\text{Drill}}}{D} + \frac{8\pi^2 \cdot m}{D} \cdot \left( \frac{r^2}{4} + \frac{h^2}{12} \right)
   \end{align}
-  In Graph (\ref{fig:plot}) $T^2$ wird gegen $a^2$ aufgetragen und durch lineare Regression der Form $y = m_{\text{Steigung}} \cdot x + n$ werden $m_{\text{Steigung}}$ und $n$ bestimmt.
-  $m_{\text{Steigung}}$ beträgt $713,1192 s^2/m^2$ und $n$ beträgt $8.564 s^2$. 
+  ausgedrückt werden.
+  In Abbildung (\ref{fig:plot}) wird $T^2$ gegen $a^2$ aufgetragen und durch lineare Regression der Form $y = m_{\text{St}} \cdot x + n$ werden $m_{\text{St}}$ und $n$ bestimmt.
+  $m_{\text{St}}$ beträgt $713,1192 \,\, \unit{\second\squared\per\meter\squared}$ und $n$ beträgt $8,564\,\, \unit{\second\squared}$. 
   \begin{figure}[H]
     \centering
     \includegraphics{plot.pdf}
-    \caption{Auftragung von Periodenzeit $T^2$ gegen Abstand $a^2$}
+    \caption{Auftragung von Periodenzeit $T^2$ gegen Abstand $a^2$ mit linearer Regression.}
     \label{fig:plot}
   \end{figure}
   Mithilfe dieser Regression und der obrigen Gleichung lässt sich das Eigenträgheitsmoment $I_{\text{Drill}}$ wie folgt bestimmen: 
@@ -76,15 +84,15 @@
     I_{\text{Drill}} = \frac{D \cdot n}{4 \pi^2} - \frac{1}{2} \cdot m \cdot r^2 - \frac{1}{6} \cdot m \cdot h^2
   \end{equation}
   $r$ bezeichnet dabei den Radius und $h$ die Höhe der zylindischen Gewichte, die für die Messung verwendet wurden. Die Messungen dieser beiden
-  Größen werden in Tabelle (\ref{tab:Durchmesser_Höhe_Blaues}) und (\ref{tab:Durchmesser_Höhe_Rotes}) aufgeführt. Für die Rechnung wird er Mittelwert beider Gewichte 
-   $r = (22,550 \pm 0,010) \cdot 10^{-3}\unit{\meter}$ und $h = (20,334 \pm 0,008) \cdot 10^{-3} \unit{\meter}$ verwendet.
+  Größen werden in Tabelle (\ref{tab:Durchmesser_Höhe_Blaues}) und (\ref{tab:Durchmesser_Höhe_Rotes}) aufgeführt. Für die Rechnung wird der Mittelwert beider Gewichte 
+   $r = (22,550 \pm 0,010) \cdot 10^{-3}\,\,\unit{\meter}$ und $h = (20,334 \pm 0,008) \cdot 10^{-3} \,\,\unit{\meter}$ verwendet.
   \begin{table}[H]
     \centering 
     \caption{Messungen der Höhe und des Durchmessers des blauen Gewichts}
     \label{tab:Durchmesser_Höhe_Blaues}
     \begin{tblr}{colspec={c c}}
         \toprule
-        Höhe blaues Gewicht $\,[\unit{\meter}]$ & Durchmesser blaues Gewicht$\,[\unit{\meter}]$ \\
+        Höhe $\,[\unit{\meter}]$ & Durchmesser $\,[\unit{\meter}]$ \\
         \midrule
         0,02034 & 0,0450 \\
         0,02030 & 0,0451 \\
@@ -101,7 +109,7 @@
     \label{tab:Durchmesser_Höhe_Rotes}
     \begin{tblr}{colspec={c c}}
         \toprule
-        Höhe rotes Gewicht $\,[\unit{\meter}]$ & Durchmesser rotes Gewicht$\,[\unit{\meter}]$ \\
+        Höhe $\,[\unit{\meter}]$ & Durchmesser $\,[\unit{\meter}]$ \\
         \midrule
         0,02038 & 0,04506 \\
         0,02036 & 0,04510 \\
@@ -111,13 +119,13 @@
         \bottomrule
     \end{tblr}
   \end{table}
-  Dies ergibt ein Eigenträgheitmoment $I_{\text{Drill}}$ von $(4,46 \pm 0,18) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}$.
+  Dies ergibt ein Eigenträgheitmoment $I_{\text{Drill}}$ von $(4,46 \pm 0,18) \cdot 10^{-3} \,\,\unit{\kilo\gram\meter\squared}$.
 
   \subsection{Eigenträgheitmoment der Kugel}
     \subsubsection{Theoretischer Wert}
     Das Eigenträgheitmoment der Kugel $I_{\text{K}}$ kann durch Gleichung (\ref{eqn:TragheitKugel}) berechnet werden. 
-    $r = \frac{d}{2}$ ist dabei der aus dem Mittelwert der gemessenen Durchmesser berechnete Wert $r = 0.14661 \pm 0.00020 \unit{\meter}$. 
-    Die gemessenen Durchmesser sind in Tabelle(\ref{tab:Durchmesser_Kugel}) dargestellt. $m$ ist $1,1742 \unit{\kilo\gram}$. 
+    $r = d / 2$ ist dabei der aus dem Mittelwert der gemessenen Durchmesser berechnete Wert $r = (146,61 \pm 0,20) \cdot 10^{-3} \,\,\unit{\meter}$. 
+    Die gemessenen Durchmesser sind in Tabelle(\ref{tab:Durchmesser_Kugel}) dargestellt. $m$ ist $1,1742 \,\,\unit{\kilo\gram}$. 
     
     \begin{table}[H]
       \centering 
@@ -125,7 +133,7 @@
       \label{tab:Durchmesser_Kugel}
       \begin{tblr}{colspec={c}}
           \toprule
-          Durchmesser Kugel $\,[\unit{\meter}]$ \\
+          Durchmesser $\,[\unit{\meter}]$ \\
           \midrule
           0,14660 \\
           0,14590 \\
@@ -135,7 +143,7 @@
           \bottomrule
       \end{tblr}
     \end{table}
-    Damit beträgt der Theoriewert des Trägheitsmoment der Kugel $(2,524 \pm 0,007) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}$.
+    Damit beträgt der Theoriewert des Trägheitsmoment der Kugel $(2,524 \pm 0,007) \cdot 10^{-3} \,\,\unit{\kilo\gram\meter\squared}$.
 
     \subsubsection{Gemessener Wert}
     Die für die Rechnung benötigte Periodendauer der Kugel ist in Tabelle(\ref{tab:T5_Kugel}) dargestellt. 
@@ -161,23 +169,23 @@
           \bottomrule
       \end{tblr}
     \end{table}
-    Der Mittelwert einer Periodendauer $T_{\text{K}} = (1,890 \pm 0,008) \unit{\second}$ wurde für die Berechnung des 
+    Der Mittelwert einer Periodendauer $T_{\text{K}} = (1,890 \pm 0,008) \,\,\unit{\second}$ wurde für die Berechnung des 
     Trägheitsmomentes $I_{\text{K, gemessen}}$ mithilfe von Gleichung (\ref{eqn:TragheitmomentAusSchwingungsdauer}) verwendet. 
-    $I_{\text{K, gemessen}}$ ist $(1,90 \pm 0,08) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}$.
+    $I_{\text{K, gemessen}}$ ist $(1,90 \pm 0,08) \cdot 10^{-3} \,\,\unit{\kilo\gram\meter\squared}$.
 
   \subsection{Eigenträgheitmoment der Schiebe}
     \subsubsection{Theoretischer Wert}
-    Das Eigenträgheitmoment der Scheibe kann durch Gleichung (\ref{eqn:TragheitZylinder}) berechnet werden. $m$ beträgt $0,4237 \unit{\kilo\gram}$.
-    Das zur Berechnung verwendete $r$ wurde aus dem Mittelwert der Durchmessermessungen berechnet. 
-    Die Durchmessermessungen sind in Tabelle (\ref{tab:Durchmesser_Scheibe}) vermerkt. Das mithilfe dieser Werte berechnete, theoretische 
-    Trägheitsmoment der Scheibe ist $I_{\text{S}} = (2,552 \pm 0,006) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}$. 
+    Das Eigenträgheitmoment der Scheibe kann durch Gleichung (\ref{eqn:TragheitZylinder}) berechnet werden. $m$ beträgt $0,4237 \,\,\unit{\kilo\gram}$.
+    Das zur Berechnung verwendete $r$ wurde aus dem Mittelwert der Messungen des Durchmessers berechnet. 
+    Die Messungen der Durchmesser sind in Tabelle (\ref{tab:Durchmesser_Scheibe}) vermerkt. Das mithilfe dieser Werte berechnete, theoretische 
+    Trägheitsmoment der Scheibe ist $I_{\text{S}} = (2,552 \pm 0,006) \cdot 10^{-3} \,\,\unit{\kilo\gram\meter\squared}$. 
     \begin{table}[H]
       \centering 
       \caption{Gemessene Durchmesser der Scheibe}
       \label{tab:Durchmesser_Scheibe}
       \begin{tblr}{colspec={c}}
           \toprule
-          Durchmesser Scheibe $\,[\unit{\meter}]$ \\
+          Durchmesser $\,[\unit{\meter}]$ \\
           \midrule
           0,22010 \\
           0,21890 \\
@@ -211,23 +219,23 @@
           \bottomrule
       \end{tblr}
     \end{table}
-    Für $I_{\text{S, gemessen}}$ wird folgender Wert berechnet: 
-    $(1,85 \pm 0,07) \cdot 10^{-3} \unit{\kilo\gram\meter\squared}$ 
+    Für $I_{\text{S, gemessen}}$ wird der Wert $(1,85 \pm 0,07) \cdot 10^{-3} \,\,\unit{\kilo\gram\meter\squared}$ berechnet. 
+     
   
   \subsection{Trägheitsmoment der Puppe}
     \subsubsection{1. Position der Puppe}
       \textbf{Theoretischer Wert}\\
         Zur Berechnung des Trägheitsmoments der Puppe in Position 1 werden eine Reihe von Vereinfachungen angenommen. Der Kopf wird genauso
         wie die Arme, Beine und der Torso als zylindrisch angenommen und die Dichte als homogen. Der Durchmesser der einzelnen Zylinder wird 
-        als Mittelwert der Messungen angenommen. Diese Messungen sind in Tabelle (\ref{tab:Durchmesser_Puppe}) aufgeführt. 
+        als Mittelwert der Messungen der Durchmesser angenommen. Diese Messungen sind in Tabelle (\ref{tab:Durchmesser_Puppe}) aufgeführt. 
 
         \begin{table}[H]
           \centering 
-          \caption{Durchmesser der Puppenteile}
+          \caption{Gemessene Durchmesser der einzelnen Puppenteile}
           \label{tab:Durchmesser_Puppe}
           \begin{tblr}{colspec={c c}}
               \toprule
-              Kopfdurchmesser $\,[\unit{\meter}]$ & Armdurchmesser $\,[\unit{\meter}]$ & Torsodurchmesser $\,[\unit{\meter}]$ & Beindurchmesser $\,[\unit{\meter}]$\\
+              Kopf $\,\,[\unit{\meter}]$ & Arm $\,\,[\unit{\meter}]$ & Torso $\,\,[\unit{\meter}]$ & Bein $\,\,[\unit{\meter}]$\\
               \midrule 
               0,02726 & 0,00824 & 0,02330 & 0,01900 \\
               0,02786 & 0,01480 & 0,02708 & 0,01734 \\
@@ -243,17 +251,18 @@
           \end{tblr}
         \end{table}
         Mithilfe der gemittelten Durchmesser werden die Volumina der einzelnen Körperteile berechnet, um dadurch die Masse der Einzelteile zu bestimmen. 
-        Bei dieser Berechnung wird angenommen, dass die Dichte der Puppe homogen ist. Die durch diese Formel 
+        Bei dieser Berechnung wird angenommen, dass die Dichte der Puppe homogen ist. Die Volumina der Puppenteile können durch  
         $$V = \pi \cdot r^2 \cdot h$$
-        berechneten Volumen der Puppenteile, sowie die daraus anteilig am Gesamtgewicht von $0,1696 \,\unit{\kilo\gram}$ bestimmte Massen sind in Tabelle (\ref{tab:Volumen_Puppe}) 
-        und (\ref{Massen_Puppe})gelistet. 
+        berechnet werden. $r$ ist dabei der Radius der Zylinder und $h$ die Höhe. 
+        Das berechneten Volumen der Puppenteile, sowie die daraus anteilig am Gesamtgewicht von $0,1696 \,\,\unit{\kilo\gram}$ bestimmte Massen sind in Tabelle (\ref{tab:Volumen_Puppe}) 
+        und (\ref{tab:Massen_Puppe}) gelistet. 
         \begin{table}[H]
           \centering 
           \caption{Volumina der Puppenteile}
           \label{tab:Volumen_Puppe}
           \begin{tblr}{colspec={c c c c}}
               \toprule
-              Kopf $\,[10^{-5}\,\unit{\meter\tothe{3}}]$ & Arm $\,[10^{-5}\,\unit{\meter\tothe{3}}]$ & Torso $\,[10^{-5}\,\unit{\meter\tothe{3}}]$ & Bein $\,[10^{-5}\,\unit{\meter\tothe{3}}]$\\
+              Kopf $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$ & Arm $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$ & Torso $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$ & Bein $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$\\
               \midrule 
               0,017 \pm \,\,0,004 & 1,66 \pm \,\,0,18 & 9,50 \pm \,\,1,0 & 3,0 \pm \,\,0,4 \\
               \bottomrule
@@ -266,7 +275,7 @@
           \label{tab:Massen_Puppe}
           \begin{tblr}{colspec={c c c c}}
               \toprule
-              Kopfmasse $\,[\unit{\kilo\gram}]$ & Armmasse $\,[\unit{\kilo\gram}]$ & Torsomasse $\,[\unit{\kilo\gram}]$ & Beinmasse $\,[\unit{\kilo\gram}]$\\
+              Kopf $\,[\unit{\kilo\gram}]$ & Arm $\,[\unit{\kilo\gram}]$ & Torso $\,[\unit{\kilo\gram}]$ & Bein $\,[\unit{\kilo\gram}]$\\
               \midrule 
               0,017 \pm\, 0,004 & 0,0136 \pm\, 0,0015 & 0,078 \pm\, 0,006 & 0,017 \pm\, 0,004 \\
               \bottomrule
@@ -274,23 +283,22 @@
         \end{table}
         Mithilfe dieser Massen wird das Trägheitsmoment der einzelnen Puppenteile bestimmt, woraus sich das Gesamtträgheitsmoment der Puppe in 
         Position 1 zusammensetzt. Da alle Gliedmaße als Zylinder genähert wurden, werden die Trägheitsmoment durch Formel (\ref{eqn:TragheitZylinder})
-        für den Kopf, den Torso und die Beine und Formel (\ref{eqn:TrägheitZylinderQuer}) für die vom Torso ausgestrecken Arme. 
+        für den Kopf, den Torso und die Beine und Formel (\ref{eqn:TrägheitZylinderQuer}) für die vom Torso ausgestrecken Arme berechnet. 
         Für die Berechnung des Trägheitsmomentes der Beine und Arme wird der Satz von Steiner angewandt. Der dabei verwendete Abstand beträgt bei den 
         Beinen näherungsweise den Radius der Beine und bei den Armen die Summe aus dem Radius des Torsos und der Hälfte der Höhe der Arme. 
-        Diese Werte führen zu einem theoretischen Trägheitsmoment der Puppe in Position 1 von $(0,262 \pm 0,025) \cdot 10^{-3}\,\, \unit{\kilo\gram\meter\squared}$.
+        Diese Werte führen zu einem theoretischen Trägheitsmoment der Puppe in Position 1 $I_{\text{Pos1,theo}}$ von $(0,262 \pm 0,025) \cdot 10^{-3}\,\, \unit{\kilo\gram\meter\squared}$.
         \\
         \\
       \textbf{Gemessener Wert} \\
-      Die gemessenen fünffachen Periodendauer der Puppe in Position 1 sind in Tabelle (\ref{tab:T5_Positon_1}) vermerkt, unterschieden 
-      nach Auslenkung um $90$°
-      und $120$°. 
+      Die gemessenen, fünffachen Periodendauern der Puppe in Position 1 sind in Tabelle (\ref{tab:T5_Positon_1}) vermerkt, unterschieden 
+      nach Auslenkung um $90$° und $120$°. 
       \begin{table}[H]
         \centering 
         \caption{Fünfache Periodendauer der Puppe in Position 1}
         \label{tab:T5_Positon_1}
         \begin{tblr}{colspec={c c}}
             \toprule
-            T bei Auslenkung um 90° $\,[\unit{\second}]$ & T bei Auslenkung um 120° $\,[\unit{\second}]$ \\
+            T bei Auslenkung um 90° $\,\,[\unit{\second}]$ & T bei Auslenkung um 120° $\,\,[\unit{\second}]$ \\
             \midrule
             3,10 & 3,15 \\
             3,06 & 3,06 \\
@@ -301,31 +309,27 @@
         \end{tblr}
       \end{table}
       Da der Mittelwert der Periodendauer bei Auslenkung um $90$° und $120$° annähernd gleich sind, wird davon ausgegangen, dass keine Abhängigkeit der 
-      Periodendauer von der Auslenkung besteht und beide Messungen zusammengefasst betrachtet. 
-      Der allgemeine Mittelwert der Periodenauer $T$ ist daher $T = 0,614 \pm 0,004 \unit{\second}$. 
+      Periodendauer von der Auslenkung besteht und beide Messungen zusammengefasst betrachtet werden können. 
+      Der allgemeine Mittelwert der Periodenauer $T$ ist daher $T = 0,614 \pm 0,004\,\, \unit{\second}$. 
       Mithilfe dieses Mittelwertes und Formel (\ref{eqn:TragheitmomentAusSchwingungsdauer}) wird das 
-      Trägheitsmoment der Puppe in Position 1 $I_{\text{Pos1,gemessen}}$ berechnet. 
-      $I_{\text{Pos1,gemessen}}$ ist $(0,2 \pm 0,008) \cdot 10^{-3}\, \unit{\kilo\gram\meter\squared}$.
+      Trägheitsmoment der Puppe in Position 1 $I_{\text{Pos1}}$ berechnet. 
+      $I_{\text{Pos1}}$ ist $(0,2 \pm 0,008) \cdot 10^{-3}\,\, \unit{\kilo\gram\meter\squared}$.
             
     \subsubsection{Position 2 der Puppe}
-    Position 2 der Puppe ist in Bild (\ref{fig:Position_2}) zu sehen. 
-    Es wurde vereinfachend angenommen, dass beide Beine im Winkel von $90$° vom Torso wegzeigen. Die Armposition ist dieselbe wie bei Position 1 der Puppe.
-    \begin{figure}[H]
-      \centering
-      \includegraphics[width=0.5\textwidth]{Position_2.jpg}
-      \caption{Puppe in Position 2, seitlich fotographiert.}
-      \label{fig:Position_2}
-    \end{figure}
+    Bei Position 2 der Puppe wurde vereinfachend angenommen, dass beide Beine im Winkel von $90$° vom Torso wegzeigen. 
+    Die Armposition ist dieselbe wie bei Position 1 der Puppe.\\
+    \\
+    
       \textbf{Theoretischer Wert} \\
       Für die Berechnung des theoretischen Wertes des Trägheitsmoments der Puppe in Position 2 können die bereits berechneten Trägheitsmomente der
-      Arme, des Kopfes und des Torsos übernommen werden, da ihre Position keine Veränderung aufweist im Vergleich zwischen Position 1 und 2. 
+      Arme, des Kopfes und des Torsos übernommen werden, da ihre Position keine Veränderung aufweist. 
       Neu berechnet werden hingegen die Trägheitsmomente der Beine. Für die Berechnung dieser wird Formel (\ref{eqn:TrägheitZylinderQuer}) und
       der Satz von Steiner verwendet. 
-      Das theoretisch berechnete Trägheitsmoment der Puppe in Position 2 beträgt demnach $(0,72 \pm 0,05) \cdot 10^{-3}\, \unit{\kilo\gram\meter\squared}$. \\
+      Das theoretisch berechnete Trägheitsmoment der Puppe in Position 2 $I_{\text{Pos2,theo}}$ beträgt demnach $(0,72 \pm 0,05) \cdot 10^{-3}\,\, \unit{\kilo\gram\meter\squared}$. \\
       \\
       \textbf{Gemessener Wert} \\
       Wie bereits bei Position 1 festgestellt, hängt die Periodendauer nicht von der Auslenkung ab. Daher werden auch bei Position 2 beide Messwertreihen
-      zusammen betrachtet. Die gemessene fünfache Periodendauer ist trotz dessen in Tabelle (\ref{tab:T5_Positon_2}) nach Auslenkungswinkel 
+      zusammen betrachtet. Die gemessene fünfache Periodendauer ist trotzdessen in Tabelle (\ref{tab:T5_Positon_2}) nach Auslenkungswinkel 
       getrennt aufgeführt.
       \begin{table}[H]
         \centering 
@@ -343,10 +347,10 @@
             \bottomrule
         \end{tblr}
       \end{table}
-      Der Mittelwert der Periodenauer $T$ ist $T = 0,962 \pm 0,004 \unit{\second}$. 
+      Der Mittelwert der Periodenauer $T$ ist $T = (0,962 \pm 0,004)\,\, \unit{\second}$. 
       Mithilfe dieses Mittelwertes und Formel (\ref{eqn:TragheitmomentAusSchwingungsdauer}) wird das 
-      Trägheitsmoment der Puppe in Position 2 $I_{\text{Pos2,gemessen}}$ berechnet. 
-      $I_{\text{Pos2,gemessen}}$ ist $ (0,491 \pm 0,020) \cdot 10^{-3}\, \unit{\kilo\gram\meter\squared}$.
+      Trägheitsmoment der Puppe in Position 2 $I_{\text{Pos2}}$ berechnet. 
+      $I_{\text{Pos2}}$ ist $ (0,491 \pm 0,020) \cdot 10^{-3}\,\, \unit{\kilo\gram\meter\squared}$.
         
 
   

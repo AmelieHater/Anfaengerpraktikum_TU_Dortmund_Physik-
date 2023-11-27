@@ -28,7 +28,7 @@ T_quadrat = np.square(T5_Periodendauer/5)
 x = a_quadrat
 y = T_quadrat
 
-x_plot= np.linspace(0, 0.1)
+x_plot= np.linspace(-0.01, 0.1)
 params, covariance_matrix = np.polyfit(x, y, deg=1, cov=True)
 #errors = np.sqrt(np.diag(covariance_matrix))
 
