@@ -9,21 +9,21 @@ Zudem wird der Satz von Steiner überprüft.
 \label{sec:Theorie}
 Rotationsbewegungen lassen sich mit Hilfe des Drehmoments $M$, des Trägheitsmoment $I$ und 
 der Winkelbeschleunigung $\dot{\omega}$ beschreiben. Das Trägheitsmoment einer Punktmasse, 
-mit der Masse $m$ und dem Abstand $r$ zu einer Drehachse, lässt wird wie folgt bestimmt:
+mit der Masse $m$ und dem Abstand $r$ zu einer Drehachse, wird bestimmt durch
 \begin{equation}
     I = m \cdot r^{2}\,.
     \label{eqn:TragheitPunktmasse}
 \end{equation}
 %
 Bei einer Rotation eines ausgedehnten Körpers bewegen sich alle Masseelemente mit einer 
-Winkelbeschleunigung $\dot{\omega}$ um eine feste Drehachse. Dabei gilt für das Gesamtträgheitsmoment:
+Winkelbeschleunigung $\dot{\omega}$ um eine feste Drehachse. Dabei gilt für das Gesamtträgheitsmoment
 \begin{equation}
-    I = \sum_{i} r_{i}^{2} \cdot m_{i}\, .
+    I = \sum_{i} r_{i}^{2} \cdot m_{i}\,.
     \label{eqn:GesamttragheitSumme}
 \end{equation}
 %
 Hier beschreibt $r_{i}$ den Abstand der einzelnen Masselemente $m_{i}$ zur festen Drehachse.
-Für infinitesimale Massen gilt für das Gesamtträgheitsmoment:
+Für infinitesimale Massen gilt für das Gesamtträgheitsmoment
 \begin{equation}
     I = \int r^{2}\,dm \,.
     \label{eqn:GesamttragheitIntegral}
@@ -44,7 +44,7 @@ das Trägheitsmoment berechnen.
 %
 $I_{\text{SP}}$ beschreibt das Trägheitsmoment, das sich auf die Schwerpunktachse des Körpers bezieht, und $m$
 ist die Masse des Körpers. 
-Das Drehmoment ist beschrieben durch:
+Das Drehmoment ist beschrieben durch
 \begin{align}
     \vec{M} &= \vec{F} \times \vec {r}\, \text{  bzw.} \label{eqn:DrehmomentVektor} \\
     M &= F \cdot r \cdot \sin \left(\varphi \right) \,, \label{eqn:DrehmomentSkalar}
@@ -54,19 +54,18 @@ wobei $\vec{F}$ bzw. $F$ die Kraft angibt, die auf den rotierenen Körper wirkt,
 bzw. $r$ der Abstand zur Drehachse ist und der Winkel $\varphi$ die Auslenkung zur
 Ruhelage beschreibt. \\
 In einem schwingfähigen System wirkt dem Auslenkungswinkel $\varphi$ ein rücktreibendes Drehmoment entgegen.
-Ein solches System erzeugt eine harmonische Schwingung mit der Schwingungsdauer: 
+Ein solches System erzeugt eine harmonische Schwingung mit der Schwingungsdauer
 \begin{equation}
     T = 2 \pi \sqrt{\frac{I}{D}}\,.
     \label{eqn:Schwingungsdauer}
  \end{equation}
 Hier beschreibt $D$ die Winkelrichtgröße und $I$ das Trägheitsmoment.  
-Das wirkende Drehmoment wird mit Hilfe der Winkelrichtgröße $D$ wie folgt ausgedrückt:
+Das wirkende Drehmoment wird mit Hilfe der Winkelrichtgröße $D$ durch die Gleichung
 \begin{equation}
-   M = D \cdot \varphi\,.
+   M = D \cdot \varphi\,
    \label{eqn:DrehmomentMitWinkelrichtgröße}
 \end{equation}
-%
-Die Winkelrichtgröße berechnet sich durch: 
+bestimmt. Die Winkelrichtgröße berechnet sich mit
 \begin{equation}
    D = \frac{F \cdot r}{\varphi}\,.
     \label{eqn:Winkelrichtgröße}
@@ -74,20 +73,20 @@ Die Winkelrichtgröße berechnet sich durch:
 %
 \subsection{Spezifische Trägheitsmomente}
 \label{sec:Trägheitsmomente}
-Die umgestellte Gleichung (\ref{eqn:Schwingungsdauer}) nach $I$ ergibt:
+Die umgestellte Gleichung (\ref{eqn:Schwingungsdauer}) nach $I$ ergibt
 \begin{equation}
     I = \frac{T^{2} \cdot D}{\left(2 \pi\right)^{2}}\,.
     \label{eqn:TragheitmomentAusSchwingungsdauer}
 \end{equation}
 %
-Das Trägheitmoment einer Kugel mit der Masse $m$ und dem Radius $r$ wird durch die folgende Gleichung
-bestimmt: 
+Das Trägheitmoment einer Kugel mit der Masse $m$ und dem Radius $r$ wird durch die Gleichung
 \begin{equation}
     I_{\text{K}} = \frac{2}{5}m \cdot r^{2}\,.
     \label{eqn:TragheitKugel}
 \end{equation}
+bestimmt.\\
 Das Trägheitsmoment eines Zylinders mit der Masse $m$ und dem Radius $r$ ist gegeben 
-durch:
+durch
 \begin{align}
     I_{\text{Z}} &= \frac{m \cdot r^2}{2} \label{eqn:TragheitZylinder} \\
     I_{\text{Zh}} &= m \left(\frac{r^{2}}{4} + \frac{h^{2}}{12} \right) \label{eqn:TrägheitZylinderQuer}\,.
