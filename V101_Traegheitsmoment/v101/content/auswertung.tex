@@ -5,7 +5,7 @@
   $0,19975 \,\unit{\meter}$ gemessen. Diese Werte sind in Tabelle (\ref{tab:F_von_phi}) zu sehen. Die Winkelrichtgröße $D$ wird durch Gleichung 
   (\ref{eqn:Winkelrichtgröße}) bestimmt und ist ebenfalls in Tabelle (\ref{tab:F_von_phi}) eingetragen.
   Das gemittelte Ergebnis ist 
-  $\bar{D} = (21,0 \pm 0,8) \cdot 10^{-3} \,\unit{\newton\meter}$.
+  $D = (21,0 \pm 0,8) \cdot 10^{-3} \,\,\unit{\newton\meter}$.
   
   \begin{table}[H]
     \centering 
@@ -13,7 +13,7 @@
     \label{tab:F_von_phi}
     \begin{tblr}{colspec={c c c}}
         \toprule
-        $\varphi [^{\circ}]$ & F [\unit{\newton}] & D [\unit{\newton\meter}]\\
+        $\varphi \,\, [^{\circ}]$ & F [\unit{\newton}] & D [\unit{\newton\meter}]\\
         \midrule
         20 & 0,026 & 0,0149\\
         30 & 0,050 & 0,0191\\
@@ -23,8 +23,8 @@
         70 & 0,136 & 0,0222\\
         80 & 0,156 & 0,0223\\
         90 & 0,184 & 0,0234\\
-        100 & 0,20 & 0,0229\\
-        110 & 0,21 & 0,0218\\
+        100 & 0,200 & 0,0229\\
+        110 & 0,210 & 0,0218\\
         \bottomrule
     \end{tblr}
   \end{table}
@@ -35,11 +35,11 @@
   bei einer Auslenkung von $90 ^{\circ}$ gemessen. Diese Messwerte sind in Tabelle (\ref{tab:Bestimmung_I_D}) vermerkt. 
   \begin{table}[H]
     \centering 
-    \caption{Fünffache Periodendauer in Abhängigkeit vom Abstand}
+    \caption{Fünffache Periodendauer $T$ in Abhängigkeit vom Abstand $a$}
     \label{tab:Bestimmung_I_D}
     \begin{tblr}{colspec={c c}}
         \toprule
-        $a \,[\unit{\meter}]$ & $5 \cdot T \,[\unit{\second}]$ \\
+        $a \,\,[\unit{\meter}]$ & $5 \cdot T \,\,[\unit{\second}]$ \\
         \midrule
         0,050 & 14,40 \\
         0,075 & 16,57 \\
@@ -63,8 +63,8 @@
     I_{\text{Drill}} &= \frac{T^{2} \cdot D}{\left(2 \pi\right)^{2}} - 2 \cdot \left(m \left(\frac{r^{2}}{4} + \frac{h^{2}}{12} \right) + m \cdot a^2 \right) \\
     \Leftrightarrow T^2 &= \frac{8 \pi^2 \cdot m}{D} \cdot a^2 + \frac{4 \pi^2  \cdot m \cdot I_{\text{Drill}}}{D} + \frac{8\pi^2 \cdot m}{D} \cdot \left( \frac{r^2}{4} + \frac{h^2}{12} \right)
   \end{align}
-  In Graph (\ref{fig:plot}) $T^2$ wird gegen $a^2$ aufgetragen und durch lineare Regression der Form $y = m_{\text{Steigung}} \cdot x + n$ werden $m$ und $n$ bestimmt.
-  $m$ beträgt $713,1192 s^2/m^2$ und $n$ beträgt $8.564 s^2$. 
+  In Graph (\ref{fig:plot}) $T^2$ wird gegen $a^2$ aufgetragen und durch lineare Regression der Form $y = m_{\text{Steigung}} \cdot x + n$ werden $m_{\text{Steigung}}$ und $n$ bestimmt.
+  $m_{\text{Steigung}}$ beträgt $713,1192 s^2/m^2$ und $n$ beträgt $8.564 s^2$. 
   \begin{figure}[H]
     \centering
     \includegraphics{plot.pdf}
