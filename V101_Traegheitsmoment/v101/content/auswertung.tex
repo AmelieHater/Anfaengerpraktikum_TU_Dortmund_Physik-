@@ -5,7 +5,8 @@
   $0,19975 \,\unit{\meter}$, vermerkt in Tabelle (\ref{tab:F_von_phi}), verwendet. Die Winkelrichtgröße $D$ wird durch Gleichung 
   (\ref{eqn:Winkelrichtgröße}) bestimmt und ist ebenfalls in Tabelle (\ref{tab:F_von_phi}) eingetragen.
   Im Folgenden werden Mittelwerte aus einer Messwerttabelle gebildet. Diese Mittelwerte werden durch 
-  $$\bar{x} = \frac{1}{n} \cdot \sum_{i = 1}^{n}x_i$$ berechnet. $n$ ist dabei die Anzahl der Messungen aus der der Mittelwert bestimmt wird.
+  $$\bar{x} = \frac{1}{n} \cdot \sum_{i = 1}^{n}x_i$$ berechnet. $n$ ist dabei die Anzahl der Messungen aus welcher der Mittelwert bestimmt wird und
+  $x_{i}$ beschreibt die einzelnen Messdaten.
   Der Mittelwertsfehler wird durch 
   $$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - \bar{x})} $$
   berechnet. Bei Größen, die von mehreren fehlerbehafteten Größen abhängig sind, wird die Gaußsche Fehlerfortpflanzung 
@@ -62,7 +63,7 @@
     \end{tblr}
   \end{table}
   $I_{\text{Drill}}$ wird durch die Verbindung $$I_{\text{gemessen}} = I_{\text{Drill}} + 2 \cdot I_{\text{Zh, verschoben}}$$ berechnet. 
-  Dabei ist $$I_{\text{Zh, verschoben}} = I_{\text{Zh}} + m \cdot a^2$$ nach Satz von Steiner. 
+  Dabei ist $$I_{\text{Zh, verschoben}} = I_{\text{Zh}} + m \cdot a^2\, ,$$ nach Satz von Steiner (\ref{eqn:SatzVonSteiner}). 
    
   Mithilfe der Gleichung (\ref{eqn:TragheitmomentAusSchwingungsdauer})
   werden $I_{\text{Drill}}$ und $T^2$ durch
@@ -79,11 +80,11 @@
     \caption{Auftragung von Periodenzeit $T^2$ gegen Abstand $a^2$ mit linearer Regression.}
     \label{fig:plot}
   \end{figure}
-  Mithilfe dieser Regression und der obrigen Gleichung lässt sich das Eigenträgheitsmoment $I_{\text{Drill}}$ wie folgt bestimmen: 
+  Mithilfe dieser Regression und der obigen Gleichung lässt sich das Eigenträgheitsmoment $I_{\text{Drill}}$ mit
   \begin{equation}
     I_{\text{Drill}} = \frac{D \cdot n}{4 \pi^2} - \frac{1}{2} \cdot m \cdot r^2 - \frac{1}{6} \cdot m \cdot h^2
   \end{equation}
-  $r$ bezeichnet dabei den Radius und $h$ die Höhe der zylindischen Gewichte, die für die Messung verwendet wurden. Die Messungen dieser beiden
+  bestimmen. $r$ bezeichnet dabei den Radius und $h$ die Höhe der zylindischen Gewichte, die für die Messung verwendet wurden. Die Messungen dieser beiden
   Größen werden in Tabelle (\ref{tab:Durchmesser_Höhe_Blaues}) und (\ref{tab:Durchmesser_Höhe_Rotes}) aufgeführt. Für die Rechnung wird der Mittelwert beider Gewichte 
    $r = (22,550 \pm 0,010) \cdot 10^{-3}\,\,\unit{\meter}$ und $h = (20,334 \pm 0,008) \cdot 10^{-3} \,\,\unit{\meter}$ verwendet.
   \begin{table}[H]
@@ -125,7 +126,7 @@
     \subsubsection{Theoretischer Wert}
     Das Eigenträgheitmoment der Kugel $I_{\text{K}}$ wird durch Gleichung (\ref{eqn:TragheitKugel}) berechnet. 
     $r = d / 2$ ist dabei der aus dem Mittelwert der gemessenen Durchmesser berechnete Wert $r = (146,61 \pm 0,20) \cdot 10^{-3} \,\,\unit{\meter}$. 
-    Die gemessenen Durchmesser sind in Tabelle(\ref{tab:Durchmesser_Kugel}) dargestellt. $m$ ist $1,1742 \,\,\unit{\kilo\gram}$. 
+    Die gemessenen Durchmesser sind in Tabelle (\ref{tab:Durchmesser_Kugel}) dargestellt. $m$ ist $1,1742 \,\,\unit{\kilo\gram}$. 
     
     \begin{table}[H]
       \centering 
@@ -146,11 +147,11 @@
     Damit beträgt der Theoriewert des Trägheitsmoment der Kugel $I_{\text{K,theo}}$ $(2,524 \pm 0,007) \cdot 10^{-3} \,\,\unit{\kilo\gram\meter\squared}$.
 
     \subsubsection{Gemessener Wert}
-    Die für die Rechnung benötigte Periodendauer der Kugel ist in Tabelle(\ref{tab:T5_Kugel}) dargestellt. 
+    Die für die Rechnung benötigte Periodendauer der Kugel ist in Tabelle (\ref{tab:T5_Kugel}) dargestellt. 
     Diese wurde bei fester Auslenkung um 90° gemessen.
     \begin{table}[H]
       \centering 
-      \caption{Gemessene fünfache Periodendauer der Kugel}
+      \caption{Gemessene fünffache Periodendauer der Kugel}
       \label{tab:T5_Kugel}
       \begin{tblr}{colspec={c}}
           \toprule
@@ -170,10 +171,10 @@
       \end{tblr}
     \end{table}
     Der Mittelwert einer Periodendauer $T_{\text{K}} = (1,890 \pm 0,008) \,\,\unit{\second}$ wurde für die Berechnung des 
-    Trägheitsmomentes $I_{\text{K}}$ mithilfe von Gleichung (\ref{eqn:TragheitmomentAusSchwingungsdauer}) verwendet. 
+    Trägheitsmomentes $I_{\text{K}}$ mithilfe von Gleichung (\ref{eqn:TragheitmomentAusSchwingungsdauer}) verwendet. \\
     $I_{\text{K}}$ ist $(1,90 \pm 0,08) \cdot 10^{-3} \,\,\unit{\kilo\gram\meter\squared}$.
 
-  \subsection{Eigenträgheitmoment der Schiebe}
+  \subsection{Eigenträgheitmoment der Scheibe}
     \subsubsection{Theoretischer Wert}
     Das Eigenträgheitmoment der Scheibe wird durch Gleichung (\ref{eqn:TragheitZylinder}) berechnet. $m$ beträgt $0,4237 \,\,\unit{\kilo\gram}$.
     Das zur Berechnung verwendete $r$ wurde aus dem Mittelwert der Messungen des Durchmessers berechnet. 
@@ -200,7 +201,7 @@
     $T$ ist dabei der Mittelwert der einfachen Periodendauer. Die gemessene fünffache Periodendauer ist in Tabelle (\ref{tab:T5_Scheibe}) dargestellt.
     \begin{table}[H]
       \centering 
-      \caption{Gemessene fünfache Periodendauer der Scheibe}
+      \caption{Gemessene fünffache Periodendauer der Scheibe}
       \label{tab:T5_Scheibe}
       \begin{tblr}{colspec={c}}
           \toprule
@@ -223,7 +224,7 @@
      
   
   \subsection{Trägheitsmoment der Puppe}
-    \subsubsection{1. Position der Puppe}
+    \subsubsection{Position 1 der Puppe}
       \textbf{Theoretischer Wert}\\
         Zur Berechnung des Trägheitsmoments der Puppe in Position 1 werden eine Reihe von Vereinfachungen angenommen. Der Kopf wird genauso
         wie die Arme, Beine und der Torso als zylindrisch angenommen und die Dichte als homogen. Der Durchmesser der einzelnen Zylinder wird 
@@ -264,7 +265,7 @@
               \toprule
               Kopf $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$ & Arm $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$ & Torso $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$ & Bein $\,[10^{-5}\,\,\unit{\meter\tothe{3}}]$\\
               \midrule 
-              0,017 \pm \,\,0,004 & 1,66 \pm \,\,0,18 & 9,50 \pm \,\,1,0 & 3,0 \pm \,\,0,4 \\
+              0,017 \pm \,\,0,004 & 1,66 \pm \,\,0,18 & 10,0 \pm \,\,1,0 & 3,0 \pm \,\,0,4 \\
               \bottomrule
           \end{tblr}
         \end{table}
@@ -294,7 +295,7 @@
       nach Auslenkung um $90$° und $120$°. 
       \begin{table}[H]
         \centering 
-        \caption{Fünfache Periodendauer der Puppe in Position 1}
+        \caption{Fünffache Periodendauer der Puppe in Position 1}
         \label{tab:T5_Positon_1}
         \begin{tblr}{colspec={c c}}
             \toprule
@@ -329,11 +330,11 @@
       \\
       \textbf{Gemessener Wert} \\
       Wie bereits bei Position 1 festgestellt, hängt die Periodendauer nicht von der Auslenkung ab. Daher werden auch bei Position 2 beide Messwertreihen
-      zusammen betrachtet. Die gemessene fünfache Periodendauer ist trotzdessen in Tabelle (\ref{tab:T5_Positon_2}) nach Auslenkungswinkel 
+      zusammen betrachtet. Die gemessene fünffache Periodendauer ist trotzdessen in Tabelle (\ref{tab:T5_Positon_2}) nach Auslenkungswinkel 
       getrennt aufgeführt.
       \begin{table}[H]
         \centering 
-        \caption{Fünfache Periodendauer der Puppe in Position 2}
+        \caption{Fünffache Periodendauer der Puppe in Position 2}
         \label{tab:T5_Positon_2}
         \begin{tblr}{colspec={c c}}
             \toprule
