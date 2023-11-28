@@ -28,11 +28,22 @@
 \label{sec:Auswertung}
 \subsection{Viskosität von Wasser bei Raumtemperatur}
 \label{sec:Viskosität von Wasser}
+Im Folgenden werden Mittelwerte aus einer Messwerttabelle gebildet. Diese Mittelwerte werden durch 
+$$\bar{x} = \frac{1}{n} \cdot \sum_{i = 1}^{n}x_i$$ berechnet. $n$ ist dabei die Anzahl der Messungen aus welcher der Mittelwert bestimmt wird und
+$x_{i}$ beschreibt die einzelnen Messdaten.
+Der Mittelwertsfehler wird durch 
+$$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - \bar{x})} $$
+berechnet. Bei Größen, die von mehreren fehlerbehafteten Größen abhängig sind, wird die Gaußsche Fehlerfortpflanzung 
+$$\Delta f = \sqrt{\sum_{i = 1}^{n} \left( \frac{\partial f}{\partial x_i} \right)^2 \cdot \left(\Delta x_i \right)^2}$$
+zur Berechnung des Fehlers verwendet. \\
 Zunächst wird die Dichte der kleinen Glaskugel $\rho_{\text{kl}}$ durch die Gleichung 
 (\ref{eqn:DichtefunktionKugel}) und Gleichung (\ref{eqn:VolumenKugel}) bestimmt. 
 Dafür werden die gegebene Masse $m_{\text{kl}} = 4.4531\,\unit{\gram}$ und der 
 gemessene Durchmesser $d_{\text{kl}}= \left(1.5570 \pm 0.0010\right)\,\unit{\centi \meter}$
-verwendet. Es folgt
+verwendet. 
+Der Fehler von $\rho_{\text{kl}}$ wird durch die Gaußsche Fehlerfortpflanzung berechnet. Eingesetz ergibt sich 
+$$\Delta \rho_{\text{kl}} = \sqrt{\left(-\frac{m_{\text{kl}}}{V_{\text{K}}^2}\cdot \Delta V_{\text{K}}\right)^2}$$ 
+Es folgt
 $$\rho_{\text{kl}} = \left(2.253 \pm 0.004\right)\unit[per-mode=fraction]{\gram\per\cubic\centi\meter}.$$ 
 Die betrachteten Fallzeiten der kleinen Kugel sind in dieser Tabelle erfasst:
 \begin{table}[H]
@@ -202,7 +213,7 @@ Anhand dieser linearen Regression und der Gleichung (\ref{eqn:lnEta}) werden die
 ermittelt. Hierbei entspricht $A$ dem Ordinatenabschnitt und $B$ der Steigung der 
 linearen Ausgleichsgeraden.
 \begin{align*}
-  \ln\left(A\right) &= -5.567 \pm 0.097 \Longleftrightarrow A = 0.0038\pm0.0004\\
-  B &= 1680\pm30
+  \ln\left(A\right) &= -5.567 \pm 0.097 \Longleftrightarrow A = (0.0038\pm0.0004)\,\unit[inter-unit-product=\cdot]{\milli\pascal\second}\\
+  B &= (1680\pm30)\, \unit{\kelvin}
 \end{align*}
 %Siehe \autoref{fig:plot}!

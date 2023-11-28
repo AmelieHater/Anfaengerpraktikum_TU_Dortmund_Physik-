@@ -117,7 +117,7 @@ plt.plot(
 )
 plt.grid()
 plt.xlabel(r'$T^{-1}$ [K $^{-1}$]')
-plt.ylabel(r"$\ln{ \left ( \eta \right )}$ [mPa$\cdot$s]")
+plt.ylabel(r"$\ln{ \left ( \eta \right )}$")
 plt.legend(loc = "best")
 plt.margins(0.075)
 plt.savefig("plot.pdf")
