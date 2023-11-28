@@ -95,7 +95,7 @@ Die betrachteten Fallzeiten der großen Kugel sind in dieser Tabelle erfasst:
       \bottomrule
   \end{tblr}
 \end{table}
-Aus den Messdaten werden die folgenden Zeiten bestimmt:
+Aus den Messdaten werden die folgenden gemittelten Zeiten mit deren Standardabweichung bestimmt:
 %
 \begin{align*}
   t_{\text{gr,r}} &= \left( 34.73\pm0.09\right)  \unit{\second}\\
@@ -109,16 +109,20 @@ Apparatekonstante der großen Glaskugel bestimmt.
 \end{align*}
 %
 \subsection{Bestimmung der Reynoldschen Zahl}
-Durch einsetzen der Werte in die Gleichung (\ref{eqn:Reynoldszahl}) ergeben sich für die 
-kleine Glaskugel diese Reynoldszahlen:
+Zur Berechnung der Reynoldszahl wird die charakteristische Länge des Experiments benötigt. 
+Diese entspricht annähernd dem Durchmesser der großen Kugel $d_{\text{gr}}$.
+Durch Einsetzen der Werte in die Gleichung (\ref{eqn:Reynoldszahl}) ergeben sich für die 
+kleine Glaskugel diese Reynoldszahlen
 \begin{align*}
   Re_{\text{kl,r}} &= \left(111.3\pm2.0\right)\\
-  Re_{\text{kl,h}} &= \left(110.2\pm2.4\right).
+  Re_{\text{kl,h}} &= \left(110.2\pm2.4\right)\,.
 \end{align*}
-Analog erfogt die Berechnung der Reynoldszahlen für die große Glaskugel.
+
+Analog erfogt die Berechnung der Reynoldszahlen für die große Glaskugel. 
+Dadurch ergeben sich 
 \begin{align*}
   Re_{\text{gr,r}} &= \left(19.46\pm0.19\right)\\
-  Re_{\text{gr,h}} &= \left(19.35\pm0.24\right)
+  Re_{\text{gr,h}} &= \left(19.35\pm0.24\right)\, .
 \end{align*}
 Aus den Reynoldszahlen erschließt sich, dass sowohl bei der kleinen als auch bei der großen Glaskugel
 eine laminare Strömung entsteht, da alle Reynoldzahlen deutlich kleiner sind als $Re=2000$.
@@ -131,7 +135,7 @@ von der dynamischen Viskosität $\eta$.
 \begin{align}
   \begin{split}
    \eta (T) &= A \cdot e^{\frac{B}{T}}\\
-    \Rightarrow \ln\left(\eta\left(T\right)\right) &= \ln \left(B\right) \cdot \frac{1}{T} + \ln\left(A\right)
+    \Rightarrow \ln\left(\eta\left(T\right)\right) &= \frac{B}{T} + \ln\left(A\right)
     \label{eqn:lnEta}
   \end{split}
 \end{align}
@@ -157,10 +161,10 @@ aufgeführt:
       \bottomrule
   \end{tblr}
 \end{table}
-Im Abschnitt \ref{sec:Viskosität von Wasser} wurde bereits festgestellt, dass die dynamischen Viskositäten 
+Im Abschnitt \ref{sec:Viskosität von Wasser} wird bereits festgestellt, dass die dynamischen Viskositäten 
 der beiden Fallrichtungen bei Raumtemperatur keine signifikante Differenz aufweisen. Aus diesem Grund werden
 bei dieser Auswertung die Fallrichtungen \glqq hoch\grqq{} und \glqq runter\grqq{} nicht mehr getrennt voneinander
-betrachtet. Demnach erhält man für die jeweiligen Temperaturen die folgenden Fallzeiten:
+betrachtet. Demnach ergeben sich für die jeweiligen Temperaturen die folgenden Fallzeiten:
 \begin{table}[H]
   \centering 
   \caption{Fallzeiten der großen Kugel und die temperaturabhängige Viskositäten}
@@ -185,7 +189,7 @@ betrachtet. Demnach erhält man für die jeweiligen Temperaturen die folgenden F
 Die in der Tabelle aufgelisteten dynamischen Viskositäten $\eta\left(T\right)$ erschließen sich aus der Gleichung (\ref{eqn:EmpirischeEtaFunktion}) 
 und den temperaturabhängigen Dichten.
 Mithilfe dieser Daten und der Gleichung (\ref{eqn:lnEta}) lassen sich die Messwerte sowie
-deren Unsicherheiten graphisch darstellen. 
+deren Unsicherheiten in Abbildung (\ref{fig:plot}) graphisch darstellen. 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.92\textwidth]{plot.pdf}
