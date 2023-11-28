@@ -1,0 +1,12 @@
+#Gekoppelte Schwingung Messungen 5T Schwingung und 5T Schwebung bei Länge 2 und linkes Pendel 5 cm Auslenkung
+#5T Schwingung #5T Schwebung
+7.63 78.36
+7.89 78.86
+7.73 78.50
+8.16 78.82
+7.60 78.46
+7.60 78.89
+7.60 
+7.61
+7.69
+7.78

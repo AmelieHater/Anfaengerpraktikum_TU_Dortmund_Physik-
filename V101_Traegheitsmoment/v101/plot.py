@@ -148,36 +148,36 @@ Puppe_Gesamtmasse = 0.1696 # in kg
 #Annahme, dass Dichte homogen ist im Körper
 #Volumenbestimmung der Puppe
 Volumen_1Arm = np.pi * (Arme_Durchmesser/2)**2 * Arme_Hoehe
-#print("Volumen Arm: ",Volumen_1Arm)
+print("Volumen Arm: ",Volumen_1Arm)
 Volumen_Kopf = np.pi * (Kopf_Durchmesser/2)**2 * Kopf_Hoehe
-#print("Volumen Kopf: ",Volumen_Kopf)
+print("Volumen Kopf: ",Volumen_Kopf)
 Volumen_Torso = np.pi * (Torso_Durchmesser/2)**2 * Torso_Hoehe
-#print("Volumen Torso: ",Volumen_Torso)
+print("Volumen Torso: ",Volumen_Torso)
 Volumen_1Bein = np.pi * (Beine_Durchmesser/2)**2 * Beine_Hoehe
-#print("Volumen Bein: ",Volumen_1Bein)
+print("Volumen Bein: ",Volumen_1Bein)
 Volumen_gesamte_Puppe = 2 * Volumen_1Arm + 2 * Volumen_1Bein + Volumen_Kopf + Volumen_Torso
 Volumen_gesamte_Puppe_in_cm = Volumen_gesamte_Puppe * 1000000
-#print("Volumen der gesamten Puppe in cm^3: ",Volumen_gesamte_Puppe_in_cm)
+print("Volumen der gesamten Puppe in cm^3: ",Volumen_gesamte_Puppe_in_cm)
 
 #Anteil der einzelnen Volumina am Gesamtvolumen
 Prozent_Arm = Volumen_1Arm/Volumen_gesamte_Puppe
 Masse_Arm = Puppe_Gesamtmasse * Prozent_Arm
 Masse_Arme = 2* Masse_Arm
-#print("Masse Arm:", Masse_Arm)
+print("Masse Arm:", Masse_Arm)
 
 Prozent_Bein = Volumen_1Bein/Volumen_gesamte_Puppe
 Masse_Bein = Puppe_Gesamtmasse * Prozent_Bein
 Masse_Beine = 2* Masse_Bein
-#print("Masse Bein:", Masse_Bein)
+print("Masse Bein:", Masse_Bein)
 
 Prozent_Kopf = Volumen_Kopf/Volumen_gesamte_Puppe
 Masse_Kopf = Puppe_Gesamtmasse * Prozent_Kopf
-#print("Masse Kopf:", Masse_Kopf)
+print("Masse Kopf:", Masse_Kopf)
 
 Prozent_Torso = Volumen_Torso/Volumen_gesamte_Puppe
 Masse_Torso = Puppe_Gesamtmasse * Prozent_Torso
-#print("Masse Torso:", Masse_Torso)
-#print("Gesamtmasse:", Masse_Arme + Masse_Beine + Masse_Kopf + Masse_Torso)
+print("Masse Torso:", Masse_Torso)
+print("Gesamtmasse:", Masse_Arme + Masse_Beine + Masse_Kopf + Masse_Torso)
 
 #I_gesamt der Puppe in Position 1 ausrechnen
 I_Kopf_Position_1 = (1/2) * Masse_Kopf * (Kopf_Durchmesser/2)**2

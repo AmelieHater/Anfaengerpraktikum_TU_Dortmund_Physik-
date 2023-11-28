@@ -1,0 +1,12 @@
+#Schwingung 5 T in s 5 cm Auslenkung Laenge 1
+#Gleichsinnig #Gegensinnig
+5.97 5.10
+5.88 5.20
+5.92 5.13
+5.98 5.45
+5.97 5.08
+5.99 5.06
+5.95 5.08
+6.02 5.06
+6.10 5.30
+5.93 5.10

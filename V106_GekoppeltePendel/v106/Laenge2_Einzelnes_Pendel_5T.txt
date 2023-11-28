@@ -1,0 +1,12 @@
+#Einzelne Pendel 5T in s bei Auslenkung 5,2 cm bei Länge 2
+#linkes Pendel #Rechtes Pendel
+7.99 7.96
+8.04 7.96
+7.96 8.11
+7.99 7.97
+8.04 7.96
+8.17 8.04
+7.92 8.14
+7.94 8.16
+7.89 7.97
+8.18 8.14

@@ -1,8 +1,28 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
+Das Ziel des Versuchs ist die Schwingdauer, Schwebungsdauer und die Kopplungskonstante $K$ gekoppelter Pendel bei verschiedener Schwingungsformen zu bestimmen. Es werden 
+gleichsinnige Schwinung, gegensinnige Schwingung und gekoppelte Schwingung betrachtet.  
 
 \section{Theorie}
 \label{sec:Theorie}
+Zunächst wird ein einzelnens ungekoppeltes Fadenpendel mit Fadenlänge $l$ betrachtet. 
+Wird die Masse am Stab aus der Ruhelage ($\varphi = 0$) ausgelenkt, wirkt 
+die Gravitationskraft $\vec{F} = m \cdot \vec{g}$ als Rückstellkraft der Bewegung entgegen. Dies bewirkt ein Drehmoment 
+$M = D_{\text{P}} \cdot \varphi$ auf das Pendel. $\varphi$ ist dabei der Auslenkungswinkel aus der Ruhelage und $D_{\text{P}}$ die 
+Winkelrichtgröße des Pendels. Die das System beschreibende Differentialgleichung lautet für die angenommene Kleinwinkelnäherung 
+$\sin(\varphi) = \varphi$ für $\varphi \leq 10°$
+\begin{equation}
+    J \cdot \ddot{\varphi} + D_{\text{P}} \cdot \varphi = 0\, .
+\end{equation}
+$J$ bezeichnet das Trägheitsmoment des Pendels. Diese Differentialgleichung ist die des harmonischen Oszillators und beschreibt eine harmonische Schwingung 
+mit Schwingfrequenz 
+
+\begin{equation}
+ \omega = \sqrt{\frac{D_{\text{P}}}{J}} = \sqrt{\frac{g}{l}}\, .
+\end{equation}
+\\
+\\
+%Zwei identische durch eine Feder mit Federkonstante $K$ gekoppelte Fadenpendel
 
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
@@ -12,7 +32,7 @@ Cosinus bzw. Sinus beschrieben werden kann, d.h. die Projektion einer gleichför
 \\
 \\
 \textbf{Wie weit kann man ein Fadenpendel von $l = 70 \,\,\unit{\centi\meter}$ auslenken, damit die Kleinwinkelnäherung noch gilt?}\\
-Bei der Kleinwinkelnäherung ist es ausschlaggebend, dass der Winkel $\alpha$ möglichst keinen Wert über $5°$ annimmt, 
+Bei der Kleinwinkelnäherung ist es ausschlaggebend, dass der Winkel $\alpha$ möglichst keinen Wert über $10°$ annimmt, 
 damit die Taylorentwicklung des $\sin(\alpha)$ mit Entwicklungspunkt $\alpha = 0$ noch gültig ist. 
 Der Winkel $\alpha$ im Fadenpendelsystem kann durch
 \begin{align}
@@ -20,4 +40,4 @@ Der Winkel $\alpha$ im Fadenpendelsystem kann durch
     \Leftrightarrow x &= \sin(\alpha) \cdot l
 \end{align}
 ausgdrückt werden. $x$ ist dabei die Auslenkung aus der Ruhelage, senkrecht zur Ruhelage. \\
-Einsetzen von $\alpha = 5°$ und $l = 70 \,\, \unit{\centi\meter}$ ergibt eine maximale Auslenkung von $x = 6,10 \,\, \unit{\centi\meter}$. 
+Einsetzen von $\alpha = 10°$ und $l = 70 \,\, \unit{\centi\meter}$ ergibt eine maximale Auslenkung von $x = 12,16 \,\, \unit{\centi\meter}$. 
