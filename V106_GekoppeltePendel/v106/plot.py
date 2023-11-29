@@ -9,58 +9,170 @@ T_linkes0 = T_5_linkes/5
 T_linkes_mean = np.mean(T_linkes0)
 T_linkes_std = scipy.stats.sem(T_linkes0)
 T_linkes = ufloat(T_linkes_mean, T_linkes_std)
-# print(f"T_linkes_L1: {T_linkes}")
+# print(f"Exp: T_linkes_L1: {T_linkes} in s")
+
 T_rechtes0 = T_5_rechtes/5
 T_rechtes_mean = np.mean(T_rechtes0)
 T_rechtes_std = scipy.stats.sem(T_rechtes0)
 T_rechtes = ufloat(T_rechtes_mean, T_rechtes_std)
-# print(f"T_rechtes_L1: {T_rechtes}")
+# print(f"Exp: T_rechtes_L1: {T_rechtes}in s")
 
 T_5_linkes_L2, T_5_rechtes_L2= np.genfromtxt("Laenge2_Einzelnes_Pendel_5T.txt", unpack=True)
 T_linkes0_L2 = T_5_linkes_L2/5
 T_linkes_L2_mean = np.mean(T_linkes0_L2)
 T_linkes_L2_std = scipy.stats.sem(T_linkes0_L2)
 T_linkes_L2 = ufloat(T_linkes_L2_mean, T_linkes_L2_std)
-# print(f"T_linkes_L2: {T_linkes_L2}")
+# print(f"Exp: T_linkes_L2: {T_linkes_L2} in s")
+
 T_rechtes0_L2 = T_5_rechtes_L2/5
 T_rechtes_L2_mean = np.mean(T_rechtes0_L2)
 T_rechtes_L2_std = scipy.stats.sem(T_rechtes0_L2)
 T_rechtes_L2 = ufloat(T_rechtes_L2_mean, T_rechtes_L2_std)
-# print(f"T_rechtes_L2: {T_rechtes_L2}")
+# print(f"Exp: T_rechtes_L2: {T_rechtes_L2}in s")
 
-# Länge 1 gleichphasige Schwingung
+# Länge 1 --------------------------------------------------------------------------
 g = 9.81
-l_1 = 0.3000
+l_1 = 0.3200 # in m
+# Experimetell:
+# Länge 1 gleichphasige Schwingung
+T_gleich_L1, T_gegen_L1 =  np.genfromtxt("Laenge1_Schwingung.txt", unpack=True)
+T_gleich0_L1 = T_gleich_L1/5
+T_gleich_L1_mean = np.mean(T_gleich0_L1)
+T_gleich_L1_std = scipy.stats.sem(T_gleich0_L1)
+T_gleich_L1 = ufloat(T_gleich_L1_mean, T_gleich_L1_std)
+# print(f"Exp: T_gleich_L1: {T_gleich_L1} in s")
+
+omega_gleich_L1 = 2 * np.pi * (1/T_gleich_L1)
+# print(f"Exp: omega_gleich_L1: {omega_gleich_L1} in 1/s")
+
+# Theoriewerte:
 omega_plus_1_theo = unp.sqrt(g/l_1)
-print(f"omega_plus_1_theo: {omega_plus_1_theo}")
+print(f"Theo: omega_plus_1_theo: {omega_plus_1_theo} in 1/s")
 T_plus_1_theo = 2 * np.pi * unp.sqrt(l_1/g)
-print(f"T_plus_1_theo: {T_plus_1_theo}")
+print(f"Theo: T_plus_1_theo: {T_plus_1_theo} in s")
 
 # Länge 1 gegenphasige Schwingung
+# Experimentell:
+T_gegen0_L1 = T_gegen_L1/5
+T_gegen_L1_mean = np.mean(T_gegen0_L1)
+T_gegen_L1_std = scipy.stats.sem(T_gegen0_L1)
+T_gegen_L1 = ufloat(T_gegen_L1_mean, T_gegen_L1_std)
+# print(f"Exp: T_gegen_L1: {T_gegen_L1} in s")
+
+omega_gegen_L1 = 2 * np.pi * (1/T_gegen_L1)
+# print(f"Exp: omega_gegen_L1: {omega_gegen_L1} in 1/s")
+
+Kopplung_L1 = (T_gleich_L1**2 - T_gegen_L1**2)/(T_gleich_L1**2 + T_gegen_L1**2)
+print(f"Kopplungskonstante K_L1: {Kopplung_L1}")
+
+#Theorie:
+omega_minus_1_theo = unp.sqrt((g * (1+Kopplung_L1))/(l_1 * (1-Kopplung_L1)))
+print (f"Theo: omega_minus_1_theo: {omega_minus_1_theo} in 1/s")
+T_minus_1_theo = 2 * np.pi * unp.sqrt((l_1 * (1-Kopplung_L1))/(g * (1-Kopplung_L1)))
+print (f"Theo: T_mius_1_theo: {T_minus_1_theo} in s")
+
+# Länge 1 Gekoppelte Schwingung
+# Experimentell:
+T_schwingung_L1, T_schwebung_L1 =  np.genfromtxt("Laenge1_Gekoppelte_Schwingung.txt", unpack=True)
+T_schwingung0_L1 = T_schwingung_L1/5
+T_schwingung_L1_mean = np.mean(T_schwingung0_L1)
+T_schwingung_L1_std = scipy.stats.sem(T_schwingung0_L1)
+T_schwingung_L1 = ufloat(T_schwingung_L1_mean, T_schwingung_L1_std)
+# print(f"Exp: T_schwingung_L1: {T_schwingung_L1} in s")
+
+omega_schwingung_L1 = 2 * np.pi * (1/T_schwingung_L1) #how?????
+print(f"Exp?????: omega_schwingung_L1: {omega_schwingung_L1} in 1/s") 
+
+# Theorie: wenn man einen theoretischen Wert ausrechnen kann
 
 
+
+
+# Experimentell:
+T_schwebung0_L1 = T_schwebung_L1/5
+T_schwebung_L1_mean = np.mean(T_schwebung0_L1)
+T_schwebung_L1_std = scipy.stats.sem(T_schwebung0_L1)
+T_schwebung_L1 = ufloat(T_schwebung_L1_mean, T_schwebung_L1_std)
+# print(f"Exp: T_schwebung_L1: {T_schwebung_L1} in s")
+
+omega_schwebung_L1 = omega_gleich_L1 - omega_gegen_L1
+# print(f"Exp: omega_schwebung_L1: {omega_schwebung_L1} in 1/s")
+
+# Theorie:
+T_schwebung_L1_theo = (unp.nominal_values(T_plus_1_theo) * unp.nominal_values(T_minus_1_theo)) / (unp.nominal_values(T_plus_1_theo) - unp.nominal_values(T_minus_1_theo))
+print(f"Theo: T_schwebung_L1_theo: {T_schwebung_L1_theo} in s")
+omega_schwebung_L1_theo = omega_plus_1_theo - omega_minus_1_theo
+print(f"Theo: omega_schwebung_L1_theo: {omega_schwebung_L1_theo} in 1/s")
+
+# Länge 2 --------------------------------------------------------------------------
+l_2 = 0.6500 # in m
+T_gleich_L2, T_gegen_L2 =  np.genfromtxt("Laenge2_Schwingung.txt", unpack=True)
 # Länge 2 gleichphasige Schwingung
-l_2 = 0.6500
+# Experimentell:
+T_gleich0_L2 = T_gleich_L2/5
+T_gleich_L2_mean = np.mean(T_gleich0_L2)
+T_gleich_L2_std = scipy.stats.sem(T_gleich0_L2)
+T_gleich_L2 = ufloat(T_gleich_L2_mean, T_gleich_L2_std)
+# print(f"Exp: T_gleich_L2: {T_gleich_L2} in s")
+
+omega_gleich_L2 = 2 * np.pi * (1/T_gleich_L2)
+# print(f"Exp: omega_gleich_L2: {omega_gleich_L2} in 1/s")
+
+# Theorie:
 omega_plus_2_theo = unp.sqrt(g/l_2)
-print(f"omega_plus_2_theo: {omega_plus_2_theo}")
+print(f"Theo: omega_plus_2_theo: {omega_plus_2_theo} in 1/s")
 T_plus_2_theo = 2 * np.pi * unp.sqrt(l_2/g)
-print(f"T_plus_2_theo: {T_plus_2_theo}")
+print(f"Theo: T_plus_2_theo: {T_plus_2_theo} in s")
 
 # Länge 2 gegenphasige Schwingung
+# Experimentell:
+T_gegen0_L2 = T_gegen_L2/5
+T_gegen_L2_mean = np.mean(T_gegen0_L2)
+T_gegen_L2_std = scipy.stats.sem(T_gegen0_L2)
+T_gegen_L2 = ufloat(T_gegen_L2_mean, T_gegen_L2_std)
+# print(f"Exp: T_gegen_L2: {T_gegen_L2} in s")
+
+omega_gegen_L2 = 2 * np.pi * (1/T_gegen_L2)
+# print(f"Exp: omega_gegen_L2: {omega_gegen_L2} in 1/s")
+
+Kopplung_L2 = (T_gleich_L2**2 - T_gegen_L2**2)/(T_gleich_L2**2 + T_gegen_L2**2)
+print(f"Kopplungskonstante K_L2: {Kopplung_L2}")
+
+#Theorie:
+omega_minus_2_theo = unp.sqrt((g * (1+Kopplung_L2))/(l_2 * (1-Kopplung_L2)))
+print (f"Theo: omega_minus_2_theo: {omega_minus_2_theo} in 1/s")
+T_minus_2_theo = 2 * np.pi * unp.sqrt((l_2 * (1-Kopplung_L2))/(g * (1-Kopplung_L2)))
+print (f"Theo: T_mius_2_theo: {T_minus_2_theo} in s")
+
+# Länge 2 Gekoppelte Schwingung
+# Experimentell:
+T_schwingung_L2, T_schwebung_L2 =  np.genfromtxt("Laenge2_Gekoppelte_Schwingung.txt", unpack=True)
+T_schwingung0_L2 = T_schwingung_L2/5
+T_schwingung_L2_mean = np.mean(T_schwingung0_L2)
+T_schwingung_L2_std = scipy.stats.sem(T_schwingung0_L2)
+T_schwingung_L2 = ufloat(T_schwingung_L2_mean, T_schwingung_L2_std)
+# print(f"Exp: T_schwingung_L2: {T_schwingung_L2} in s")
+
+omega_schwingung_L2 = 2 * np.pi * (1/T_schwingung_L2) #how?????
+print(f"Exp?????: omega_schwingung_L2: {omega_schwingung_L2} in 1/s") 
+
+# Theorie: wenn man einen theoretischen Wert ausrechnen kann
 
 
-#x = np.linspace(0, 10, 1000)
-#y = x ** np.sin(x)
-#
-#fig, (ax1, ax2) = plt.subplots(1, 2, layout="constrained")
-#ax1.plot(x, y, label="Kurve")
-#ax1.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-#ax1.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-#ax1.legend(loc="best")
-#
-#ax2.plot(x, y, label="Kurve")
-#ax2.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-#ax2.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-#ax2.legend(loc="best")
-#
-#fig.savefig("build/plot.pdf")
+
+
+# Experimentell:
+T_schwebung0_L2 = T_schwebung_L2/5
+T_schwebung_L2_mean = np.mean(T_schwebung0_L2)
+T_schwebung_L2_std = scipy.stats.sem(T_schwebung0_L2)
+T_schwebung_L2 = ufloat(T_schwebung_L2_mean, T_schwebung_L2_std)
+# print(f"Exp: T_schwebung_L2: {T_schwebung_L2} in s")
+
+omega_schwebung_L2 = omega_gleich_L2 - omega_gegen_L2
+# print(f"Exp: omega_schwebung_L2: {omega_schwebung_L2} in 1/s")
+
+# Theorie:
+T_schwebung_L2_theo = (unp.nominal_values(T_plus_2_theo) * unp.nominal_values(T_minus_2_theo)) / (unp.nominal_values(T_plus_2_theo) - unp.nominal_values(T_minus_2_theo))
+print(f"Theo: T_schwebung_L2_theo: {T_schwebung_L2_theo} in s")
+omega_schwebung_L2_theo = omega_plus_2_theo - omega_minus_2_theo
+print(f"Theo: omega_schwebung_L2_theo: {omega_schwebung_L2_theo} in 1/s")
