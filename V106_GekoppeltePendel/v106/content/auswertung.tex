@@ -19,12 +19,72 @@
 % Exp L2:   T_schwebung_L2: 15.741+/-0.013 in s   omega_schwebung_L2: -0.417+/-0.030 in 1/s
 \section{Auswertung}
 \label{sec:Auswertung}
-
-\begin{figure}
+%
+\subsection{Kurzes Pendel}
+\label{sec:Auswertung_KuresPendel}
+Zunächst werden die beiden Schwingungen der einzelnen Pendel verglichen. Die gemessene fünffache Schwingungsdauer $5\,T$ des linken als auch des rechten
+Pendels sind in der Tabelle (\ref{tab:EinzelSchwingung_L1}) aufgelistet.
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \caption{Gemessene fünffache Schwingungsdauer bei einer Länge von $xx\, \unit{\centi\meter}$}
+  \label{tab:EinzelSchwingung_L1}
+  \begin{tblr}{colspec={c c}}
+      \toprule
+      linkes Pendel & rechtes Pendel\\ 
+      $5\, T_{\text{l},1}\,\left[\unit{\second}\right]$ & $5\, T_{\text{r},1}\,\left[\unit{\second}\right]$  \\
+      \midrule
+      6,21 & 6,19 \\
+      6,07 & 6,24 \\
+      6,15 & 6,24 \\
+      6,19 & 6,30 \\
+      6,24 & 6,05 \\
+      6,10 & 6,15 \\
+      6,22 & 6,18 \\
+      6,14 & 6,18 \\
+      6,19 & 6,14 \\
+      6,35 & 6,25 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+Aus dieser Tabelle und mit den Gleichungen $$\bar{x} = \frac{1}{n} \cdot \sum_{i = 1}^{n}x_i$$ und $$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - \bar{x})} $$
+lassen sich die Mittelwerte sowie die Standardabweichungen des Mittelwerts bestimmen. $x_i$ beschreibt die einzelnen Messdaten und $n$ die Anzahl
+der Messungen. Somit ergeben sich die Schwingungsdauern
+\begin{align*}
+  T_{\text{l},1} &= \left( 1.237 \pm 0.005 \right)\,\unit{\second}\\
+  T_{\text{r},1} &= \left( 1.238 \pm 0.004 \right)\,\unit{\second}\,.
+\end{align*}
+
+%
+\subsection{Langes Pendel}
+\label{sec:Auswertung_LangesPendel}
+
+\begin{table}[H]
+  \centering
+  \caption{Gemessene fünffache Schwingungsdauer bei einer Länge von $xx\, \unit{\centi\meter}$}
+  \label{tab:EinzelSchwingung_L2}
+  \begin{tblr}{colspec={c c}}
+      \toprule
+      linkes Pendel & rechtes Pendel\\ 
+      $5\, T_{\text{l},2}\,\left[\unit{\second}\right]$ & $5\, T_{\text{r},2}\,\left[\unit{\second}\right]$  \\
+      \midrule
+      7,99 & 7,96 \\
+      8,04 & 7,96 \\
+      7,96 & 8,11 \\
+      7,99 & 7,97 \\
+      8,04 & 7,96 \\
+      8,17 & 8,04 \\
+      7,92 & 8,14 \\
+      7,94 & 8,16 \\
+      7,89 & 7,97 \\
+      8,18 & 8,14 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+% \begin{figure}
+%   \centering
+%   \includegraphics{plot.pdf}
+%   \caption{Plot.}
+%   \label{fig:plot}
+% \end{figure}
 
 %Siehe \autoref{fig:plot}!

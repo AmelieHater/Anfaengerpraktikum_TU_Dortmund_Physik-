@@ -66,9 +66,9 @@ Kopplung_L1 = (T_gleich_L1**2 - T_gegen_L1**2)/(T_gleich_L1**2 + T_gegen_L1**2)
 print(f"Kopplungskonstante K_L1: {Kopplung_L1}")
 
 #Theorie:
-omega_minus_1_theo = unp.sqrt((g * (1+Kopplung_L1))/(l_1 * (1-Kopplung_L1)))
+omega_minus_1_theo = unp.sqrt((g * (1 + Kopplung_L1))/(l_1 * (1 - Kopplung_L1)))
 print (f"Theo: omega_minus_1_theo: {omega_minus_1_theo} in 1/s")
-T_minus_1_theo = 2 * np.pi * unp.sqrt((l_1 * (1-Kopplung_L1))/(g * (1-Kopplung_L1)))
+T_minus_1_theo = 2 * np.pi * unp.sqrt((l_1 * (1 - Kopplung_L1))/(g * (1 + Kopplung_L1)))
 print (f"Theo: T_mius_1_theo: {T_minus_1_theo} in s")
 
 # Länge 1 Gekoppelte Schwingung
@@ -139,9 +139,9 @@ Kopplung_L2 = (T_gleich_L2**2 - T_gegen_L2**2)/(T_gleich_L2**2 + T_gegen_L2**2)
 print(f"Kopplungskonstante K_L2: {Kopplung_L2}")
 
 #Theorie:
-omega_minus_2_theo = unp.sqrt((g * (1+Kopplung_L2))/(l_2 * (1-Kopplung_L2)))
+omega_minus_2_theo = unp.sqrt((g * (1 + Kopplung_L2))/(l_2 * (1 - Kopplung_L2)))
 print (f"Theo: omega_minus_2_theo: {omega_minus_2_theo} in 1/s")
-T_minus_2_theo = 2 * np.pi * unp.sqrt((l_2 * (1-Kopplung_L2))/(g * (1-Kopplung_L2)))
+T_minus_2_theo = 2 * np.pi * unp.sqrt((l_2 * (1 - Kopplung_L2))/(g * (1 + Kopplung_L2)))
 print (f"Theo: T_mius_2_theo: {T_minus_2_theo} in s")
 
 # Länge 2 Gekoppelte Schwingung
@@ -176,3 +176,34 @@ T_schwebung_L2_theo = (unp.nominal_values(T_plus_2_theo) * unp.nominal_values(T_
 print(f"Theo: T_schwebung_L2_theo: {T_schwebung_L2_theo} in s")
 omega_schwebung_L2_theo = omega_plus_2_theo - omega_minus_2_theo
 print(f"Theo: omega_schwebung_L2_theo: {omega_schwebung_L2_theo} in 1/s")
+
+#  Abweichungen bzw. rel. Messfehler
+# L1:
+print("Diskussion \nRelative Fehler L1:")
+rel_T_gleich_L1 = abs(T_gleich_L1 - T_plus_1_theo)/ T_plus_1_theo
+rel_omega_gleich_L1 = abs(omega_gleich_L1 - omega_plus_1_theo) / omega_plus_1_theo
+print (f"rel. T+ L1: {rel_T_gleich_L1}")
+print(f"rel. omega+ L1: {rel_omega_gleich_L1}")
+rel_T_gegen_L1 = abs(T_gegen_L1 - T_minus_1_theo) / T_minus_1_theo
+rel_omega_gegen_L1 = abs(omega_gegen_L1 - omega_minus_1_theo) / omega_minus_1_theo
+print (f"rel. T- L1: {rel_T_gegen_L1}")
+print(f"rel. omega- L1: {rel_omega_gleich_L1}")
+rel_T_schwebung_L1 = abs(T_schwebung_L1 - T_schwebung_L1_theo) / T_schwebung_L1_theo
+rel_omega_schwebung_L1 = abs(omega_schwebung_L1 - omega_schwebung_L1_theo) / omega_schwebung_L1_theo
+print (f"rel. T_S L1: {rel_T_schwebung_L1}")
+print(f"rel. omega_S L1: {rel_omega_schwebung_L1}")
+
+#L2
+print("Diskussion \nRelative Fehler L2:")
+rel_T_gleich_L2 = abs(T_gleich_L2 - T_plus_2_theo)/ T_plus_2_theo
+rel_omega_gleich_L2 = abs(omega_gleich_L2 - omega_plus_2_theo) / omega_plus_2_theo
+print (f"rel. T+ L2: {rel_T_gleich_L2}")
+print(f"rel. omega+ L2: {rel_omega_gleich_L2}")
+rel_T_gegen_L2 = abs(T_gegen_L2 - T_minus_2_theo) / T_minus_2_theo
+rel_omega_gegen_L2 = abs(omega_gegen_L2 - omega_minus_2_theo) / omega_minus_2_theo
+print (f"rel. T- L2: {rel_T_gegen_L2}")
+print(f"rel. omega- L2: {rel_omega_gleich_L2}")
+rel_T_schwebung_L2 = abs(T_schwebung_L2 - T_schwebung_L2_theo) / T_schwebung_L2_theo
+rel_omega_schwebung_L2 = abs(omega_schwebung_L2 - omega_schwebung_L2_theo) / omega_schwebung_L2_theo
+print (f"rel. T_S L2: {rel_T_schwebung_L2}")
+print(f"rel. omega_S L2: {rel_omega_schwebung_L2}")
