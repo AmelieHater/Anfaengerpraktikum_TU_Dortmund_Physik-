@@ -31,7 +31,7 @@ Pendels sind in der Tabelle (\ref{tab:EinzelSchwingung_L1}) aufgelistet.
   \begin{tblr}{colspec={c c}}
       \toprule
       linkes Pendel & rechtes Pendel\\ 
-      $5\, T_{\text{l},1}\,\left[\unit{\second}\right]$ & $5\, T_{\text{r},1}\,\left[\unit{\second}\right]$  \\
+      $5\, T_{\text{l}, 1}\,\left[\unit{\second}\right]$ & $5\, T_{\text{r}, 1}\,\left[\unit{\second}\right]$  \\
       \midrule
       6,21 & 6,19 \\
       6,07 & 6,24 \\
@@ -50,10 +50,112 @@ Aus dieser Tabelle und mit den Gleichungen $$\bar{x} = \frac{1}{n} \cdot \sum_{i
 lassen sich die Mittelwerte sowie die Standardabweichungen des Mittelwerts bestimmen. $x_i$ beschreibt die einzelnen Messdaten und $n$ die Anzahl
 der Messungen. Somit ergeben sich die Schwingungsdauern
 \begin{align*}
-  T_{\text{l},1} &= \left( 1.237 \pm 0.005 \right)\,\unit{\second}\\
-  T_{\text{r},1} &= \left( 1.238 \pm 0.004 \right)\,\unit{\second}\,.
+  T_{\text{l}, 1} &= \left( 1.237 \pm 0.005 \right)\,\unit{\second}\\
+  T_{\text{r}, 1} &= \left( 1.238 \pm 0.004 \right)\,\unit{\second}\,.
 \end{align*}
+Aufgrund der Fehlertolernz können die beiden Pendel als identisch angenommen werden. Daher werden im Folgenden drei verschiedene Schwingungsarten
+untersucht.
+%
+%
+\subsubsection{Gleichphasige Schwingung}
+\label{sec:GleichphasigeSchwingung_KuresPendel}
+Die gemessene fünffache Schwingungsdauer der gleichphasigen Schwingung sind in der Tabelle (\ref{tab:GleichphasigeSchwingung_L1}) aufgeführt.
+\begin{table}[H]
+  \centering
+  \caption{Gemessene fünffache Schwingungsdauer bei einer Länge von $xx\, \unit{\centi\meter}$ und gleichphasiger Schwingung.}
+  \label{tab:GleichphasigeSchwingung_L1}
+  \begin{tblr}{colspec={c}}
+      \toprule
+      $5\, T_{+, 1}\,\left[\unit{\second}\right]$\\
+      \midrule
+      5,97 \\
+      5,88 \\
+      5,92 \\
+      5,98 \\
+      5,97 \\
+      5,99 \\
+      5,95 \\
+      6,02 \\
+      6,10 \\
+      5,93 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+Die aus der Tabelle (\ref{tab:GleichphasigeSchwingung_L1}) hergeleitete gemittelte Schwingungsdauer mit der Standardabweichung lautet
+$$T_{+, 1} = \left( 1.194 \pm 0.004 \right)\,\unit{\second}\,.$$
+Mit der Gleichung (\ref{}) wird die theoretische Schwingungsdauer der gleichphasigen Schwingung bestimmt. Daraus folgt
+$$T_{+, \text{theo.}, 1} = \left(...\right)\,\unit{\second}\,.$$
+Aus der Gleichung (\ref{}) und der Gaußschen Fehlerfortpflanzung 
+$$\Delta \omega = \sqrt{\left(-\frac{2 \pi}{T^{2}}\cdot \Delta T \right)^{2}}$$
+wird, durch Einsetzen von $T_{\text{gl}, 1}$, die Schwingungsfrequenz
+$$\omega_{+, 1} =  \left( 5.261 \pm 0.017 \right)\,\unit[per-mode=fraction]{\per \second}$$ berechnet. 
+Anhand der Gleichung (\ref{}) wird die theoretische Schwingungsfreqeunz der gleichphasigen Schwingung 
+$$\omega_{+, \text{theo.}, 1} = \left(...\right)\,\unit[per-mode=fraction]{\per \second}\,$$ bestimmt.
+%
+%
+\subsubsection{Gegenphasige Schwingung}
+\label{sec:GegenphasigeSchwingung_KurzelPendel}
+Die gemessenen Schwingungsdauern der gegenphasigen Schwingung bei einer Länge von $xx\, \unit{\centi\meter}$ sind 
+in der Tabelle (\ref{tab:GegenphasigeSchwingung_L1}) aufgeführt. 
+\begin{table}[H]
+  \centering
+  \caption{Gemessene fünffache Schwingungsdauer bei einer Länge von $xx\, \unit{\centi\meter}$ und gegenphasiger Schwingung.}
+  \label{tab:GegenphasigeSchwingung_L1}
+  \begin{tblr}{colspec={c}}
+      \toprule
+      $5\, T_{-, 1}\,\left[\unit{\second}\right]$\\
+      \midrule
+      5,10 \\
+      5,20 \\
+      5,13 \\
+      5,45 \\
+      5,08 \\
+      5,06 \\
+      5,08 \\
+      5,06 \\
+      5,30 \\
+      5,10 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+Anhand dieser Daten lässt sich die gemittelte Schwingungsdauer und die Standardabweichung berechnet. Somit ergibt sich
+$$T_{-, 1} = \left(1.031 \pm 0.008 \right)\, \unit{\second}\,.$$ 
+Für die Bestimmung der theoretischen Schwingungsdauer und Schwingungsfrequenz einer gegenphasigen Schwingung wird die Kopplungskonstante $K$ benötigt. Da
+diese nicht gegeben ist, wird die Kopplungskonstante durch Einsetzen von $T_{+,1}$ und $T_{-,1}$ in die Gleichung (\ref{}) berechnet.
+Daraus folgt
+$$K_1 = \left( 0.146 \pm 0.008 \right)\,.$$
+Anschließend lässt sich die theoretische Schwingungsdauer mit Hilfe der Gleichung (\ref{}) bestimmen. Diese lautet
+$$T_{-,\text{theo.},1} = \left( ... \right)\, \unit{\second}\,.$$
+Die empirische Schwingungsfrequenz 
+$$\omega_{-,1} = \left( 6.09 \pm 0.05 \right)\, \unit[per-mode=fraction]{\per \second}$$ wird durch $T_{-,1}$ und der Gleichung (\ref{})
+berechnet. Aus der Gleichung (\ref{}) ergibt sich die folgendene theoretische Schwingungsfrequenz
+$$\omega_{-,\text{theo},1} = \left( ... \right)\,\unit[per-mode=fraction]{\per \second}\,.$$
 
+%
+\subsubsection{Gekoppelte Schwingung}
+\label{sec:GekoppelteSchwingung_KurzesPendel}
+\begin{table}[H]
+  \centering
+  \caption{Gemessene fünffache Schwingungsdauer und Schwebung bei einer Länge von $xx\, \unit{\centi\meter}$ und gekoppelter Schwingung.}
+  \label{tab:Gekoppelt_L1}
+  \begin{tblr}{colspec={c c}}
+      \toprule
+      $5\, T_{1}\,\left[\unit{\second}\right]$ & $5\, T_{\text{S}, 1}\,\left[\unit{\second}\right]$  \\
+      \midrule
+      5,09 & 35,53 \\
+      4,93 & 35,94 \\
+      4,76 & 35,56 \\
+      5,03 & 35,58 \\
+      5,56 & 35,63 \\
+      5,20 & 35,58 \\
+      5,69 & 35,50 \\
+      5,70 & 35,44 \\
+      6,50 & 35,55 \\
+      6,46 & 35,64 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+%
 %
 \subsection{Langes Pendel}
 \label{sec:Auswertung_LangesPendel}
@@ -65,7 +167,7 @@ der Messungen. Somit ergeben sich die Schwingungsdauern
   \begin{tblr}{colspec={c c}}
       \toprule
       linkes Pendel & rechtes Pendel\\ 
-      $5\, T_{\text{l},2}\,\left[\unit{\second}\right]$ & $5\, T_{\text{r},2}\,\left[\unit{\second}\right]$  \\
+      $5\, T_{\text{l}, 2}\,\left[\unit{\second}\right]$ & $5\, T_{\text{r}, 2}\,\left[\unit{\second}\right]$  \\
       \midrule
       7,99 & 7,96 \\
       8,04 & 7,96 \\
@@ -77,6 +179,80 @@ der Messungen. Somit ergeben sich die Schwingungsdauern
       7,94 & 8,16 \\
       7,89 & 7,97 \\
       8,18 & 8,14 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+
+\subsubsection{Gleichphasige Schwingung}
+\label{sec:GleichphasigeSchwingung_LangesPendel}
+\begin{table}[H]
+  \centering
+  \caption{Gemessene fünffache Schwingungsdauer bei einer Länge von $xx\, \unit{\centi\meter}$ und gleichphasiger Schwingung.}
+  \label{tab:GleichphasigeSchwingung_L2}
+  \begin{tblr}{colspec={c}}
+      \toprule
+      $5\, T_{+, 2}\,\left[\unit{\second}\right]$\\
+      \midrule
+      7,82 \\
+      8,09 \\
+      7,70 \\
+      8,06 \\
+      7,83 \\
+      7,95 \\
+      7,65 \\
+      7,72 \\
+      7,72 \\
+      7,83 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+%
+%
+\subsubsection{Gegenphasige Schwingung}
+\label{sec:GegenphasigeSchwingung_LangesPendel}
+\begin{table}[H]
+  \centering
+  \caption{Gemessene fünffache Schwingungsdauer bei einer Länge von $xx\, \unit{\centi\meter}$ und gegenphasiger Schwingung.}
+  \label{tab:GegenphasigeSchwingung_L2}
+  \begin{tblr}{colspec={c}}
+      \toprule
+      $5\, T_{-, 2}\,\left[\unit{\second}\right]$\\
+      \midrule
+      7,18 \\
+      7,09 \\
+      7,04 \\
+      7,01 \\
+      7,24 \\
+      7,13 \\
+      7,06 \\
+      7,10 \\
+      7,18 \\
+      6,95 \\
+      \bottomrule
+  \end{tblr}
+\end{table}
+%
+%
+\subsubsection{Gekoppelte Schwingung}
+\label{sec:GekoppelteSchwingung_LangesPendel}
+\begin{table}[H]
+  \centering
+  \caption{Gemessene fünffache Schwingungsdauer und Schwebung bei einer Länge von $xx\, \unit{\centi\meter}$ und gekoppelter Schwingung.}
+  \label{tab:Gekoppelt_L2}
+  \begin{tblr}{colspec={c c}}
+      \toprule
+      $5\, T_{2}\,\left[\unit{\second}\right]$ & $5\, T_{\text{S}, 2}\,\left[\unit{\second}\right]$  \\
+      \midrule
+      7,63 & 78,36 \\
+      7,89 & 78,86 \\
+      7,73 & 78,50 \\
+      8,16 & 78,82 \\
+      7,60 & 78,46 \\
+      7,60 & 78,89 \\
+      7,60 & 78,58 \\
+      7,61 & 78,81 \\
+      7,69 & 78,93 \\
+      7,78 & 78,82 \\
       \bottomrule
   \end{tblr}
 \end{table}
