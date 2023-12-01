@@ -32,7 +32,7 @@ T_rechtes_L2 = ufloat(T_rechtes_L2_mean, T_rechtes_L2_std)
 
 # Länge 1 --------------------------------------------------------------------------
 g = 9.81
-l_1 = 0.3200 # in m
+l_1 = 0.3250 # in m
 # Experimetell:
 # Länge 1 gleichphasige Schwingung
 T_gleich_L1, T_gegen_L1 =  np.genfromtxt("Laenge1_Schwingung.txt", unpack=True)
@@ -106,7 +106,7 @@ omega_schwebung_L1_theo = omega_plus_1_theo - omega_minus_1_theo
 print(f"Theo: omega_schwebung_L1_theo: {omega_schwebung_L1_theo} in 1/s")
 
 # Länge 2 --------------------------------------------------------------------------
-l_2 = 0.6500 # in m
+l_2 = 0.6530 # in m
 T_gleich_L2, T_gegen_L2 =  np.genfromtxt("Laenge2_Schwingung.txt", unpack=True)
 # Länge 2 gleichphasige Schwingung
 # Experimentell:
@@ -189,13 +189,15 @@ print(f"rel. omega+ L1: {rel_omega_gleich_L1}")
 rel_T_gegen_L1 = abs(T_gegen_L1 - T_minus_1_theo) / T_minus_1_theo
 rel_omega_gegen_L1 = abs(omega_gegen_L1 - omega_minus_1_theo) / omega_minus_1_theo
 print (f"rel. T- L1: {rel_T_gegen_L1}")
-print(f"rel. omega- L1: {rel_omega_gleich_L1}")
+print(f"rel. omega- L1: {rel_omega_gegen_L1}")
 rel_T_schwebung_L1 = abs(T_schwebung_L1 - T_schwebung_L1_theo) / T_schwebung_L1_theo
 rel_omega_schwebung_L1 = abs(omega_schwebung_L1 - omega_schwebung_L1_theo) / omega_schwebung_L1_theo
 rel_omega_schwebung_L1test = abs(omega_schwebung_test - omega_schwebung_L1_theo) / omega_schwebung_L1_theo
+rel_omega_schwebung_L1test2 = abs(omega_schwebung_test - abs(omega_schwebung_L1_theo)) / abs(omega_schwebung_L1_theo)
 print (f"rel. T_S L1: {rel_T_schwebung_L1}")
 print(f"rel. omega_S L1: {rel_omega_schwebung_L1}")
 print(f"rel. omega_S L1 test: {rel_omega_schwebung_L1test}")
+print(f"rel. omega_S L1 test2: {rel_omega_schwebung_L1test2}")
 
 #L2
 print("Diskussion \nRelative Fehler L2:")
@@ -206,10 +208,12 @@ print(f"rel. omega+ L2: {rel_omega_gleich_L2}")
 rel_T_gegen_L2 = abs(T_gegen_L2 - T_minus_2_theo) / T_minus_2_theo
 rel_omega_gegen_L2 = abs(omega_gegen_L2 - omega_minus_2_theo) / omega_minus_2_theo
 print (f"rel. T- L2: {rel_T_gegen_L2}")
-print(f"rel. omega- L2: {rel_omega_gleich_L2}")
+print(f"rel. omega- L2: {rel_omega_gegen_L2}")
 rel_T_schwebung_L2 = abs(T_schwebung_L2 - T_schwebung_L2_theo) / T_schwebung_L2_theo
 rel_omega_schwebung_L2 = abs(omega_schwebung_L2 - omega_schwebung_L2_theo) / omega_schwebung_L2_theo
-rel_omega_schwebung_L2test = abs(omega_schwebung_test2 - omega_schwebung_L1_theo) / omega_schwebung_L1_theo
+rel_omega_schwebung_L2test = abs(omega_schwebung_test2 - omega_schwebung_L2_theo) / omega_schwebung_L2_theo
+rel_omega_schwebung_L2test2 = abs(omega_schwebung_test2 - abs(omega_schwebung_L2_theo)) / abs(omega_schwebung_L2_theo)
 print (f"rel. T_S L2: {rel_T_schwebung_L2}")
 print(f"rel. omega_S L2: {rel_omega_schwebung_L2}")
 print(f"rel. omega_S L2 test: {rel_omega_schwebung_L2test}")
+print(f"rel. omega_S L2 test2: {rel_omega_schwebung_L2test2}")
