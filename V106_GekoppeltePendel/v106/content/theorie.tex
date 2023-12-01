@@ -11,19 +11,69 @@ die Gravitationskraft $\vec{F} = m \cdot \vec{g}$ als Rückstellkraft der Bewegu
 $M = D_{\text{P}} \cdot \varphi$ auf das Pendel. $\varphi$ ist dabei der Auslenkungswinkel aus der Ruhelage und $D_{\text{P}}$ die 
 Winkelrichtgröße des Pendels. Die das System beschreibende Differentialgleichung lautet für die angenommene Kleinwinkelnäherung 
 $\sin(\varphi) = \varphi$ für $\varphi \leq 10°$
-\begin{equation}
+\begin{equation*}
     J \cdot \ddot{\varphi} + D_{\text{P}} \cdot \varphi = 0\,.
-\end{equation}
+\end{equation*}
 $J$ bezeichnet das Trägheitsmoment des Pendels. Diese Differentialgleichung ist die des harmonischen Oszillators und beschreibt eine harmonische Schwingung 
 mit Schwingfrequenz 
 
-\begin{equation}
+\begin{equation*}
  \omega = \sqrt{\frac{D_{\text{P}}}{J}} = \sqrt{\frac{g}{l}}\, .
+\end{equation*}
+Die Periodendauer $T$ und die Schwingfrequenz $\omega$ sind verbunden durch 
+\begin{align}
+    \omega &= \frac{2 \pi}{T} \,\,\text{bzw.} \label{eqn:VerbindungOmegaT}\\
+    \Leftrightarrow T &= \frac{2 \pi}{\omega} \label{eqn:VerbindungTOmega}\, .
+\end{align}
+\\
+Zwei identische Pendel, die durch eine Feder mit Federkonstante $K$ gekoppelt sind, haben eine andere Bewegungsgleichung. 
+Auf jeden Pendel wirkt dann ein zusätzliches Drehmoment. Auf das eine Pendel wirkt $M_1 = D_{\text{F}} \cdot (\varphi_2 - \varphi_1)$ 
+und auf das andere wirkt $M_2 = D_{\text{F}} \cdot (\varphi_1 - \varphi_2)$. 
+Durch diese Kopplung entstehen die beiden gekoppelten Differentialgleichungungen
+\begin{align*}
+J \ddot{\varphi_1} + D \varphi_1 &= D_{\text{F}} \cdot \left( \varphi_{2} - \varphi_{1} \right) \\
+\Leftrightarrow J \ddot{\varphi_2} + D \varphi_2 &= D_{\text{F}} \cdot \left( \varphi_{1} - \varphi_{2} \right) \, ,
+\end{align*}
+die das System vollkommen beschreiben.
+Mithilfe eines geeigneten Winkels können die Gleichungen entkoppelt werden, sodass sich das System als Überlagerung von zwei Eigenschwingungen darstellen lässt. 
+Diese Eigenschwingungen sind harmonische Schwingungen mit Frequenz $\omega_{1}$ und $\omega_{2}$. 
+Je nach Auslenkungswinkel $\alpha_1$ und $\alpha_2$ der Pendel beim Zeitpunkt $t = 0$ entstehen verschiedene Schwingungsarten. 
+\\
+Ist $\alpha_1 = \alpha_2$, schwingt das Pendel gleichsinnig. Bei dieser Bewegung übt die Feder keine Kraft aus, da sie durch die gleich große Auslenkung beider
+Pendel, weder gestreckt noch gestaucht wird. Beide Pendel schwingen daher gleich und identisch zu einem ungekoppelten Fadenpendel, welches um 
+denselben Winkel ausgelenkt wurde. Daher ist die Schwingfrequenz $\omega_+$ bei diesen konkreten Anfangsbedingungen 
+\begin{equation}
+    \omega_+ = \sqrt{\frac{g}{l}}\, ,
+    \label{eqn:OmegaGleichsinnig}
 \end{equation}
-\\
-\\
+dieselbe wie bei einem ungekoppelten Fadenpendel. \\
+Bei einer gegensinnigen Schwingung ist $\alpha_1 = - \alpha_2$. 
+Die Kopplungsfeder übt dann eine gleich große Kraft auf die Pendel aus. Die Kraft zeigt immer zur Mitte zwischen den beiden Pendeln. 
+Die Schwingung bei diesen Anfangsbedingungen ist symmetrisch.
+Die Frequenz $\omega_-$ wird durch
+\begin{equation}
+    \omega_- = \sqrt{\frac{g}{l} \cdot \frac{1 + \text{K}}{1 - \text{K}}}
+    \label{eqn:OmegaGegensinnig}
+\end{equation}
+berechnet. 
+Falls nur ein Pendel aus der Ruhelage ausgelenkt wird, heißt die entstandene Bewegung gekoppelte Schwingung. Dann gilt für 
+die Auslenkungen $\alpha_1 = 0$ und $\alpha_2 \neq 0$. 
+Für $t > 0$ führt das zweite Pendel eine Schwingung aus, ähnlich zu der eines ungekoppelten Fadenpendels. Im fortschreitender Zeit wird die Pendelbewegung des 
+zweiten Pendels langsamer bis dieses vollkommen still steht. Während die Schwiungung des zweiten Pendels langsamer wird, nimmt die des ersten Pendels zu bis es die 
+maximale Auslenkung erreicht, wenn das zweite Pendel stillsteht. Dieses Muster wiederholt sich dauerhaft. Diese Bewegung kommt dadurch zustande, dass 
+die Feder für eine Energieübertragung zwischen den Pendeln sorgt. Die zwischen zwei Stillständen eines Pendels vergangene Zeit nennt man Schwebung.
+Die Schwebungsfrequenz $\omega_{\text{S}}$ wird durch 
+\begin{equation}
+    \omega_{\text{S}} =  \omega_+ - \omega_-
+    \label{eqn:OmegaSchwebung}
+\end{equation}
+berechnet. Die sich daraus ergebene Schwebedauer $T_{\text{S}}$ ist
+\begin{equation}
+    T_{\text{S}} =  \frac{T_+ \cdot T_-}{T_+ - T_-}\,.
+    \label{eqn:TSchwebung}
+\end{equation}
+ 
 %Zwei identische durch eine Feder mit Federkonstante $K$ gekoppelte Fadenpendel
-
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
 \textbf{Wann spricht man von einer harmomischen Schwingung?}\\
@@ -35,9 +85,9 @@ Cosinus bzw. Sinus beschrieben werden kann, d.h. die Projektion einer gleichför
 Bei der Kleinwinkelnäherung ist es ausschlaggebend, dass der Winkel $\alpha$ möglichst keinen Wert über $10°$ annimmt, 
 damit die Taylorentwicklung des $\sin(\alpha)$ mit Entwicklungspunkt $\alpha = 0$ noch gültig ist. 
 Der Winkel $\alpha$ im Fadenpendelsystem kann durch
-\begin{align}
+\begin{align*}
     \sin(\alpha) &= \frac{x}{l} \\
     \Leftrightarrow x &= \sin(\alpha) \cdot l
-\end{align}
+\end{align*}
 ausgdrückt werden. $x$ ist dabei die Auslenkung aus der Ruhelage, senkrecht zur Ruhelage. \\
 Einsetzen von $\alpha = 10°$ und $l = 70 \,\, \unit{\centi\meter}$ ergibt eine maximale Auslenkung von $x = 12,16 \,\, \unit{\centi\meter}$. 
