@@ -56,8 +56,8 @@ Aus dieser Tabelle und mit den Gleichungen $$\bar{x} = \frac{1}{n} \cdot \sum_{i
 lassen sich die Mittelwerte sowie die Standardabweichungen des Mittelwerts bestimmen. $x_i$ beschreibt die einzelnen Messdaten und $n$ die Anzahl
 der Messungen. Somit ergeben sich die Schwingungsdauern
 \begin{align*}
-  T_{\text{l}, 1} &= \left( 1,237 \pm 0,005 \right)\,\unit{\second}\\
-  T_{\text{r}, 1} &= \left( 1,238 \pm 0,004 \right)\,\unit{\second}\,.
+  T_{\text{l,exp.}, 1} &= \left( 1,237 \pm 0,005 \right)\,\unit{\second}\\
+  T_{\text{r,exp.}, 1} &= \left( 1,238 \pm 0,004 \right)\,\unit{\second}\,.
 \end{align*}
 Aufgrund der Fehlertolernz werden die beiden Pendel als identisch angenommen. Daher werden im Folgenden drei verschiedene Schwingungsarten
 untersucht.
@@ -88,13 +88,13 @@ Die gemessene fünffache Schwingungsdauer der gleichphasigen Schwingung sind in 
   \end{tblr}
 \end{table}
 Die aus der Tabelle (\ref{tab:GleichphasigeSchwingung_L1}) hergeleitete gemittelte Schwingungsdauer mit der Standardabweichung lautet
-$$T_{+, 1} = \left( 1,194 \pm 0,004 \right)\,\unit{\second}\,.$$
+$$T_{+,\text{exp.} 1} = \left( 1,194 \pm 0,004 \right)\,\unit{\second}\,.$$
 Mit der Gleichung (\ref{}) wird die theoretische Schwingungsdauer der gleichphasigen Schwingung bestimmt. Daraus folgt
 $$T_{+, \text{theo.}, 1} = 1,144\,\unit{\second}\,.$$
 Aus der Gleichung (\ref{}) und der Gaußschen Fehlerfortpflanzung 
 $$\Delta \omega = \sqrt{\left(-\frac{2 \pi}{T^{2}}\cdot \Delta T \right)^{2}}$$
 wird, durch Einsetzen von $T_{\text{gl}, 1}$, die Schwingungsfrequenz
-$$\omega_{+, 1} =  \left( 5,261 \pm 0,017 \right)\,\unit[per-mode=fraction]{\per \second}$$ berechnet. 
+$$\omega_{+,\text{exp.} 1} =  \left( 5,261 \pm 0,017 \right)\,\unit[per-mode=fraction]{\per \second}$$ berechnet. 
 Anhand der Gleichung (\ref{}) wird die theoretische Schwingungsfreqeunz der gleichphasigen Schwingung 
 $$\omega_{+, \text{theo.}, 1} = 5,494\,\unit[per-mode=fraction]{\per \second}\,$$ bestimmt.
 %
@@ -125,18 +125,20 @@ in der Tabelle (\ref{tab:GegenphasigeSchwingung_L1}) aufgeführt.
   \end{tblr}
 \end{table}
 Anhand dieser Daten lässt sich die gemittelte Schwingungsdauer und die Standardabweichung berechnet. Somit ergibt sich
-$$T_{-, 1} = \left(1,031 \pm 0,008 \right)\, \unit{\second}\,.$$ 
+$$T_{-,\text{exp.}, 1} = \left(1,031 \pm 0,008 \right)\, \unit{\second}\,.$$ 
 Für die Bestimmung der theoretischen Schwingungsdauer und Schwingungsfrequenz einer gegenphasigen Schwingung wird die Kopplungskonstante $K$ benötigt. Da
-diese nicht gegeben ist, wird die Kopplungskonstante durch Einsetzen von $T_{+,1}$ und $T_{-,1}$ in die Gleichung (\ref{}) berechnet.
+diese nicht gegeben ist, wird die Kopplungskonstante durch Einsetzen von $T_{+,1}$ und $T_{-,1}$ in die Gleichung (\ref{}) berechnet. Die Messusicherheit der Kopplungskonstante
+ergibt sich aus der Gaußschen Fehlerfortpflanzung
+$$\Delta K = \sqrt{\left(\frac{4 \cdot T_+\cdot T_{-}^{2}}{\left(T_{+}^{2} + T_{-}^{2}\right)^{2}}\cdot \Delta T_+\right)^{2}+ \left(-\frac{4\cdot T_{+}^{2}\cdot T_{-}}{\left(T_{+}^{2} + T_{-}^{2}\right)^{2}} \cdot \Delta T_{-}\right)^2}$$
 Daraus folgt
 $$K_1 = \left( 0,146 \pm 0,008 \right)\,.$$
 Anschließend lässt sich die theoretische Schwingungsdauer mit Hilfe der Gleichung (\ref{}) bestimmen. Diese lautet
 $$T_{-,\text{theo.},1} = \left( 0,988 \pm 0,008 \right)\, \unit{\second}\,.$$
 Die empirische Schwingungsfrequenz 
-$$\omega_{-,1} = \left( 6,09 \pm 0,05 \right)\, \unit[per-mode=fraction]{\per \second}$$ wird durch $T_{-,1}$ und der Gleichung (\ref{})
+$$\omega_{-,\text{exp.}1} = \left( 6,09 \pm 0,05 \right)\, \unit[per-mode=fraction]{\per \second}$$ wird durch $T_{-,1}$ und der Gleichung (\ref{})
 berechnet. Aus der Gleichung (\ref{}) ergibt sich die folgendene theoretische Schwingungsfrequenz
 $$\omega_{-,\text{theo},1} = \left( 6,36 \pm 0,05 \right)\,\unit[per-mode=fraction]{\per \second}\,.$$
-
+%
 %
 \subsubsection{Gekoppelte Schwingung}
 \label{sec:GekoppelteSchwingung_KurzesPendel}
@@ -163,13 +165,17 @@ In der Tabelle (\ref{tab:Gekoppelt_L1}) sind die Schwingungsdauer und die Schweb
   \end{tblr}
 \end{table}
 Aus dieser Tabelle lässt sich die gemittelte Schwingungsdauer und die Standardabweichung 
-$$T_{1} = \left( 1,10\pm 0,04 \right)\, \unit{\second}$$ bestimmen.
+$$T_{1,\text{exp.}} = \left( 1,10\pm 0,04 \right)\, \unit{\second}$$ bestimmen.
 Durch Einsetzen der Schwingungsdauer $T_{1}$ in die Gleichung (\ref{}) ergibt sich die Schwingungsfreqeunz
-$$\omega_{1} = \left( 5,72 \pm 0,20 \right)\, \unit[per-mode=fraction]{\per \second}\,.$$
+$$\omega_{1,\text{exp.}} = \left( 5,72 \pm 0,20 \right)\, \unit[per-mode=fraction]{\per \second}\,.$$
 Anhand der Messwerte aus der Tabelle (\ref{tab:Gekoppelt_L1}) wird die gemittelte Schwebung und die Standardabweichung 
-$$T_{\text{S}} = \left( 7,119 \pm 0,009 \right)\, \unit{\second}$$ berechnet. Die aus der Gleichung (\ref{}) ermittelte 
-Schwingungsfreqeunz der Schwebung lautet
-$$\omega_{\text{S}} = \left( 0,8826 \pm 0,0011 \right)\unit[per-mode=fraction]{\per \second}\,.$$
+$$T_{\text{S,exp.},1} = \left( 7,119 \pm 0,009 \right)\, \unit{\second}$$ berechnet. 
+Der theoretische Wert berechnet sich mit der Gleichung (\ref{}) und beträgt
+$$T_{\text{S,theo},1} = \left( 7,2 \pm 0,4 \right)\, \unit{\second} $$
+Die aus der Gleichung (\ref{}) ermittelte Schwingungsfreqeunz der Schwebung lautet
+$$\omega_{\text{S,exp.},1} = \left( 0,8826 \pm 0,0011 \right)\unit[per-mode=fraction]{\per \second}\,.$$
+Mithilfe der Gleichung (\ref{}) wird die theoretische Schwingungsfreqeunz berechnet. Der Betrag davon lautet
+$$\omega_{\text{S,theo.},1} = \left( 0,87 \pm 0,05 \right)\unit[per-mode=fraction]{\per \second}\,.$$
 %
 %
 \subsection{Langes Pendel}
@@ -200,8 +206,8 @@ aufgeführt.
 \end{table}
 Aus der Tabelle ergeben sich die gemittelten Schwingungsdauern und deren Standardabweichung
 \begin{align*}
-  T_{\text{l}, 2} &= \left( 1,602 \pm 0,006 \right)\, \unit{\second}\\
-  T_{\text{r}, 2} &= \left( 1,608 \pm 0,006 \right)\, \unit{\second}\,.
+  T_{\text{l,exp.}, 2} &= \left( 1,602 \pm 0,006 \right)\, \unit{\second}\\
+  T_{\text{r,exp.}, 2} &= \left( 1,608 \pm 0,006 \right)\, \unit{\second}\,.
 \end{align*}
 Aufgrund der Fehlertoleranz werden die beiden Pendel erneut als identisch angenommen und die drei verschiedene Schwingungsarten untersucht.
 \subsubsection{Gleichphasige Schwingung}
@@ -230,18 +236,20 @@ aufgelistet.
   \end{tblr}
 \end{table}
 Aus diesen Werten ergibt sich die gemittelte Schwingungsdauer und die Standardabweichung
-$$T_{+,2} = \left( 1,567 \pm 0,010 \right)\, \unit{\second}\,.$$
+$$T_{+,\text{exp.},2} = \left( 1,567 \pm 0,010 \right)\, \unit{\second}\,.$$
 Die theoretische Schwingungsdauer lässt sich anhand der Gleichung (\ref{}) bestimmen und beträgt
 $$T_{+,\text{theo.},2} = 1,621\, \unit{\second}\,.$$
-Mit der Gleichung (\ref{}) und $T_{+,2}$ lässt sich die Schwingungsfreqeunz
-$$\omega_{+,2} = \left( 4,009 \pm 0,025 \right)\, \unit[per-mode=fraction]{\per\second}$$ berechnen. 
-Die theoretische Schwingungsfrequenz 
+Mit der Gleichung (\ref{}) und $T_{+,\text{exp.}2}$ lässt sich die Schwingungsfreqeunz
+$$\omega_{+,\text{exp.},2} = \left( 4,009 \pm 0,025 \right)\, \unit[per-mode=fraction]{\per\second}$$ berechnen. 
+Die theoretische Schwingungsfrequenz
 $$\omega_{+,\text{theo.},2} = 3,876 \, \unit[per-mode=fraction]{\per\second}$$ ergibt sich aus der Gleichung (\ref{}).
 
 %
 %
 \subsubsection{Gegenphasige Schwingung}
 \label{sec:GegenphasigeSchwingung_LangesPendel}
+In der Tabelle (\ref{tab:GegenphasigeSChwingung_L2}) sind die gemessenen Schwingungsdauern bei einer Länge von $65,3\, \unit{\centi\meter}$ einer gegenphasigen
+Schwingung. 
 \begin{table}[H]
   \centering
   \caption{Gemessene fünffache Schwingungsdauer bei einer Länge von $65,3\, \unit{\centi\meter}$ und gegenphasiger Schwingung.}
@@ -263,10 +271,23 @@ $$\omega_{+,\text{theo.},2} = 3,876 \, \unit[per-mode=fraction]{\per\second}$$ e
       \bottomrule
   \end{tblr}
 \end{table}
+Aus dieser Tabelle ergibt sich die folgende gemittelte Schwingungsdauer mit der Standardabweichung
+$$T_{-,\text{exp},2} = \left(1,420 \pm 0,006\right)\,\unit{\second}\,.$$
+Um die theoretische Schwingungsdauer zu bestimmt wird zunächst die Kopplungskonstante $K$ mit der
+Gleichung (\ref{}) bestimmt. Daraus ergibt sich
+$$K_{2} = 0,099 \pm 0,007\,.$$
+Mit der Gleichung (\ref{}) wird die theoretische Schwingungsdauer 
+$$T_{-,\text{theo.},2} = \left( 1,468 \pm 0.011 \right)\,\unit{\second}$$ berechnet. Durch Einsetzen von
+$T_{-,\text{exp},2}$ in die Gleichung (\ref{}) wird die Schwingungsfrequenz 
+$$\omega_{-,\text{exp.},2} = \left(4,426 \pm 0,017 \right)\, \unit[per-mode=fraction]{\per\second}$$ bestimmt. 
+Die theoretische Schwingungsdauer ergibt aus Gleichung (\ref{}) 
+Für die theoretische Schwingungsfrequenz ergibt sich aus der Gleichung (\ref{}) 
+$$\omega_{-,\text{theo.},2} = \left( 4,279 \pm 0,031 \right)\, \unit[per-mode=fraction]{\per\second}\,.$$
 %
 %
 \subsubsection{Gekoppelte Schwingung}
 \label{sec:GekoppelteSchwingung_LangesPendel}
+Die gemessenen Schwingungsdauern bei der gekoppelten Schwingung sind in der Tabelle (\ref{tab:Gekoppelte_L2}) aufgeführt.
 \begin{table}[H]
   \centering
   \caption{Gemessene fünffache Schwingungsdauer und Schwebung bei einer Länge von $65,3\, \unit{\centi\meter}$ und gekoppelter Schwingung.}
@@ -288,6 +309,19 @@ $$\omega_{+,\text{theo.},2} = 3,876 \, \unit[per-mode=fraction]{\per\second}$$ e
       \bottomrule
   \end{tblr}
 \end{table}
+Aus diesen Messwerten lässt sich die gemittelte Schwingungsdauer mit der Standardabweichung
+$$ T_{2,\text{exp.}} =\left( 1,546 \pm 0,011 \right)\,\unit{\second} $$ ermitteln. 
+Die Schwingungsfrequent wird aus der Gleichung (\ref{}) berechnet. Daraus folgt
+$$\omega_{2,\text{exp.}} = \left( 4,065 \pm 0,030 \right)\, \unit[per-mode=fraction]{\per\second}\,.$$
+Die gemittelte Schwebung mit der Standardabweichung wird anhand der Messwerten aus der Tabelle (\ref{tab:Gekoppelt_L2}) berechnet.
+Somit ergibt sich
+$$T_{\text{S,exp.},2} = \left( 15,741 \pm 0,013 \right)\,\unit{\second}\,.$$
+Mit Hilfe der Gleichung (\ref{}) wird die folgende theoretische Schwebung bestimmt.
+$$ T_{\text{S,theo.},2} = \left( 15,6 \pm 1,2 \right)\,\unit{\second}\,.$$
+Durch Einsatz von $T_{\text{S,exp.},2}$ in Gleichung (\ref{}) wird die Schwebungsfrequenz
+$$\omega_{\text{S,exp.},2} = \left( 0,39917 \pm 0,00033  \right)\, \unit[per-mode=fraction]{\per\second} $$ berechnet.
+Anhand der Gleichung (\ref{}) lässt sich die theoretische Schwebungsfrequenz ermitteln. Der Betrag davon lautet
+$$\omega_{\text{S,exp.},2} = \left( 0,404 \pm -0,031  \right)\, \unit[per-mode=fraction]{\per\second}\,.$$ 
 % \begin{figure}
 %   \centering
 %   \includegraphics{plot.pdf}
