@@ -1,23 +1,93 @@
 % Diskussion L1
 % Relative Fehler L1:
-% rel. T+ L1:               0,0442+/-0,0033 
-% rel. omega+ L1:           0,0423+/-0,0030 
-% rel. T- L1:               0,0442+/-0,0033 
-% rel. omega- L1:           0,0423+/-0,0030 
-% rel. T_S L1:              0,02+/-0,06 
-% rel. omega_S L1:          -0,0423+/-0,0030 (nicht mit omega=2pi*(1/T))
-% rel. omega_S L1 test:     -2,02+/-0,06 (mit 2pi*(1/T), aber omega_theo ist negativ)
-% rel. omega_S L1 test2:    0,02+/-0,06 (ergibt eig am meisten Sinn, mit 2pi*(1/T), aber mit abs(omega_theo))
+% rel. T+ L1:               0,0442152264703583     0.0437
+% rel. omega+ L1:           0,04234302024096516     0,0424
+% rel. T- L1:               0,04421522647035821     0,0435
+% rel. omega- L1:           0,042343020240964944     0.0425
+% rel. T_S L1:              0,016041803428131787 
+% rel. omega_S L1 test2:    0,016303338377607397 (ergibt eig am meisten Sinn, mit 2pi*(1/T), aber mit abs(omega_theo))
 % Diskussion L2   
 % Relative Fehler L2:   
-% rel. T+ L2:               0,033+/-0,006
-% rel. omega+ L2:           0,034+/-0,006
-% rel. T- L2:               0,033+/-0,006
-% rel. omega- L2:           0,034+/-0,006
-% rel. T_S L2:              0,01+/-0,08
-% rel. omega_S L2:          -0,034+/-0,006 (nicht mit omega=2pi*(1/T))
-% rel. omega_S L2 test:     -1,99+/-0,08 (mit 2pi*(1/T), aber omega_theo ist negativ)
-% rel. omega_S L2 test2:    0,01+/-0,08 (ergibt eig am meisten Sinn, mit 2pi*(1/T), aber mit abs(omega_theo))
+% rel. T+ L2:               0,033108177656174805
+% rel. omega+ L2:           0,0342418633512878
+% rel. T- L2:               0,03310817765617467
+% rel. omega- L2:           0,034241863351287635
+% rel. T_S L2:              0,010945563805828885
+% rel. omega_S L2 test2:    0,010827055578168007 (ergibt eig am meisten Sinn, mit 2pi*(1/T), aber mit abs(omega_theo))
 \section{Diskussion}
 \label{sec:Diskussion}
 $$\text{rel. Abweichung} = \frac{|\text{exp. Wert} - \text{theo. Wert}|}{\text{theo. Wert}}$$
+\subsection{Kurzes Pendel}
+Gleichphasige Schwingung:\\
+\begin{align*}
+    T_{+,\text{exp.}, 1} &= \left( 1,194 \pm 0,004 \right)\,\unit{\second}\\
+    T_{+, \text{theo.}, 1} &= 1,144\,\unit{\second}
+\end{align*}
+Abweichung: $4,42\%$
+\begin{align*}
+    \omega_{+,\text{exp.}, 1} &=  \left( 5,261 \pm 0,017 \right)\,\unit[per-mode=fraction]{\per \second}\\
+    \omega_{+, \text{theo.}, 1} &= 5,494\,\unit[per-mode=fraction]{\per \second}
+\end{align*}
+Abweichung: $4,23\%$
+
+gegenphasige Schwingung:\\
+\begin{align*}
+    T_{-,\text{exp.}, 1} &= \left(1,031 \pm 0,008 \right)\, \unit{\second}\\
+    T_{-,\text{theo.},1} &= \left( 0,988 \pm 0,008 \right)\, \unit{\second}
+\end{align*}
+Abweichung: $4,42\%$
+\begin{align*}
+    \omega_{-,\text{exp.},1} &= \left( 6,09 \pm 0,05 \right)\, \unit[per-mode=fraction]{\per \second}\\
+    \omega_{-,\text{theo},1} &= \left( 6,36 \pm 0,05 \right)\,\unit[per-mode=fraction]{\per \second}
+\end{align*}
+Abweichung: $4,23\%$
+
+Gekoppelte Schwingung:\\
+\begin{align*}
+    T_{\text{S,exp.},1} &= \left( 7,119 \pm 0,009 \right)\, \unit{\second}\\
+    T_{\text{S,theo},1} &= \left( 7,2 \pm 0,4 \right)\, \unit{\second}
+\end{align*}
+Abweichung: $1,60å\%$
+\begin{align*}
+    \omega_{\text{S,exp.},1} &= \left( 0,8826 \pm 0,0011 \right)\unit[per-mode=fraction]{\per \second}\\
+    \omega_{\text{S,theo.},1} &= \left( 0,87 \pm 0,05 \right)\unit[per-mode=fraction]{\per \second}
+\end{align*}
+Abweichung: $1,63\%$
+%
+%
+\subsection{Langes Pendel}
+Gleichphasige Schwingung:\\
+\begin{align*}
+    T_{+,\text{exp.},2} &= \left( 1,567 \pm 0,010 \right)\, \unit{\second}\\
+    T_{+,\text{theo.},2} &= 1,621\, \unit{\second}
+\end{align*}
+Abweichung: $3,31\%$
+\begin{align*}
+    \omega_{+,\text{exp.},2} &= \left( 4,009 \pm 0,025 \right)\, \unit[per-mode=fraction]{\per\second}\\
+    \omega_{+,\text{theo.},2} &= 3,876 \, \unit[per-mode=fraction]{\per\second}
+\end{align*}
+Abweichung: $3,42\%$
+
+gegenphasige Schwingung:\\
+\begin{align*}
+    T_{-,\text{exp},2} &= \left(1,420 \pm 0,006\right)\,\unit{\second}\\
+    T_{-,\text{theo.},2} &= \left( 1,468 \pm 0.011 \right)\,\unit{\second}
+\end{align*}
+Abweichung: $3,31\%$
+\begin{align*}
+    \omega_{-,\text{exp.},2} &= \left(4,426 \pm 0,017 \right)\, \unit[per-mode=fraction]{\per\second}\\
+    \omega_{-,\text{theo.},2} &= \left( 4,279 \pm 0,031 \right)\, \unit[per-mode=fraction]{\per\second}
+\end{align*}
+Abweichung: $3,42\%$
+
+Gekoppelte Schwingung:\\
+\begin{align*}
+    T_{\text{S,exp.},2} &= \left( 15,741 \pm 0,013 \right)\,\unit{\second}\\
+    T_{\text{S,theo.},2} &= \left( 15,6 \pm 1,2 \right)\,\unit{\second}
+\end{align*}
+Abweichung: $1,10\%$
+\begin{align*}
+    \omega_{\text{S,exp.},2} &= \left( 0,39917 \pm 0,00033  \right)\, \unit[per-mode=fraction]{\per\second}\\
+    \omega_{\text{S,exp.},2} &= \left( 0,404 \pm -0,031  \right)\, \unit[per-mode=fraction]{\per\second}
+\end{align*}
+Abweichung: $1,08\%$
