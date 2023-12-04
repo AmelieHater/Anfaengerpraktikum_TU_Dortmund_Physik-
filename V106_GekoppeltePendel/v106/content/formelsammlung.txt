@@ -29,5 +29,8 @@ Formelsammlung zum Versuch
 
 \label{eqn:TSchwebung}
     T_{\text{S}} =  \frac{T_+ \cdot T_-}{T_+ - T_-}\,.
+
+\label{eqn:Kopplungskonstante}
+  K = \frac{T_{+}² - T_{-}²}{T_{+}² + T_{-}²}\, .
     
     
