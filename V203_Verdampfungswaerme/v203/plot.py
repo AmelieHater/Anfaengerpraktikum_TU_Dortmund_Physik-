@@ -95,7 +95,7 @@ p_aAinkilopascal_Fehler = p_aAinbar_Fehler * 100
 T_aAinK = unp.uarray(T_aAinK_nom, T_aAinK_Fehler)
 p_aAinkilopascal = unp.uarray(p_aAinkilopascal_nom, p_aAinkilopascal_Fehler)
 
-#Plot für millibarMessung
+#Plot für barMessung
 x = T_aAinK
 y = p_aAinkilopascal
 
@@ -117,8 +117,8 @@ ax.plot(
 )
 ax.grid()
 ax.set_xlim([375,475])
-ax.set_xlabel(r'$T$ [K]')
-ax.set_ylabel(r"$p$ [kPa]")
+ax.set_xlabel(r'$T_2$ [K]')
+ax.set_ylabel(r"$p_2$ [kPa]")
 ax.legend(loc = "best")
 fig2.savefig("plot2.pdf")
 
@@ -151,8 +151,8 @@ ax.plot(
 )
 ax.grid()
 ax.set_xlim([375,475])
-ax.set_xlabel(r'$T$ [K]')
-ax.set_ylabel(r"$L_-(T)$ [Jmol$^{-1}]$")
+ax.set_xlabel(r'$T_2$ [K]')
+ax.set_ylabel(r"$L_{2,-}(T)$ [Jmol$^{-1}]$")
 fig3.savefig("plot3.pdf")
 
 #Dann für L_+(T) von V_+
@@ -169,6 +169,6 @@ ax.plot(
 )
 ax.grid()
 ax.set_xlim([375,475])
-ax.set_xlabel(r'$T$ [K]')
-ax.set_ylabel(r"$L_+(T)$ [$\cdot$ 10$^{3}$ Jmol$^{-1}$]")
+ax.set_xlabel(r'$T_2$ [K]')
+ax.set_ylabel(r"$L_{2,+}(T)$ [$\cdot$ 10$^{3}$ Jmol$^{-1}$]")
 fig4.savefig("plot4.pdf")

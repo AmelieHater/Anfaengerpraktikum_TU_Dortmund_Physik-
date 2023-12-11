@@ -51,7 +51,7 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
      %Der Druck als $\ln{\frac{p}{p_0}}$ auf der y Achse und die Temperatur in $\frac{1}{T} \,\left[\frac{1}{\symup{K}}\right]$ auf der x-Achse. 
 
 
-    \begin{figure}
+    \begin{figure}[H]
       \centering
       \includegraphics{plot1.pdf}
       \caption{Graphische Darstellung der Messwerte aus Tabelle (\ref{tab:Druck_unter_1_bar}) mit Ausgleichsgerade.}
@@ -77,7 +77,7 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
       m &= - \frac{L}{R} \\
       \Leftrightarrow L &= - \, m \cdot R
     \end{align}
-    umgestellt. Für $R = 8,3145 \, \unit[per-mode=fraction]{\joule\per\mol\per\kelvin}$ ergibt dies einen Wert von $L = (28,4 \pm 0,4) \cdot 10^3 \, \unit[per-mode=fraction]{\joule\per\mol}$.
+    umgestellt. Für $R = 8,3145 \, \unit[per-mode=fraction]{\joule\per\mol\per\kelvin}$ \cite{R_Konstante} ergibt dies einen Wert von $L = (28,4 \pm 0,4) \cdot 10^3 \, \unit[per-mode=fraction]{\joule\per\mol}$.
     \\
     Zur Berechnung der inneren Verdampfungswärme $L_{\text{i}}$ wird Formel (\ref{eqn:Verdampfungswaerme}) verwendet. Diese umgestellt ergibt 
     \begin{equation}
@@ -109,8 +109,8 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
       \label{eqn:L_neue_Form}
     \end{equation}
     
-    Zur Bestimmung von $L$ wird demnach die Ableitung der Druckkurve nach $T$ benötigt. 
-    Ein Ausdruck für $p$ wird im Folgenden durch das Auswerten der Messwerte, die in Tabelle (\ref{tab:Druck_ueber_1_bar}) aufgeführt sind, 
+    Zur Bestimmung von $L_2$ wird demnach die Ableitung der Druckkurve nach $T_2$ benötigt. 
+    Ein Ausdruck für $p_2$ wird im Folgenden durch das Auswerten der Messwerte, die in Tabelle (\ref{tab:Druck_ueber_1_bar}) aufgeführt sind, 
     berechnet. 
 
     \begin{table}[H]
@@ -140,14 +140,14 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
       \end{tblr}
     \end{table}
     
-    Diese Messwerte werden in Abbildung (\ref{}) mit einem Ausgleichspolynom 3. Grades dargestellt.
+    Diese Messwerte werden in Abbildung (\ref{fig:Druck_ueber_1_bar}) mit einem Ausgleichspolynom 3. Grades dargestellt.
     Dieses hat die Form 
     \begin{equation}
-      p = a \cdot T³ + b \cdot T² + c \cdot T + d \,.
+      p_2 = a \cdot T_2³ + b \cdot T_2² + c \cdot T_2 + d \,.
     \end{equation}
-    Die benötigte Ableitung nach $T$ hat demnach die Form
+    Die benötigte Ableitung nach $T_2$ hat demnach die Form
     \begin{equation}
-      \frac{\symup{d}p}{\symup{d}T} = 3  a \cdot T² + 2 b \cdot T + c \,.
+      \frac{\symup{d}p_2}{\symup{d}T_2} = 3  a \cdot T_2² + 2 b \cdot T_2 + c \,.
     \end{equation}
     Die Berechnung der Parameter ergibt 
     \begin{align*}
@@ -164,38 +164,38 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
       \label{fig:Druck_ueber_1_bar}
     \end{figure}
     
-    $V_{\text{D}}$ wird in dieser Rechnung nicht durch die ideale Gasgleichung ausgedrückt, da der Druck für diese
-    Annahme zu hoch ist. Die nun verwendete Näherung für $V_{\text{D}}$ ist
+    $V_{\text{D,2}}$ wird in dieser Rechnung nicht durch die ideale Gasgleichung ausgedrückt, da der Druck für diese
+    Annahme zu hoch ist. Die nun verwendete Näherung für $V_{\text{D,2}}$ ist
     \begin{equation}
-      R \cdot T = \left(p + \frac{\symup{k}}{V_{\text{D}}²}\right) \cdot V_{\text{D}} \, .
+      \symup{R} \cdot T_2 = \left(p_2 + \frac{\symup{k}}{V_{\text{D,2}}²}\right) \cdot V_{\text{D,2}} \, .
       \label{eqn:neues_V_D}
     \end{equation}
     Dabei ist $\symup{k} = 0,9 \, \frac{\symup{J}\symup{m³}}{\symup{mol²}}$ eine Konstante. Diese Näherung 
-    beinhaltet die Annahme, dass das Volumen der Flüssigkeit $V_{\text{F}}$ gegenüber dem des Volumens $V_{\text{D}}$ vernachlässigt
+    beinhaltet die Annahme, dass das Volumen der Flüssigkeit $V_{\text{F,2}}$ gegenüber dem des Volumens $V_{\text{D,2}}$ vernachlässigt
     werden kann. 
-    Umstellen der Gleichung (\ref{eqn:neues_V_D}) nach $V_{\text{D}}$ ergibt
+    Umstellen der Gleichung (\ref{eqn:neues_V_D}) nach $V_{\text{D,2}}$ ergibt
     \begin{equation}
-      V_{\text{D}} = \frac{\symup{R}T}{2 p} \pm \sqrt{\left(\frac{\symup{R}T}{2p}\right)² - \frac{\symup{k}}{p}} \, .
+      V_{\text{D,2}} = \frac{\symup{R}T_2}{2 p_2} \pm \sqrt{\left(\frac{\symup{R}T_2}{2p_2}\right)² - \frac{\symup{k}}{p_2}} \, .
     \end{equation}
-    Diese Formel und die Annahme, dass $V_{\text{F}} \thickapprox 0$ gegenüber $V_{\text{D}}$, führen eingesetzt in Formel (\ref{eqn:L_neue_Form}) zu 
+    Diese Formel und die Annahme, dass $V_{\text{F,2}} \thickapprox 0$ gegenüber $V_{\text{D,2}}$, führen eingesetzt in Formel (\ref{eqn:L_neue_Form}) zu 
     \begin{align*}
-      L &= T \cdot \left(\frac{\symup{R}T}{2 p} \pm \sqrt{\left(\frac{\symup{R}T}{2p}\right)² - \frac{\symup{k}}{p}}\right) \cdot \frac{\symup{d}p}{\symup{d}T} \\
-      \Rightarrow L_+ &= T \cdot \left(\frac{\symup{R}T}{2 p} + \sqrt{\left(\frac{\symup{R}T}{2p}\right)² - \frac{\symup{k}}{p}}\right) \cdot \frac{\symup{d}p}{\symup{d}T} \\
-      \Rightarrow L_- &= T \cdot \left(\frac{\symup{R}T}{2 p} - \sqrt{\left(\frac{\symup{R}T}{2p}\right)² - \frac{\symup{k}}{p}}\right) \cdot \frac{\symup{d}p}{\symup{d}T} \, .
+      L_2 &= T_2 \cdot \left(\frac{\symup{R}T_2}{2 p_2} \pm \sqrt{\left(\frac{\symup{R}T_2}{2p_2}\right)² - \frac{\symup{k}}{p_2}}\right) \cdot \frac{\symup{d}p_2}{\symup{d}T_2} \\
+      \Rightarrow L_{2,+} &= T_2 \cdot \left(\frac{\symup{R}T_2}{2 p_2} + \sqrt{\left(\frac{\symup{R}T_2}{2p_2}\right)² - \frac{\symup{k}}{p_2}}\right) \cdot \frac{\symup{d}p_2}{\symup{d}T_2} \\
+      \Rightarrow L_{2,-} &= T_2 \cdot \left(\frac{\symup{R}T_2}{2 p_2} - \sqrt{\left(\frac{\symup{R}T_2}{2p_2}\right)² - \frac{\symup{k}}{p_2}}\right) \cdot \frac{\symup{d}p_2}{\symup{d}T_2} \, .
     \end{align*}
     
-    Zur Veranschaulichkeit werden die beiden Lösungen $L_+$ und $L_-$ in Abbildungen dargestellt. $L_+$ in Abbildung (\ref{fig:L_+}) und $L_-$ in Abbildung (\ref{fig:L_-}).
+    Zur Veranschaulichkeit werden die beiden Lösungen $L_{2,+}$ und $L_{2,-}$ in Abbildungen dargestellt. $L_{2,+}$ in Abbildung (\ref{fig:L_+}) und $L_{2,-}$ in Abbildung (\ref{fig:L_-}).
     \begin{figure}[H]
       \centering
       \includegraphics{plot4.pdf}
-      \caption{Lösung für die Wärmeenergie $L$ bei positivem Wurzelvorzeichen.}
+      \caption{Lösung für die Wärmeenergie $L_2$ bei positivem Wurzelvorzeichen.}
       \label{fig:L_+}
     \end{figure}
 
     \begin{figure}[H]
       \centering
       \includegraphics{plot3.pdf}
-      \caption{Lösung für die Wärmeenergie $L$ bei negativem Wurzelvorzeichen.}
+      \caption{Lösung für die Wärmeenergie $L_2$ bei negativem Wurzelvorzeichen.}
       \label{fig:L_-}
     \end{figure}
     %Siehe \autoref{fig:plot}!
