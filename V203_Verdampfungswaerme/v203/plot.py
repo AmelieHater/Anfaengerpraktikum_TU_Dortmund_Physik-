@@ -139,7 +139,10 @@ a_Schlange = 0.9 # Jm³ / mol²
 
 fig3, ax = plt.subplots(1, 1)
 x_plot = np.linspace(375,475,10000)
-y_plot_1 = ((x_plot * (3*a * x_plot**2 + 2 * b * x_plot + c))/(a * x_plot**3 + b * x_plot**2 + c * x_plot + d)) * (((R * x_plot)/(2)) - (np.sqrt(((R * x_plot)**2/(4)) - (a_Schlange * (a * x_plot**3 + b * x_plot**2 + c * x_plot + d)))))
+p = a * x_plot**3 + b * x_plot**2 + c * x_plot + d
+p_Ableitung = 3*a * x_plot**2 + 2 * b * x_plot + c
+
+y_plot_1 = x_plot * (((R * x_plot)/(2*p)) - np.sqrt(((R * x_plot)/(2*p))**2 - (a_Schlange/p))) * p_Ableitung
 
 ax.plot(
     x_plot,
@@ -157,7 +160,8 @@ fig3.savefig("plot3.pdf")
 fig4, ax = plt.subplots(1, 1)
 x_plot = np.linspace(375,475,10000)
 
-y_plot_2 = ((x_plot * (3*a * x_plot**2 + 2 * b * x_plot + c))/(a * x_plot**3 + b * x_plot**2 + c * x_plot + d)) * (((R * x_plot)/(2)) + (np.sqrt(((R * x_plot)**2/(4)) - (a_Schlange * (a * x_plot**3 + b * x_plot**2 + c * x_plot + d)))))
+
+y_plot_2 = x_plot * (((R * x_plot)/(2*p)) + np.sqrt(((R * x_plot)/(2*p))**2 - (a_Schlange/p))) * p_Ableitung 
 ax.plot(
     x_plot,
     y_plot_2 * 10 **-3,
