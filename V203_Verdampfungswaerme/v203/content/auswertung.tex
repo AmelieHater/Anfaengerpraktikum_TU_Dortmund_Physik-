@@ -8,7 +8,7 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
   \subsection{Verdampfungswärme von Wasser bis 1 bar}
    Der zu Anfang gemessene Umgebungsdruck $p_0$ beträgt $985\,\unit{\milli\bar}$ bei einer Umgebungstemperatur von $22 \,\unit{\celsius}$. 
   Die gemessenen Werte für das Druckverhalten bei ansteigendender Temperatur für 
-  Druck unter 1 bar ist in Tabelle (\ref{tab:Druck_unter_1_bar}) aufgelistet. 
+  Druck unter 1 bar ist in Tabelle (\ref{tab:Druck_unter_1_bar}) aufgelistet. Diese Werte werden in Abbildung (\ref{fig:Druck_unter_1_bar}) aufgetragen.  
 
     \begin{longtblr}[
       caption = {Gemessener Druck $p$ bei verschiedenen Temperaturen $T$},
@@ -47,13 +47,13 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
       $50 \pm 1$ & $192 \pm 1$  & $76 \pm 1$ & $417 \pm 1$ & & \\ 
       \bottomrule
     \end{longtblr}
-     Diese Werte werden in Abbildung (\ref{fig:Druck_unter_1_bar}) aufgetragen. 
+     
      %Der Druck als $\ln{\frac{p}{p_0}}$ auf der y Achse und die Temperatur in $\frac{1}{T} \,\left[\frac{1}{\symup{K}}\right]$ auf der x-Achse. 
 
 
     \begin{figure}[H]
       \centering
-      \includegraphics{plot1.pdf}
+      \includegraphics[width=0.977\linewidth]{plot1.pdf}
       \caption{Graphische Darstellung der Messwerte aus Tabelle (\ref{tab:Druck_unter_1_bar}) mit Ausgleichsgerade.}
       \label{fig:Druck_unter_1_bar}
     \end{figure}
@@ -77,7 +77,7 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
       m &= - \frac{L}{R} \\
       \Leftrightarrow L &= - \, m \cdot R
     \end{align}
-    umgestellt. Für $R = 8,3145 \, \unit[per-mode=fraction]{\joule\per\mol\per\kelvin}$ \cite{R_Konstante} ergibt dies einen Wert von $L = (28,4 \pm 0,4) \cdot 10^3 \, \unit[per-mode=fraction]{\joule\per\mol}$.
+    umgestellt. Für $R = 8,3145 \, \unit[per-mode=reciprocal]{\joule\per\mol\per\kelvin}$ \cite{R_Konstante} ergibt dies einen Wert von $L = (28,4 \pm 0,4) \cdot 10^3 \, \unit[per-mode=reciprocal]{\joule\per\mol}$.
     \\
     Zur Berechnung der inneren Verdampfungswärme $L_{\text{i}}$ wird Formel (\ref{eqn:Verdampfungswaerme}) verwendet. Diese umgestellt ergibt 
     \begin{equation}
@@ -87,14 +87,14 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
     \begin{equation}
       L_{\text{a}} = R \cdot  T_{\text{a}}\, . 
     \end{equation}
-    Dies ergibt $L_{\text{a}} = 3,1013 \cdot 10³ \, \unit[per-mode=fraction]{\joule\per\mol}$. 
-    Mithilfe von $L_{\text{a}}$ wird $L_{\text{i}} = (25,3 \pm 0,4) \cdot 10³ \, \unit[per-mode=fraction]{\joule\per\mol}$ bestimmt. 
+    Dies ergibt $L_{\text{a}} = 3,1013 \cdot 10³ \, \unit[per-mode=reciprocal]{\joule\per\mol}$. 
+    Mithilfe von $L_{\text{a}}$ wird $L_{\text{i}} = (25,3 \pm 0,4) \cdot 10³ \, \unit[per-mode=reciprocal]{\joule\per\mol}$ bestimmt. 
     Um die Einheit der Energie $L_{\text{i}}$ in eine Energie mit Einheit Elektronenvolt pro Molekül $L_{\text{i,M}}$ umzurechnen, wird 
     \begin{equation}
       L_{\text{i,M}} = \frac{L_{\text{i}}}{\symup{N} \cdot \symup{e}}
       \label{eqn:L_Molekül}
     \end{equation}
-    angewandt. $\symup{N}$ ist dabei die Avogadrokonstante $6,0221 \cdot 10^{23} \, \frac{1}{\symup{mol}}$ und $\symup{e}$ die Elementarladung mit 
+    angewandt. $\symup{N}$ ist dabei die Avogadrokonstante $6,0221 \cdot 10^{23} \, \symup{mol^{-1}}$ und $\symup{e}$ die Elementarladung mit 
     $\symup{e} = 1,6022 \cdot 10^{-19} \, \unit{\ampere\second}$. 
     Durch Gleichung (\ref{eqn:L_Molekül}) wird $L_{\text{i,M}}$ berechnet zu $L_{\text{i,M}} = (0,262 \pm 0,005) \, \symup{e}\symup{V}$.
     
@@ -170,14 +170,14 @@ bestimmt. Dabei bezeichnet $n$ die Anzahl der Größen, von denen $f$ abhänig i
       \symup{R} \cdot T_2 = \left(p_2 + \frac{\symup{k}}{V_{\text{D,2}}²}\right) \cdot V_{\text{D,2}} \, .
       \label{eqn:neues_V_D}
     \end{equation}
-    Dabei ist $\symup{k} = 0,9 \, \frac{\symup{J}\symup{m³}}{\symup{mol²}}$ eine Konstante. Diese Näherung 
+    Dabei ist $\symup{k} = 0,9 \, \symup{J}\symup{m^{-3}}\symup{mol^{-2}}$ eine Konstante. Diese Näherung 
     beinhaltet die Annahme, dass das Volumen der Flüssigkeit $V_{\text{F,2}}$ gegenüber dem des Volumens $V_{\text{D,2}}$ vernachlässigt
-    werden kann. 
+    wird. 
     Umstellen der Gleichung (\ref{eqn:neues_V_D}) nach $V_{\text{D,2}}$ ergibt
     \begin{equation}
       V_{\text{D,2}} = \frac{\symup{R}T_2}{2 p_2} \pm \sqrt{\left(\frac{\symup{R}T_2}{2p_2}\right)² - \frac{\symup{k}}{p_2}} \, .
     \end{equation}
-    Diese Formel und die Annahme, dass $V_{\text{F,2}} \thickapprox 0$ gegenüber $V_{\text{D,2}}$, führen eingesetzt in Formel (\ref{eqn:L_neue_Form}) zu 
+    Diese Formel und die Annahme, dass $V_{\text{F,2}} << V_{\text{D,2}}$, führen eingesetzt in Formel (\ref{eqn:L_neue_Form}) zu 
     \begin{align*}
       L_2 &= T_2 \cdot \left(\frac{\symup{R}T_2}{2 p_2} \pm \sqrt{\left(\frac{\symup{R}T_2}{2p_2}\right)² - \frac{\symup{k}}{p_2}}\right) \cdot \frac{\symup{d}p_2}{\symup{d}T_2} \\
       \Rightarrow L_{2,+} &= T_2 \cdot \left(\frac{\symup{R}T_2}{2 p_2} + \sqrt{\left(\frac{\symup{R}T_2}{2p_2}\right)² - \frac{\symup{k}}{p_2}}\right) \cdot \frac{\symup{d}p_2}{\symup{d}T_2} \\
