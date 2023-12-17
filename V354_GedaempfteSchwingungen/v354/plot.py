@@ -61,6 +61,7 @@ R_eff_exp = 2 * ((b_pos + b_neg)/2) * L * 10**6
 print(f"R_eff_exp: {R_eff_exp} in ohm")
 
 # ------------------- Aufgabe b -------------------
+R_ap_exp = 4500
 R_ap_theo = 2* unp.sqrt(L/C)
 print(f"R_ap Theo: {R_ap_theo} (ohm)")
 # ------------------- Aufgabe c -------------------
@@ -71,7 +72,7 @@ T = unp.uarray(T_Einheit, delta_T)
 U_0 = 2.15
 f_Einheit = f * 1000 # Einheit
 
-U_zu_U0 = U_c /U_0
+U_zu_U0 = unp.nominal_values(U_c) /U_0
 print(f"U/U_0: {U_zu_U0}")
 
 
@@ -79,41 +80,73 @@ def Kurve_c(omega, R, L, C):
     return (1/np.sqrt((1- L * C * omega**2)**2 + omega**2 * R**2 * C**2))
 
 x = np.linspace(9.5, 45, 1000)
-y = Kurve_c(2*np.pi*1000*x, unp.nominal_values(R2), unp.nominal_values(L), unp.nominal_values(C))
+y_theoKurve = Kurve_c(2*np.pi*1000*x, unp.nominal_values(R2), unp.nominal_values(L), unp.nominal_values(C))
 fig2, ax1 = plt.subplots(1, 1, layout="constrained")
 ax1.plot(f, unp.nominal_values(U_zu_U0), "rx",label="Messwerte")
-ax1.plot(x,y, "b-" , label = "Theoriekurve")
+ax1.plot(x,y_theoKurve, "b-" , label = "Theoriekurve")
 ax1.set_xscale("log")
 ax1.grid(which="both")
 ax1.set_xlim([9.5,45])
-ax1.set_xlabel(r"$f\,\,$[kHz]]")
-ax1.set_ylabel(r"$U/U_0$")
+ax1.set_xlabel(r"$f\,\,$[kHz]")
+ax1.set_ylabel(r"$\frac{U}{U_0}$")
 ax1.legend(loc="best")
 fig2.savefig("plot_b.pdf")
 # print(f"U_C= {U_c} in V")
 # print(f"T= {T} in mikrosek") 
 
-print(f"Resonanzüberhöhung q theo: {max(y)}")
+print(f"Resonanzüberhöhung q theo: {max(y_theoKurve)}")
 
 delta_omega = R2 / L 
 delta_freq = delta_omega / (2 * np.pi)
 omega_0 = unp.sqrt(1/(L*C))
 q = omega_0/delta_omega
+delta_freq_exp = 30.16 - 20.85 
 print(f"delta_omega theo: {delta_omega} in Hz")
 print(f'delta_freq  theo(Breite der Resonanzkurve): {delta_freq} in Hz')
+print(f'delta_freq  exp(Breite der Resonanzkurve): {delta_freq_exp * 1000} in Hz')
 print(f'Güte/Resonanzüberhöhung q theo: {q} in V')
-# x = np.linspace(0, 10, 1000)
-# y = x ** np.sin(x)
 
-# fig, (ax1, ax2) = plt.subplots(1, 2, layout="constrained")
-# ax1.plot(x, y, label="Kurve")
-# ax1.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-# ax1.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-# ax1.legend(loc="best")
+U_omegaplus = max(y_theoKurve)/(np.sqrt(2))
+print(f"Spannung von omega+ und omega- theo: {U_omegaplus}")
+max_exp = ufloat(3.1395348837209305,0.023255813953488372)
+U_omegaplus_exp = max_exp/(np.sqrt(2))
+print(f"Spannung von omega+ und omega- exp: {U_omegaplus_exp}")
 
-# ax2.plot(x, y, label="Kurve")
-# ax2.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-# ax2.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-# ax2.legend(loc="best")
+omega_res = unp.sqrt(1/(L*C) - (R2**2)/(2*(L**2)))
+omega_1 = R2/(2*L) + unp.sqrt(R2**2/(4*(L**2)) + 1/(L*C))
+omega_2 = -R2/(2*L) + unp.sqrt(R2**2/(4*(L**2)) + 1/(L*C))
+print(f'Frequenz 1 theo: {omega_1/(1000*2*np.pi)} in kHz')
+print(f'Frequenz 2 theo: {omega_2/(1000*2*np.pi)} in kHz')
 
-# fig.savefig("build/plot.pdf")
+def breite_Kurve(x, max):
+    return(max/(np.sqrt(2))*x /x)
+x1 = np.linspace(20.85, 30.16, 2)
+fig3, ax1 = plt.subplots(1, 1, layout="constrained")
+ax1.plot(f, unp.nominal_values(U_zu_U0), "r",label="Messwerte")
+ax1.plot(x1, unp.nominal_values(breite_Kurve(x1,max_exp)), "b--" , label = "Experimentelle Breite")
+ax1.grid(which="both")
+ax1.set_xlim([18,33])
+ax1.set_ylim([1,3.5])
+ax1.set_xlabel(r"$f\,\,$[kHz]")
+ax1.set_ylabel(r"$\frac{U}{U_0}$")
+ax1.legend(loc="best")
+fig3.savefig("plot_c.pdf")
+
+# ------------------- Diskussion -------------------
+def rel_Abweichung(exp, theo):
+    return (np.abs(exp-theo)/(theo))
+print("Diskussion:")
+R_eff_abw = rel_Abweichung(R_eff_exp, R1)
+print(f"rel. Abw. R eff: {R_eff_abw}")
+
+R_ap_abw = rel_Abweichung(R_ap_exp, R_ap_theo)
+print(f"rel. Abw. R ap: {R_ap_abw}")
+
+max_abw = rel_Abweichung(unp.nominal_values(max_exp), max(y_theoKurve))
+print(f"rel. Abw. Maximum(Resonanzüberhöhung q): {max_abw}")
+
+breite_abw = rel_Abweichung(delta_freq_exp,delta_freq)
+print(f"rel. Abw. Breite: {breite_abw}")
+
+delta_freq_abw = rel_Abweichung(delta_freq_exp, delta_freq)
+print(f"rel. Abw. delta_freq: {delta_freq_abw}")
