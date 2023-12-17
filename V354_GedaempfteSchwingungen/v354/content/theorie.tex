@@ -1,8 +1,29 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
-
+Das Ziel dieses Versuches ist sich mit verschiedene gedämpften und erzwungen Schwingungen innerhalb einer Schaltung
+ bestehend aus Widerständen, Kondensatoren und Spulen, auseinanderzusetzen. Insbesondere wird sich mit einer gedäpften Schwingung, dem aperiodischen 
+ Grenzfall und Frequenzabhängigkeit der Kondensatorspannung beschäftigt. 
 \section{Theorie}
 \label{sec:Theorie}
+Ein ungedämpfter Schwingkreis besteht aus einer Spule mit Induktivität $L$ und einem Kondensator mit Kapazität $C$. In diesem gilt Energieerhaltung, was bedeutet, 
+dass die Gesamtenergie, die im Schwingkreis gespeichert ist, konstant bleibt. Diese Gesamtenergie setzt sich aus der Energie zusammen, die im Magnetfeld der Spule
+gespeichert ist und der Energie, die im elektrischen Feld des Kondensators gespeichert ist. Diese beiden Energieformen oszillieren verlustfrei im Schwingkreis. 
 
-\subsection{Vorbereitungsaufgaben}
-\label{sec:Vorbereitungsaufgaben}
+\subsection{Gedämpfte Schwingungen}
+In einem gedämpften Schwingkreis ist zusätzlich zu der Spule und dem Kondensatir ein ohmscher Widerstand $R$ eingebaut, an dem elektrische Energie konstant in 
+Wärmeenergie umgewandelt wird und dadurch das System verlässt. Daher ist keine Energieerhaltung im gedämpften Schwingkreis gegeben. Allerdings findet trotzdessen eine 
+Oszillation der einzelnen Energien statt, die Gesamtenergie nähert sich allerdings stetig der $0$ an. 
+Das Verhalten des gedämpften Schwingkreises lässt sich durch die Differentialgleichung 
+\begin{equation}
+    \ddot{I} + \frac{R}{L} \cdot \dot{I} + \frac{1}{L C} \cdot I = 0 
+\end{equation}
+beschreiben. $I$ ist dabei der im Schwingkreis fließende Strom. 
+Diese Gleichung wird durch die Funktion  
+\begin{equation}
+    I = \symup{e}^{-2\pi\mu t} \cdot \left(B_1 \cdot \symup{e}^{2\pi\nu \symup{i}t}  + B_2 \cdot \symup{e}^{- 2\pi\nu \symup{i}t} \right)
+\end{equation}
+gelöst. Für diese Funktion wurden die Abkürzungen 
+\begin{equation*}
+2 \pi \mu \coloneqq \frac{R}{2 L}  \,\,\text{und}\,\, 2 \pi \nu \coloneqq \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)²}
+\end{equation*}
+
