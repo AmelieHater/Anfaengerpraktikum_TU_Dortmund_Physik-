@@ -15,15 +15,15 @@ t_pos, delta_t, Amp_pos, delta_A = np.genfromtxt("positiveAmp.txt", unpack=True)
 t_Einheit_pos =t_pos * 50
 t_pos = unp.uarray(t_Einheit_pos+215, delta_t)
 Amp_pos = unp.uarray(Amp_pos, delta_A)
-# print(f"t pos.={t_pos}") # in mikrosek
-# print(f"A post= {Amp_pos}") # in Volt 
+print(f"t pos.={t_pos} in mikrosek") 
+print(f"A post= {Amp_pos} in V")
 
 t_neg, delta_t, Amp_neg, delta_A = np.genfromtxt("negativeAmp.txt", unpack=True)
 t_Einheit_neg =t_neg * 50
 t_neg = unp.uarray(t_Einheit_neg+215, delta_t)
 Amp_neg = unp.uarray(Amp_neg, delta_A)
-# print(f"t neg= {t_neg}") # in mikrosek
-# print(f"A neg= {Amp_neg}") # in Volt
+print(f"t neg= {t_neg} in mikrosek")
+print(f"A neg= {Amp_neg} in V")
 
 # Plot für Aufgabe a 
 def exponential_pos (x, a, b):
@@ -34,13 +34,13 @@ def exponential_neg (x, a, b):
 
 popt_pos, pcov_pos = curve_fit(exponential_pos, unp.nominal_values(t_pos), unp.nominal_values(Amp_pos))
 a_pos, b_pos = popt_pos
-print(f"a: {a_pos}")
-print(f"b: {b_pos}")
+print(f"a pos: {a_pos} in V")
+print(f"b pos: {b_pos * 10**(6)} in Hz")
 
 popt_neg, pcov_neg = curve_fit(exponential_neg, unp.nominal_values(t_neg), unp.nominal_values(Amp_neg))
 a_neg, b_neg = popt_neg
-print(f"a: {a_neg}")
-print(f"b: {b_neg}")
+print(f"a neg: {a_neg} in V")
+print(f"b neg: {b_neg * 10**(6)} in Hz")
 
 x = np.linspace(0,430, 100000)
 y_pos = exponential_pos(x, a_pos, b_pos)
@@ -57,8 +57,8 @@ ax1.set_ylabel(r"$U\,\,$[V]")
 ax1.legend(loc="best")
 fig.savefig("plot_a.pdf")
 
-R_eff_exp = 2 * ((b_pos + b_neg)/2) * L * 10**3
-print(f"R_eff_exp: {R_eff_exp}")
+R_eff_exp = 2 * ((b_pos + b_neg)/2) * L * 10**6
+print(f"R_eff_exp: {R_eff_exp} in ohm")
 
 # ------------------- Aufgabe b -------------------
 R_ap_theo = 2* unp.sqrt(L/C)
@@ -79,9 +79,10 @@ def Kurve_c(omega, R, L, C):
     return (1/np.sqrt((1- L * C * omega**2)**2 + omega**2 * R**2 * C**2))
 
 x = np.linspace(9.5, 45, 1000)
+y = Kurve_c(2*np.pi*1000*x, unp.nominal_values(R2), unp.nominal_values(L), unp.nominal_values(C))
 fig2, ax1 = plt.subplots(1, 1, layout="constrained")
 ax1.plot(f, unp.nominal_values(U_zu_U0), "rx",label="Messwerte")
-ax1.plot(x, Kurve_c(2*np.pi*1000*x, unp.nominal_values(R2), unp.nominal_values(L), unp.nominal_values(C)), "b-" , label = "Theoriekurve")
+ax1.plot(x,y, "b-" , label = "Theoriekurve")
 ax1.set_xscale("log")
 ax1.grid(which="both")
 ax1.set_xlim([9.5,45])
@@ -89,9 +90,18 @@ ax1.set_xlabel(r"$f\,\,$[kHz]]")
 ax1.set_ylabel(r"$U/U_0$")
 ax1.legend(loc="best")
 fig2.savefig("plot_b.pdf")
-# print(f"U_C= {U_c}") # in mikrosek
-# print(f"T= {T}") # in Volt
+# print(f"U_C= {U_c} in V")
+# print(f"T= {T} in mikrosek") 
 
+print(f"Resonanzüberhöhung q theo: {max(y)}")
+
+delta_omega = R2 / L 
+delta_freq = delta_omega / (2 * np.pi)
+omega_0 = unp.sqrt(1/(L*C))
+q = omega_0/delta_omega
+print(f"delta_omega theo: {delta_omega} in Hz")
+print(f'delta_freq  theo(Breite der Resonanzkurve): {delta_freq} in Hz')
+print(f'Güte/Resonanzüberhöhung q theo: {q} in V')
 # x = np.linspace(0, 10, 1000)
 # y = x ** np.sin(x)
 
