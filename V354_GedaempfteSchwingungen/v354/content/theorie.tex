@@ -12,7 +12,15 @@ gespeichert ist und der Energie, die im elektrischen Feld des Kondensators gespe
 \subsection{Gedämpfte Schwingungen}
 In einem gedämpften Schwingkreis ist zusätzlich zu der Spule und dem Kondensatir ein ohmscher Widerstand $R$ eingebaut, an dem elektrische Energie konstant in 
 Wärmeenergie umgewandelt wird und dadurch das System verlässt. Daher ist keine Energieerhaltung im gedämpften Schwingkreis gegeben. Allerdings findet trotzdessen eine 
-Oszillation der einzelnen Energien statt, die Gesamtenergie nähert sich allerdings stetig der $0$ an. 
+Oszillation der einzelnen Energien statt, die Gesamtenergie nähert sich allerdings stetig der $0$ an. Das Schaltbild eines gedämpften Schwingkreises ist in Abbildung (\ref{pic:Gedaempfter_Schwingkreis})
+dargestellt. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Gedaempfter_Schwingkreis.png}
+    \caption{Schaltbild eines gedämpften Schwingkreises mit Spule, ohmschen Widestand und Kondensator.}
+    \label{pic:Gedaempfter_Schwingkreis}
+\end{figure}
+
 Das Verhalten des gedämpften Schwingkreises lässt sich durch die Differentialgleichung 
 \begin{equation}
     \ddot{I} + \frac{R}{L} \cdot \dot{I} + \frac{1}{L C} \cdot I = 0 
@@ -79,7 +87,7 @@ Daraus folgt, dass $nu = 0$ ist. Die Funktion $I$ vereinfacht sich zu
 $\symup{D}$ ist eine reele Konstante. In Abbildung (\ref{pic:aperiodische_Daempfung})
 ist der aperiodische Grenzfall als gestrichelte, schwarze Linie dargestellt. 
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{Aperiodische_Daempfung_Abbildung.png}
     \caption{Verhalten von Strom $I$ in einem Schwingkreis bei aperiodischer Dämpfung.}
@@ -87,7 +95,64 @@ ist der aperiodische Grenzfall als gestrichelte, schwarze Linie dargestellt.
 \end{figure}
 
 \subsection{Erzwungene Schwingungen}
-In einem Schwingkreis entsteht eine erzwungene Schwingung 
+In einem Schwingkreis entsteht eine erzwungene Schwingung, wenn dieser eine äußere 
+periodische Krafteinwirkung erfährt. In diesem Fall ist die Kraft eine Spannungsquelle
+mit sinusförmiger Wechselspannung $U(t)$. Dieser Schwingkreis ist in Abbildung 
+(\ref{pic:erzwungene_Schwingung_Schwingkreis}) zu sehen. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{erzwungene_Schwingung_Schwingkreis.png}
+    \caption{Schwingkreis an dein eine sinusförmige Wechselstromquelle angeschlossen ist.}
+    \label{pic:erzwungene_Schwingung_Schwingkreis}
+\end{figure}
 
-
+Die Differentialgleichung 
+\begin{equation}
+    \label{eqn:diffgleichung_erzwungene_Schwingung}
+    LC \cdot \ddot{U}_{\text{C}} + RC \cdot \dot{U}_{\text{C}} + U_{\text{C}} = \symup{U}_0 \cdot \symup{e}^{\omega \symup{i} t}
+\end{equation}
+beschreibt das System. $\symup{U}_0$ ist eine Konstante. Diese Gleichung wird durch den Ansatz $U_{\text{C}} = U \cdot \symup{e}^{\omega \symup{i}t}$ mit
+\begin{equation}
+    U = \frac{\symup{U}_0 \cdot \left(1 - LC \omega² - \omega R C \symup{i}\right)}{\left(1 - LC \omega²\right)² + \omega² R² C²}
+\end{equation}
+gelöst. Der Betrag von $U$ beträgt 
+\begin{equation}
+    |U| = \symup{U}_0 \sqrt{\frac{\left(1 - LC \omega²\right)² + \omega² R² C²}{\left(\left(1 - LC\omega²\right)² + \omega² R² C²\right)²}} 
+\end{equation}
+und die Phase ist
+\begin{equation}
+    \varphi (\omega) = \arctan{\left(\frac{- \omega R C}{1 - L C \omega²} \right)}. 
+\end{equation}
+Die Funktion 
+\begin{equation}
+    U_{\text{C}}(\omega) = \frac{\symup{U}_0}{\sqrt{\left(1 - LC \omega²\right)² + \omega² R² C²}}
+\end{equation}
+löst die Differentialgleichung (\ref{eqn:diffgleichung_erzwungene_Schwingung}).
+$U_{\text{C}}(\omega)$ hat ein Maximum für die Resonanzfrequenz $\omega_{\text{res}}$.
+Diese beträgt
+$$\omega_{\text{res}} = \sqrt{\frac{1}{LC} - \frac{R²}{2L²}}\, .$$
+Für $\omega \rightarrow 0$ und $\omega \rightarrow \infty$ strebt $U_{\text{C}}(\omega)$
+gegen die Erregeramplitude $\symup{U}_{\text{0}}(\omega)$.
+Für den Fall der schwachen Dämpfung, für den 
+$$\frac{R²}{2L²} << \frac{1}{LC}$$
+gilt, nähert sich $\omega_{\text{res}}$ $\omega_0$ von der ungedämpften Schwingung an. 
+In diesem Fall wird das Maximum von $U_{\text{C}}$ durch 
+$$U_{\text{C,max}} =  \frac{1}{\omega_0 R C} \cdot \symup{U}_0 = \frac{1}{R}\sqrt{\frac{L}{C}} \, \symup{U}_0$$
+ausgedrückt. 
+Falls $R \rightarrow 0$ geht $U_{\text{C,max}} \rightarrow \infty$. Der Vorfaktor 
+$\frac{1}{\omega_0 R C}$ heißt Resonanzüberhöhung oder auch Güte $q$ des Schwingkreises.
+Die Breite des Resonanzkurve wird mithilfe der Frequenzen $\omega_+$ und $\omega_-$ beschrieben, 
+bei denen 
+$$U_{\text{C}}(\omega_{+,-}) = \frac{1}{\sqrt{2}} \cdot U_{\text{C,max}}$$
+gilt. Unter der Voraussetzung, dass 
+$$\frac{R²}{L²} << \omega²_0$$
+gilt, wird die Breite der Resonanzkurve durch 
+\begin{equation}
+\omega_+ - \omega_- \thickapprox \frac{R}{L}
+\end{equation}
+ausgedrückt.
+Die Güte $q$ wird ausgedrückt durch
+\begin{equation}
+    q = \frac{\omega_0}{\omega_+ - \omega_- } \, .
+\end{equation}
