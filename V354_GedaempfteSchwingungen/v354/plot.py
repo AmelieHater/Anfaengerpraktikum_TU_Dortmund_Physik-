@@ -94,8 +94,6 @@ fig2.savefig("plot_b.pdf")
 # print(f"U_C= {U_c} in V")
 # print(f"T= {T} in mikrosek") 
 
-print(f"Resonanzüberhöhung q theo: {max(y_theoKurve)}")
-
 delta_omega = R2 / L 
 delta_freq = delta_omega / (2 * np.pi)
 omega_0 = unp.sqrt(1/(L*C))
@@ -106,7 +104,7 @@ print(f'delta_freq  theo(Breite der Resonanzkurve): {delta_freq} in Hz')
 print(f'delta_freq  exp(Breite der Resonanzkurve): {delta_freq_exp * 1000} in Hz')
 print(f'Güte/Resonanzüberhöhung q theo: {q} in V')
 
-U_omegaplus = max(y_theoKurve)/(np.sqrt(2))
+U_omegaplus = q/(np.sqrt(2))
 print(f"Spannung von omega+ und omega- theo: {U_omegaplus}")
 max_exp = ufloat(3.1395348837209305,0.023255813953488372)
 U_omegaplus_exp = max_exp/(np.sqrt(2))
@@ -122,8 +120,8 @@ def breite_Kurve(x, max):
     return(max/(np.sqrt(2))*x /x)
 x1 = np.linspace(20.85, 30.16, 2)
 fig3, ax1 = plt.subplots(1, 1, layout="constrained")
-ax1.plot(f, unp.nominal_values(U_zu_U0), "r",label="Messwerte")
-ax1.plot(x1, unp.nominal_values(breite_Kurve(x1,max_exp)), "b--" , label = "Experimentelle Breite")
+ax1.plot(f, unp.nominal_values(U_zu_U0), "ro-",label="Messwerte")
+ax1.plot(x1, unp.nominal_values(breite_Kurve(x1,max_exp)), "b-" , label = "Exp. Resonanzbereich")
 ax1.grid(which="both")
 ax1.set_xlim([18,33])
 ax1.set_ylim([1,3.5])
@@ -135,18 +133,20 @@ fig3.savefig("plot_c.pdf")
 # ------------------- Diskussion -------------------
 def rel_Abweichung(exp, theo):
     return (np.abs(exp-theo)/(theo))
+
 print("Diskussion:")
 R_eff_abw = rel_Abweichung(R_eff_exp, R1)
+print(f"R_eff_exp: {R_eff_exp} in ohm und R_1: {R1} in ohm ")
 print(f"rel. Abw. R eff: {R_eff_abw}")
 
 R_ap_abw = rel_Abweichung(R_ap_exp, R_ap_theo)
+print(f"R_ap_exp: {R_ap_exp} in ohm und R_ap_theo: {R_ap_theo} in ohm ")
 print(f"rel. Abw. R ap: {R_ap_abw}")
 
-max_abw = rel_Abweichung(unp.nominal_values(max_exp), max(y_theoKurve))
+max_abw = rel_Abweichung(unp.nominal_values(max_exp),q)
+print(f"Resonanzüberhöhung q_exp: {max_exp} und q_theo: {q}")
 print(f"rel. Abw. Maximum(Resonanzüberhöhung q): {max_abw}")
 
-breite_abw = rel_Abweichung(delta_freq_exp,delta_freq)
+breite_abw = rel_Abweichung(9.31*1000,delta_freq)
+print(f"delta_freq_exp: {9.31*1000} in Hz und delta_freq_theo: {delta_freq} in Hz ")
 print(f"rel. Abw. Breite: {breite_abw}")
-
-delta_freq_abw = rel_Abweichung(delta_freq_exp, delta_freq)
-print(f"rel. Abw. delta_freq: {delta_freq_abw}")

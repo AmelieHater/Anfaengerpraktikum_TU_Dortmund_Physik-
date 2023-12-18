@@ -83,12 +83,18 @@ Für die Spannungen $U < 0$ ergeben sich die Werte
 \end{figure}
 Anhand des gemittelten Werts $b = 4811,585$ aus den Werten $b_{\text{pos.}}$ und $b_{\text{neg.}}$ ergibt sich mit der Gleichung (\ref{eqn:})
 der effektive Widerstand 
-$$R_{\text{eff}} = 2\cdot b\cdot L = \left(162.3\pm0.5\right)\,\unit{\ohm}\,.$$
+$$R_{\text{eff,exp.}} = 2\cdot b\cdot L = \left(162,3\pm0,5\right)\,\unit{\ohm}\,.$$
+%
+%
+%
 \subsection{Aperiodischen Grenzfall}
-Der im Experiment bestimmter aperiodische Widerstand beträgt
+Mithilfe des verstellbaren Widerstands $R_3$ wird im Experiment der aperiodische Widerstand ermittelt und beträgt
 $$R_{\text{ap,exp.}} = 4500\,\unit{\ohm}\,.$$
 Durch Einsetzen von $L$ und $C$ in die Gleichung (\ref{eqn:}) wird der theoretische aperiodische Widerstand
 $$R_{\text{ap,theo.}} = (5723\pm9)\,\unit{\ohm}\,.$$ bestimmt.
+%
+%
+%
 \subsection{Frequenzabhängigkeit der Kondensatorspannung}
 Für diese Durchführung wird der Widerstand $R_2$ verwendet. Die gemessenen Spannungen in Abhängigkeit der Frequenz sind in der 
 Tabelle (\ref{tab:Kondensatorspannung}) aufgeführt. Zusätzlich wird in der Tabelle (\ref{tab:Kondensatorspannung}) das Verhältnis $\frac{U}{U_0}$ festgehalten.
@@ -115,7 +121,7 @@ Hierfür wird die Spannung $U_0 = 2,15\,\unit{\volt}$ bestimmt.
   \end{tblr}
 \end{table}
 In der Abbildung (\ref{fig:Frequenzabhängigkeit}) ist das Verhätnis $\frac{U}{U_0}$ gegen die Frequenz $f$ halblogarithmisch aufgetragen. 
-Gleichzeitig wird mit der Gleichung (\ref{eqn:}) die Theoriekurve bestimmt, die ebenfalls in der Abbildung (\ref{fig:Frequenzabhängigkeit}) 
+Gleichzeitig wird mit der Gleichung (\ref{eqn:Theoriekurve}) die Theoriekurve bestimmt, die ebenfalls in der Abbildung (\ref{fig:Frequenzabhängigkeit}) 
 dargestellt ist.
 \begin{figure}[H]
   \centering
@@ -123,12 +129,23 @@ dargestellt ist.
   \caption{Frequenzabhängigkeit der Spannung und die Theoriekurve.}
   \label{fig:Frequenzabhängigkeit}
 \end{figure}
-Anhand der Tabelle (\ref{tab:Kondensatorspannung}) lässt sich die Resonanzüberhöhung bei einer Frequenz $f = 26,53\,\unit{\kilo\hertz}$ abschätzen. Demnach ergibt sich für die 
-experimentelle Resonanzüberhöhung
+Anhand der Tabelle (\ref{tab:Kondensatorspannung}) lässt sich die Resonanzüberhöhung bzw. Güte bei einer Frequenz $f = 26,53\,\unit{\kilo\hertz}$ abschätzen. Demnach ergibt sich für die 
+experimentelle Güte
 $$q_{\text{exp.}}= 3,140\,.$$
-Die theoretische Resonanzüberhöhung wird mit der Gleichung (\ref{eqn:}) bestimmt und beträgt
-$$q_{\text{theo.}}=\left( 4.196\pm0.008 \right)\,.$$
-
+Die theoretische Güte wird mit den Gleichungen (\ref{eqn:BreiteResonanzkurve}) und (\ref{eqn:Güte}) bestimmt und beträgt
+$$q_{\text{theo.}}=\left( 4,196\pm0,008 \right)\,.$$
+Die Breite des Resonanzbereics, wird ermittelt, indem die beiden Frequenzen bestimmt werden, bei denen das Verhältnis $\frac{U}{U_0}$ das $\frac{1}{\sqrt{2}}$-fache von der
+Güte $q$ beträgt. Dafür wird in Abbildung (\ref{fig:Resonanzbereich}) ein Ausschnitt der Messwerte linear dargestellt. Anhand dieser Abbildung lässt sich ablesen
+bei welchen Frequenzen $\frac{U}{U_0} = 2.220$ gilt.
+Daraus ergeben sich die Frequenzen
+\begin{align*}
+  f_{1,\text{exp.}} &= 20,85\,\unit{\kilo\hertz}\\
+  f_{2,\text{exp.}} &= 30,16\,\unit{\kilo\hertz}\,.
+\end{align*}
+Demnach ergibt sich für den experimentellen Resonanzbereich 
+$$\Delta f_{\text{exp.}}=  f_{2,\text{exp.}}-  f_{1,\text{exp.}}= 9,31\,\unit{\kilo\hertz}\,.$$
+Der theoretische Breite des Resoanzbereich wird mithilfe der Gleichung (\ref{eqn:BreiteResonanzkurve}) abgeschätzt. Somit beträgt die Breite
+$$\Delta f_{\text{theo.}}= \left(6434\pm20\right)\,\unit{\hertz}\,.$$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.90\textwidth]{plot_c.pdf}
