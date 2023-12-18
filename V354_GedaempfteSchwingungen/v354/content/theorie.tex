@@ -1,23 +1,23 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
-Das Ziel dieses Versuches ist sich mit verschiedene gedämpften und erzwungen Schwingungen innerhalb einer Schaltung
- bestehend aus Widerständen, Kondensatoren und Spulen, auseinanderzusetzen. Insbesondere wird sich mit einer gedäpften Schwingung, dem aperiodischen 
- Grenzfall und Frequenzabhängigkeit der Kondensatorspannung beschäftigt. 
+Das Ziel dieses Versuches ist sich mit verschiedenen gedämpften und erzwungen Schwingungen innerhalb einer Schaltung
+ bestehend aus Widerständen, Kondensatoren und Spulen, auseinanderzusetzen. Insbesondere wird sich mit einer gedämpften Schwingung, dem aperiodischen 
+ Grenzfall und der Frequenzabhängigkeit der Kondensatorspannung beschäftigt. 
 \section{Theorie}
 \label{sec:Theorie}
-Ein ungedämpfter Schwingkreis besteht aus einer Spule mit Induktivität $L$ und einem Kondensator mit Kapazität $C$. In diesem gilt Energieerhaltung, was bedeutet, 
+Ein ungedämpfter Schwingkreis besteht aus einer Spule mit Induktivität $L$ und einem Kondensator mit Kapazität $C$. Hier gilt Energieerhaltung, was bedeutet, 
 dass die Gesamtenergie, die im Schwingkreis gespeichert ist, konstant bleibt. Diese Gesamtenergie setzt sich aus der Energie zusammen, die im Magnetfeld der Spule
 gespeichert ist und der Energie, die im elektrischen Feld des Kondensators gespeichert ist. Diese beiden Energieformen oszillieren verlustfrei im Schwingkreis. 
 
 \subsection{Gedämpfte Schwingungen}
-In einem gedämpften Schwingkreis ist zusätzlich zu der Spule und dem Kondensatir ein ohmscher Widerstand $R$ eingebaut, an dem elektrische Energie konstant in 
+In einem gedämpften Schwingkreis ist zusätzlich zu der Spule und dem Kondensator ein ohmscher Widerstand $R$ eingebaut, an dem elektrische Energie konstant in 
 Wärmeenergie umgewandelt wird und dadurch das System verlässt. Daher ist keine Energieerhaltung im gedämpften Schwingkreis gegeben. Allerdings findet trotzdessen eine 
 Oszillation der einzelnen Energien statt, die Gesamtenergie nähert sich allerdings stetig der $0$ an. Das Schaltbild eines gedämpften Schwingkreises ist in Abbildung (\ref{pic:Gedaempfter_Schwingkreis})
 dargestellt. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{Gedaempfter_Schwingkreis.png}
-    \caption{Schaltbild eines gedämpften Schwingkreises mit Spule, ohmschen Widestand und Kondensator.}
+    \caption{Schaltbild eines gedämpften Schwingkreises mit Spule, ohmschen Widestand und Kondensator. [Q\cite{anleitungV354}]}
     \label{pic:Gedaempfter_Schwingkreis}
 \end{figure}
 
@@ -35,13 +35,13 @@ gelöst. Für diese Funktion werden die Abkürzungen
 2 \pi \mu \coloneqq \frac{R}{2 L}  \,\,\text{und}\,\, 2 \pi \nu \coloneqq \sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)²}
 \end{equation*}
 verwendet. Für das Verhalten der Schwingung ist entscheident, ob $\nu$ eine imaginäre
-oder reele Zahl ist. Dies hängt davon ab in welchem Größenverhältnis die beiden 
+oder reelle Zahl ist. Dies hängt davon ab in welchem Größenverhältnis die beiden 
 Summanden unter der Wurzel stehen. \\
 \\
 \textbf{1. Schwingfall}\\
 Damit der Schwingfall eintritt, in dem die Amplitude harmonisch mit einer bestimmten Frequenz 
-oszilliert, während sie ich auf den 
-Nullpunkt zubewegt, muss $\nu$ eine reele Zahl sein. Dies wird erfüllt, wenn 
+oszilliert, während sie sich auf den 
+Nullpunkt zubewegt, muss $\nu$ eine reelle Zahl sein. Dies wird erfüllt, wenn 
 \begin{equation*}
     \frac{1}{LC} > \left(\frac{R}{2L}\right)² 
 \end{equation*}
@@ -49,7 +49,7 @@ gilt. Die Funktion von $I$ vereinfacht sich in diesem Fall zu
 \begin{equation}
     I = \symup{A}_0 \cdot \symup{e}^{-2\pi\mu t} \cdot \cos{ \left(2\pi\nu t + \eta\right)} \, .
 \end{equation}
-$\symup{A}_0$ und $\eta$ sind reele Konstanten. Die Abklingdauer $T_{\text{ex}}$ der Amplitude bezeichnet
+$\symup{A}_0$ und $\eta$ sind reelle Konstanten. Die Abklingdauer $T_{\text{ex}}$ der Amplitude bezeichnet
 die Zeit, die benötigt wird, damit die Amplitude auf den $\symup{e}$-ten Teil des 
 ursprünglichen Wertes abgenommen hat. Für die Abklingdauer gilt
 \begin{equation}
@@ -58,13 +58,13 @@ ursprünglichen Wertes abgenommen hat. Für die Abklingdauer gilt
 Die einhüllende Funktion zur gedämpften Schwingung ist die Funktion $\pm \symup{e}^{-2\pi\mu t}$. \\
 \\
 \textbf{2. Kriechfall}\\
-Der Kriechfall tritt ein, eine aperiodische Dämpfung vorliegt, wodurch
+Der Kriechfall tritt ein, wenn eine aperiodische Dämpfung vorliegt, wodurch
  $\nu$ eine imaginäre Zahl ist, welche durch 
 \begin{equation*}
     \frac{1}{LC} < \left(\frac{R}{2L}\right)² 
 \end{equation*}
 zustandekommt. Die Lösungsfunktion von $I$ enthält nun keinen oszillierenden Anteil mehr. 
-Anhängig von der Wahl der Konstanten $\symup{B}_1$ und $\symup{B}_2$ erreicht $I$ zu Beginn ein Extremwert 
+Abhängig von der Wahl der Konstanten $\symup{B}_1$ und $\symup{B}_2$ erreicht $I$ zu Beginn ein Extremwert 
 oder geht direkt monoton auf den Nullpunkt zu. Kriechfälle für verschiedene Konstanten 
 sind als durchgezogene, farbige Striche in Abbildung (\ref{pic:aperiodische_Daempfung})
 dargestellt. 
@@ -73,24 +73,24 @@ Für große Zeiten gilt
     I \sim \symup{e}^{- 2\pi \left(\mu - \nu \symup{i}\right)t}\, . 
 \end{equation*}
  \\
-\textbf{3. Aperiodischer Greznfall}\\
+\textbf{3. Aperiodischer Grenzfall}\\
 Der aperiodische Grenzfall ist ein Spezialfall in dem $I$ am schnellsten gegen den 
 Nullpunkt geht. 
 Für diesen Fall gilt 
 \begin{equation*}
     \frac{1}{LC} = \left(\frac{R}{2L}\right)² \, .
 \end{equation*}
-Daraus folgt, dass $nu = 0$ ist. Die Funktion $I$ vereinfacht sich zu
+Daraus folgt, dass $\nu = 0$ ist. Die Funktion $I$ vereinfacht sich zu
 \begin{equation*}
     I = \symup{D} \cdot \symup{e}^{- \frac{t}{\sqrt{L C}}} \, .
 \end{equation*} 
-$\symup{D}$ ist eine reele Konstante. In Abbildung (\ref{pic:aperiodische_Daempfung})
+$\symup{D}$ ist eine reelle Konstante. In Abbildung (\ref{pic:aperiodische_Daempfung})
 ist der aperiodische Grenzfall als gestrichelte, schwarze Linie dargestellt. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{Aperiodische_Daempfung_Abbildung.png}
-    \caption{Verhalten von Strom $I$ in einem Schwingkreis bei aperiodischer Dämpfung.}
+    \caption{Verhalten von Strom $I$ in einem Schwingkreis bei aperiodischer Dämpfung. [Q\cite{anleitungV354}]}
     \label{pic:aperiodische_Daempfung}
 \end{figure}
 
@@ -103,7 +103,7 @@ mit sinusförmiger Wechselspannung $U(t)$. Dieser Schwingkreis ist in Abbildung
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{erzwungene_Schwingung_Schwingkreis.png}
-    \caption{Schwingkreis an dein eine sinusförmige Wechselstromquelle angeschlossen ist.}
+    \caption{Schwingkreis an dem eine sinusförmige Wechselstromquelle angeschlossen ist. [Q\cite{anleitungV354}]}
     \label{pic:erzwungene_Schwingung_Schwingkreis}
 \end{figure}
 
@@ -137,13 +137,13 @@ Für $\omega \rightarrow 0$ und $\omega \rightarrow \infty$ strebt $U_{\text{C}}
 gegen die Erregeramplitude $\symup{U}_{\text{0}}(\omega)$.
 Für den Fall der schwachen Dämpfung, für den 
 $$\frac{R²}{2L²} << \frac{1}{LC}$$
-gilt, nähert sich $\omega_{\text{res}}$ $\omega_0$ von der ungedämpften Schwingung an. 
+gilt, nähert sich $\omega_{\text{res}}$ der Frequenz $\omega_0$ von der ungedämpften Schwingung an. 
 In diesem Fall wird das Maximum von $U_{\text{C}}$ durch 
 $$U_{\text{C,max}} =  \frac{1}{\omega_0 R C} \cdot \symup{U}_0 = \frac{1}{R}\sqrt{\frac{L}{C}} \, \symup{U}_0$$
 ausgedrückt. 
 Falls $R \rightarrow 0$ geht $U_{\text{C,max}} \rightarrow \infty$. Der Vorfaktor 
 $\frac{1}{\omega_0 R C}$ heißt Resonanzüberhöhung oder auch Güte $q$ des Schwingkreises.
-Die Breite des Resonanzkurve wird mithilfe der Frequenzen $\omega_+$ und $\omega_-$ beschrieben, 
+Die Breite der Resonanzkurve wird mithilfe der Frequenzen $\omega_+$ und $\omega_-$ beschrieben, 
 bei denen 
 $$U_{\text{C}}(\omega_{+,-}) = \frac{1}{\sqrt{2}} \cdot U_{\text{C,max}}$$
 gilt. Unter der Voraussetzung, dass 
