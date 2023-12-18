@@ -121,7 +121,7 @@ def breite_Kurve(x, max):
 x1 = np.linspace(20.85, 30.16, 2)
 fig3, ax1 = plt.subplots(1, 1, layout="constrained")
 ax1.plot(f, unp.nominal_values(U_zu_U0), "ro-",label="Messwerte")
-ax1.plot(x1, unp.nominal_values(breite_Kurve(x1,max_exp)), "b-" , label = "Exp. Resonanzbereich")
+ax1.plot(x1, unp.nominal_values(breite_Kurve(x1,max_exp)), "b--" , label = "Exp. Resonanzbereich")
 ax1.grid(which="both")
 ax1.set_xlim([18,33])
 ax1.set_ylim([1,3.5])
