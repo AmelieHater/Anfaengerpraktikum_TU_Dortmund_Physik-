@@ -57,9 +57,14 @@ ax1.set_ylabel(r"$U\,\,$[V]")
 ax1.legend(loc="best")
 fig.savefig("plot_a.pdf")
 
-R_eff_exp = 2 * ((b_pos + b_neg)/2) * L * 10**6
+b_mittel = (b_pos + b_neg)/2
+R_eff_exp = 2 * (b_mittel) * L * 10**6
 print(f"R_eff_exp: {R_eff_exp} in ohm")
 
+T_abkl_exp = 2 / (b_mittel)
+T_abkl_theo = (2 * L) / R1
+print(f"T_abkl_exp: {T_abkl_exp} in s")
+print(f"T_abkl_theo: {T_abkl_theo * 10**6} in s")
 # ------------------- Aufgabe b -------------------
 R_ap_exp = 4500
 R_ap_theo = 2* unp.sqrt(L/C)
@@ -139,6 +144,10 @@ R_eff_abw = rel_Abweichung(R_eff_exp, R1)
 print(f"R_eff_exp: {R_eff_exp} in ohm und R_1: {R1} in ohm ")
 print(f"rel. Abw. R eff: {R_eff_abw}")
 
+T_ex_abw = rel_Abweichung(415.66, 502)
+print(f"T_ex_exp: {415.66} in s und T_ex_theo: {ufloat(502,2)}")
+print(f"rel. Abw. Abklingzeit: {T_ex_abw}")
+
 R_ap_abw = rel_Abweichung(R_ap_exp, R_ap_theo)
 print(f"R_ap_exp: {R_ap_exp} in ohm und R_ap_theo: {R_ap_theo} in ohm ")
 print(f"rel. Abw. R ap: {R_ap_abw}")
@@ -150,3 +159,4 @@ print(f"rel. Abw. Maximum(Resonanzüberhöhung q): {max_abw}")
 breite_abw = rel_Abweichung(9.31*1000,delta_freq)
 print(f"delta_freq_exp: {9.31*1000} in Hz und delta_freq_theo: {delta_freq} in Hz ")
 print(f"rel. Abw. Breite: {breite_abw}")
+

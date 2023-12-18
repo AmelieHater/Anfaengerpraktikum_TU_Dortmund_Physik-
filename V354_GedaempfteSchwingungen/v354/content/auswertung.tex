@@ -8,6 +8,8 @@
 % a: 3.195407081244171 in V
 % b neg: 4964.215848906855 in Hz
 % R_eff_exp: 162.3+/-0.5 in ohm
+% T_abkl_exp: 415.6633570590278 in s
+% T_abkl_theo: 502.1+/-1.7 in s
 % ------------------- Aufgabe b -------------------
 % R_ap Theo: 5723+/-9 (ohm)
 % ------------------- Aufgabe c -------------------
@@ -92,8 +94,15 @@ $$R_{\text{eff,exp.}} = 2\cdot b\cdot L = \left(162,3\pm0,5\right)\,\unit{\ohm}\
 \subsection{Aperiodischen Grenzfall}
 Mithilfe des verstellbaren Widerstands $R_3$ wird im Experiment der aperiodische Widerstand ermittelt und beträgt
 $$R_{\text{ap,exp.}} = 4500\,\unit{\ohm}\,.$$
-Durch Einsetzen von $L$ und $C$ in die Gleichung (\ref{eqn:}) wird der theoretische aperiodische Widerstand
-$$R_{\text{ap,theo.}} = (5723\pm9)\,\unit{\ohm}\,.$$ bestimmt.
+Der theoretische, aperiodische Widerstand ergibt sich durch Umstellen der Gleichung (\ref{eqn:aperiodischerGrenzfall}) nach $R$. Daraus folgt für 
+den Widerstand
+$$R_\text{ap}= 2\cdot \sqrt{\frac{L}{C}}\,.$$
+Durch Einsetzen von $L$ und $C$ wird
+$$R_{\text{ap,theo.}} = (5723\pm9)\,\unit{\ohm}$$ bestimmt.
+Die experimentelle Abklingzeit wird mit $b = 2 \pi \mu$ und der Gleichung (\ref{eqn:Abklingzeit}) ermittelt. Daraus folgt
+$$T_{\text{ex,exp.}}= 415,66\,\unit{\micro\second}\,.$$
+Die theoretische Abklingzeit wird durch Einsetzen von $L$ und $R_1$ in Gleichung (\ref{eqn:Abklingzeit}) berechnet. Dies beträgt
+$$T_{\text{ex,theo.}}= \left(502\pm2\right)\,\unit{\micro\second}\,.$$
 %
 %
 %
@@ -151,7 +160,7 @@ $$\Delta f_{\text{theo.}}= \left(6434\pm20\right)\,\unit{\hertz}\,.$$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.90\textwidth]{plot_c.pdf}
-  \caption{Linear aufgertagene Messdaten mit dem Resonanzbereich.}
+  \caption{Linear aufgetragene Messdaten mit dem Resonanzbereich.}
   \label{fig:Resonanzbereich}
 \end{figure}
 % \begin{figure}
