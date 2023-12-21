@@ -8,3 +8,33 @@ $$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - 
 
 Gauß:
 $$\Delta f = \sqrt{\sum_{i = 1}^{n} \left( \frac{\partial f}{\partial x_i} \right)^2 \cdot \left(\Delta x_i \right)^2}$$
+
+    f(t+T) = f(t)\,.
+\label{eqn:zeitlichPeriodisch}
+
+    f(x+D) = f(x)\,.
+\label{eqn:räumlichPeriodisch}
+
+    f(t)& = a\cdot\sin\left(\frac{2\pi}{T}\cdot t\right)\quad\text{bzw.}\\
+\label{eqn:allgSinus}
+    
+    f(t)& = b\cdot\cos\left(\frac{2\pi}{T}\cdot t\right)
+\label{eqn:allgCosinus}
+
+    \frac{1}{2}a_0 + \sum_{n=1}^{/infin}\left(a_n\cos\left(\frac{2\pin}{T}t\right)+b_n\sin\left(\frac{2\pin}{T}t\right)\right)
+\label{eqn:FourierTheorem}
+
+    a_n &= \frac{2}{T} \int_{0}^{T}f(t)\cos \left( \frac{2\pi n}{T}\cdot t\right)\text{d}t\quad \text{bzw.} 
+\label{eqn:a_n}\\
+
+    b_n &= \frac{2}{T} \int_{0}^{T}f(t)\sin \left( \frac{2\pi n}{T}\cdot t\right)\text{d}t 
+\label{eqn:b_n}
+
+    \nu_1=\frac{1}{T}
+\label{eqn:Grundfrequenz}
+
+    g(\nu)= \int_{-\infty}^{\infty}f(t)\exp\left(i \nu t\right) \text{d}T
+\label{eqn:FourierTransformation}
+
+    f(t)=\frac{1}{2\pi}\int_{\infty}^{\infty}g(\nu)\exp\left(-i\nu t\right)\text{d}\nu\,.
+\label{eqn:reverseFourierTransformation}
