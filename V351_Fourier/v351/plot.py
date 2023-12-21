@@ -30,6 +30,11 @@ popt_saeg, pcov_saeg = curve_fit(exponential_fct, saegezahn_f_kHz, saegezahn_U_V
 a_saeg, b_saeg = popt_saeg
 print(f"a_saeg: {a_saeg}, b_saeg: {b_saeg}")
 
+#Fehlerrechnung Säegdings
+errors = np.sqrt(np.diag(pcov_saeg))
+for name, value, error in zip("ab", popt_saeg, errors):
+    print(f"{name} = {value:.4f} ± {error:.4f}")
+
 x = np.linspace(0.01,120, 1000)
 y_saeg = exponential_fct(x, a_saeg, b_saeg)
 
@@ -48,6 +53,11 @@ popt_recht, pcov_recht = curve_fit(exponential_fct, rechteck_f_kHz, rechteck_U_V
 a_recht, b_recht = popt_recht
 print(f"a_recht: {a_recht}, b_recht: {b_recht}")
 
+#Fehlerrechnung Rechteck
+errors = np.sqrt(np.diag(pcov_recht))
+for name, value, error in zip("cd", popt_recht, errors):
+    print(f"{name} = {value:.4f} ± {error:.4f}")
+
 x = np.linspace(0.01,400, 1000)
 y_recht = exponential_fct(x, a_recht, b_recht)
 
@@ -65,6 +75,11 @@ fig2.savefig("plot2.pdf")
 popt_drei, pcov_drei = curve_fit(exponential_fct, dreieck_f_kHz, dreieck_U_V_nom)
 a_drei, b_drei = popt_drei
 print(f"a_drei: {a_drei}, b_drei: {b_drei}")
+
+#Fehlerrechnung Dreieck
+errors = np.sqrt(np.diag(pcov_drei))
+for name, value, error in zip("ef", popt_drei, errors):
+    print(f"{name} = {value:.4f} ± {error:.4f}")
 
 x = np.linspace(0.01,140, 1000)
 y_drei = exponential_fct(x, a_drei, b_drei)
