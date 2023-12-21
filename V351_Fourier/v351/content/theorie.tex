@@ -69,3 +69,50 @@ Im Allgemeinen ist zu beachten, dass oftmals eine Integration über einen unendl
 Zeitraum beschränkt wird. Daher ist die Periodizität von der Funktion $f(t)$ nicht mehr erfüllt.
 \section{Vorbereitungsaufgabe}
 \label{sec:Vorbereitungsaufgabe}
+In der Vorbereitungsaufgabe sollten mithilfe der Gleichungen (\ref{eqn:a_n}) und (\ref{eqn:b_n}) die Fourier-Koeffizienten 
+für drei verschiedene periodische Funktionen berechnet werden. Um die Rechnung zu vereinfachen werden gerade oder ungerade Funktionen gewählt.
+\subsection{Rechteckschwingung}
+\begin{equation*}
+    f(t) = \begin{cases}
+        C & -\frac{T}{2} \leq t \leq 0\\
+        -C & 0 < t \leq \frac{T}{2}
+    \end{cases}
+    \quad (C \in \mathbb{R})
+\end{equation*}
+Diese Funktion ist ungerade, weswegen für die Koeffizienten $a_n=0\,\,\forall n$ gilt. Die Berechnung von $b_n$ lautet
+\begin{align*}
+    b_n &= \frac{2}{T}\left( \int _{-\frac{T}{2}}^{0} C \cdot \sin \left(\frac{2\pi n}{T}\cdot t\right)\text{d}t + \int_{0}^{\frac{T}{2}}-C \cdot \sin \left(\frac{2\pi  n}{T}\cdot t\right)\text{d}t\right)\\
+    &= \frac{2}{T}\left( \left[-\frac{CT}{2 \pi n}\cdot \cos \left(\frac{2\pi n}{T}\cdot t\right)\right]_{-\frac{T}{2}}^{0} - \left[-\frac{CT}{2 \pi n}\cdot \cos \left(\frac{2\pi n}{T}\cdot t\right)\right]_{0}^{\frac{T}{2}}\right)\\
+    &= \frac{2C}{\pi n} \left(\cos\left(\pi n\right) - 1 \right)\\
+    \Rightarrow b_n &= 0,\text{ für } n\text{ gerade und}\\
+     b_n &= -\frac{4C}{\pi n},\text{ für } n\text{ ungerade}\\
+    \Rightarrow b_n &\sim \frac{1}{n}\,.
+\end{align*}
+\subsection{Sägezahnschwingung}
+\begin{equation*}
+    f(t) = t\quad 0 \leq t \leq T
+\end{equation*}
+Die Sägezahnschwingung ist ebenfalls eine ungerade Fukntion, wodurch die Koeffizienten $a_n = 0 \,\,\forall n $ gilt. 
+Für die Koeffizienten $b_n$ ergeben sich
+\begin{align*}
+    b_n &= \frac{2}{T} \int_{0}^{T} t \cdot \sin \left(\frac{2 \pi n}{T}\cdot t\right) \text{d}t\\
+    &= \frac{2}{T} \left(-\frac{T^2}{2 \pi n} + \left(\frac{T}{2 \pi n}\right)^2 \cdot\sin \left(2 \pi n\right)\right)\\
+    b_n&= - \frac{T}{\pi n}\\
+    \Rightarrow b_n &\sim \frac{1}{n}\,.
+\end{align*}
+\subsection{Dreieckschwingung}
+\begin{equation*}
+    f(t) = \begin{cases}
+        t+ \frac{T}{2} & -\frac{T}{2} \leq t \leq 0\\
+        -t + \frac{T}{2} & 0 < t \leq \frac{T}{2}
+    \end{cases}
+\end{equation*}
+Die gewählte Dreiecksschwingung ist eine gerade Funktion, weswegen für die Koeffizienten $b_n = 0 \,\, \forall n$ gilt.
+Die Koeffizienten $a_n$ lauten 
+\begin{align*}
+    a_n &= \frac{2}{T}\left(\int_{-\frac{T}{2}}^{0} (t+\frac{T}{2})\cdot \cos \left( \frac{2 \pi n}{T}\cdot t\right)\text{d}t + \int_{0}^{\frac{T}{2}}(-t+\frac{T}{2})\cdot \cos\left(\frac{2 \pi n}{T}\cdot t\right)\text{d}t\right)\\
+    &= \frac{T}{{\pi}^2 n^2}\left(1-\cos\left(\pi n\right)\right)\\
+    \Rightarrow a_n &= 0,\text{ für } n\text{ gerade und}\\
+     a_n &= \frac{2T}{{\pi^2} n^2},\text{ für } n\text{ ungerade}\\
+    \Rightarrow a_n &\sim \frac{1}{n^2}\,.
+\end{align*}
