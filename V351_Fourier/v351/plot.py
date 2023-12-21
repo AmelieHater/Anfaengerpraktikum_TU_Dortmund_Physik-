@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from uncertainties import ufloat
 import uncertainties.unumpy as unp
+import scipy as scipy
+from scipy.optimize import curve_fit
 import math 
 
 saegezahn_f_kHz, saegezahn_U_dB = np.genfromtxt("Messwerte_saegezahn.txt", unpack=True)
@@ -12,20 +14,63 @@ saegezahn_U_V = 10 **(saegezahn_U_dB/20)
 rechteck_U_V = 10 **(rechteck_U_dB/20)
 dreieck_U_V = 10 **(dreieck_U_dB/20)
 
+def exponential_fct (x, a, b):
+    return(a * x**(b))
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+popt_saeg, pcov_saeg = curve_fit(exponential_fct, saegezahn_f_kHz, saegezahn_U_V)
+a_saeg, b_saeg = popt_saeg
+#print(f"n: {a_saeg}")
+
+x = np.linspace(0.01,120, 1000)
+y_saeg = exponential_fct(x, a_saeg, b_saeg)
+
 fig, ax = plt.subplots(1, 1)
-ax.plot(x, y, "x", label = "Messwerte")
+ax.plot(saegezahn_f_kHz, saegezahn_U_V, "x", label = "Messwerte")
+ax.plot(x, y_saeg, label = "Fit" )
 ax.grid()
-ax.set_xlim([10,110])
+ax.set_xlim([0,120])
+ax.set_ylim([0,100])
 ax.set_xlabel(r'$f$ [kHz]')
-ax.set_ylabel(r"$U$ [V]")
+ax.set_ylabel(r"$U_S$ [V]")
 ax.legend(loc = "best")
-fig.savefig("plot.pdf")
+fig.savefig("plot1.pdf")
 
-print("Saegezahn", saegezahn_f_kHz)
-print(saegezahn_U_V)
+popt_recht, pcov_recht = curve_fit(exponential_fct, rechteck_f_kHz, rechteck_U_V)
+a_recht, b_recht = popt_recht
+#print(f"n: {a_saeg}")
+
+x = np.linspace(0.01,400, 1000)
+y_recht = exponential_fct(x, a_recht, b_recht)
+
+fig2, ax2 = plt.subplots(1, 1)
+ax2.plot(rechteck_f_kHz, rechteck_U_V, "x", label = "Messwerte")
+ax2.plot(x, y_recht, label = "Fit" )
+ax2.grid()
+ax2.set_xlim([0,400])
+ax2.set_ylim([0,100])
+ax2.set_xlabel(r'$f$ [kHz]')
+ax2.set_ylabel(r"$U_R$ [V]")
+ax2.legend(loc = "best")
+fig2.savefig("plot2.pdf")
+
+popt_drei, pcov_drei = curve_fit(exponential_fct, dreieck_f_kHz, dreieck_U_V)
+a_drei, b_drei = popt_drei
+#print(f"n: {a_saeg}")
+
+x = np.linspace(0.01,140, 1000)
+y_drei = exponential_fct(x, a_drei, b_drei)
+
+fig3, ax3 = plt.subplots(1, 1)
+ax3.plot(dreieck_f_kHz, dreieck_U_V, "x", label = "Messwerte")
+ax3.plot(x, y_drei, label = "Fit" )
+ax3.grid()
+ax3.set_xlim([0,140])
+ax3.set_ylim([-10,70])
+ax3.set_xlabel(r'$f$ [kHz]')
+ax3.set_ylabel(r"$U_D$ [V]")
+ax3.legend(loc = "best")
+fig3.savefig("plot3.pdf")
+
 #x = np.linspace(0, 10, 1000)
 #y = x ** np.sin(x)
 #
