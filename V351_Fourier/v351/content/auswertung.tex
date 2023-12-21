@@ -7,7 +7,7 @@ Im ersten Teil des Experiments wurden wie in der Durchführung beschrieben die S
 In Abbildung (\ref{fig:plot1}) ist die Fouriereihe der Sägezahnspannung zu sehen.
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 0.7\linewidth]{Sägezahn.jpeg}
+  \includegraphics[width = 0.6\linewidth]{Sägezahn.jpeg}
   \caption{Verlauf der Sägezahnspannung.}
   \label{fig:plot1}
 \end{figure}
@@ -15,7 +15,7 @@ In Abbildung (\ref{fig:plot1}) ist die Fouriereihe der Sägezahnspannung zu sehe
 In Abbildung (\ref{fig:plot2}) ist die Fouriereihe der Dreiecksspannung zu erkennen. 
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 0.7\linewidth]{Dreieck.jpeg}
+  \includegraphics[width = 0.6\linewidth]{Dreieck.jpeg}
   \caption{Verlauf der Dreiecksspannung.}
   \label{fig:plot2}
 \end{figure}
@@ -23,13 +23,13 @@ In Abbildung (\ref{fig:plot2}) ist die Fouriereihe der Dreiecksspannung zu erken
 Außerdem ist in Abbildung (\ref{fig:plot3}) die Fouriereihe der Rechteckspannung zu sehen.
 \begin{figure}[H]
   \centering
-  \includegraphics[width = 0.7\linewidth]{Viereck.jpeg}
+  \includegraphics[width = 0.6\linewidth]{Viereck.jpeg}
   \caption{Verlauf der Rechteckspannung.}
   \label{fig:plot3}
 \end{figure}
 
 \subsection{Fourieanalyse}
-Im zweiten Teil des Experiments wurde das Linienspektrums der Sägezahnspannung, Dreiecksspannung und Rechteckspannung auf dem Oszilloskop eingestellt, um dann 
+Im zweiten Teil des Experiments wurde das Linienspektrums der Sägezahnspannung, Dreieckspannung und Rechteckspannung auf dem Oszilloskop eingestellt, um dann 
 mithilfe des Cursers die Höhe der Peaks messen zu können. \\
 \\
 \textbf{Sägezahnspannung} \\
@@ -60,14 +60,14 @@ Die Amplitude wird zur weiteren Betrachtung der Daten von Dezibil in Volt umgere
 $$\unit{\volt} \sim  10 ^{\frac{\unit{\decibel}}{20}} \, .$$
 Diese Messwerte werden in Abbildung (\ref{fig:saeg}) aufgetragen. Zusätzlich wird eine Ausgleichsfunktion berechnet, die durch
 \begin{equation}
-   U(x) = \symup{a} \cdot x^{\symup{b}} 
+   U(x) = \symup{c} \cdot x^{\symup{d}} 
    \label{eqn:Ausgleichsfunktion}
 \end{equation}
 definiert ist. 
 Für die Sägezahnspannung werden die Werte 
 \begin{align*}
-  \symup{a}_1 &= (451 \pm 4) \cdot 10^{-3} \, \unit{\volt\second} \\
-  \symup{b}_1 &= -1,0036 \pm 0,0035
+  \symup{c}_1 &= (451 \pm 4) \cdot 10^{-3} \, \unit{\volt\second} \\
+  \symup{d}_1 &= -1,0036 \pm 0,0035
 \end{align*}
 berechnet. Diese Ausgleichsfunktion wird mit in Abbildung (\ref{fig:saeg}) abgebildet. 
 \begin{figure}[H]
@@ -76,7 +76,7 @@ berechnet. Diese Ausgleichsfunktion wird mit in Abbildung (\ref{fig:saeg}) abgeb
   \caption{Gemessene Peaks der Sägezahnspannung $U_{\text{S}}$ und zugehörige Ausgleichsfunktion.}
   \label{fig:saeg}
 \end{figure}
-Der Faktor $\symup{b}$ zeigt welche Abhängigkeit der Höhe der Peaks von der Frequenz besteht. Das berechnete $\symup{b}_1 \approx -1$ bestätigt eine 
+Der Faktor $\symup{d}$ zeigt welche Abhängigkeit der Höhe der Peaks von der Frequenz besteht. Das berechnete $\symup{d}_1 \approx -1$ bestätigt eine 
 $\frac{1}{n}$ Abhängigkeit. \\
 \\
 \textbf{Dreiecksspannung} \\
@@ -101,8 +101,8 @@ Die gemessenen Peaks des Linienspektrums der Dreiecksspannung in Abhängigkeit v
 \end{table}
 Durch diese Messwerte wird ebenfalls die Ausgleichsfunktion (\ref{eqn:Ausgleichsfunktion}) gelegt. Die durch diese Messwerte errechneten Faktoren sind 
 \begin{align*}
-  \symup{a}_2 &= (5381 \pm 91) \cdot 10^{-3} \, \unit{\volt\second} \\
-  \symup{b}_2 &= -1,9809 \pm 0,0072 \, .
+  \symup{c}_2 &= (5381 \pm 91) \cdot 10^{-3} \, \unit{\volt\second} \\
+  \symup{d}_2 &= -1,9809 \pm 0,0072 \, .
 \end{align*}
 Die Messwerte und die Ausgleichsfunktion sind in Abbildung (\ref{fig:drei}) dargestellt. 
 \begin{figure}[H]
@@ -111,7 +111,7 @@ Die Messwerte und die Ausgleichsfunktion sind in Abbildung (\ref{fig:drei}) darg
   \caption{Gemessene Peaks der Dreieckspannung $U_{\text{D}}$ und Ausgleichsfunktion.}
   \label{fig:drei}
 \end{figure}
-Der Faktor $\symup{b}_2 \approx -2$ zeigt, dass die Höhe der Peaks mit $\frac{1}{n²}$ abfällt. \\
+Der Faktor $\symup{d}_2 \approx -2$ zeigt, dass die Höhe der Peaks mit $\frac{1}{n²}$ abfällt. \\
 \\
 \textbf{Rechteckspannung} \\
 Die für die Peaks des Linienspektrums der Rechteckspannung aufgenommenen Messwerte sind in Tabelle (\ref{tab:recht}) notiert. 
@@ -148,8 +148,8 @@ Die für die Peaks des Linienspektrums der Rechteckspannung aufgenommenen Messwe
 \end{table}
 Die durch die Gleichung (\ref{eqn:Ausgleichsfunktion}) und die Messwerte aus Tabelle (\ref{tab:recht}) berechnete Ausgleichsgerade hat die Parameter
 \begin{align*}
-  \symup{a}_3 &= (878 \pm 5) \cdot 10^{-3} \, \unit{\volt\second} \\
-  \symup{b}_3 &= -0,9939 \pm 0,0022 \, .
+  \symup{c}_3 &= (878 \pm 5) \cdot 10^{-3} \, \unit{\volt\second} \\
+  \symup{d}_3 &= -0,9939 \pm 0,0022 \, .
 \end{align*}
 Die Ausgleichsfunktion und Messwerte sind in Abbildung (\ref{fig:recht}) aufgetragen. 
 \begin{figure}[H]
@@ -158,7 +158,7 @@ Die Ausgleichsfunktion und Messwerte sind in Abbildung (\ref{fig:recht}) aufgetr
   \caption{Gemessene Peaks der Rechteckspannung $U_{\text{R}}$ und Ausgleichsfunktion.}
   \label{fig:recht}
 \end{figure}
-Der Wert $\symup{b}_3 \approx -1$ weist auf eine $\frac{1}{n}$ Entwicklung der Höhe der Peaks des Linienspektrums hin. 
+Der Wert $\symup{d}_3 \approx -1$ weist auf eine $\frac{1}{n}$ Entwicklung der Höhe der Peaks des Linienspektrums hin. 
 
 
 %a_saeg: 450.68807906140404, b_saeg: -1.0035509703352652
