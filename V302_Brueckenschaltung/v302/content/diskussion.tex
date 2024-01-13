@@ -2,3 +2,63 @@
 \label{sec:Diskussion}
 Die relative Abweichung zwischen dem theoretischen und dem experimentellen Wert wird bestimmt durch
 $$\text{rel. Abweichung} = \frac{|\text{exp. Wert} - \text{theo. Wert}|}{\text{theo. Wert}}\,.$$
+In der Tabelle (\ref{tab:relativeAbweichung_1}) sind die experimentellen und theoretischen Werte sowie deren relative Abweichungen der 
+Wheatstonschen Brücke, Kapazitätsmessbrücke, Induktivitätsmessbrücke und der Maxwell-Brücke aufgelistet.
+\begin{table}[H]
+    \centering
+    \caption{Relative Abweichung der verschiedenen Brückenschaltungen.}
+    \label{tab:relativeAbweichung_1}
+    \begin{tblr}{colspec={c | c || c}}
+        \toprule
+        exp. & theo. & rel. Abweichung\\
+        \midrule
+        \SetCell[c=3]{c} Wheatstonesche Brücke & &\\
+        \midrule
+        $R_{13,\text{exp.}} = \left(305,2\pm0,9 \right)\,\unit{\ohm}$ & $R_{13,\text{theo.}} = 319,5\,\unit{\ohm}$ & $4,47\,\%$\\ 
+        $R_{14,\text{exp.}} = \left(904,1\pm2,6 \right)\,\unit{\ohm}$ & $R_{14,\text{theo.}} = 900\,\unit{\ohm}$& $0,46\,\%$ \\
+        \midrule
+        \SetCell[c=3]{c} Kapazitätsmessbrücke & &\\
+        \midrule
+        $C_{15,\text{exp.}}= \left( 771,9\pm2,5 \right)\unit{\nano\farad}$ & $C_{15,\text{theo.}}= 652\,\unit{\nano\farad}$& $18,4\,\%$\\
+        $ R_{15,\text{exp.}} = \left(460,6\pm1,3\right)\,\unit{\ohm}$ &$ R_{15,\text{theo.}} = 473\,\unit{\ohm}$ &$2,62\,\%$ \\
+        $C_{8,\text{exp.}}= \left( 533,0\pm1,7 \right)\,\unit{\nano\farad}$ & $C_{8,\text{theo.}}= 294,1\,\unit{\nano\farad}$ & $81,2\,\%$\\
+        $R_{8,\text{exp.}} = \left( 670,8\pm1,9 \right)\,\unit{\ohm}$ & $ R_{8,\text{theo.}} = 564\,\unit{\ohm}$ & $18,94\,\%$ \\
+        \midrule
+        \SetCell[c=3]{c} Induktivitätsmessbrücke & &\\
+        \midrule
+        $L_{19,\text{exp.}} = \left( 77,68\pm0,26 \right)\,\unit{\milli\henry}$ & $L_{19,\text{theo.}} = 26,96\,\unit{\milli\henry}$ & $188,1\,\%$\\
+        $R_{19,\text{exp.}} = \left( 240,50\pm0,80  \right)\,\unit{\ohm}$ & $ R_{19,\text{theo.}} = 108,7\,\unit{\ohm}$ & $121,3\,\%$ \\
+        $L_{16,\text{exp.}} = \left( 159,30\pm0,50 \right)\,\unit{\milli\henry}$ & $L_{16,\text{theo.}} = 132,71\,\unit{\milli\henry}$ & $20,02\,\%$ \\
+        $R_{16,\text{exp.}} = \left( 92,77\pm0,28 \right)\,\unit{\ohm}$ & $ R_{16,\text{theo.}} = 411,2\,\unit{\ohm}$ & $77,44\,\%$\\
+        \midrule
+        \SetCell[c=3]{c} Maxwell-Brücke & &\\
+        \midrule
+        $L_{19,\text{exp.}} = 28,97\,\unit{\milli\henry}$ & $L_{19,\text{theo.}} = 26,96\,\unit{\milli\henry}$ & $7,46\,\%$\\
+        $R_{19,\text{exp.}} = \left( 111,51\pm0,32   \right)\,\unit{\ohm}$ & $ R_{19,\text{theo.}} = 108,7\,\unit{\ohm}$ & $2,59\,\%$ \\
+        $L_{16,\text{exp.}} =  134,27\,\unit{\milli\henry}$ & $L_{16,\text{theo.}} = 132,71\,\unit{\milli\henry}$ & $1,18\,\%$ \\
+        $R_{16,\text{exp.}} = \left( 414,4\pm1,2 \right)\,\unit{\ohm}$ & $ R_{16,\text{theo.}} = 411,2\,\unit{\ohm}$ & $0,78\,\%$\\
+        \bottomrule
+    \end{tblr}
+  \end{table}
+Diese Abweichungen könnten an der ungenauen Bestimmung von $R_3$ und $R_4$ liegen. 
+Hierfür muss die Brückenspannung minimiert werden, welche mithilfe vom Ablesen am Oszilloskop minimiert wurde. Allerdings entsteht bei der
+Minimierung ein Rauschen, was das Ablesen ungenau machen könnte. Zudem ist häufiger das Problem aufgetreten, dass beim Berühren der Kabel oder
+des Potentiometers sich die Abbildung auf dem Oszilloskop geändert hat, was ebenfalls die teilweise großen Abweichungen erklären könnte. 
+\\
+Bei der Wien-Robinson-Brücke fällt auf, dass die Messwerte mehr von der Theoriekurve abweichen, desto weiter sich die Frequenz von $f_0$ entfernt. 
+Allerdings lässt sich mit dem geringen Klirrfaktor von $k=0,10$ die hohe Genauigkeit im Frequenzbereich um $f_0$ bestätigen.
+
+
+
+% Bei der Wheatstoneschen Brücke ist zwischen dem experimentellen Wert $R_{13,\text{exp.}} = \left(305,2\pm0,9 \right)\,\unit{\ohm}$
+% und dem theoretischen Wert $R_{13,\text{theo.}} = 319,5\,\unit{\ohm}$ eine Abweichung von $4,47\,\%$. Für den zweiten unbekannten Widerstand
+% beträgt der experimentelle Wert $ R_{14,\text{exp.}} = \left(904,1\pm2,6 \right)\,\unit{\ohm}$ und ther Theoriewert $R_{14,\text{theo.}} = 900\,\unit{\ohm}$. 
+% Somit ist hier eine Abweichung von $0,46\,\%$ vorhanden. Diese Abweichungen könnten an der ungenauen Bestimmung von $R_3$ und $R_4$ liegen. 
+% Hierfür musste die Brückenspannung minimiert werde, welche mithilfe vom Ablesen am Oszilloskop minimiert wurde. Allerdings entsand bei der
+% Minimierung ein Rauschen, was das Ablesen ungenau machen könnte. Diese Erklärung gilt auch für die folgenden Abweichung bei der Kapazität-, Induktivitätsmessbrücke 
+% und Maxwell-Brücke. Für die Kapazitätsmessbrücke ergibt sich die Kapazität $C_{15,\text{exp.}}= \left( 771,9\pm2,5 \right)\unit{\nano\farad}$ und die theoretische
+% Kapazität beträgt $C_{15,\text{theo.}}= 652\,\unit{\nano\farad}$, wodurch eine Abweichung von $18,4\,\%$ vorhanden ist. Der berechnete Widerstand ist
+% $ R_{15,\text{exp.}} = \left(460,6\pm1,3\right)\,\unit{\ohm}$, welche um $2,62\,\%$ vom Theoriwert $ R_{15,\text{theo.}} = 473\,\unit{\ohm}$ abweicht.
+% Bei der zweiten Durchführung weicht der Experimentalwert $C_{8,\text{exp.}}= \left( 533,0\pm1,7 \right)\,\unit{\nano\farad}$ von der theoretischen Kapazität
+% $C_{8,\text{theo.}}= 294,1\,\unit{\nano\farad}$ um $81,2\,\%$ ab. Der Widerstand hat eine Abweichung von $18,94\,\%$ bei einem Experimentalwert von $R_{8,\text{exp.}} = \left( 670,8\pm1,9 \right)\,\unit{\ohm}$
+% und einem Theoriwert von $ R_{8,\text{theo.}} = 564\,\unit{\ohm}$. 
