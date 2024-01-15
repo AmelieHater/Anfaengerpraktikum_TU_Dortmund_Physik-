@@ -13,7 +13,7 @@ werden die Messunischerheiten ausgerechnet, wenn eine Größe von mehreren fehle
 \subsection{Wheatstonesche Brücke}
 \label{sec:WheatstonescheBrücke}
 Zunächst wird der unbekannte Widerstand $R_{13}$ verwendet. Die verwendeten und gemessenen Widerstände sind in der Tabelle (\ref{tab:WheatstonescheBrücke_1})
-aufgelistet. Der Widerstand wird mit der Gleichung (\ref{eqn:}) berechnet. Bei der Berechnung der Messunischerheiten wird der Fehler $\Delta\frac{R_3}{R_4} = 0,005 \cdot \frac{R_3}{R_4}$ verwendet. 
+aufgelistet. Der Widerstand wird mit der Gleichung (\ref{eqn:Wheatstone_R}) berechnet. Bei der Berechnung der Messunischerheiten wird der Fehler $\Delta\frac{R_3}{R_4} = 0,005 \cdot \frac{R_3}{R_4}$ verwendet. 
 \begin{table}[H]
   \centering
   \caption{Widerstände der Wheatstonschen Brücke bei dem unbekannten Widerstand $R_{13}$.}
@@ -33,7 +33,7 @@ $$ R_{13,\text{exp.}} = \left(305,2\pm0,9 \right)\,\unit{\ohm}\,.$$
 Der theoretische Wert lautet
 $$R_{13,\text{theo.}} = 319,5\,\unit{\ohm}\,.$$
 In der Tabelle (\ref{tab:WheatstonescheBrücke_2}) sind die verwendeten und gemessenen Widerstände bei einer Durchführung mit dem 
-unbekannten Widerstand $R_{14}$ aufgeführt. Der Widerstand $R_{14}$ berechnet sich erneut aus der Gleichung (\ref{eqn:}).
+unbekannten Widerstand $R_{14}$ aufgeführt. Der Widerstand $R_{14}$ berechnet sich erneut aus der Gleichung (\ref{eqn:Wheatstone_R}).
 \begin{table}[H]
   \centering
   \caption{Widerstände der Wheatstonschen Brücke bei dem unbekannten Widerstand $R_{14}$.}
@@ -55,7 +55,7 @@ $$R_{14,\text{theo.}} = 900\,\unit{\ohm}\,.$$
 \subsection{Kapazitätsmessbrücke}
 Bei dieser Durchführung wird wieder der relative Fehler wie im Abschnitt (\ref{sec:WheatstonescheBrücke}) benutzt. In der Tabelle (\ref{tab:Kapazitätsmessbrücke_1})
 sind die verwendeten und gemessenen Kapazitäten und Widerstände der Kapazitätsmessbrücke bei den unbekannten $C_{15}$ und $R_{15}$ aufgelistet. 
-Die unbekannten Werte werden mit den Gleichungen (\ref{eqn:}) und (\ref{eqn:}) bestimmt.
+Die unbekannten Werte werden mit den Gleichungen (\ref{eqn:Kapazitaet_C}) und (\ref{eqn:Wheatstone_R}) bestimmt.
 \begin{table}[H]
   \centering
   \caption{Kapazität und Widerstände der Kapazitätsmessbrücke bei den unbekannnten Werten $C_{15}$ und $R_{15}$.}
@@ -79,7 +79,7 @@ $$ R_{15,\text{exp.}} = \left(460,6\pm1,3\right)\,\unit{\ohm}$$
 berechnen. Der theoretische Widerstand ist
 $$ R_{15,\text{theo.}} = 473\,\unit{\ohm}\,.$$
 Die Werte bei einer Durchführung mit den unbekannten Werten $C_{8}$ und $R_{8}$ sind in der Tabelle (\ref{tab:Kapazitätsmessbrücke_2}) aufgeführt.
-$C_{8}$ und $R_{8}$ werden ebenfalls mit den Gleichungen (\ref{eqn:}) und (\ref{eqn:}) ermittelt.
+$C_{8}$ und $R_{8}$ werden ebenfalls mit den Gleichungen (\ref{eqn:Kapazitaet_C}) und (\ref{eqn:Wheatstone_R}) ermittelt.
 \begin{table}[H]
   \centering
   \caption{Kapazität und Widerstände der Kapazitätsmessbrücke bei den unbekannnten Werten $C_{8}$ und $R_{8}$.}
@@ -105,7 +105,7 @@ $$ R_{8,\text{theo.}} = 564\,\unit{\ohm}\,.$$
 \subsection{Induktivitätsmessbrücke}
 Der relative Fehler aus Abschnitt (\ref{sec:WheatstonescheBrücke}) gilt auch für diese Durchführung. Die verwendete Induktivität sowie die 
 verwendeten und gemessenen Widerstände der Induktivitätsmessbrücke bei unbekannten $L_{19}$ und $R_{19}$ sind in der Tabelle (\ref{tab:Induktivitätsmessbrücke_1})
-aufgelistet. Hier werden $L_{19}$ und $R_{19}$ mit den Gleichungen (\ref{eqn:}) und (\ref{eqn:}) bestimmt.
+aufgelistet. Hier werden $L_{19}$ und $R_{19}$ mit den Gleichungen (\ref{eqn:Induktivität_L}) und (\ref{eqn:Wheatstone_R}) bestimmt.
 \begin{table}[H]
   \centering
   \caption{Induktivität und Widerstände der Induktivitätsmessbrücke bei den unbekannnten Werten $L_{19}$ und $R_{19}$.}
@@ -130,7 +130,7 @@ Außerdem ist der theoretische Widerstand
 $$ R_{19,\text{theo.}} = 108,7\,\unit{\ohm}$$ gegeben. 
 Die zugehörigen Werte bei der Durchführung mit der unbekannten Induktivität $L_{16}$ und dem unbekannten Widerstand $R_{16}$
 sind in der Tabelle (\ref{tab:Induktivitätsmessbrücke_2}) aufgelistet. Die unbekannten Werte werden nochmals mit den Gleichungen
-(\ref{eqn:}) und (\ref{eqn:}) berechnet. 
+(\ref{eqn:Induktivität_L}) und (\ref{eqn:Wheatstone_R}) berechnet. 
 \begin{table}[H]
   \centering
   \caption{Induktivität und Widerstände der Induktivitätsmessbrücke bei den unbekannnten Werten $L_{16}$ und $R_{16}$.}
@@ -155,8 +155,8 @@ Der dazugehörige theoretische Widerstand ist
 $$ R_{16,\text{theo.}} = 411,2\,\unit{\ohm}\,.$$ 
 \subsection{Maxwell-Brücke}
 In diesem Abschnitt wird wieder der gleiche relative Fehler aus Abschnitt (\ref{sec:WheatstonescheBrücke}) verwendet. Die erste Durchführung
-ist erneut mit der unbekannten Induktivität $L_{19}$ und dem unbekannten $R_{19}$. Diese Werte werden mithilfe der Gleichungen (\ref{eqn:}) 
-und (\ref{eqn:}) bestimmt. In der Tabelle (\ref{tab:MaxwellBrücke_1}) sind die verwendetene sowie gemessenen Widerstände, die genutzte Kapazität
+ist erneut mit der unbekannten Induktivität $L_{19}$ und dem unbekannten $R_{19}$. Diese Werte werden mithilfe der Gleichungen (\ref{eqn:Induktivität_L_Maxwell}) 
+und (\ref{eqn:Wheatstone_R}) bestimmt. In der Tabelle (\ref{tab:MaxwellBrücke_1}) sind die verwendetene sowie gemessenen Widerstände, die genutzte Kapazität
 und die berechneten $L_{19}$ und $R_{19}$ aufgelistet.
 \begin{table}[H]
   \centering
@@ -181,7 +181,7 @@ $$R_{19,\text{exp.}} = \left( 112,97\pm0,33  \right)\,\unit{\ohm}$$
 bestimmt und der theoretische Widerstand ist wieder
 $$ R_{19,\text{theo.}} = 108,7\,\unit{\ohm}\,.$$
 Bei der zweiten Durchführung wird bei der Maxwell-Brücke die unbekannten Werte $L_{16}$ und $R_{16}$ bestimmt. Diese werden ebenfalls mit
-den Gleichungen (\ref{eqn:}) und (\ref{eqn:}) berechnet. Die verwendeten Größen und die berechneten $L_{16}$ und $R_{16}$ sind in der Tabelle 
+den Gleichungen (\ref{eqn:Induktivität_L_Maxwell}) und (\ref{eqn:Wheatstone_R}) berechnet. Die verwendeten Größen und die berechneten $L_{16}$ und $R_{16}$ sind in der Tabelle 
 (\ref{tab:MaxwellBrücke_2}) aufgeführt.
 \begin{table}[H]
   \centering
@@ -232,7 +232,7 @@ aufgelistet. Außerdem beträgt die Speisespannung bei dieser Durchführung $U_{
 Anhand dieser Tabelle lässt sich die Frequenz $f_0 = 400\,\unit{\hertz}$ bestimmen, bei der die Brückenspannung am niedrigsten ist.
 Damit lassen sich die Messwerte in der Abbildung (\ref{fig:WienRobinson}) halblogarithmisch darstellen. Hierfür wird auf der x-Achse die
 auf die minimale Brückenspannung normierte Frequenz $\Omega = \frac{f}{f_0}$ und auf der y-Achse $\left| \frac{U_{\text{Br}}}{U_{\text{S}}}\right|^2$ 
-aufgetragen. Außerdem wird mithilfe der Gleichung (\ref{eqn:}) die Theoriekurve bestimmt, welche ebenfalls in der Abbildung (\ref{fig:WienRobinson}) 
+aufgetragen. Außerdem wird mithilfe der Gleichung (\ref{eqn:Omega}) die Theoriekurve bestimmt, welche ebenfalls in der Abbildung (\ref{fig:WienRobinson}) 
 abgebildet ist. 
 \begin{figure}[H]
   \centering
@@ -240,8 +240,8 @@ abgebildet ist.
   \caption{Halblogarithmische Darstellung der Frequenz und Spannungen.}
   \label{fig:WienRobinson}
 \end{figure}
-Der Klirrfaktor wird mit der Gleichung (\ref{eqn:}) bestimmt. Allerdings wird die Summe der Oberwellen mit der zweiten Oberwelle angenähert.
-Die zweite Oberwelle $U_2$ bestimmt sich aus der Gleichung (\ref{eqn:}) und durch
+Der Klirrfaktor wird mit der Gleichung (\ref{eqn:Klirrfaktor}) bestimmt. Allerdings wird die Summe der Oberwellen mit der zweiten Oberwelle angenähert.
+Die zweite Oberwelle $U_2$ bestimmt sich aus der Gleichung (\ref{eqn:Klirrfaktor}) und durch
 $$U_2 = \frac{U_{\text{Br}}}{f(\Omega = 2)}\,,$$
 wobei für $U_{\text{Br}}$ die minimale Brückenspannung verwendet wird. Somit ergibt sich 
 $$U_2 = \frac{15\unit{\milli\volt}}{\sqrt{\frac{1}{45}}} \approx 100,62\,\unit{\milli\volt}\,.$$

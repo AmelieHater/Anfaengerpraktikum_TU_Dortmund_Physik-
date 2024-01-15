@@ -8,3 +8,28 @@ $$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - 
 
 Gauß:
 $$\Delta f = \sqrt{\sum_{i = 1}^{n} \left( \frac{\partial f}{\partial x_i} \right)^2 \cdot \left(\Delta x_i \right)^2}$$
+
+Zu diesem Versuch: 
+\label{eqn:Wheatstone_R}
+        R_x = R_2 \cdot \frac{R_3}{R_4} \,.
+
+\label{eqn:Kapazitaet_C}
+    C_x = C_2 \cdot \frac{R_4}{R_3} \,.
+
+
+\label{eqn:Induktivität_L}
+        L_x = L_2 \cdot \frac{R_3}{R_4} \,.
+    
+\label{eqn:Induktivität_L_Maxwell}
+        L_x = R_2 \cdot R_3 \cdot C_4 
+   
+        \omega_0 = \frac{1}{R \cdot C}
+\label{eqn:omega_0}
+    
+    \left| \frac{U_{\text{Br}}}{U_{\text{S}}}\right| &= \sqrt{\frac{1}{9} \cdot \frac{(\Omega² - 1)²}{(1-\Omega²)² + 9\Omega²}} & \text{mit} \,\, \Omega &= \frac{\omega}{\omega_0} \, .
+\label{eqn:Omega}
+    
+        k = \frac{1}{U_1} \sqrt{\sum_i ^n {{U_i}²}} \, .
+\label{eqn:Klirrfaktor}
+    
+    
