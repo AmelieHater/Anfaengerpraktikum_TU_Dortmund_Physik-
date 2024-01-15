@@ -112,7 +112,7 @@ C_4_19_d = C_4_19_d * 10**(-9)
 delta_R_34_19_d = (R_3_19_d/R_4_19_d)* 0.005
 R_34_19_d = unp.uarray(R_3_19_d/R_4_19_d, delta_R_34_19_d)
 R_x_19_d = R_2_19_d * R_34_19_d
-# print (f"R_x_19_d: {R_x_19_d} in ohm")
+print (f"R_x_19_d: {R_x_19_d} in ohm")
 R_x_19_d = np.mean(R_x_19_d)
 print (f"R_x_19_d: {R_x_19_d} in ohm")
 
