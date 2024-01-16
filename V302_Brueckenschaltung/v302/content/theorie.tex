@@ -9,25 +9,25 @@ durch den Versuch das Verständnis der Kirchhoffschen Gesetze vertieft und versc
     Die Funktionsweise einer Brückenschaltung beruht auf zwei Kirchhoffschen Gesetzen. Die sogenannte Knotenregel besagt, dass an einem Knotenpunkt die Summe der 
     zufließenden Ströme der Summe der abfließenden Ströme entsprechen muss. Zufließende Ströme haben ein positives Vorzeichen und abfließende Ströme haben ein 
     negatives Vorzeichen. Dann gilt 
-    \begin{equation}
+    \begin{equation*}
         \label{eqn:Knotenregel}
         \sum_k {I_k} = 0 \,.
-    \end{equation}
+    \end{equation*}
     $I_k$ sind dabei die einzelnen zufließende oder abfließende Ströme. 
     Die sogenannte Maschenregel beschreibt, dass die Summe aller treibenden, elektrischen Spannungen der Summe der abfallenden Spannungen innerhalb einer beliebigen, geschlossenen 
     Masche eines Stromkreises entspricht. Dabei haben die abfallenden Spannung ein negatives Vorzeichen und die treibenden Spannungen ein positives Vorzeichen. 
     Dann gilt
-    \begin{equation}
+    \begin{equation*}
         \label{eqn:Maschenregel}
         \sum_k {U_k} = 0 
-    \end{equation}
+    \end{equation*}
     innerhalb einer Masche. $U_k$ sind dabei die in der Masche treibenden oder abfallenden Spannungen. 
     Diese beiden Regel können verwendet werden, um Schaltpläne zu erstellen, die es ermöglichen die Kenngrößen unbekannter Bauteile zu bestimmen. Eine 
     solche prinzipielle Brückenschaltung ist in Abbildung (\ref{pic:prinzipielle_Brückenschaltung}) zu sehen. $R$ bezeichnet ohmsche Widerstände.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\linewidth]{prinzipielle_Schaltung.png}
-        \caption{Schaltplan einer prinzipiellen Brückenschaltung}
+        \caption{Schaltplan einer prinzipiellen Brückenschaltung. Q\cite{anleitungV302}}
         \label{pic:prinzipielle_Brückenschaltung}
     \end{figure}
     Die unbekannte Kenngröße wird durch die sogenannte Nullmethode bestimmt. Bei dieser wird $R_2$ variiert bis zwischen Punkt A und Punkt B keine Spannung mehr zu
@@ -75,10 +75,10 @@ durch den Versuch das Verständnis der Kirchhoffschen Gesetze vertieft und versc
     \subsection{Wien-Robinson-Brücke}
     Das Schaltbild der Wien-Robinson-Brücke ist in Abbildung (\ref{pic:WRB}) zu sehen. In dieser Schaltung gibt es kein Abgleichelement, stattdessen fungiert die 
     Schaltung als elektrischer Filter. Die Schwingung mit der Frequenz 
-    \begin{equation}
+    \begin{equation*}
         \omega_0 = \frac{1}{R \cdot C}
         \label{eqn:omega_0}
-    \end{equation}
+    \end{equation*}
    wird geschwächt. Mit der Brückenspannung $U_{\text{Br}}$ und der Quellspannung $U_{\text{S}}$ gilt
     \begin{align}
     \left| \frac{U_{\text{Br}}}{U_{\text{S}}}\right| &= \sqrt{\frac{1}{9} \cdot \frac{(\Omega² - 1)²}{(1-\Omega²)² + 9\Omega²}} & \text{mit} \,\, \Omega &= \frac{\omega}{\omega_0} \, .
@@ -92,6 +92,12 @@ durch den Versuch das Verständnis der Kirchhoffschen Gesetze vertieft und versc
         k = \frac{1}{U_1} \sqrt{\sum_i ^n {{U_i}²}} \, .
     \label{eqn:Klirrfaktor}
     \end{align}
+    $U_2$ wird durch 
+    \begin{align}
+        U_2 &= \frac{U_{\text{Br}}}{f(\Omega = 2)} & \text{mit} \,\, f(\Omega) &= \left| \frac{U_{\text{Br}}}{U_{\text{S}}}\right|
+    \label{eqn:U_2}
+    \end{align}
+    genähert.
     
     %\subsection{Fehlerrechnung}
     %Im Folgenden werden Mittelwerte von Messungen gebildet. Diese Mittelwerte werden durch 
