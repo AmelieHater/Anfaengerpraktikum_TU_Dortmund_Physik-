@@ -26,13 +26,13 @@ beschreiben. Dabei ist $h$ das Planksche Wirkumsquantum, $c$ die Lichtgeschwindi
 
 Das charakteristische Röntgenspektrum ist abhängig vom Material der Anode. Es entsteht dadurch, dass das Anodenmaterial ionisiert wird, wodurch eine leere 
 Elektronenschale entsteht. In diese leere Schale fällt dann ein Elektron aus einer höheren Schale herein und gibt die Energiedifferenz der Schalen als Röntgenquant 
-ab. Daher besteht das charakteristische Röntgenspektrum aus scharfen Linien, die mit den Buchstaben $K_\alpha, K_\beta, L_alpha, \text{etc.}$ bezeichnet werden. Der
+ab. Daher besteht das charakteristische Röntgenspektrum aus scharfen Linien, die mit den Buchstaben $K_\alpha, K_\beta, L_\alpha, \text{etc.}$ bezeichnet werden. Der
 Großbuchstabe gibt dabei die Schale an, in die das Elektron hineinfällt und die griechischen Buchstaben geben an, aus welcher Schale es kommt. \\
 Die Bindungsenergie $E_n$ der einzelnen Elektronen in der n-ten Schale kann durch die Formel 
 \begin{equation}
 E_n = - R_{\infty} \cdot z^{2}_{\text{eff}} \cdot \frac{1}{n²}
 \end{equation}
-beschrieben werden. $R_{\infty}$ ist hier die Rydbergenergie und $z_{\text{eff}}$ die effektive Kernladung, für die $z_{\text{eff}} = z - \sigma$ mit $z$ als Kernladungszahl 
+beschrieben werden. $R_{\infty}$ ist hier die Rydbergenergie und $z_{\text{eff}}$ die effektive Kernladung, für die $z_{\text{eff}} = z - \sigma$ mit $z$ als Kernladung 
 und $\sigma$ als Abschirmkonstante gilt. 
 Die Abschirmkonstanten können durch folgende Formen für die Energien der $\text{Cu-K}_\alpha$ - und der $\text{Cu-K}_{\beta}$ - Linie 
 \begin{align}
@@ -42,9 +42,46 @@ Die Abschirmkonstanten können durch folgende Formen für die Energien der $\tex
  \end{align}
 bei Vernachlässigung des Drehimpulsbeitrages berechnet werden. Für Kupfer gilt dabei $n = 1, m = 2$ und $l = 3$. \\
 
-\subsection{Absorption von Röntgenstrahlung}
-Der Compton- und der Photoeffekt sind die beiden wichtigsten Prozesse bei der Absorption von Röntgenstrahlung mit einer Energie von unter $1 \si{\mega\electronvolt}$.
 
+\subsection{Absorption von Röntgenstrahlung}
+\begin{wrapfigure}{r}{5.6cm}
+    \begin{center}
+        \label{fig:Absorptionskanten}
+        \includegraphics[width=5.5cm]{content/Bilder/Kantenbild.jpeg}
+        %\captionstyle{indent}
+        %\setcapindent{1cm}
+        \caption[width=5.5cm]{Schematische \\ Darstellung der \\Absorptionskanten \cite{anleitungV602}.}
+    \end{center}
+    
+    \label{fig:Kantenbild}
+\end{wrapfigure}
+Der Compton- und der Photoeffekt sind die beiden wichtigsten Prozesse bei der Absorption von Röntgenstrahlung mit einer Energie von unter $1 \si{\mega\electronvolt}$.
+Dies führt dazu, dass der Absorptionskoeffizient mit zunehmender Energie abnimmt und wenn die Photonenernergie marginal größer ist als die Bindungsenergie eines 
+Elektrons aus der nächsten weiter am Kern liegenden Schale sprunghaft ansteigt. Dieser Bereich wird als L - oder K-Kante bezeichnet, je nachdem aus welcher Schale das 
+Elektron stammt. Die L-Kante besitzt dabei eine in diesem Experiment nicht auflösbare Feinstruktur, die K-Kante gibt es hingegen nur einmal. Dies ist auch in 
+Abbildung (\ref{fig:Absorptionskanten}) zu sehen. Diese Abbildung zeigt eine schematische Darstellung der L- und K-Kante. 
+Mithilfe der aus der Sommerfeldschen Feinstrukturformel herleitbare Formel 
+\begin{equation}
+    \sigma_K = Z - \sqrt{\frac{E_K}{R_{\infty}} - \frac{\alpha² \cdot Z⁴}{4}}
+    \label{eqn:sigma_k}
+\end{equation}
+lässt sich die Abschirmkonstante $\sigma_{K,\text{abs}}$ für Elektronen aus der K-Schale berechnen. 
+Für die Abschirmkonstante $\sigma_{L,\text{abs}}$ gilt hingegen 
+\begin{equation}
+    \sigma_L = Z - \sqrt{\left(\frac{4}{\alpha}\sqrt{\frac{\Delta E_L}{R_{\infty}}} - \frac{5 \Delta E_L}{R_{\infty}}\right) \cdot \left(1 + \frac{19}{32}\alpha² \frac{\Delta E_L}{R_{\infty}}\right)} \, .
+    \label{eqn:sigma_l}
+\end{equation}
+Dabei ist $\Delta E_L = E_{L,11} - E_{L,111}$ mit den Energien zweier Feinstruktur L-Kanten, $Z$ die Ordnungszahl des Materials und $\alpha$ die Feinstrukturkonstante.
+\FloatBarrier 
+\subsection{Bragg'sche Refektion}
+Die Bragg'sche Refelktion ermöglich das genaue Messen von Wellenlängen und ermöglich dadurch eine experimentelle Analyse des emmitierten Röntgenspektrums. Es gilt, 
+dass Licht nur in einem bestimmten, von der Wellenlänge abhängenden, Glanzwinkel konstruktiv interferiert, wenn es auf einen Bragg-Kristall mit bestimmter Gitterkonstante
+$d$ trifft. Daher kann aus der Bragg'schen Bedingung 
+\begin{equation}
+    \label{eqn:Bragg_Bedingung}
+    2 d \sin{\theta} = n \lambda
+\end{equation}
+die Wellenlänge berechnet werden. $\theta$ ist dabei der Einfall der Strahlung und $n$ die Beugungsordnung.
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
 Zur Vorbereitung sollen die Energien der $\text{Cu-K}_\alpha$ - und der $\text{Cu-K}_{\beta}$ - Linie recherchiert werden. Zu diesen Energien wird der Glanzwinkel 
@@ -58,7 +95,7 @@ Die sich ergebenden Werte sind
 \end{align*}
 Zusätzlich sollte die Literaturwerte der K-Kante recherchiert und die dazugehörigen Braggwinkel und Abschirmkonstanten für verschiedene Materialien berechnet werden.
 Berechnet wurden die Werte mithilfe von Formel (\ref{}) und (\ref{}).
-Sämtliche Werte befinden sich sortiert nach Ordnungszahl $z$ in Tabelle (\ref{tab:Vorbereitungswerte}).
+Sämtliche Werte befinden sich sortiert nach Ordnungszahl $Z$ in Tabelle (\ref{tab:Vorbereitungswerte}).
 
 \begin{table}[H]
     \centering
@@ -66,7 +103,7 @@ Sämtliche Werte befinden sich sortiert nach Ordnungszahl $z$ in Tabelle (\ref{t
     \label{tab:Vorbereitungswerte}
     \begin{tblr}{colspec={l r r r r}}
         \toprule
-        $\text{Material}$ & $z$ & $E^{\text{Lit}}_{\text{K}}\left[\si{\kilo\electronvolt}\right]$ & $\theta^{\text{Lit}}_{\text{K}} \left[\unit{\degree}\right]$ & $\sigma_{\text{K}}$ \\
+        $\text{Material}$ & $Z$ & $E^{\text{Lit}}_{\text{K}}\left[\si{\kilo\electronvolt}\right]$ & $\theta^{\text{Lit}}_{\text{K}} \left[\unit{\degree}\right]$ & $\sigma_{\text{K}}$ \\
         \midrule
         \text{Zink} & 30 & 9,65 & 18,60 & 3,56 \\
         \text{Germanium} & 32 & 11,11 & 16,09 & 3,67 \\
