@@ -15,6 +15,7 @@ schematisch in Abbildung (\ref{fig:Bremsspektrum}) zu sehen. Die aus der maximal
 sich durch 
 \begin{equation}
     \lambda_{\text{min}} = \frac{h \cdot c}{e \cdot U}
+    \label{eqn:lambda}
 \end{equation}
 beschreiben. Dabei ist $h$ das Planksche Wirkumsquantum, $c$ die Lichtgeschwindigkeit, $e$ die Elementarladung und $U$ die angelegte Beschleunigungsspannung.\\
 \begin{figure}[H]
@@ -31,6 +32,7 @@ Großbuchstabe gibt dabei die Schale an, in die das Elektron hineinfällt und di
 Die Bindungsenergie $E_n$ der einzelnen Elektronen in der n-ten Schale kann durch die Formel 
 \begin{equation}
 E_n = - R_{\infty} \cdot z^{2}_{\text{eff}} \cdot \frac{1}{n²}
+\label{Bindungsenergie_Elektronen}
 \end{equation}
 beschrieben werden. $R_{\infty}$ ist hier die Rydbergenergie und $z_{\text{eff}}$ die effektive Kernladung, für die $z_{\text{eff}} = z - \sigma$ mit $z$ als Kernladung 
 und $\sigma$ als Abschirmkonstante gilt. 
@@ -46,20 +48,18 @@ bei Vernachlässigung des Drehimpulsbeitrages berechnet werden. Für Kupfer gilt
 \subsection{Absorption von Röntgenstrahlung}
 \begin{wrapfigure}{r}{5.6cm}
     \begin{center}
-        \label{fig:Absorptionskanten}
         \includegraphics[width=5.5cm]{content/Bilder/Kantenbild.jpeg}
         %\captionstyle{indent}
         %\setcapindent{1cm}
         \caption[width=5.5cm]{Schematische \\ Darstellung der \\Absorptionskanten \cite{anleitungV602}.}
+        \label{fig:Kantenbild}
     \end{center}
-    
-    \label{fig:Kantenbild}
 \end{wrapfigure}
 Der Compton- und der Photoeffekt sind die beiden wichtigsten Prozesse bei der Absorption von Röntgenstrahlung mit einer Energie von unter $1 \si{\mega\electronvolt}$.
 Dies führt dazu, dass der Absorptionskoeffizient mit zunehmender Energie abnimmt und wenn die Photonenernergie marginal größer ist als die Bindungsenergie eines 
 Elektrons aus der nächsten weiter am Kern liegenden Schale sprunghaft ansteigt. Dieser Bereich wird als L - oder K-Kante bezeichnet, je nachdem aus welcher Schale das 
 Elektron stammt. Die L-Kante besitzt dabei eine in diesem Experiment nicht auflösbare Feinstruktur, die K-Kante gibt es hingegen nur einmal. Dies ist auch in 
-Abbildung (\ref{fig:Absorptionskanten}) zu sehen. Diese Abbildung zeigt eine schematische Darstellung der L- und K-Kante. 
+Abbildung (\ref{fig:Kantenbild}) zu sehen. Diese Abbildung zeigt eine schematische Darstellung der L- und K-Kante. 
 Mithilfe der aus der Sommerfeldschen Feinstrukturformel herleitbare Formel 
 \begin{equation}
     \sigma_K = Z - \sqrt{\frac{E_K}{R_{\infty}} - \frac{\alpha² \cdot Z⁴}{4}}
@@ -86,7 +86,7 @@ die Wellenlänge $\lambda$ berechnet werden. $\theta$ ist dabei der Einfall der 
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
 Zur Vorbereitung sollen die Energien der $\text{Cu-K}_\alpha$ - und der $\text{Cu-K}_{\beta}$ - Linie recherchiert werden. Zu diesen Energien wird der Glanzwinkel 
-Theta des Briggs Kristalls mit Formel (\ref{}) bestimmt. Der Briggs Kristall ist ein LiFI Kristall mit Gitterkonstante $d = 201,4 \unit{\pico\meter}$.
+Theta des Briggs Kristalls mit Formel (\ref{eqn:Bragg_Bedingung}) bestimmt. Der Briggs Kristall ist ein LiFI Kristall mit Gitterkonstante $d = 201,4 \unit{\pico\meter}$.
 Die sich ergebenden Werte sind 
 \begin{align*}
     K_\alpha &= 8 \, \si{\kilo\electronvolt}\\
@@ -95,7 +95,7 @@ Die sich ergebenden Werte sind
     \theta_\beta &= 20,21 \unit{\degree} .
 \end{align*}
 Zusätzlich sollte die Literaturwerte der K-Kante recherchiert und die dazugehörigen Braggwinkel und Abschirmkonstanten für verschiedene Materialien berechnet werden.
-Berechnet wurden die Werte mithilfe von Formel (\ref{}) und (\ref{}).
+Berechnet wurden die Werte mithilfe von Formel (\ref{eqn:sigma_k}) und (\ref{eqn:Bragg_Bedingung}).
 Sämtliche Werte befinden sich sortiert nach Ordnungszahl $Z$ in Tabelle (\ref{tab:Vorbereitungswerte}).
 
 \begin{table}[H]

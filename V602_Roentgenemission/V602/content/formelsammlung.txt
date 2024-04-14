@@ -1,3 +1,41 @@
+\label{eqn:lambda}
+    \lambda_{\text{min}} = \frac{h \cdot c}{e \cdot U}
+
+\label{Bindungsenergie_Elektronen}
+    E_n = - R_{\infty} \cdot z^{2}_{\text{eff}} \cdot \frac{1}{n²}
+
+\label{eqn:Kupfer_Linien_Energien_abs}
+    E_{K,\text{abs}} &= R_{\infty} \cdot \left(z - \sigma_1\right)²  \\
+
+\label{eqn:Kupfer_Linien_Energien_alpha}
+    E_{K,\alpha} &= R_{\infty} \cdot \left(\frac{1}{n}\right)² \cdot \left(z - \sigma_1\right)² - R_{\infty} \cdot \left(\frac{1}{m}\right)² \cdot \left(z - \sigma_2\right)² \\
+    
+\label{eqn:Kupfer_Linien_Energien_beta}
+    E_{K,\beta} &= R_{\infty} \cdot \left(\frac{1}{n}\right)² \cdot \left(z - \sigma_1\right)² - R_{\infty} \cdot \left(\frac{1}{l}\right)² \cdot \left(z - \sigma_3\right)² 
+
+\label{eqn:sigma_k}
+   \sigma_K = Z - \sqrt{\frac{E_K}{R_{\infty}} - \frac{\alpha² \cdot Z⁴}{4}}
+
+\label{eqn:sigma_l}
+    \sigma_L = Z - \sqrt{\left(\frac{4}{\alpha}\sqrt{\frac{\Delta E_L}{R_{\infty}}} - \frac{5 \Delta E_L}{R_{\infty}}\right) \cdot \left(1 + \frac{19}{32}\alpha² \frac{\Delta E_L}{R_{\infty}}\right)} \, .
+    
+\label{eqn:Bragg_Bedingung}
+    2 d \sin{\theta} = n \lambda
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Statistische Formeln zum copy & pasten:
 
 Mittelwert:
