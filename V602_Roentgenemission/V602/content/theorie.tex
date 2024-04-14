@@ -73,15 +73,16 @@ Für die Abschirmkonstante $\sigma_{L,\text{abs}}$ gilt hingegen
 \end{equation}
 Dabei ist $\Delta E_L = E_{L,11} - E_{L,111}$ mit den Energien zweier Feinstruktur L-Kanten, $Z$ die Ordnungszahl des Materials und $\alpha$ die Feinstrukturkonstante.
 \FloatBarrier 
-\subsection{Bragg'sche Refektion}
-Die Bragg'sche Refelktion ermöglich das genaue Messen von Wellenlängen und ermöglich dadurch eine experimentelle Analyse des emmitierten Röntgenspektrums. Es gilt, 
+\subsection{Bragg'sche Reflektion}
+Die Bragg'sche Reflektion ermöglich das genaue Messen von Wellenlängen und ermöglich dadurch eine experimentelle Analyse des emmitierten Röntgenspektrums. Es gilt, 
 dass Licht nur in einem bestimmten, von der Wellenlänge abhängenden, Glanzwinkel konstruktiv interferiert, wenn es auf einen Bragg-Kristall mit bestimmter Gitterkonstante
 $d$ trifft. Daher kann aus der Bragg'schen Bedingung 
 \begin{equation}
     \label{eqn:Bragg_Bedingung}
     2 d \sin{\theta} = n \lambda
 \end{equation}
-die Wellenlänge berechnet werden. $\theta$ ist dabei der Einfall der Strahlung und $n$ die Beugungsordnung.
+die Wellenlänge $\lambda$ berechnet werden. $\theta$ ist dabei der Einfall der Strahlung und $n$ die Beugungsordnung.
+
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
 Zur Vorbereitung sollen die Energien der $\text{Cu-K}_\alpha$ - und der $\text{Cu-K}_{\beta}$ - Linie recherchiert werden. Zu diesen Energien wird der Glanzwinkel 
@@ -114,3 +115,16 @@ Sämtliche Werte befinden sich sortiert nach Ordnungszahl $Z$ in Tabelle (\ref{t
         \bottomrule
     \end{tblr}
  \end{table}
+
+ \section{Versuchsaufbau}
+ Das Zentrum des Versuchsaufbaus stellen die Kupferröntgenröhre, ein Lifi-Kristall und ein Geiger-Müller-Zählrohr dar. Diese Bauteile sind 
+ zusammen in einem Gerät eingelassen, dass sich über einen Computer ansteuern lässt. Allerdings lassen sich verschiedene Absorber vor den 
+ Geiger-Müller-Zähler des Schrauben. Das gesamte Gerät ist in Abbildung (\ref{fig:Geraet}) zu sehen. 
+ Innerhalb des Computerprogramms lassen sich Messart, Drehmodus, Kristallwinkel und die Integrationszeit verändern. Alle Messungen in diesem 
+ Versuch werden bei einer Beschleunigungsspannung von $35 \, \unit{\kilo\volt}$ und Emissionsstrom von $1 \, \unit{\milli\ampere}$ aufgenommen.
+ \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{content/Bilder/Gerät.jpeg}
+    \caption{Foto des Versuchaufbaus.}
+    \label{fig:Geraet}
+\end{figure}
