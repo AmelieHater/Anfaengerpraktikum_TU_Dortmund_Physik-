@@ -1,6 +1,12 @@
 \label{eqn:lambda}
     \lambda_{\text{min}} = \frac{h \cdot c}{e \cdot U}
 
+\label{eqn:E_kin}
+    E_{\text{kin}} &= e \cdot U 
+
+\label{eqn:E_Strahl} 
+    E_{\text{Strahl}} &= h \cdot \nu 
+
 \label{Bindungsenergie_Elektronen}
     E_n = - R_{\infty} \cdot z^{2}_{\text{eff}} \cdot \frac{1}{n²}
 

@@ -13,10 +13,11 @@ Energie, die das Elektron durch das Abbremsen verloren hat. Das Bremsspektrum is
 k, als auch nur Teile davon. Die maximal mögliche Energie hängt dabei ausschließlich von der Beschleunigungsspannung ab. Das Bremsspektrum ist 
 schematisch in Abbildung (\ref{fig:Bremsspektrum}) zu sehen. Die aus der maximalen Energie ableitbare minimale Wellenlänge lässt
 sich durch 
-\begin{equation}
-    \lambda_{\text{min}} = \frac{h \cdot c}{e \cdot U}
-    \label{eqn:lambda}
-\end{equation}
+\begin{align}
+    \lambda_{\text{min}} &= \frac{h \cdot c}{e \cdot U} \label{eqn:lambda} \\
+    \text{mit} \,\, E_{\text{kin}} &= e \cdot U \label{eqn:E_kin} \\
+    \text{und} \,\, E_{\text{Strahl}} &= h \cdot \nu \label{eqn:E_Strahl}
+\end{align}
 beschreiben. Dabei ist $h$ das Planksche Wirkumsquantum, $c$ die Lichtgeschwindigkeit, $e$ die Elementarladung und $U$ die angelegte Beschleunigungsspannung.\\
 \begin{figure}[H]
     \centering
@@ -107,6 +108,7 @@ Sämtliche Werte befinden sich sortiert nach Ordnungszahl $Z$ in Tabelle (\ref{t
         $\text{Material}$ & $Z$ & $E^{\text{Lit}}_{\text{K}}\left[\si{\kilo\electronvolt}\right]$ & $\theta^{\text{Lit}}_{\text{K}} \left[\unit{\degree}\right]$ & $\sigma_{\text{K}}$ \\
         \midrule
         \text{Zink} & 30 & 9,65 & 18,60 & 3,56 \\
+        \text{Gallium} & 31 & 10,38 &17,25 & 3,60 \\
         \text{Germanium} & 32 & 11,11 & 16,09 & 3,67 \\
         \text{Brom} & 35 & 13,48 & 13,20 & 3,83 \\
         \text{Rubidium} & 37 & 15,21 & 11,68 & 3,94 \\
