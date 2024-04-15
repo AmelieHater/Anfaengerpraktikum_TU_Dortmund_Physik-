@@ -48,7 +48,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Überprüfung der Bragg Bedingung}
-In Abbildung \ref{fig:Bragg} sind die Messdaten zur Überprüfung der
+In Abbildung (\ref{fig:Bragg}) sind die Messdaten zur Überprüfung der
 Bragg-Bedingung der Röntgenstahlen auf ein LiF-Gitter dargestellt.
 Anhand dieser Abbildung wird das Maximum bei $\theta_{\text{exp.}} = 14\,\unit{\degree}$
 abgelesen. Der theoretische Braggwinkel lautet $\theta_{\text{theo.}} = 14\,\unit{\degree}$.
@@ -61,7 +61,7 @@ abgelesen. Der theoretische Braggwinkel lautet $\theta_{\text{theo.}} = 14\,\uni
 
 \subsection{Emissionsspektrum einer Cu-Röntgenröhre}
 Die Messdaten des Emissionsspektrums einer Cu-Röntgenröhre sind in der 
-Abbildung \ref{fig:Emissionsspektrum} abgebildet. Zusätzlich sind in dieser
+Abbildung (\ref{fig:Emissionsspektrum}) abgebildet. Zusätzlich sind in dieser
 Abbildung der Bremsberg, die $K_{\alpha}$- und $K_{\beta}$-Linien markiert.
 Aus der Graphik lassen sich 
 \begin{align*}
@@ -70,7 +70,7 @@ Aus der Graphik lassen sich
 \end{align*}
 bestimmen. Der abgelesene Grenzwinkel $\theta_{\text{Grenz}}$ lautet etwa
 $$\theta_{\text{Grenz}} = 5,6\,\unit{\degree}\,.$$ Damit lässt sich durch Umstellen der Gleichung
-\ref{eqn:Bragg_Bedingung} die minimale Wellenlänge und mit der Gleichung \ref{eqn:} die maximale Energie des Bremsbergs
+(\ref{eqn:Bragg_Bedingung}) die minimale Wellenlänge und mit der Gleichungen (\ref{eqn:lambda}) und (\ref{eqn:E_kin}) die maximale Energie des Bremsbergs
 berechnen. Daraus folgt
 \begin{align*}
   \lambda_{\text{min}} &= 39,31\,\unit{\pico\metre}\\
@@ -84,7 +84,7 @@ berechnen. Daraus folgt
   \label{fig:Emissionsspektrum}
 \end{figure}
 Um das Auflösungsvermögen der Apparatur zu bestimmen, wird der Ausschnitt der $K_{\alpha}$-
-und $K_{\beta}$-Linien in der Abbildung \ref{fig:Detailspektrum} dargestellt. Innerhalb dieser Abbildung
+und $K_{\beta}$-Linien in der Abbildung (\ref{fig:Detailspektrum}) dargestellt. Innerhalb dieser Abbildung
 sind die Halbwertsbreiten der $K_{\alpha}$ und $K_{\beta}$-Linien eingezeichnet. 
 \begin{figure}[H]
   \centering
@@ -92,11 +92,118 @@ sind die Halbwertsbreiten der $K_{\alpha}$ und $K_{\beta}$-Linien eingezeichnet.
   \caption{Detailspektrum der Cu-Röhre der $K_{\alpha}-$ und $K_{\beta}$-Linien.}
   \label{fig:Detailspektrum}
 \end{figure}
-
+Durch die jeweils zwei Schnittpunkten mit der Halbwertsbreite und der $K_{\alpha}$- und $K_{\beta}$-Linien 
+ergeben sich zu jedem Peak zwei Winkel. Für die $K_{\alpha}$-Linie ergeben sich $\theta_{\alpha,\text{min}}= 22,30\,\unit{\degree}$
+und $\theta_{\alpha,\text{max}}= 22,75\,\unit{\degree}$. Für die $K_{\beta}$-Linie sind die Winkel  $\theta_{\alpha,\text{min}}= 20,10\,\unit{\degree}$
+und $\theta_{\alpha,\text{max}}= 20,50\,\unit{\degree}$. Aus diesen Winkeln werden mit den Gleichungen (\ref{eqn:lambda}) und (\ref{eqn:E_kin}) die Energien ermittelt. 
+Die daraus ergebenen Energiedifferenzen $\Delta E$ wird für die Berechnung des Auflösungsvermögens mit
+$$A=\frac{E}{\Delta E}$$
+verwendet. Hier beschreibt $E$ die Energie der Peaks. In der Tabelle (\ref{tab:Auflösungsvermögen}) sind die berechneten
+Werte aufgelistet.
+\begin{table}[H]
+  \centering
+  \caption{Werte zur Bestimmung der Auflösungsvermögen.}
+  \label{tab:Auflösungsvermögen}
+  \begin{tblr}{colspec={c c c c}}
+      \toprule
+      $K$-Linie& $E\,[\unit{\kilo\eV}]$ & $\Delta E\,[\unit{\kilo\eV}]$ & $A$\\
+      \midrule
+      $\alpha$ &   $8,00$&     $0,15$ &   $52,63$\\
+      $\beta$ &    $8,91$&     $0,17$ &   $53,23$\\
+      \bottomrule
+  \end{tblr}
+\end{table}
+Mit den Werten aus Tabelle (\ref{tab:Auflösungsvermögen}) und den Gleichungen (\ref{eqn:Kupfer_Linien_Energien_abs}), (\ref{eqn:Kupfer_Linien_Energien_alpha})
+und (\ref{eqn:Kupfer_Linien_Energien_beta}) werden die Abschirmkonstanten 
+ermittelt. Diese sind in der Tabelle (\ref{tab:Abschirmkonstante}) aufgeführt.
+Zudem lässt sich die Absorptionsenergie nicht experimentell bestimmen,
+weswegen der Theoriwert $E_{K,\text{abs}}= 8,987\unit{\kilo\eV}$ \cite{Recherche} verwendet wird.
+\begin{table}[H]
+  \centering
+  \caption{Experimentelle und theoretische Abschirmkonstanten.}
+  \label{tab:Abschirmkonstante}
+  \begin{tblr}{colspec={c c c }}
+      \toprule
+      $\sigma_{\text{n}}$ & experimentell & theoretisch\\
+      \midrule
+      $\sigma_1$ &   &     $3,57$ \\
+      $\sigma_2$ &    $12,22$&     $12,14$ \\
+      $\sigma_3$ &    $22,09$&     $24,04$ \\
+      \bottomrule
+  \end{tblr}
+\end{table}
 \subsection{Absorptionsspektrum fünf verschiedener Materialien}
+Die Messdaten bei der Messung der Absorptionsspektren sind in den Abbildungen (\ref{fig:Zink}),
+(\ref{fig:Gallium}), (\ref{fig:Brom}),(\ref{fig:Strontium}), (\ref{fig:Zirkonium}) dargestellt.
+Zusätzlich sind in den Abbildungen die Mittelwerte, sowie der Braggwinke $\theta_K $ markiert. 
+Mithilfe der Gleichung (\ref{eqn:Bragg_Bedingung}), (\ref{eqn:lambda}), (\ref{eqn:E_kin}) und (\ref{eqn:sigma_k}) werden die Braggwinkel, die Absorptionsenergien und die Abschirmkonstaten der 
+verschiedenen Absorber bestimmt und in der Tabelle (\ref{tab:Abschirmkonstante}) aufgeführt. 
+\begin{table}[H]
+  \centering
+  \caption{Bragg-Winkel, Absorptionsenergie und Abschirmkonstanten der unterschiedlichen Absorber.}
+  \label{tab:Abschirmkonstante}
+  \begin{tblr}{colspec={c c c c c c c }}
+      \toprule
+      Material & $\theta_K^{\text{exp.}}\,[\unit{\degree}]$ & $\theta_K^{\text{lit.}}\,[\unit{\degree}]$ & $E_K^{\text{exp.}}\,[\unit{\kilo\eV}]$ & $E_K^{\text{lit.}}\,[\unit{\kilo\eV}]$ & $\sigma_K^{\text{exp.}}$ & $\sigma_K^{\text{lit.}}$\\
+      \midrule
+      Zn &    $19,84$&  $18,60$  &  $9,07$  & $9,65$   & $4,67$ & $3,56$\\
+      Ga &    $17,21$&  $16,06$  &  $10,40$ & $11,11$  & $3,87$ & $3,67$\\
+      Br &    $13,13$&  $13,20$  &  $13,55$ & $13,48$  & $4.10$ & $3,83$\\
+      Sr &    $10,99$&  $11,01$  &  $16,15$ &  $16,12$ & $4,33$ & $3,98$\\
+      Zr &    $9,91$ &  $9,84$   &  $17,89$ &  $18,01$ & $4,61$ & $4,08$\\
+      \bottomrule
+  \end{tblr}
+\end{table}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.80\textwidth]{content/Plots/Zink.pdf}
+  \caption{Ermittlung des Braggwinkels des Zink-Absorbers.}
+  \label{fig:Zink}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.80\textwidth]{content/Plots/Gallium.pdf}
+  \caption{Ermittlung des Braggwinkels des Gallium-Absorbers.}
+  \label{fig:Gallium}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.80\textwidth]{content/Plots/Brom.pdf}
+  \caption{Ermittlung des Braggwinkels des Brom-Absorbers.}
+  \label{fig:Brom}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.80\textwidth]{content/Plots/Strontium.pdf}
+  \caption{Ermittlung des Braggwinkels des Strontium-Absorbers.}
+  \label{fig:Strontium}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.80\textwidth]{content/Plots/Zirkonium.pdf}
+  \caption{Ermittlung des Braggwinkels des Zirkonium-Absorbers.}
+  \label{fig:Zirkonium}
+\end{figure}
+\subsection{Bestimmung der Rydbergkonstanten}
+Anhand des Moseleyschen Gesetz (\ref{Bindungsenergie_Elektronen}) lässt sich ein linearer Zusammenhang zwischen
+$\sqrt{E_K}$ und $z_{\text{eff}}$ ablesen, wobei der Proportionalitätsfaktor die Rydbergenergie
+$R_{\infty}$ entspricht. Daher werden mithilfe der Messdaten der Absorptionsspektren einer 
+lineare Regression durchgeführt. Hierfür wird die Funktion
+$y =mx+b$ verwendet. Somit ergeben sich 
+\begin{align*}
+  m=(3,828\pm0,009)\,\sqrt{\unit{\eV}}\\
+  b=(-1,81\pm0,28)\,\sqrt{\unit{\eV}}\,.\\
+\end{align*}
+Demnach lautet die experimentelle Rydbergenergie 
+$$R_{\infty,\text{exp}} = m^2=(14,65\pm0,07)\,\unit{\eV}\,.$$
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{content/Plots/Rydberg.pdf}
+  \caption{Lineare Regression der Absorptionsenergien und den entsprechenden Ordnungszahlen.}
+  \label{fig:Rydberg}
+\end{figure}
 % \begin{figure}
 %   \centering
 %   \includegraphics{plot.pdf}
-%   \caption{Plot.}
-%   \label{fig:plot}
+%\label{fig:plot}
 % \end{figure}
