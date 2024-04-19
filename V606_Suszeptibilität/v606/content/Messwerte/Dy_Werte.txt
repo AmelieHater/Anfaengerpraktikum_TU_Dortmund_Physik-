@@ -1,0 +1,4 @@
+# U_Spannung_vorher in V, U_Brueckenspannung_nachher in V, Widerstand_vorher_minimal in 5milli Ohm, Widerstand_nachher_minimal in 5milli Ohm
+34e-3 81e-3 548 210
+34e-3 81e-3 547 239
+34e-3 80e-3 539 227
