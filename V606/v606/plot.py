@@ -11,7 +11,7 @@ y_norm = y / 104.7618
 #def gaussian(x, a, b):
 #   return np.exp(-(x-b)**2*a)
 #
-x_2 = np.linspace(20, 40, 100)
+x_2 = np.linspace(20, 40, 10000)
 #params, covariance_matrix = curve_fit(gaussian, x, y_norm, p0=(31, 13.5))
 
 
