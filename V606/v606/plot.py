@@ -39,7 +39,7 @@ print(guete)
 # Güte ist 73,51601711627912
 # Güte am Gerät war 20 
 Guete_Abweichung = abs(20 - 73.51601711627912)/20
-print(Guete_Abweichung) = 2.675800855813956
+print(Guete_Abweichung)
 #Abweichung der Güte: 2.675800855813956
 
 #Suszeptibilität berechnen 

@@ -1,0 +1,5 @@
+Messung von X auf viele verschiedene Arten und Weisen 
+mit der 1. Methode: Spannung U_Sp vorher messen, dann Probe rein, dann U_Br nachher messen und die Formel, F ist Durchmesser der Spule und Q Durchmesser der Probe
+X = 4 * (F/Q) *(U_Br/U_Sp)
+
+2. Möglichkeit 
