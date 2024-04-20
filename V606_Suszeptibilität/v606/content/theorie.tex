@@ -1,8 +1,59 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
-
+In diesem Versuch wird die Suszeptibilität stark paramagnetischer Materialien 
+mithilfe einer Brückenschaltung untersucht. 
+\nocite{anleitungV606}
 \section{Theorie}
 \label{sec:Theorie}
-
-\subsection{Vorbereitungsaufgaben}
-\label{sec:Vorbereitungsaufgaben}
+In Materie wird die magnetische Flussdichte $\vec{B}$ durch die magnetische Feldstärke
+$\vec{H}$, die Induktionskonstante $\mu _0$ und die Magnetisierung $\vec{M}$ wie folgt beschrieben
+\begin{equation}
+    \vec{B} = \mu _0 \vec{H} + \vec{M}\,.
+    \label{eqn:magnetischeFlussdichte}
+\end{equation}
+Dabei hängt $\vec{M}$ mit $\vec{H}$ durch 
+\begin{equation}
+    \vec{M} = \mu _0\, \chi\, \vec{H}
+    \label{eqn:Magnetisierung}
+\end{equation}
+zusammen. Hierbei beschreibt $\chi$ die Suszeptibilität, welche keine Konstante ist, sondern von $\vec{H}$ und der Temperatur $T$ abhängt.
+Der Diamagnetismus tritt für alle Atome auf, weil durch ein von außen angelegtes Magnetfeld ein magnetischer Moment induziert wird. Dadurch
+entsteht ein induziertes Magnetfeld, was dem äußeren Magnetfeld entgegengerichtet ist. Daher gilt beim Diamagnetimus für die Suszeptibilität
+$\chi < 0 $. Anders als beim Diamagnetismus, tritt der Paramagnetismus nur bei Atomen, Ionen oder Molekülen mit einem nicht veschwindenen Drehimpuls auf.
+Dieser entsteht durch die relativ zum äußeren Magnetfeld ausgerichteten magnetischen Momente, die mit dem Drehimpuls gekoppelt sind. Zusätzlich ist der
+Paramagnetismus im Vergleich zum Diamagnetimus temperaturabhängig, da die Ausrichtung der magnischten Moment durch
+die thermische Bewegung gestört wird. Bei einem nicht zu starken äußeren Magnetfeld auf die Atome gilt für den Gesamtdrehimpuls $\vec{J}$
+\begin{equation}
+    \vec{J} = \vec{L} + \vec{S}\,.
+    \label{eqn:Gesamtdrehimpuls}
+\end{equation}
+Diese Gleichung wird ebenfalls als LS-Kopplung bezeichnet, wobei $\vec{L} = \sum{\vec{l}_{\text{i}}}$ den Gesamtbahndrehimpuls und 
+$\vec{S} = \sum{\vec{s}_{\text{i}}}$ den Gesamtspin beschreibt.
+Die zugehörigen magnetischen Momente zu dem Drehimpuls $\vec{L}$ und dem Spin $\vec{S}$ lauten
+\begin{align}
+    \vec{\mu _{\text{L}}} &= - \frac{\mu_{\text{B}}}{\hbar}\,\vec{L}\quad\text{und} \label{eqn:magnetischerMommentDrehimpuls} \\
+    \vec{\mu _ {\text{S}}} &= -g_{\text{S}}\frac{\mu_{\text{B}}}{\hbar}\,\vec{S}\,. \label{eqn:magnetischerMomentSpin}
+\end{align}
+$\hbar$ ist das reduzierte Planksche Wirkungsquantum, $g_{\text{S}}$ ist das gyromagnetische Verhältnis des freien Elektrons und 
+\begin{equation}
+    \mu _{\text{B}} = \frac{1}{2} \frac{e_0}{m_0}\,\hbar
+    \label{eqn:BohrscheMagneton}
+\end{equation}
+ist das Bohrsche Magneton, wobei $e_0$ die Ladung und $m_0$ die Ruhemasse des Elektrons sind. 
+In der Quantenmechanik wird $g_{\text{S}} \approx 2$ genähert, wodurch mit dem Landé-Faktor
+\begin{equation}
+    g_{\text{L}} = \frac{3\,J \left(J+1\right) + \big(S\left(S +1\right) -L\left(L+1\right)\big)}{2\,J\left(J+1\right)} 
+    \label{eqn:LandeFaktor}
+\end{equation}
+für den Betrag des magnetischen Moments 
+\begin{equation}
+    \left|\vec{\mu_{\text{J}}}\right| \approx \mu_{\text{B}}\,g_{\text{J}}\sqrt{J\left(J+1\right)}
+    \label{eqn:magnetischerMoment}
+\end{equation}
+gilt. Daraus folgt für die potentielle Energie mit der Orientierungsquantenzahl $m$
+\begin{equation}
+    E_{\text{m}} = \mu_{\text{B}}\,g_{\text{J}}\, m\, B\,. 
+    \label{eqn:E_pot}
+\end{equation}
+Ein Zeeman-Effekt tritt dann auf wenn die durch die Gleichung (\ref{eqn:E_pot}) beschriebene Aufspaltung eines Energieniveaus
+in $2J+1$ Unterniveaus beim Anlegen eines Feldes an eine Probe mit permanenten magnetischen Momenten statfindet.

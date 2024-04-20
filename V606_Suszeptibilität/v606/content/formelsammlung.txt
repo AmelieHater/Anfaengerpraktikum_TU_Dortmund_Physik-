@@ -8,3 +8,31 @@ $$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - 
 
 Gauß:
 $$\Delta f = \sqrt{\sum_{i = 1}^{n} \left( \frac{\partial f}{\partial x_i} \right)^2 \cdot \left(\Delta x_i \right)^2}$$
+
+______________
+\vec{B} = \mu _0 \vec{H} + \vec{M}\,.
+    \label{eqn:magnetischeFlussdichte}
+
+\vec{M} = \mu _0\, \chi\, \vec{H}
+    \label{eqn:Magnetisierung}
+
+\vec{J} = \vec{L} + \vec{S}\,.
+    \label{eqn:Gesamtdrehimpuls}
+
+\vec{\mu _{\text{L}}} = - \frac{\mu_{\text{B}}}{\B{h}\,\vecv{L}}\text{ und} 
+    \label{eqn:magnetischerMommentDrehimpuls}
+
+\vec{\mu _ {\text{S}}} &= -g_{\text{S}}\frac{\mu_{\text{B}}}{\hbar}\,\vec{S}\,. 
+    \label{eqn:magnetischerMomentSpin}
+
+\mu _{\text{B}} = \frac{1}{2} \frac{e_0}{m_0}\,\hbar
+    \label{eqn:BohrscheMagneton}
+
+g_{\text{L}} = \frac{3\,J \left(J+1\right) + \left(S\left(S +1\right) -L\left(L+1\right)\right)}{2\,J\left(J+1\right)} 
+    \label{eqn:LandeFaktor}
+
+|\vec{\mu_{\text{J}}}| \approx \mu_{\text{B}}\,g_{\text{J}}\sqrt{J\left(J+1\right)}
+    \label{eqn:magnetischerMoment}
+
+E_{\text{m}} = \mu_{\text{B}}\,g_{\text{J}}\, m\, B 
+    \label{eqn:E_pot}
