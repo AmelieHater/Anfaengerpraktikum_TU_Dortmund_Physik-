@@ -63,3 +63,6 @@ L_{\text{M}} = \mu _0 \frac{n^2}{I}F + \chi \mu_0\frac{n^2}{I}Q\,,
 
 Q = \frac{\nu _0}{\nu _{+}- \nu _{-}}
     \label{eqn:Guete}
+
+Q_{\text{real}}= Q \frac{\rho_{\text{p}}}{\rho_{\text{w}}}\,,
+    \label{eqn:Querschnitt_Real}
