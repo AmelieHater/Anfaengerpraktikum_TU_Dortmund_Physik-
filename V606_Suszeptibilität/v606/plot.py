@@ -153,6 +153,7 @@ Chi_Gd_experimental_1 = 4 * (F/Q_real_gd) * (U_Brueckenspannung_nachher_Gd_Mitte
 Chi_Nd_experimental_1 = 4 * (F/Q_real_nd) * (U_Brueckenspannung_nachher_Nd_Mittelwert/U_Spannung_vorher_Nd_Mittelwert)
 Chi_Dy_experimental_1 = 4 * (F/Q_real_dy) * (U_Brueckenspannung_nachher_Dy_Mittelwert/U_Spannung_vorher_Dy_Mittelwert)
 
+
 print("Chi_experimental: ", Chi_Gd_experimental_1)
 print("Chi_experimental: ", Chi_Nd_experimental_1)
 print("Chi_experimental: ", Chi_Dy_experimental_1)
@@ -179,9 +180,9 @@ Chi_Dy_experimental_2 = 2 * (Delta_R_Dy/Widerstand_vorher_minimal_Dy_Mittelwert)
 
 #Chi 1
 
-Abweichung_chi_1_Gd = Chi_Gd_experimental_1/Chi_Gd
-Abweichung_chi_1_Nd = Chi_Nd_experimental_1/Chi_Nd
-Abweichung_chi_1_Dy = Chi_Dy_experimental_1/Chi_Dy
+Abweichung_chi_1_Gd = (Chi_Gd_experimental_1-Chi_Gd)/Chi_Gd
+Abweichung_chi_1_Nd = (Chi_Nd_experimental_1-Chi_Nd)/Chi_Nd
+Abweichung_chi_1_Dy = (Chi_Dy_experimental_1-Chi_Dy)/Chi_Dy
 
 print("Abweichung Chi Nr.1: ",Abweichung_chi_1_Gd)
 print("Abweichung Chi Nr.1: ",Abweichung_chi_1_Nd)
@@ -189,9 +190,9 @@ print("Abweichung Chi Nr.1: ",Abweichung_chi_1_Dy)
 
 #Chi 2
 
-Abweichung_chi_2_Gd = Chi_Gd_experimental_2/Chi_Gd
-Abweichung_chi_2_Nd = Chi_Nd_experimental_2/Chi_Nd
-Abweichung_chi_2_Dy = Chi_Dy_experimental_2/Chi_Dy
+Abweichung_chi_2_Gd = (Chi_Gd_experimental_2-Chi_Gd)/Chi_Gd
+Abweichung_chi_2_Nd = (Chi_Nd_experimental_2-Chi_Nd)/Chi_Nd
+Abweichung_chi_2_Dy = (Chi_Dy_experimental_2-Chi_Dy)/Chi_Dy
 
 print("Abweichung Nr.2: ",Abweichung_chi_2_Gd)
 print("Abweichung Nr.2: ",Abweichung_chi_2_Nd)
