@@ -1,6 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+def rel_Abweichung(exp, theo):
+    return (np.abs(exp-theo)/(theo)*100) #ist schon in Prozent
+
 x = np.linspace(0, 10, 1000)
 y = x ** np.sin(x)
 
