@@ -62,8 +62,8 @@ Chi_Dy = (1.256637062*10**(-6) * (9.27439952 * 10**(-24))**2 * (1.33)**2 * 2.52 
 
 #Chi Experiment ausrechnen 
 #Q_real ausrechnen 
-#Q_real_gd = 1.2119125494921674e-05
 #Q_real_nd = 1.6053372250599395e-05
+#Q_real_gd = 1.2119125494921674e-05
 #Q_real_dy = 1.1668289516390781e-05
 
 M_gd = 14.08e-3
@@ -145,8 +145,8 @@ Widerstand_nachher_minimal_Dy_Mittelwert = ufloat(np.mean(Widerstand_nachher_min
 #Berechnung nach der 1. Methode 
 F = 86.6e-6 #in Quadratmeter
 
-#Chi_experimental Gd:  43.3+/-1.5
 #Chi_experimental Nd:  22.6+/-1.1
+#Chi_experimental Gd:  43.3+/-1.5
 #Chi_experimental Dy:  70.43+/-0.29
 
 Chi_Gd_experimental_1 = 4 * (F/Q_real_gd) * (U_Brueckenspannung_nachher_Gd_Mittelwert/U_Spannung_vorher_Gd_Mittelwert)
@@ -159,8 +159,8 @@ print("Chi_experimental: ", Chi_Nd_experimental_1)
 print("Chi_experimental: ", Chi_Dy_experimental_1)
 
 #Berechnung nach der 2. Methode
-#Chi_2_experimental Gd:  4.27+/-0.28
 #Chi_2_experimental Nd:  0.45+/-0.16
+#Chi_2_experimental Gd:  4.27+/-0.28
 #Chi_2_experimental Dy:  8.70+/-0.23
 
 #Berechnung Delta R (Die Einheiten sind egal, weil in der Formel R/R geteilt wird. Daher ist nur das Verhältnis wichtig)
