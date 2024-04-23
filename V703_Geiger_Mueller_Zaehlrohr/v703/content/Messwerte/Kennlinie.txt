@@ -1,4 +1,4 @@
-# Beschleunigungsspannung in Volt ; Anzahl der Messung 
+# Beschleunigungsspannung in Volt ; Anzahl der Messung bei 60 Sekunden Messzeit
 300 0
 320 0
 340 15594
@@ -16,7 +16,11 @@
 580 16600
 600 16674
 620 17050
-640
-660
-680
-700
+640 16914
+660 17245
+680 17223
+700 17173
+720 17699
+740 18787
+760 19890
+780 21871

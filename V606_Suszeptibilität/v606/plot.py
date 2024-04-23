@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
-import uncertainties.unumpy as unp
-import scipy as sc
+#import uncertainties.unumpy as unp
+#import scipy as sc
 from scipy.stats import sem
 
 x, y = np.genfromtxt("content/Messwerte/Bandpass.txt", unpack=True)
