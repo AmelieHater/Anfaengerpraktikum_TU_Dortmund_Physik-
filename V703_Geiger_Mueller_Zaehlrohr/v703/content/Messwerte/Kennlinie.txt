@@ -1,4 +1,9 @@
-# Beschleunigungsspannung in Volt ; Anzahl der Messung bei 60 Sekunden Messzeit
+# Beschleunigungsspannung in Volt ; Anzahl der Messung bei 60 Sekunden Messzeit 
+# Arbeitspunkt 560 V 
+# Totzeit Oszilloskop 225 mu sekunden
+# Totzeit 2 1. Quelle: bei 560 V 59355 + 67000 * 2 N bei 120 s
+# 2 Quellen: 67000 * 3 + 65228 bei 120 sekunden
+# 2. Quelle: 67000 * 1 + 42837 N bei 120 s
 300 0
 320 0
 340 15594
