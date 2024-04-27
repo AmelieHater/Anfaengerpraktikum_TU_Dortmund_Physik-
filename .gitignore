@@ -8,3 +8,6 @@
 *.toc
 *.bbl
 *.blg
+
+#irgendwas
+.DS_Store
