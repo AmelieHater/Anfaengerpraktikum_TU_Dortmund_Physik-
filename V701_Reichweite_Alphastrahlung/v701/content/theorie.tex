@@ -1,0 +1,40 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+Das Ziel dieses Versuchs ist die Reichweite von $\alpha$-Strahlung in Luft über den Energieverlust zu bestimmen. 
+
+\section{Theorie}
+\label{sec:Theorie}
+Durch elastische Stöße geben $\alpha$-Teilchen beim Durchlaufen von Materie Energie ab. Somit lässt sich über den Energieverlust der $\alpha$-Strahlung 
+die Reichweite bestimmen.  Außerdem verringert sich die Energie eines $\alpha$-Teilchen ebenfalls durch Anregung oder Dissoziation von Molekülen. Hierbei 
+ist der Energieverlust $-\frac{\text{d}E_{\alpha}}{\text{d}x}$ von Energie der $\alpha$-Strahlung und der Dichte des durchlaufenden Materials ab. Je kleiner 
+die Geschwindigkeit, desto mehr nimmt die Wahrscheinlichkeit zur Wechselwirkung zu. Mithilfe der Bethe-Bloch-Gleichung
+\begin{equation}
+	-\frac{\text{d}E_{\alpha}}{\text{d}x} = \frac{z^2e^4}{4 \pi \epsilon_0 m_e} \cdot \frac{nZ}{v^2} \ln \left( \frac{2m_e v^2}{I} \right)
+\label{eqn:Bethe-Bloch-Gleichung}
+\end{equation}
+wird der Energieverlust der $\alpha$-Teilchen für hinreichend große Energien beschrieben. $z$ ist die Ladung, $v$ die Geschwindigkeit der $\alpha$-Strahlung, 
+$Z$ die Ordnungszahl, $n$ die Teilchendichte und $I$ die Ionisierungsenergie des Targetgases. Für kleine Energien ist Bethe-Bloch Gleichung allerdings nicht 
+gültig, weil Ladungsaustauschprozessse auftauchen. Die Reichweite $R$ eines $\alpha$-Teilchens lässt sich über 
+\begin{equation}
+	R= \int_{0}^{E_{\alpha}} \frac{\text{d}E_{\alpha}}{\left(-\frac{\text{d}E_{\alpha}}{\text{d}x}\right)}
+\label{eqn:Reichweite}
+\end{equation}
+berechnen. Dies ist die Wegstrecke bis zu einer vollständigen Abbremsung des $\alpha$-Teilchens.
+Für kleine Energien werden zur Bestimmung der mittleren Reichweite $R_m$ empirisch gewonne Kurven verwendet. Die mittlere Reichweite ist die Reichweite, die 
+von der Hälfte der vorhandenen $\alpha$-Teilchen erreicht wird. Für Strahlungen in der Luft mit einer Energie von $E_{\alpha}  \leq 2,5\,\unit{\mega\eV}$ gilt 
+für die mittlere Reichweite 
+\begin{equation}
+R_m= 3,1\cdot E_{\alpha}^{\frac{3}{2}}\,,
+\label{eqn:mittlere_Reichweite}
+\end{equation}
+mit einer Größenordnung von Millimetern für  $R_m$.
+Für eine $\alpha$-Strahlung in Gasen bei konstanter Temperatur und konstantem Volumen ist die Reichweite eines $\alpha$-Teilchens  vom Druck $p$ abhängig. 
+Für die effektive Länge $x$ gilt dann
+\begin{equation}
+x= x_0\cdot \frac{p}{p_0}\,,
+\label{eqn:effektive_Laenge}
+\end{equation}
+wobei $x_0$ der feste Abstand zwischen Detektor und $\alpha$-Strahler und $p_0 = 1013\,\unit{\milli\bar}$ den Normaldruck beschreiben.
+
+\subsection{Vorbereitungsaufgaben}
+\label{sec:Vorbereitungsaufgaben}
