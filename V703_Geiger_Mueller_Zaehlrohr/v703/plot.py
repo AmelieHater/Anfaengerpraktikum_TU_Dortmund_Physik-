@@ -38,9 +38,9 @@ ax1.legend(loc="best")
 ax1.grid()
 fig1.savefig("Kennlinie.pdf")
 
-m_plateau = 10000*m / ((16739/60))
+m_plateau = 100*100*m / ((16739/60))
 z = 320 # Länge Plateau
-s = (z*(U_A + 50) - z*(U_A - 50)) / z*U_A 
+s = ((U_A + 50) - (U_A - 50)) / U_A * 10
 print(f"Plateusteigung s {s}")
 print(f"Plateusteigung m {m_plateau}")
 
@@ -63,6 +63,8 @@ print(f"Diskussion:")
 tau_rel = rel_Abweichung(225,tau_2Q)
 print(f"rel. Abweichung tau: {tau_rel} %")
 
+s_rel = rel_Abweichung(m_plateau,s)
+print(f"rel. Abweichung Steigung s: {s_rel} %")
 # fig2, ax2 = plt.subplots(1, 1, layout = "constrained")
 # ax2.plot(x, linear(x,params[0],params[1]), "-", label ="Lineare Regression")
 # ax2.plot(U_V, N_s, "x", label = "Messwerte")
