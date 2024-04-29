@@ -86,10 +86,16 @@ Ausgangsimpulse entstehen. Diese Impulse stellen eine Verfälschung des Ergebnis
 führen dazu, dass das Geiger-Müller-Plateu eine positive Steigung $s$ hat. Es gilt 
 \begin{equation}
     s = \frac{\Delta N}{N} \cdot \frac{100 \,\%}{100 \unit{\volt}} \, .
+    \label{eqn:s_anderes}
 \end{equation}
 In dieser Formel ist $\frac{\Delta N}{N}$ die relative Zählrate und $s$ ist pro 
-$100 \unit{\volt}$ Spannungsänderung definiert. 
-
+$100 \unit{\volt}$ Spannungsänderung definiert. Wenn der Arbeitspunkt $U_A$ bekannt ist, 
+kann auch die Formel 
+\begin{equation}
+    s = \frac{\left(U_A + 50 \, \unit{\volt}\right) - \left(U_A - 50 \, \unit{\volt} \right)}{U_A}
+    \label{eqn:s_arbeitspunkt}
+\end{equation}
+verwendet werden.
 \subsection{Totzeit}
 In der Zeit, in 
 der sich die positive Ladungswolke um den Draht herum gebildet hat, ist das Messgerät
@@ -111,6 +117,7 @@ Anschließend wird die Zählrate $N_{12}$ beider Quellen zusammen gemessen. Die 
 lässt sich dann mithilfe von 
 \begin{equation}
     \tau = \frac{N_1 + N_2 - N_{12}}{N_{12}² - N_1² - N_2²}
+    \label{eqn:tau_tilde}
 \end{equation}
 berechnet werden. 
 \subsection{Vorbereitungsaufgaben}
