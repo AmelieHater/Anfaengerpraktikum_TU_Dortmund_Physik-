@@ -1,0 +1,8 @@
+# Abstand = 4,5 cm Threshold 0,88
+# Druck in mbar , Anzahl der gemessenen Pulse ,  Maximale Anzahl Impulser im channel , channel der maximalen Anzahl 
+0 26225 78 1239
+60 26012 82 1158
+100 25800 83 1064
+150 25502 85 999
+200 25299 90 926
+250 
