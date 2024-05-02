@@ -74,7 +74,11 @@ errors_3 = np.sqrt(np.diag(covariance_matrix_3))
 params_4, covariance_matrix_4 = np.polyfit(linear_approx_x_2, linear_approx_2, deg=1, cov=True)
 errors_4 = np.sqrt(np.diag(covariance_matrix_4))
 
-fig, (ax3) = plt.subplots(1, 1, layout="constrained")
+x_punkt_1 = (max(Pulszahl_1)/2 - params_3[1])/params_3[0] 
+x_punkt_2 = (max(Pulszahl_2)/2 - params_4[1])/params_4[0] 
+print("Schnittpunkt bei der 1. Liste: ", x_punkt_1, "Schnittpunkt bei der 2. Liste: ", x_punkt_2)
+print("y-Koordinate der 1.: ", max(Pulszahl_1)/2, "y-Koordinate der 2.: ", max(Pulszahl_2)/2)
+fig,(ax3) = plt.subplots(1, 1, layout="constrained")
 ax3.plot(Weglaenge_eff_1, Pulszahl_1, "x", label="Messwerte")
 ax3.plot(
     x_plot_3,
@@ -82,9 +86,11 @@ ax3.plot(
     label="Lineare Regression",
     linewidth=1,
 )
+ax3.plot(x_punkt_1, max(Pulszahl_1)/2, ".", color = "green")
 ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax3.set_ylabel(r"$\text{Anzahl der Pulse} $")
-#ax3.set_xlim(-0.001, 0.031)
+ax3.set_xlim(-0.002, 0.0255)
+ax3.hlines(y = max(Pulszahl_1)/2, xmin = - 0.002, xmax = 0.0255)
 ax3.legend(loc="best")
 fig.savefig("Plots/plot3.pdf")
 
@@ -96,9 +102,11 @@ ax4.plot(
     label="Lineare Regression",
     linewidth=1,
 )
+ax4.plot(x_punkt_2, max(Pulszahl_2)/2, ".", color = "green")
 ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax4.set_ylabel(r"$\text{Anzahl der Pulse} $")
-#ax4.set_xlim(-0.001, 0.031)
+ax4.hlines(y = max(Pulszahl_2)/2, xmin = - 0.002, xmax = 0.0305)
+ax4.set_xlim(-0.002, 0.0305)
 ax4.legend(loc="best")
 fig.savefig("Plots/plot4.pdf")
 
@@ -108,3 +116,7 @@ fig.savefig("Plots/plot4.pdf")
 #y-Achsenabschnitt: 3.990 ± 0.039
 #Steigung der Reichweite_2:  -117.482 ± 9.825
 #y-Achsenabschnitt: 4.189 ± 0.172
+#Schnittpunkt bei der 1. Liste:  x = 0.02256093357890863 
+#y-Koordinate der 1.: y = 13112.5 
+#Schnittpunkt bei der 2. Liste:  x = 0.02302477244638596
+#y-Koordinate der 2.: y = 8019.0
