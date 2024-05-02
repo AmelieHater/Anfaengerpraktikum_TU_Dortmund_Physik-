@@ -24,7 +24,7 @@ errors = np.sqrt(np.diag(covariance_matrix))
 
 params_2, covariance_matrix_2 = np.polyfit(Weglaenge_eff_2, Energie_2_MeV, deg=1, cov=True)
 errors_2 = np.sqrt(np.diag(covariance_matrix_2))
-#for name, value, error in zip("ab", params, errors):
+#for name, value, error in zip("ab", params_2, errors_2):
 #    print(f"{name} = {value:.3f} ± {error:.3f}")
 x_plot = np.linspace(-0.001, 0.027)
 x_plot_2 = np.linspace(-0.001, 0.031)
@@ -42,6 +42,7 @@ ax1.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax1.set_xlim(-0.001, 0.027)
 ax1.legend(loc="best")
 fig.savefig("plot1.pdf")
+#print("Steigung der Reichweite_1: ", params[0])
 
 fig, (ax2) = plt.subplots(1, 1, layout="constrained")
 ax2.plot(Weglaenge_eff_2, Energie_2_MeV, "x", label="Messwerte")
@@ -56,3 +57,13 @@ ax2.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax2.set_xlim(-0.001, 0.031)
 ax2.legend(loc="best")
 fig.savefig("plot2.pdf")
+#print("Steigung der Reichweite_2: ", params_2[0])
+
+
+
+
+#Werte: 
+#Steigung der Reichweite_1:  -112.383 ± 2.515
+#y-Achsenabschnitt: 3.990 ± 0.039
+#Steigung der Reichweite_2:  -117.482 ± 9.825
+#y-Achsenabschnitt: 4.189 ± 0.172
