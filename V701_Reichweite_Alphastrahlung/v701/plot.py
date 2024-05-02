@@ -41,7 +41,7 @@ ax1.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax1.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax1.set_xlim(-0.001, 0.027)
 ax1.legend(loc="best")
-fig.savefig("plot1.pdf")
+fig.savefig("Plots/plot1.pdf")
 #print("Steigung der Reichweite_1: ", params[0])
 
 fig, (ax2) = plt.subplots(1, 1, layout="constrained")
@@ -56,10 +56,51 @@ ax2.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax2.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax2.set_xlim(-0.001, 0.031)
 ax2.legend(loc="best")
-fig.savefig("plot2.pdf")
+fig.savefig("Plots/plot2.pdf")
 #print("Steigung der Reichweite_2: ", params_2[0])
 
+linear_approx_x_1 = Weglaenge_eff_1[9:12]  
+linear_approx_x_2 = Weglaenge_eff_2[7:10] 
 
+linear_approx_1 = Pulszahl_1[9:12]  
+linear_approx_2 = Pulszahl_2[7:10]
+
+x_plot_3 = np.linspace(0.019, 0.026)
+x_plot_4 = np.linspace(0.020, 0.027)
+
+params_3, covariance_matrix_3 = np.polyfit(linear_approx_x_1, linear_approx_1, deg=1, cov=True)
+errors_3 = np.sqrt(np.diag(covariance_matrix_3))
+
+params_4, covariance_matrix_4 = np.polyfit(linear_approx_x_2, linear_approx_2, deg=1, cov=True)
+errors_4 = np.sqrt(np.diag(covariance_matrix_4))
+
+fig, (ax3) = plt.subplots(1, 1, layout="constrained")
+ax3.plot(Weglaenge_eff_1, Pulszahl_1, "x", label="Messwerte")
+ax3.plot(
+    x_plot_3,
+    params_3[0] * x_plot_3 + params_3[1],
+    label="Lineare Regression",
+    linewidth=1,
+)
+ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
+ax3.set_ylabel(r"$\text{Anzahl der Pulse} $")
+#ax3.set_xlim(-0.001, 0.031)
+ax3.legend(loc="best")
+fig.savefig("Plots/plot3.pdf")
+
+fig, (ax4) = plt.subplots(1, 1, layout="constrained")
+ax4.plot(Weglaenge_eff_2, Pulszahl_2, "x", label="Messwerte")
+ax4.plot(
+    x_plot_4,
+    params_4[0] * x_plot_4 + params_4[1],
+    label="Lineare Regression",
+    linewidth=1,
+)
+ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
+ax4.set_ylabel(r"$\text{Anzahl der Pulse} $")
+#ax4.set_xlim(-0.001, 0.031)
+ax4.legend(loc="best")
+fig.savefig("Plots/plot4.pdf")
 
 
 #Werte: 
