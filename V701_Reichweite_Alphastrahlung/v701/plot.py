@@ -26,8 +26,15 @@ params_2, covariance_matrix_2 = np.polyfit(Weglaenge_eff_2, Energie_2_MeV, deg=1
 errors_2 = np.sqrt(np.diag(covariance_matrix_2))
 #for name, value, error in zip("ab", params_2, errors_2):
 #    print(f"{name} = {value:.3f} ± {error:.3f}")
-x_plot = np.linspace(-0.001, 0.027)
-x_plot_2 = np.linspace(-0.001, 0.031)
+x_min_1 = Weglaenge_eff_1[0]-np.abs(Weglaenge_eff_1[1]-Weglaenge_eff_1[0])/2
+x_max_1 = Weglaenge_eff_1[-1]-np.abs(Weglaenge_eff_1[1]-Weglaenge_eff_1[0])/2
+
+x_min_2 = Weglaenge_eff_2[0]-np.abs(Weglaenge_eff_2[1]-Weglaenge_eff_2[0])/2
+x_max_2 = Weglaenge_eff_2[-1]-np.abs(Weglaenge_eff_2[1]-Weglaenge_eff_2[0])/2
+
+x_plot = np.linspace(x_min_1, x_max_1)
+x_plot_2 = np.linspace(x_min_2, x_max_2)
+
 
 fig, (ax1) = plt.subplots(1, 1, layout="constrained")
 ax1.plot(Weglaenge_eff_1, Energie_1_MeV, "x", label="Messwerte")
@@ -39,7 +46,8 @@ ax1.plot(
 )
 ax1.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax1.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
-ax1.set_xlim(-0.001, 0.027)
+ax1.set_xlim(x_min_1, x_max_1)
+ax1.set_ylim(0.5, 4.5)
 ax1.legend(loc="best")
 fig.savefig("Plots/plot1.pdf")
 #print("Steigung der Reichweite_1: ", params[0])
@@ -54,7 +62,8 @@ ax2.plot(
 )
 ax2.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax2.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
-ax2.set_xlim(-0.001, 0.031)
+ax2.set_xlim(x_min_2, x_max_2)
+ax2.set_ylim(0.5, 4.5)
 ax2.legend(loc="best")
 fig.savefig("Plots/plot2.pdf")
 #print("Steigung der Reichweite_2: ", params_2[0])
@@ -78,6 +87,10 @@ x_punkt_1 = (max(Pulszahl_1)/2 - params_3[1])/params_3[0]
 x_punkt_2 = (max(Pulszahl_2)/2 - params_4[1])/params_4[0] 
 print("Schnittpunkt bei der 1. Liste: ", x_punkt_1, "Schnittpunkt bei der 2. Liste: ", x_punkt_2)
 print("y-Koordinate der 1.: ", max(Pulszahl_1)/2, "y-Koordinate der 2.: ", max(Pulszahl_2)/2)
+
+x_min_3 = Weglaenge_eff_1[0]-np.abs(Weglaenge_eff_1[1]-Weglaenge_eff_1[0])/2
+x_max_3 = Weglaenge_eff_1[-1]+np.abs(Weglaenge_eff_1[1]-Weglaenge_eff_1[0])/2
+
 fig,(ax3) = plt.subplots(1, 1, layout="constrained")
 ax3.plot(Weglaenge_eff_1, Pulszahl_1, "x", label="Messwerte")
 ax3.plot(
@@ -89,10 +102,13 @@ ax3.plot(
 ax3.plot(x_punkt_1, max(Pulszahl_1)/2, ".", color = "green")
 ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax3.set_ylabel(r"$\text{Anzahl der Pulse} $")
-ax3.set_xlim(-0.002, 0.0255)
-ax3.hlines(y = max(Pulszahl_1)/2, xmin = - 0.002, xmax = 0.0255)
+ax3.set_xlim(x_min_3, x_max_3)
+ax3.hlines(y = max(Pulszahl_1)/2, xmin = x_min_3, xmax = x_max_3)
 ax3.legend(loc="best")
 fig.savefig("Plots/plot3.pdf")
+
+x_min_4 = Weglaenge_eff_2[0]-np.abs(Weglaenge_eff_2[1]-Weglaenge_eff_2[0])/2
+x_max_4 = Weglaenge_eff_2[-1]+np.abs(Weglaenge_eff_2[1]-Weglaenge_eff_2[0])/2
 
 fig, (ax4) = plt.subplots(1, 1, layout="constrained")
 ax4.plot(Weglaenge_eff_2, Pulszahl_2, "x", label="Messwerte")
@@ -105,8 +121,8 @@ ax4.plot(
 ax4.plot(x_punkt_2, max(Pulszahl_2)/2, ".", color = "green")
 ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax4.set_ylabel(r"$\text{Anzahl der Pulse} $")
-ax4.hlines(y = max(Pulszahl_2)/2, xmin = - 0.002, xmax = 0.0305)
-ax4.set_xlim(-0.002, 0.0305)
+ax4.hlines(y = max(Pulszahl_2)/2, xmin = x_min_4, xmax = x_max_4)
+ax4.set_xlim(x_min_4, x_max_4)
 ax4.legend(loc="best")
 fig.savefig("Plots/plot4.pdf")
 
