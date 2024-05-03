@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from numpy.random import default_rng
+from uncertainties import ufloat
+import uncertainties.unumpy as unp
+import random 
 
 def rel_Abweichung(exp, theo):
     return (np.abs(exp-theo)/(theo)*100) #ist schon in Prozent
@@ -99,11 +103,11 @@ ax3.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax3.plot(x_punkt_1, max(Pulszahl_1)/2, ".", color = "green")
+ax3.hlines(y = max(Pulszahl_1)/2, xmin = x_min_3, xmax = x_max_3)
+ax3.plot(x_punkt_1, max(Pulszahl_1)/2, "o", color = "green", linewidth=6)
 ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax3.set_ylabel(r"$\text{Anzahl der Pulse} $")
 ax3.set_xlim(x_min_3, x_max_3)
-ax3.hlines(y = max(Pulszahl_1)/2, xmin = x_min_3, xmax = x_max_3)
 ax3.legend(loc="best")
 fig.savefig("Plots/plot3.pdf")
 
@@ -118,13 +122,66 @@ ax4.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax4.plot(x_punkt_2, max(Pulszahl_2)/2, ".", color = "green")
+ax4.hlines(y = max(Pulszahl_2)/2, xmin = x_min_4, xmax = x_max_4)
+ax4.plot(x_punkt_2, max(Pulszahl_2)/2, "o", color = "green", linewidth=6)
 ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
 ax4.set_ylabel(r"$\text{Anzahl der Pulse} $")
-ax4.hlines(y = max(Pulszahl_2)/2, xmin = x_min_4, xmax = x_max_4)
 ax4.set_xlim(x_min_4, x_max_4)
 ax4.legend(loc="best")
 fig.savefig("Plots/plot4.pdf")
+
+#Histogrammversuch 
+Fehler_von_Daten = np.sqrt(Daten)
+Daten_plus_Fehler = Daten + Fehler_von_Daten
+Daten_minus_Fehler = Daten - Fehler_von_Daten
+
+Daten_mit_Fehlern = unp.uarray(Daten, Fehler_von_Daten)
+#print(Daten_mit_Fehlern)
+Mittelwert = np.mean(Daten_mit_Fehlern)
+sigma = np.std(Daten)
+
+# create a new random number generator with a fixed seed
+rng = default_rng(42)
+poisson_1 = rng.poisson(Mittelwert.nominal_value, 100) #1. Eingabe ist der Mittelwert 2. ist wie viele Werte 
+gauss_1 = rng.normal(Mittelwert.nominal_value, sigma, size = 100)
+
+
+fig_Gauss, ((ax5, ax6), (ax7, ax8))= plt.subplots(2,2)
+ax5.hist(Daten, bins=10, histtype='step', range = [1100,1400], label = 'Daten', linewidth=1.3)
+ax5.hist(Daten_plus_Fehler, bins = 10, histtype='step', range = [1100,1400], label = r"$\text{Daten} + \sqrt{N}$", linewidth=1.3)
+ax5.hist(Daten_minus_Fehler, bins = 10, histtype='step', range = [1060,1400], label = r"$\text{Daten} - \sqrt{N}$", linewidth=1.3)
+ax5.hist(gauss_1, bins = 10, histtype='step', range = [1060,1400], label = r"$\text{Gaussverteilung}$", linewidth=2)
+ax5.set_title("Daten in 10 Bins")
+#ax5.legend(loc="best")
+ax6.hist(Daten, bins=14, histtype='step', range = [1100,1400], linewidth=1.3)
+ax6.hist(Daten_plus_Fehler, bins = 14, histtype='step', range = [1100,1400], linewidth=1.3)
+ax6.hist(Daten_minus_Fehler, bins = 14, histtype='step', range = [1060,1400], linewidth=1.3)
+ax6.hist(gauss_1, bins = 14, histtype='step', range = [1060,1400], linewidth=2)
+ax6.set_title("Daten in 14 Bins")
+#ax6.legend(loc="best")
+ax7.hist(Daten, bins=16, histtype='step', range = [1100,1400], linewidth=1.3)
+ax7.hist(Daten_plus_Fehler, bins = 16, histtype='step', range = [1100,1400], linewidth=1.3)
+ax7.hist(Daten_minus_Fehler, bins = 16, histtype='step', range = [1060,1400], linewidth=1.3)
+ax7.hist(gauss_1, bins = 16, histtype='step', range = [1060,1400], linewidth=2)
+ax7.set_title("Daten in 16 Bins")
+#ax7.legend(loc="best")
+ax8.hist(Daten, bins=18, histtype='step', range = [1100,1400], linewidth=1.3)
+ax8.hist(Daten_plus_Fehler, bins = 18, histtype='step', range = [1100,1400], linewidth=1.3)
+ax8.hist(Daten_minus_Fehler, bins = 18, histtype='step', range = [1060,1400], linewidth=1.3)
+ax8.hist(gauss_1, bins = 18, histtype='step', range = [1060,1400], linewidth=2)
+ax8.set_title("Daten in 18 Bins")
+#ax8.legend(loc="best")
+
+fig_Gauss.legend(loc="lower center", ncol=4)
+fig_Gauss.tight_layout()
+fig_Gauss.subplots_adjust(bottom=0.15)
+
+fig_Gauss.savefig("Plots/plot5.pdf")
+
+
+
+
+
 
 
 #Werte: 
