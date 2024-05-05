@@ -3,11 +3,11 @@
 Zuerst wird der Energieverlust der Alphateilchen bestimmt. Dieser wird ermittelt, 
 indem die Energie der Teilchen gegen die effektive Weglänge aufgetragen wird. 
 Die effektive Weglänge wird dabei mithilfe von Formel (\ref{eqn:effektive_Laenge}) berechnet. 
-Die Energie wird durch einfachen Dreisatz aus den Informationen berechnet, dass
-diese proportional zum Channel, indem die meisten Teilchen gemessen werden, ist und 
-der Channel, indem bei einem Druck von $0 \unit{\milli\bar}$ die meisten Teilchen sind,
-eine Energie von $4 \unit{\mega\eV}$ hat. Die Anzahl der Teilchen, 
-die abhängig vom Druck gemessen werden und die Channel, in dem die meisten Teilchen gezählt
+Die Energie wird durch einfachen Dreisatz aus mehreren Informationen berechnet. Zum einen ist wichtig, dass
+die Energie proportional zum Channel, indem die meisten Teilchen gemessen werden, ist und zum anderen, dass
+der Channel, indem bei einem Druck von $0 \, \unit{\milli\bar}$ die meisten Teilchen sind,
+eine Energie von $4 \, \unit{\mega\eV}$ hat. Die Anzahl der Teilchen, 
+die abhängig vom Druck gemessen werden und die Channel, in denen die meisten Teilchen gezählt
 werden, sind in Tabelle (\ref{tab:Abstand_1}) für einen Abstand der Probe von $x_{0,1}= 4,5 \, \unit{\centi\meter}$ und in Tabelle (\ref{tab:Abstand_2}) 
 für einen Abstand der Probe von $x_{0,2} = 6 \, \unit{\centi\meter}$ aufgelistet. 
 
@@ -38,7 +38,7 @@ für einen Abstand der Probe von $x_{0,2} = 6 \, \unit{\centi\meter}$ aufgeliste
 \begin{table}[H]
     \centering
     \caption{Eingestellter Druck, gemessene Pulsanzahl und Channel mit der höchsten Pulsrate bei einem Abstand von 6 cm}
-    \label{tab:Abstand_1}
+    \label{tab:Abstand_2}
     \begin{tblr}{colspec={c c c}}
         \toprule
         $\text{Druck} \,  \left[\unit{\milli\bar}\right]$ & $\text{Anzahl der gemessenen Pulse}$ &  $\text{Channel der maximalen Pulszahl}$ \\
@@ -58,8 +58,8 @@ für einen Abstand der Probe von $x_{0,2} = 6 \, \unit{\centi\meter}$ aufgeliste
     \end{tblr}
 \end{table}
 
-Die sich aus den Daten ergebenden Werte sind in Abbildung (\ref{fig:Abstand_1}) für den Abstand von $4,5 \, \unit{\centi\meter}$ und in Abbildung (\ref{}) für den Abstand 
-von $6 \, \unit{\centi\meter}$ geplottet. Dazu wurde jeweils eine lineare Ausgleichsgerade der Form $y = mx + n$ aufgestellt und geplottet. 
+Die sich aus den Daten ergebenden Werte sind in Abbildung (\ref{fig:Abstand_1}) für den Abstand von $4,5 \, \unit{\centi\meter}$ und in Abbildung (\ref{fig:Abstand_2}) für den Abstand 
+von $6 \, \unit{\centi\meter}$ geplottet. Dazu wird jeweils eine lineare Ausgleichsgerade der Form $y = mx + n$ aufgestellt und geplottet. 
 
 \begin{figure}[H]
   \centering
@@ -76,10 +76,10 @@ von $6 \, \unit{\centi\meter}$ geplottet. Dazu wurde jeweils eine lineare Ausgle
 \end{figure}
 
 Die Steigung der Ausgleichsgerade ist dabei der Energieverlust. Dieser beträgt bei einem Abstand von $4,5 \, \unit{\centi\meter}$ $m_1 = (-112 \pm 2,5)\, 
-\unit[per-mode=fraction]{\mega\eV\per\meter}$. Bei einem Abstand von $6 \, \unit{\centi\meter}$ beträgt es $m_2 = (-117 \pm 9,8)\, 
+\unit[per-mode=fraction]{\mega\eV\per\meter}$. Bei einem Abstand von $6 \, \unit{\centi\meter}$ beträgt dieser $m_2 = (-117 \pm 9,8)\, 
 \unit[per-mode=fraction]{\mega\eV\per\meter}$. 
 
-Zur Bestimmung der mittleren, freien Weglänge wird die gemessene Pulsanzahl gegen die effektive Weglänge aufgetragen und dann der Schnittpunkt der Ausgleichsgerade, 
+Zur Bestimmung der mittleren Reichweite wird die gemessene Pulsanzahl gegen die effektive Weglänge aufgetragen und dann der Schnittpunkt der Ausgleichsgerade, 
 die durch den zu sehenden starken Abfall geht und einer Konstanten bei der Hälfte der höchsten gemessenen Pulszahl. Dieser Schnittpunkt wird grün markiert. 
 Der Plot zu einer Entfernung von $4,5 \, \unit{\centi\meter}$ ist Abbildung (\ref{fig:Weglaenge_1}) und zu einer Entferung von $6 \, \unit{\centi\meter}$ 
 ist Abbildung (\ref{fig:Weglaenge_2}). 
@@ -100,12 +100,12 @@ ist Abbildung (\ref{fig:Weglaenge_2}).
 Die x-Koordinate des grün markierte Schnittpunkts gibt die mittlere Reichweite an. Bei einer Entfernung von $4,5 \, \unit{\centi\meter}$ ist die mittlere Reichweite 
 $x_1 = 2,26 \, \unit{\centi\meter}$ und bei einer Entfernung von $6 \, \unit{\centi\meter}$ ist diese $x_2 = 2,30 \, \unit{\centi\meter}$. 
 
-Anschließend wird die statistische Messung, in der 100 Mal die Pulsanzahl nach einer zeit von $10 \unit{\second}$ bei gleichem Druck und gleichem Abstand gemessen werden, mit einer Poissonverteilung und 
+Anschließend wird die statistische Messung, in der 100 Mal die Pulsanzahl in einem Zeitintervall von $10 \, \unit{\second}$ bei gleichem Druck und gleichem Abstand gemessen werden, mit einer Poissonverteilung und 
 einer Gaußverteilung verglichen. Die gemessenen Pulszahlen sind in Tabelle (\ref{tab:Statistik}) zu sehen. 
 
 \begin{table}[H]
     \centering
-    \caption{Statistische Messung der Pulsanzahl in einem Zeitintervall von $10 \unit{\second}$}
+    \caption{Statistische Messung der Pulsanzahl in einem Zeitintervall von $10 \, \unit{\second}$}
     \label{tab:Statistik}
     \begin{tblr}{colspec={c c c c c c}}
         \toprule
