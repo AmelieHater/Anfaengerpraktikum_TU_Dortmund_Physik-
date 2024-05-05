@@ -28,8 +28,8 @@ errors = np.sqrt(np.diag(covariance_matrix))
 
 params_2, covariance_matrix_2 = np.polyfit(Weglaenge_eff_2, Energie_2_MeV, deg=1, cov=True)
 errors_2 = np.sqrt(np.diag(covariance_matrix_2))
-#for name, value, error in zip("ab", params_2, errors_2):
-#    print(f"{name} = {value:.3f} ± {error:.3f}")
+for name, value, error in zip("ab", params_2, errors_2):
+    print(f"{name} = {value:.3f} ± {error:.3f}")
 x_min_1 = Weglaenge_eff_1[0]-np.abs(Weglaenge_eff_1[1]-Weglaenge_eff_1[0])/2
 x_max_1 = Weglaenge_eff_1[-1]-np.abs(Weglaenge_eff_1[1]-Weglaenge_eff_1[0])/2
 
@@ -48,7 +48,7 @@ ax1.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax1.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
+ax1.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
 ax1.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax1.set_xlim(x_min_1, x_max_1)
 ax1.set_ylim(0.5, 4.5)
@@ -64,7 +64,7 @@ ax2.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax2.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
+ax2.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
 ax2.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax2.set_xlim(x_min_2, x_max_2)
 ax2.set_ylim(0.5, 4.5)
@@ -103,9 +103,9 @@ ax3.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax3.hlines(y = max(Pulszahl_1)/2, xmin = x_min_3, xmax = x_max_3)
-ax3.plot(x_punkt_1, max(Pulszahl_1)/2, "o", color = "green", linewidth=6)
-ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
+ax3.hlines(y = max(Pulszahl_1)/2, xmin = x_min_3, xmax = x_max_3, label = "Hälfte der maximalen Pulszahl")
+ax3.plot(x_punkt_1, max(Pulszahl_1)/2, "o", color = "green", linewidth=6, label = "Schnittpunkt")
+ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
 ax3.set_ylabel(r"$\text{Anzahl der Pulse} $")
 ax3.set_xlim(x_min_3, x_max_3)
 ax3.legend(loc="best")
@@ -122,9 +122,9 @@ ax4.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax4.hlines(y = max(Pulszahl_2)/2, xmin = x_min_4, xmax = x_max_4)
-ax4.plot(x_punkt_2, max(Pulszahl_2)/2, "o", color = "green", linewidth=6)
-ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m^{-1}]$")
+ax4.hlines(y = max(Pulszahl_2)/2, xmin = x_min_4, xmax = x_max_4, label = "Hälfte der maximalen Pulszahl")
+ax4.plot(x_punkt_2, max(Pulszahl_2)/2, "o", color = "green", linewidth=6, label = "Schnittpunkt")
+ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
 ax4.set_ylabel(r"$\text{Anzahl der Pulse} $")
 ax4.set_xlim(x_min_4, x_max_4)
 ax4.legend(loc="best")
@@ -139,7 +139,7 @@ Daten_mit_Fehlern = unp.uarray(Daten, Fehler_von_Daten)
 #print(Daten_mit_Fehlern)
 Mittelwert = np.mean(Daten_mit_Fehlern)
 sigma = np.std(Daten)
-
+print("Mittelwert und Sigma: ", Mittelwert, sigma)
 # create a new random number generator with a fixed seed
 rng = default_rng(42)
 poisson_1 = rng.poisson(Mittelwert.nominal_value, 100) #1. Eingabe ist der Mittelwert 2. ist wie viele Werte 
