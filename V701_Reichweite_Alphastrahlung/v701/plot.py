@@ -48,7 +48,7 @@ ax1.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax1.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
+ax1.set_xlabel(r"$\text{effektive Weglänge x} \, \, [\text{m}]$")
 ax1.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax1.set_xlim(x_min_1, x_max_1)
 ax1.set_ylim(0.5, 4.5)
@@ -64,7 +64,7 @@ ax2.plot(
     label="Lineare Regression",
     linewidth=1,
 )
-ax2.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
+ax2.set_xlabel(r"$\text{effektive Weglänge x} \, \, [\text{m}]$")
 ax2.set_ylabel(r"$\text{Energie} \, \,  [\text{MeV}] $")
 ax2.set_xlim(x_min_2, x_max_2)
 ax2.set_ylim(0.5, 4.5)
@@ -105,7 +105,7 @@ ax3.plot(
 )
 ax3.hlines(y = max(Pulszahl_1)/2, xmin = x_min_3, xmax = x_max_3, label = "Hälfte der maximalen Pulszahl")
 ax3.plot(x_punkt_1, max(Pulszahl_1)/2, "o", color = "green", linewidth=6, label = "Schnittpunkt")
-ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
+ax3.set_xlabel(r"$\text{effektive Weglänge x} \, \, [\text{m}]$")
 ax3.set_ylabel(r"$\text{Anzahl der Pulse} $")
 ax3.set_xlim(x_min_3, x_max_3)
 ax3.legend(loc="best")
@@ -124,7 +124,7 @@ ax4.plot(
 )
 ax4.hlines(y = max(Pulszahl_2)/2, xmin = x_min_4, xmax = x_max_4, label = "Hälfte der maximalen Pulszahl")
 ax4.plot(x_punkt_2, max(Pulszahl_2)/2, "o", color = "green", linewidth=6, label = "Schnittpunkt")
-ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [m]$")
+ax4.set_xlabel(r"$\text{effektive Weglänge x} \, \, [\text{m}]$")
 ax4.set_ylabel(r"$\text{Anzahl der Pulse} $")
 ax4.set_xlim(x_min_4, x_max_4)
 ax4.legend(loc="best")
@@ -148,26 +148,26 @@ gauss_1 = rng.normal(Mittelwert.nominal_value, sigma, size = 100)
 
 fig_Gauss, ((ax5, ax6), (ax7, ax8))= plt.subplots(2,2)
 ax5.hist(Daten, bins=10, histtype='step', range = [1100,1400], label = 'Daten', linewidth=1.3)
-ax5.hist(Daten_plus_Fehler, bins = 10, histtype='step', range = [1100,1400], label = r"$\text{Daten} + \sqrt{N}$", linewidth=1.3)
-ax5.hist(Daten_minus_Fehler, bins = 10, histtype='step', range = [1060,1400], label = r"$\text{Daten} - \sqrt{N}$", linewidth=1.3)
+ax5.hist(Daten_plus_Fehler, bins = 10, histtype='step', range = [1100,1400], label = r"$\text{Daten} + \sqrt{N}$", linewidth=1.3, linestyle = "--")
+ax5.hist(Daten_minus_Fehler, bins = 10, histtype='step', range = [1060,1400], label = r"$\text{Daten} - \sqrt{N}$", linewidth=1.3, linestyle = "--")
 ax5.hist(gauss_1, bins = 10, histtype='step', range = [1060,1400], label = r"$\text{Gaussverteilung}$", linewidth=2)
 ax5.set_title("Daten in 10 Bins")
 #ax5.legend(loc="best")
 ax6.hist(Daten, bins=14, histtype='step', range = [1100,1400], linewidth=1.3)
-ax6.hist(Daten_plus_Fehler, bins = 14, histtype='step', range = [1100,1400], linewidth=1.3)
-ax6.hist(Daten_minus_Fehler, bins = 14, histtype='step', range = [1060,1400], linewidth=1.3)
+ax6.hist(Daten_plus_Fehler, bins = 14, histtype='step', range = [1100,1400], linewidth=1.3, linestyle = "--")
+ax6.hist(Daten_minus_Fehler, bins = 14, histtype='step', range = [1060,1400], linewidth=1.3, linestyle = "--")
 ax6.hist(gauss_1, bins = 14, histtype='step', range = [1060,1400], linewidth=2)
 ax6.set_title("Daten in 14 Bins")
 #ax6.legend(loc="best")
 ax7.hist(Daten, bins=16, histtype='step', range = [1100,1400], linewidth=1.3)
-ax7.hist(Daten_plus_Fehler, bins = 16, histtype='step', range = [1100,1400], linewidth=1.3)
-ax7.hist(Daten_minus_Fehler, bins = 16, histtype='step', range = [1060,1400], linewidth=1.3)
+ax7.hist(Daten_plus_Fehler, bins = 16, histtype='step', range = [1100,1400], linewidth=1.3, linestyle = "--")
+ax7.hist(Daten_minus_Fehler, bins = 16, histtype='step', range = [1060,1400], linewidth=1.3, linestyle = "--")
 ax7.hist(gauss_1, bins = 16, histtype='step', range = [1060,1400], linewidth=2)
 ax7.set_title("Daten in 16 Bins")
 #ax7.legend(loc="best")
 ax8.hist(Daten, bins=18, histtype='step', range = [1100,1400], linewidth=1.3)
-ax8.hist(Daten_plus_Fehler, bins = 18, histtype='step', range = [1100,1400], linewidth=1.3)
-ax8.hist(Daten_minus_Fehler, bins = 18, histtype='step', range = [1060,1400], linewidth=1.3)
+ax8.hist(Daten_plus_Fehler, bins = 18, histtype='step', range = [1100,1400], linewidth=1.3, linestyle = "--")
+ax8.hist(Daten_minus_Fehler, bins = 18, histtype='step', range = [1060,1400], linewidth=1.3, linestyle = "--")
 ax8.hist(gauss_1, bins = 18, histtype='step', range = [1060,1400], linewidth=2)
 ax8.set_title("Daten in 18 Bins")
 #ax8.legend(loc="best")
@@ -178,11 +178,45 @@ fig_Gauss.subplots_adjust(bottom=0.15)
 
 fig_Gauss.savefig("Plots/plot5.pdf")
 
+#Poisson Verteilung
+fig_Poisson, ((ax5, ax6), (ax7, ax8))= plt.subplots(2,2)
+ax5.hist(Daten, bins=10, histtype='step', range = [1100,1400], label = 'Daten', linewidth=1.3)
+ax5.hist(Daten_plus_Fehler, bins = 10, histtype='step', range = [1100,1400], label = r"$\text{Daten} + \sqrt{N}$", linewidth=1.3, linestyle = "--")
+ax5.hist(Daten_minus_Fehler, bins = 10, histtype='step', range = [1060,1400], label = r"$\text{Daten} - \sqrt{N}$", linewidth=1.3, linestyle = "--")
+ax5.hist(poisson_1, bins = 10, histtype='step', range = [1060,1400], label = r"$\text{Gaussverteilung}$", linewidth=2)
+ax5.set_title("Daten in 10 Bins")
+#ax5.legend(loc="best")
+ax6.hist(Daten, bins=14, histtype='step', range = [1100,1400], linewidth=1.3)
+ax6.hist(Daten_plus_Fehler, bins = 14, histtype='step', range = [1100,1400], linewidth=1.3, linestyle = "--")
+ax6.hist(Daten_minus_Fehler, bins = 14, histtype='step', range = [1060,1400], linewidth=1.3, linestyle = "--")
+ax6.hist(poisson_1, bins = 14, histtype='step', range = [1060,1400], linewidth=2)
+ax6.set_title("Daten in 14 Bins")
+#ax6.legend(loc="best")
+ax7.hist(Daten, bins=16, histtype='step', range = [1100,1400], linewidth=1.3)
+ax7.hist(Daten_plus_Fehler, bins = 16, histtype='step', range = [1100,1400], linewidth=1.3, linestyle = "--")
+ax7.hist(Daten_minus_Fehler, bins = 16, histtype='step', range = [1060,1400], linewidth=1.3, linestyle = "--")
+ax7.hist(poisson_1, bins = 16, histtype='step', range = [1060,1400], linewidth=2)
+ax7.set_title("Daten in 16 Bins")
+#ax7.legend(loc="best")
+ax8.hist(Daten, bins=18, histtype='step', range = [1100,1400], linewidth=1.3)
+ax8.hist(Daten_plus_Fehler, bins = 18, histtype='step', range = [1100,1400], linewidth=1.3, linestyle = "--")
+ax8.hist(Daten_minus_Fehler, bins = 18, histtype='step', range = [1060,1400], linewidth=1.3, linestyle = "--")
+ax8.hist(poisson_1, bins = 18, histtype='step', range = [1060,1400], linewidth=2)
+ax8.set_title("Daten in 18 Bins")
+#ax8.legend(loc="best")
+
+fig_Poisson.legend(loc="lower center", ncol=4)
+fig_Poisson.tight_layout()
+fig_Poisson.subplots_adjust(bottom=0.15)
+
+fig_Poisson.savefig("Plots/plot6.pdf")
 
 
 
-
-
+print( "Energieverlust 1: ", rel_Abweichung( params[0],  params_2[0]))
+print("Energieverlust 2: ",rel_Abweichung( params_2[0],  params[0]))
+print("Mittlere Reichweite 1: ", rel_Abweichung( x_punkt_1,  x_punkt_2))
+print("Mittlere Reichweite 2: ", rel_Abweichung( x_punkt_2,  x_punkt_1))
 
 #Werte: 
 #Steigung der Reichweite_1:  -112.383 ± 2.515
@@ -193,3 +227,7 @@ fig_Gauss.savefig("Plots/plot5.pdf")
 #y-Koordinate der 1.: y = 13112.5 
 #Schnittpunkt bei der 2. Liste:  x = 0.02302477244638596
 #y-Koordinate der 2.: y = 8019.0
+#Energieverlust 1:  -4.437097868848706 %
+#Energieverlust 2:  -4.643117538183591 %
+#Mittlere Reichweite 1:  3.2168918181617276 % 
+#Mittlere Reichweite 2:  3.323815362612409 %
