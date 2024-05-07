@@ -20,3 +20,6 @@ $$\Delta f = \sqrt{\sum_{i = 1}^{n} \left( \frac{\partial f}{\partial x_i} \righ
 
     \Delta \nu = 2 \nu_0 \frac{v}{c}\cos \alpha \,.
 \label{eqn:Frequenzverschiebung_identisch}
+
+    \alpha = 90°-\arcsin\left( \sin \theta \cdot \frac{c_{\text{L}}}{c_{\text{P}}}\right)
+\label{eqn:Dopplerwinkel}
