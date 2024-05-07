@@ -1,0 +1,77 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+\nocite{anleitungUS3}
+Das Ziel dieses Versuchs ist die Untersuchung der Strömungsgeschwindigkeiten sowie des Strömungsprofils einer Dopplerphantomflüssigkeit anhand des Impuls-Echo-Verfahren.
+Hierfür wird an verschiedenen Strömungsrohren die Flussgeschwindigkeit und das Strömungsprofil als Funktion der Strömungsgeschwindigkeit
+$v$ sowie des Dopplerwinkels $\sin \alpha$ ermittelt. 
+\section{Theorie}
+\label{sec:Theorie}
+Die menschliche Hörschwelle liegt zwischen ca. $16\,\unit{\hertz}$ und ca. $20\,\unit{\kilo\hertz}$. Der Ultraschall Frequenzbereich
+liegt oberhalb der Hörschwelle bei ca. $20\,\unit{\kilo\hertz}$ bis ca. $1\,\unit{\giga\hertz}$. Von einem Hyperschall wird gesprochen, wenn
+der Frequenzbereich über $1\,\unit{\giga\hertz}$ liegt. Der Infraschall Frequenzbereich liegt unterhalb der Hörschwelle. 
+Der Doppler-Effekt beschreibt die Änderung der Frequenz bei relativer Bewegung zwischen einem Beobachter und einer Schallquelle. 
+Wenn sich die Quelle auf den Beobachter zu bewegt, wird die Frequenz $\nu_0$ zu einer höheren Frequenz $\nu_{\text{gr}}$ und wenn die
+Qulle sich vom Beobachter entfernt, sinkt die Frequenz $\nu_0$ auf einer niedrigeren Frequenz $\nu_{\text{kl}}$. Diese Beziehungen lassen sich mit
+der Gleichung
+\begin{equation}
+    \nu_{\text{gr/kl}} = \frac{\nu_0}{1 \mp \frac{v}{c}}
+    \label{eqn:Frequenz_Quelle-Beobachter}
+\end{equation}
+beschreiben, wobei $v$ die Geschwindigkeit des Objekts und $c$ die Schallgeschwindigkeit ist. Falls die Quelle stationär bleibt und der Beobachter sich der Quelle nähert, dann erhöht sich die Frequenz $\nu_0$ auf eine höhere Frequenz
+$\nu_{\text{h}}$. Entfernt sich der Beobachter von der Quelle weg, dann sinkt die Frequenz $\nu_0$ auf eine Frequenz $\nu_{\text{n}}$. Die Veränderungen lassen sich
+durch folgende Beziehung beschreiben 
+\begin{equation}
+    \nu_{\text{h/n}} = \nu_0 \left( 1 \pm \frac{v}{c}\right)\,.
+    \label{eqn:Frequenz_Beobachter-Quelle}
+\end{equation}
+Die Frequenzverschiebung $\Delta \nu$ wird mithilfe der Winkel $\alpha$ und $\beta$ ermittelt, welche die Winkel zwischen der Geschwindigkeit $v$ und der
+Wellennormalen der einlaufenden bzw. auslaufenden Welle beschreibt. Diese Beziehung lautet 
+\begin{equation}
+    \Delta \nu = \nu_0 \frac{v}{c} \left(\cos \alpha + \cos \beta\right)\,.
+    \label{eqn:Frequenzverschiebung}
+\end{equation}
+Bei diesem Versuch wird das Impuls-Echo-Verfahren verwendet, bei dem die Winkel $/alpha$ und $\beta$ identisch sind. Daraus folgt für die
+Frequenzverschiebung
+\begin{equation}
+    \Delta \nu = 2 \nu_0 \frac{v}{c}\cos \alpha \,.
+    \label{eqn:Frequenzverschiebung_identisch}
+\end{equation}
+Die Erzeugung von Ultraschall ist unter anderem durch die Methode des reziproken piezo-elektrischen Effekts möglich. Hierfür wird ein piezoelektrischer Kristall in ein 
+elektrisches Wechselfeld eingeführt. Der Kristall wird zum schwingen angeregt, wenn eine polare Achse des Kristalls zum elektrischen Feld zeigen und strahlt Ultraschallwellen währenddessen ab. 
+Große Schwingungsamplituden können bei Resonanz, also wenn die Anregungsfrequenz mit der Eigenfrequenz des Kristalls übereinstimmt, erzeugt werden. Dadurch können extrem hohe Schallenergiedichten 
+verwendet werden. Außerdem kann der Piezokristall umgekehrt ebenfalls als Schallempfänger dienen. Somit treffen die Schallwellen auf den Kristall, der zum schwingen angeregt wird. Am meisten werden 
+als piezoelektrische Kristalle Quarze verwendet, obwohl diese einen relativ schwachen piezoelektrischen Effekt haben. Vorteilhaft sind bei Quarze die gleichbleibende physikalische Eigenschaften. 
+
+\subsection{Vorbereitungsaufgaben}
+\label{sec:Vorbereitungsaufgaben}
+Zur Vorbereitung soll der Dopplerwinkel von drei verschiedenen Prismenwinkeln $\theta$ berechnet werden. Diese lassen sich
+mithilfe der Gleichung \ref{eqn:Dopplerwinkel} bestimmen und sind in der Tabelle \ref{tab:Vorbereitung} aufgelistet. 
+\begin{table}[H]
+    \centering
+    \caption{Berechnete Dopplerwinkel zu drei verschiedene Prismenwinkel mit den Schallgeschwindigkeiten $c_{\text{L}}=1800\,\unit[per-mode=fraction]{\metre\per\second}$ und $c_{\text{P}}=2700\,\unit[per-mode=fraction]{\metre\per\second}$.}
+    \label{tab:Vorbereitung}
+    \begin{tblr}{colspec={c c}}
+        \toprule
+        $\theta\,[°]$ & $\alpha\,[°]$ \\
+        \midrule
+        15 & 80,06 \\
+        30 & 70,53 \\
+        45 & 61,87 \\
+        \bottomrule
+    \end{tblr}
+  \end{table}
+Außerdem sollen die Tiefeneinstellungen bestimmt werden, bei denen die Flussgeschwindigkeit der drei verschiedenen Rohren gemessen werden kann. Diese werden durch einen
+Dreisatz bestimmt, da für die Dopplerflüssigkeit $4\,\unit{\micro\second} \,\,\widehat{=}\,\, 7\,\unit{\milli\metre}$ gilt. 
+\begin{table}[H]
+    \centering
+    \caption{Berechnete Tiefeneinstellungen der Dopplerflüssigkeit für drei verschiedene Rohreninnendruchmessern für die Dopplerflüssigkeit.}
+    \label{tab:Vorbereitung}
+    \begin{tblr}{colspec={c c c}}
+        \toprule
+        $[\unit{\micro\second}]$  & $[\unit{\micro\second}]$ & $[\unit{\micro\second}]$ \\
+        bei $7\,\unit{\milli\metre}$ & bei $10\,\unit{\milli\metre}$ & bei $16\,\unit{\milli\metre}$\\
+        \midrule
+        4 & 5,714 & 9,143\\
+        \bottomrule
+    \end{tblr}
+  \end{table}
