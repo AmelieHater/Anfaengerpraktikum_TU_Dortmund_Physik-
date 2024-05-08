@@ -1,0 +1,14 @@
+#Tiefe in mikrosekunden, delta frequenz in Mhz bei 3 l/min, delta frequenz in Mhz bei 6 l/min alles bei einem Winkel theta von 15°
+12      0       0
+12.5    0       281
+13      0       342
+13.5    146     391
+14      159     464
+14.5    171     525
+15      183     580
+15.5    183     574
+16      171     513
+16.5    159     431
+17      144     342
+17.5    122     293
+18      122     269
