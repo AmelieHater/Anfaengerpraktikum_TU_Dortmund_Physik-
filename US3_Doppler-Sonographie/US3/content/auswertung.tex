@@ -39,11 +39,11 @@ Die zur Berechnung der Strömungsgeschwindigkeit aufgenommenen Messwerte, sind f
     \end{tblr}
 \end{table}
 Aus diesen Werten wird mithilfe von Formel (\ref{eqn:Stroemungsgeschwindigkeit}) die Strömungsgeschwindigkeit $v$ bestimmt. 
-Diese ist in Tabelle (\ref{tab:Stroemungsgeschwindigkeit1_rohr1}) für Rohr 1 und in Tabelle (\ref{tab:Messung1_Rohr2}) für Rohr 2 vermerkt. 
+Diese ist in Tabelle (\ref{tab:Stroemungsgeschwindigkeit1_rohr1}) für Rohr 1 und in Tabelle (\ref{tab:Stroemungsgeschwindigkeit1_rohr2}) für Rohr 2 vermerkt. 
 \begin{table}[H]
     \centering
     \caption{Berechnete Strömungsgeschwindigkeit $v$ an Rohr 1 dargestellt nach verwendetem Prismenwinkel $\theta$}
-    \label{tab:Messung1_Rohr1}
+    \label{tab:Stroemungsgeschwindigkeit1_rohr1}
     \begin{tblr}{colspec={c c c}}
         \toprule
         $v \,\, \text{bei}\,\, \theta = 15° \, \left[\unit[per-mode=fraction]{\meter\per\second}\right]$ & $v \,\, \text{bei}\,\, \theta = 30° \, \left[\unit[per-mode=fraction]{\meter\per\second}\right]$  & $v \,\, \text{bei}\,\, \theta = 45° \, \left[\unit[per-mode=fraction]{\meter\per\second}\right]$ \\
@@ -59,7 +59,7 @@ Diese ist in Tabelle (\ref{tab:Stroemungsgeschwindigkeit1_rohr1}) für Rohr 1 un
 \begin{table}[H]
     \centering
     \caption{Berechnete Strömungsgeschwindigkeit $v$ an Rohr 2 dargestellt nach verwendetem Prismenwinkel $\theta$}
-    \label{tab:Messung1_Rohr2}
+    \label{tab:Stroemungsgeschwindigkeit1_rohr2}
     \begin{tblr}{colspec={c c c}}
         \toprule
         $v \,\, \text{bei}\,\, \theta = 15° \, \left[\unit[per-mode=fraction]{\meter\per\second}\right]$ & $v \,\, \text{bei}\,\, \theta = 30° \, \left[\unit[per-mode=fraction]{\meter\per\second}\right]$  & $v \,\, \text{bei}\,\, \theta = 45° \, \left[\unit[per-mode=fraction]{\meter\per\second}\right]$ \\
@@ -113,14 +113,14 @@ Frequenzverschiebung geteilt durch $\cos(\alpha)$ ist für Rohr 1 in Tabelle (\r
 \begin{figure}[H]
    \centering
    \caption{Frequenzverschiebung aufgetragen gegen die Strömunggeschwindigkeit mit Ausgleichsgerade für Rohr 1.}
-   \includegraphics[width=\linewidth]{plot1.pdf}
+   \includegraphics[width=0.8\linewidth]{plot1.pdf}
    \label{fig:Abschnitt1_10mm}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \caption{Frequenzverschiebung aufgetragen gegen die Strömunggeschwindigkeit mit Ausgleichsgerade für Rohr 2.}
-    \includegraphics[width=\linewidth]{plot2.pdf}
+    \includegraphics[width=0.8\linewidth]{plot2.pdf}
     \label{fig:Abschnitt1_16mm}
 \end{figure}
 Beide Ausgleichgeraden haben die Form $y = mx + n$. Für Rohr 1 ergibt sich dabei $m_1 = 2222,22 \, \unit[per-mode=fraction]{\per\meter}$ und $n_1 = 0 \, \unit{\hertz}$. Für Rohr 2 betragen die Werte 
@@ -139,7 +139,7 @@ zu
     x_3 &= \frac{1}{m \cdot \cos(\alpha_{45°})} \approx 0,9545 \cdot 10^{-3}\, \unit{\meter}\\
 \end{align*}
 bestimmt werden. Aus der Formel (\ref{eqn:Stroemungsgeschwindigkeit}) lässt sich für den linearen Zusammenhang von $mv = \frac{\Delta \nu}{\cos(\alpha)}$ ein 
-Theoriewert von $m = \frac{2\nu_0}{c} \approx 2222,22 \, \unit[per-mode=fraction]{\per\meter}$ bestimmen.
+Theoriewert von $m_{\text{theo}} = \frac{2\nu_0}{c} \approx 2222,22 \, \unit[per-mode=fraction]{\per\meter}$ bestimmen.
 
 
 
@@ -258,13 +258,13 @@ aufgetragen.
 \begin{figure}[H]
     \centering
     \caption{Momentangeschwindigkeit aufgetragen gegen die Messtiefe für Rohr 1.}
-    \includegraphics[width=\linewidth]{plot3.pdf}
+    \includegraphics[width=0.82\linewidth]{plot3.pdf}
     \label{fig:Momentan_1}
 \end{figure}
 \begin{figure}[H]
     \centering
     \caption{Momentangeschwindigkeit aufgetragen gegen die Messtiefe für Rohr 2.}
-    \includegraphics[width=\linewidth]{plot4.pdf}
+    \includegraphics[width=0.82\linewidth]{plot4.pdf}
     \label{fig:Momentan_2}
 \end{figure}
                                             
