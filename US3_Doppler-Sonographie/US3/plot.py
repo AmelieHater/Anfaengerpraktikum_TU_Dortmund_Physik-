@@ -8,8 +8,6 @@ def rel_Abweichung(exp, theo):
 Pumpgeschwindigkeit_10mm, delta_nu_von_Pumpgeschwindigkeit_10, Winkel_grad_von_Pumpgeschwindigkeit_10 = np.genfromtxt("content/Messwerte/Geschwindigkeit_10_nach_Winkel.txt", unpack = True)
 Pumpgeschwindigkeit_16mm, delta_nu_von_Pumpgeschwindigkeit_16, Winkel_grad_von_Pumpgeschwindigkeit_16 = np.genfromtxt("content/Messwerte/Geschwindigkeit_16_nach_Winkel.txt", unpack = True)
 
-Tiefe_mus_10mm, delta_nu_3_10, delta_nu_6_10 = np.genfromtxt("content/Messwerte/Stroemungsprofil_10mm.txt", unpack = True)
-Tiefe_mus_16mm, delta_nu_3_16, delta_nu_6_16 = np.genfromtxt("content/Messwerte/Stroemungsprofil_16mm.txt", unpack = True)
 
 #Strömungsgeschwindigkeit als Funktion der Dopplerwinkel für 5 verschiedene Flussgeschwindigkeiten bestimmen 
 # 10 mm Rohr
@@ -104,5 +102,34 @@ ax1.set_ylabel(r"$\frac{\Delta \nu}{\text{cos}(\alpha)} \, \left[ \text{Hz} \rig
 ax1.legend(loc="best")
 
 fig2.savefig("plot2.pdf")
-# 
-#
+# Apperantly ist die STeigung exakt gleich lol
+#a = 11655.012 ± 0.000
+#b = 0.000 ± 0.000
+#c = 11655.012 ± 0.000
+#d = 0.000 ± 0.000
+
+#2. Teil der Auswertung jaja 
+Tiefe_mus_10mm, delta_nu_3_10, delta_nu_6_10 = np.genfromtxt("content/Messwerte/Stroemungsprofil_10mm.txt", unpack = True)
+Tiefe_mus_16mm, delta_nu_3_16, delta_nu_6_16 = np.genfromtxt("content/Messwerte/Stroemungsprofil_16mm.txt", unpack = True)
+
+Stroemungsgeschwindigkeit_3_10 = Stroemungsgeschwindigkeit(alpha_15, nu_0, c, delta_nu_3_10)
+Stroemungsgeschwindigkeit_6_10 = Stroemungsgeschwindigkeit(alpha_15, nu_0, c, delta_nu_6_10)
+Stroemungsgeschwindigkeit_3_16 = Stroemungsgeschwindigkeit(alpha_15, nu_0, c, delta_nu_3_16)
+Stroemungsgeschwindigkeit_6_16 = Stroemungsgeschwindigkeit(alpha_15, nu_0, c, delta_nu_6_16)
+
+fig3, (ax3) = plt.subplots(1, 1, layout="constrained")
+ax3.plot(Tiefe_mus_10mm, abs(Stroemungsgeschwindigkeit_3_10), "x", label=r"$\text{Pumpgeschwindigkeit 3 l/min}$")
+ax3.plot(Tiefe_mus_10mm, abs(Stroemungsgeschwindigkeit_6_10), "x", label=r"$\text{Pumpgeschwindigkeit 6 l/min}$")
+ax3.set_xlabel(r"$\text{Messtiefe} \left[\mu\text{s}\right]$")
+ax3.set_ylabel(r"$v_{\text{Moment}} \,  \left[ \frac{\text{m}}{\text{s}} \right]$")
+ax3.legend(loc="best")
+fig3.savefig("plot3.pdf")
+
+fig4, (ax4) = plt.subplots(1, 1, layout="constrained")
+ax4.plot(Tiefe_mus_16mm, abs(Stroemungsgeschwindigkeit_3_16), "x", label=r"$\text{Pumpgeschwindigkeit 3 l/min}$")
+ax4.plot(Tiefe_mus_16mm, abs(Stroemungsgeschwindigkeit_6_16), "x", label=r"$\text{Pumpgeschwindigkeit 6 l/min}$")
+ax4.set_xlabel(r"$\text{Messtiefe} \left[\mu\text{s}\right]$")
+ax4.set_ylabel(r"$v_{\text{Moment}} \,  \left[ \frac{\text{m}}{\text{s}} \right]$")
+ax4.legend(loc="best")
+fig4.savefig("plot4.pdf")
+
