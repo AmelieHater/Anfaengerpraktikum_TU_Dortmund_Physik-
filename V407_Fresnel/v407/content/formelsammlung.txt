@@ -1,3 +1,33 @@
+\vec{S} = \vec{E} \times \vec{H} 
+\label{eqn:Poyntingvektor}
+
+\vec{S}| = v \cdot \varepsilon \cdot \varepsilon_0 \cdot \vec{E}²
+\label{eqn:Poyntingbetrag}
+
+\vec{E} = \vec{E_e} \exp{\left(\symup{i}\left(\vec{k}\cdot \vec{r} - \omega \cdot t\right)\right)}
+\label{eqn:ebene_Welle}
+
+n = \frac{c}{v}\, .
+\label{eqn:Brechungsindex}
+
+\vec{E}_e = \vec{E}_{\perp} + \vec{E}_{\parallel} \, .
+\label{eqn:Aufteilung}
+
+n = \frac{\sin{\alpha}{\sin{\beta}}}
+\label{eqn:snivellus}
+
+\vec{E}_{r,\perp} = - \vec{E}_{e,\perp} \frac{\left(\sqrt{n² - \sin{\alpha}²}- \cos{\alpha}\right)}{n² - 1}
+\label{eqn:E_r_senkrecht}
+
+\vec{E}_{r,\parallel} = \vec{E}_{e,\parallel} \frac{n² \cos{\alpha} - \sqrt{n² - \sin²{\alpha}}}{n² \cos{\alpha} + \sqrt{n² - \sin²{\alpha}}} \, .
+\label{eqn:E_r_parallel}
+
+\tan{\alpha_p} = n
+\label{eqn:Brewster}
+
+
+
+
 Statistische Formeln zum copy & pasten:
 
 Mittelwert:
