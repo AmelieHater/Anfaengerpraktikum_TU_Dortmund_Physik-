@@ -12,10 +12,17 @@ Die zu Erst gemessenen Werte des Nullstroms $I_0$ und des Dunkelstroms $I_{\text
 \end{align*}
 Wärhend der Messung des Dunkelstroms, ist das Photoelement einer maximalen Störung von anderen Lichtquellen ausgesetzt. Bei der Durchführung treffen nur minimale Störungen auf
 das Photoelement. Zusätzlich befindet sich die maximale Störung in einem kleinen Bereich, weswegen der Dunkelstrom im weiteren Verlauf der Auswertung vernachlässigt wird.
-
-\subsection{Berechnung des Brechungsindex}
+\\In der Tabelle \ref{tab:Messwerte} sind die gemessenen Photoströme in Abhängigkeit des Einfallswinkels $\alpha$ aufgelistet.
+Um die Brechungsindizes für s- und p-polarisiteres Licht zu bestimmen, werden die Gleichungen (\ref{eqn:E_r_senkrecht}) und (\ref{eqn:E_r_parallel}) nach $n_{\text{s}}$ und $n_{\text{p}}$
+umgestellt. Daraus ergeben sich
+\begin{align}
+  n_{\text{s}} &= \sqrt{\frac{E^2 - 2E\cos(2\alpha) + 1}{E^2- 2E + 1}} \label{eqn:n_s} \qquad {\text{und}}\\
+  n_{\text{p}} &= \sqrt{\left(\frac{1+E}{1-E}\right)^2 \frac{1}{2\cos^2(\alpha)} + \sqrt{\frac{(1+E)^2}{4\cos^4(\alpha)(1-E)^4}- \frac{1}{(1-E)^2} \tan^2(\alpha)}} \label{eqn:n_p}\,.
+  % n_{\text{p}} &= \sqrt{\frac{(1+E)^2}{(1-E)^2}\frac{1}{2\cos^2(\alpha)} + \frac{\sqrt{(1+E)^2-4\cos^2(\alpha)(1-E)^2\sin^2(\alpha)}}{2\cos^2(\alpha)(1-E)^2}}
+\end{align}
+Hierfür gilt $$E = \frac{E_{\text{ref}}}{E_{\text{ein}}} = \frac{I_{\text{ref}}(\alpha)}{I_0}\,.$$
 \begin{table}[H]
-  \centering
+  % \centering
   \caption{Gemessene Photoströme bei s- und p-polarisiertem Licht in Abhängigkeit vom Einfallswinkel $\alpha$.}
   \label{tab:Messwerte}
   \begin{tblr}{colspec={c c c|| c c c|| c c c}}
@@ -41,15 +48,6 @@ das Photoelement. Zusätzlich befindet sich die maximale Störung in einem klein
       \bottomrule
   \end{tblr}
 \end{table}
-In der Tabelle \ref{tab:Messwerte} sind die gemessenen Photoströme in Abhängigkeit des Einfallswinkels $\alpha$ aufgelistet.
-Um die Brechungsindizes für s- und p-polarisiteres Licht zu bestimmen, werden die Gleichungen (\ref{eqn:E_r_senkrecht}) und (\ref{eqn:E_r_parallel}) nach $n_{\text{s}}$ und $n_{\text{p}}$
-umgestellt. Daraus ergeben sich
-\begin{align}
-  n_{\text{s}} &= \sqrt{\frac{E^2 - 2E\cos(2\alpha) + 1}{E^2- 2E + 1}} \label{eqn:n_s} \qquad {\text{und}}\\
-  n_{\text{p}} &= \sqrt{\left(\frac{1+E}{1-E}\right)^2 \frac{1}{2\cos^2(\alpha)} + \sqrt{\frac{(1+E)^2}{4\cos^4(\alpha)(1-E)^4}- \frac{1}{(1-E)^2} \tan^2(\alpha)}} \label{eqn:n_p}\,.
-  % n_{\text{p}} &= \sqrt{\frac{(1+E)^2}{(1-E)^2}\frac{1}{2\cos^2(\alpha)} + \frac{\sqrt{(1+E)^2-4\cos^2(\alpha)(1-E)^2\sin^2(\alpha)}}{2\cos^2(\alpha)(1-E)^2}}
-\end{align}
-Hierfür gilt $$E = \frac{E_{\text{ref}}}{E_{\text{ein}}} = \frac{I_{\text{ref}}(\alpha)}{I_0}\,.$$
 Die berchneten Brechungsindizes sind in der Tabelle \ref{tab:Brechungsindex} aufgeführt. Durch systematische Fehler werden allerdings für das s-polarisierte Licht
 die Werte $n_{\text{s}} > 4$ und bei dem p-polarisiertem Licht alle Werte $n_{\text{p}} > 6$ vernachlässigt. Die daraus gemittelten Brechungsindizes sind
 \begin{align*}
@@ -57,16 +55,16 @@ die Werte $n_{\text{s}} > 4$ und bei dem p-polarisiertem Licht alle Werte $n_{\t
   \overline{n_{\text{p}}} &= 2,4\pm 1,1\,.
 \end{align*}
 Die Messdaten sind in der Abbildung \ref{fig:plot} dargestellt. Hierbei ist $\sqrt{\sfrac{I(\alpha)}{I_0}}$ gegen $\alpha$ aufgetragen. Zusätzlich sind in der Abbildung
-die Theoriekurven abgebildet, welche durch $\overline{n_{\text{s}}}$, $\overline{n_{\text{p}}}$ sowie den Gleichungen (\ref{eqn:}) und (\ref{eqn:}) bestimmt werden.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plot.pdf}
+die Theoriekurven abgebildet, welche durch $\overline{n_{\text{s}}}$, $\overline{n_{\text{p}}}$ sowie den Gleichungen (\ref{eqn:E_r_senkrecht}) und (\ref{eqn:E_r_parallel}) bestimmt werden.
+Außerdem wird anhand der Tabelle beim Minimum des p-polarisitem Licht ein Brewsterwinkel von $\alpha_{\text{B}} = 75\,°$ abgelesen. Dieser ist ebenfalls in der Abbildung \ref{fig:plot} eingezeichnet.
+Anhand dieses Brewsterwinkels lässt sich über die Gleichung (\ref{eqn:Brewster}) der theoretische Brechungsindex $$n = 3,73$$ ermitteln.
+\begin{figure}[H]
+  % \centering
+  \includegraphics[width=\textwidth]{plot.pdf}
   \caption{Graphische Darstellung der Messwerte mit der Theoriekurve und markiertem Brewsterwinkel.}
   \label{fig:plot}
 \end{figure}
-Außerdem wird anhand der Tabelle beim Minimum des p-polarisitem Licht ein Brewsterwinkel von $\alpha_{\text{B}} = 75\,°$ abgelesen. Dieser ist ebenfalls in der Abbildung \ref{fig:plot} eingezeichnet.
-Anhand dieses Brewsterwinkels lässt sich über die Gleichung (\ref{eqn:Brewster}) der theoretische Brechungsindex $$n = 3,73$$ ermitteln.
-  \begin{table}[H]
+\begin{table}[H]
     \centering
     \caption{Brechnete Brechungsindizes in Abhängigkeit des Winkels und der Intensität.}
     \label{tab:Brechungsindex}
