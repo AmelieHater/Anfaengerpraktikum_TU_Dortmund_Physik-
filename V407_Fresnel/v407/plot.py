@@ -40,8 +40,8 @@ n_p = n_parallel(I_plot_p, winkel)
 print(f'n_s: {np.round(n_s,2)}')
 print(f'n_p: {np.round(n_p,2)}')
 
-n_s_mean = ufloat(np.mean(n_s[n_s < 4]), np.std(n_s[n_s < 4]))
-n_p_mean = ufloat(np.mean(n_p[n_p < 4]), np.std(n_p[n_p < 4]))
+n_s_mean = ufloat(np.mean(n_s[n_s < 6]), np.std(n_s[n_s < 4]))
+n_p_mean = ufloat(np.mean(n_p[n_p < 6]), np.std(n_p[n_p < 4]))
 n_s_mean_schlecht = ufloat(np.mean(n_s), np.std(n_s))
 n_p_mean_schlecht = ufloat(np.mean(n_p), np.std(n_p))
 
