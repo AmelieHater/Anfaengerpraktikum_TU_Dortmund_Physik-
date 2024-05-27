@@ -62,7 +62,7 @@ ax1.plot(winkel * 180/np.pi, I_plot_p, 'x', color='darkorange', label='Messdaten
 # ax1.plot(x * 180/np.pi, fresnel_parallel(np.mean(n_p[n_p < 6 ]) , x), '-', color='orangered', label='Theoriekurve parallel')
 ax1.plot(x_1, fresnel_parallel(unp.nominal_values(n_p_mean) , x_1*np.pi/180), '-', color='orangered', label='Theoriekurve parallel')
 ax1.plot(x_2, -1*fresnel_parallel(unp.nominal_values(n_p_mean), x_2*np.pi/180), '-', color='orangered')
-ax1.vlines(75, ymin = 0, ymax = 1.05, linestyle = ':', label='Brewsterwinkel')
+ax1.vlines(75, ymin = 0, ymax = 1.05, color = 'mediumorchid',linestyle = ':', label='Brewsterwinkel')
 ax1.set_xlabel(r'$\alpha\,[°]$')
 ax1.set_ylabel(r'$\sqrt{\frac{I_{r}(\alpha)}{I_0}}$')
 ax1.ticklabel_format(axis='y', style='sci', scilimits=(0,0))
