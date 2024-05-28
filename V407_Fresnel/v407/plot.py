@@ -19,7 +19,7 @@ def n_senkrecht(E,alpha):
 #     return np.sqrt(((1+E)/(1-E))**2 * (1/(2* np.cos(alpha)**2)) + (1/(2*np.cos(alpha)**2 *(1-E)**2))*np.sqrt((1+E)**2-4*np.cos(alpha)**2*(1-E)**2*np.sin(alpha)**2))
 
 def n_parallel(E,alpha):
-    return np.sqrt((1+E)**2/(1-E)**2 * 1/(2*np.cos(alpha)**2) + np.sqrt((1+E)**2/(4*np.cos(alpha)**4*(1-E)**4)-1/(1-E)**2 * np.tan(alpha)**2))
+    return np.sqrt((1+E)**2/(1-E)**2 * 1/(2*np.cos(alpha)**2) + np.sqrt((1+E)**4/(4*np.cos(alpha)**4*(1-E)**4)-1/(1-E)**2 * np.tan(alpha)**2))
 
 winkel, I_senkrecht, I_parallel = np.genfromtxt('content/Messwerte/Messwerte.txt', unpack = True)
 winkel = winkel * np.pi/180
