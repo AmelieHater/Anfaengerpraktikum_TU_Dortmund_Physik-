@@ -1,0 +1,16 @@
+# Diodenlaser: 645nm
+# Hebeluntersetzung ü =1:5.046
+# Raumtemperatur T=21.6°
+# Standardfehler Schraube 0.01mm
+# Umgebungsdruck 1019.2HPa
+# Impulszähler
+3000
+3004
+3001
+2986
+2997
+2854
+3006
+3008
+3070
+3057
