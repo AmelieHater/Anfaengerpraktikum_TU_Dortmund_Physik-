@@ -10,8 +10,8 @@ lambda_theo = 645 * 10**(-9) # m (Diodenlaser)
 u = 5.046
 T_0 = 273.15
 T = 21.6 + 273.15 # K 
-# p_0 = 1019.2 * 100 # Pa
-p_0 = 1013.25 * 100 #Pa
+p_0 = 1019.2 * 100 # Pa
+# p_0 = 1013.25 * 100 #Pa
 
 z_0 = np.genfromtxt("content/Messdaten/Messwerte.txt", unpack=True)
 z = ufloat(np.mean(z_0), np.std(z_0)) 
@@ -37,7 +37,7 @@ delta_n2 = (z2 * lambda_theo)/(2*D)
 print(f'delta_n1 = {delta_n1}')
 print(f'delta_n2 = {delta_n2}')
 
-p = 700 * 133.3 #Pa
+p = 500 * 133.3 #Pa
 n_exp1 = 1 + delta_n1 * (T/T_0) * (p_0/p)
 n_exp2 = 1 + delta_n2 * (T/T_0) * (p_0/p)
 n_theo = 1.000292
