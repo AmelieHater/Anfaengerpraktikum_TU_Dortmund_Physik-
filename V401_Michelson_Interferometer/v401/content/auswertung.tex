@@ -1,11 +1,68 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Berechnung der Wellenlänge}
+Die Messung wird von $x_1 = (6 \pm 0,01)\,\unit{\milli\metre}$ bis $x_2 = (11 \pm 0,01)\,\unit{\milli\metre}$ durchgeführt. Außerdem besitzt die Mikrometerschraube ein Hebeluntersetzungsverhältnis von 
+$1 : 5,046$.  Demnach ergibt sich für die gemessene Distanz $x = (0,09909\pm 0,0020) \,\unit{\milli\metre}$. Die gemessenen Impulszählraten über diese Distanz sowie die daraus gemittelte Impulszählrate
+sind in der Tabelle \ref{tab:Impulszählrate} aufgelistet.
+\begin{table}[H]
+    \centering
+    \caption{Gemesse Impulszählraten über eine Distanz von $x = (0,09909\pm 0,0020) \,\unit{\milli\metre}$ zur Bestimmung der Wellenlänge des Diodenlasers.}
+    \label{tab:Impulszählrate}
+    \begin{tblr}{colspec={c}}
+        \toprule
+        $z$\\
+        \midrule
+        3000\\
+        3004\\
+        3001\\
+        2986\\
+        2997\\
+        2854\\
+        3006\\
+        3008\\
+        3070\\
+        3057\\
+        \midrule
+        $\overline{z} = 3000\pm50$\\
+        \bottomrule
+    \end{tblr}
+\end{table}
+Anhand von $\overline{z}$, der Distanz $x$ und der Gleichung (/ref{eqn:}) wird die Wellenlänge des Diodenlasers bestimmt. Deraus ergibt sich
+$$\lambda _{\text{exp}} = (661 \pm 12)\,\unit{\nano\metre}\,.$$
+Die Wellenlänge des Diodenlasers laut Herstellerangabe lautet
+$$\lambda = 645\,\unit{\nano\metre}\,.$$
 
-% \begin{figure}
-%   \centering
-%   \includegraphics{plot.pdf}
-%   \caption{Plot.}
-%   \label{fig:plot}
-% \end{figure}
-
-%Siehe \autoref{fig:plot}!
+\subsection{Berechnung des Brechungsindex von Luft}
+Für Messwerte zur Bestimmung der Brechungsindices und die gemittelten Werte sind in der Tabelle {\ref{tab:Vakuum}} aufgeführt. Bei dieser Messung wird
+eine Gaszelle mit einer Länge von $D = 50 \,\unit{\milli\metre}$ verwendet. 
+\begin{table}[H]
+    \centering
+    \caption{Gemesse Impulszählraten bei der Evakuierung von der Gaszelle zur Bestimmung der Brechungsindices.}
+    \label{tab:Vakuum}
+    \begin{tblr}{colspec={c c}}
+        \toprule
+        $z_{\text{Evak.}}$ & $z_{\text{Belüft.}}$\\
+        \midrule
+        10&  22\\
+        13&  29\\
+        9 &  29\\
+        8 &  29\\
+        9 &  26\\
+        \midrule
+        $\overline{z}_{\text{Evak.}} = 9,8\pm1,7$ & $\overline{z}_{\text{Belüft.}} = 27,0\pm2,8$\\
+        \bottomrule
+    \end{tblr}
+\end{table}
+Die Brechungsindices werden mithilfe der Gleichung (\ref{eqn:}) berechnet. Hierbei ist $T_0 = 0\,\unit{\celsius} = 273,15\,\unit{\kelvin}$ und $\rho_0 = 1013,25\,\unit{\hecto\pascal}$
+bei Normalbedingung verwendet. Außerdem ist die Umgebungstemperatur $T=21,6\,\unit{\celsius} = 294,75\,\unit{\kelvin}$ und der Druck durch die Pumpe lautet
+$\Delta \rho = 700 \,\unit{\milli\metre}\ce{Hg} = 933,10\,\unit{\hecto\pascal}$. Das benötigte $\Delta n$ wird durch die Gleichung (\ref{eqn:}) und der Wellenlänge $\lambda$ laut Herstellerangabe 
+bestimmt. Demnach ergeben sich
+\begin{align*}
+    \Delta n_{\text{Evak.}} &= (6,3\pm1,1)\cdot 10^{-5}\\
+    \Delta n_{\text{Belüft.}} &= (17,4\pm1,8)\cdot 10^{-5}\,.
+\end{align*}
+Daraus folgt für die Brechungsindices
+\begin{align*}
+    n_{\text{Evak.}} &=(1,000074\pm0,000013)\\
+    n_{\text{Belüft.}} &= (1,000204\pm0,000021)\,.
+\end{align*}
