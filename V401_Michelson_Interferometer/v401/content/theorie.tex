@@ -21,7 +21,7 @@ genau zu bestimmen. Der schematische Aufbau ist in Abbildung (\ref{fig:Aufbau}) 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{"content/Bilder/V401.png"}
-    \caption{Schematischer Aufbau eines Michelson Interferometer.}
+    \caption{Schematischer Aufbau eines Michelson Interferometer \cite{anleitungV401}.}
     \label{fig:Aufbau}
 \end{figure}
 Das Michelson Interferometer funktioniert dadurch, dass der eingehende Laserstrahl mithilfe einer Teilerplatte in zwei Strahlen aufgeteilt wird, die sich senkrecht 
@@ -33,8 +33,24 @@ der Abstand $x$ zu
 \begin{equation}
     x = \frac{2}{\lambda \cdot z}
 \end{equation}
-mit $z$ als Häufogkeit der Wechsels zwischen Minimum und Maximum. 
+mit $z$ als Häufigkeit der Wechsels zwischen Minimum und Maximum bestimmt werden. \\
+Zur Bestimmung des Brechungsindices von Luft wir die Formel 
+\begin{equation}
+    D \cdot \Delta n = \frac{z \cdot \lambda}{2}
+\end{equation}
+verwendet. $D$ ist dabei die Länge der Gaszelle (in diesem Experiment $50 \,\unit{\milli\meter}$). Mithilfe des idealen Gasgesetzes 
+\begin{equation}
+    p \cdot V = n \cdot R \cdot T
+    \label{eqn:Ideale_Gasgleichung}
+\end{equation}
+kann die Druckdifferenz $\Delta p$ bestimmt werden. Der Brechungsindex $n$ wird daher durch 
+\begin{equation}
+    n = 1 + \Delta n \cdot \frac{T}{T_0} \cdot \frac{p_0}{\Delta p}
+    \label{eqn:Brechungsindex}
+\end{equation}
+berechnet. $T_0$ und $p_0$ sind dabei die Temperatur und der Druck bei Normalbedingung. 
 \subsection{Vorbereitungsaufgaben}
 \label{sec:Vorbereitungsaufgaben}
-% Zur Vorbereitung sollten die Brechungsindices von Luft, CO und CO_2 recherchiert werden. Der Brechungsindex von Luft ist , der von CO ist und der von CO_2 ist . 
-% \left(\right)
+Zur Vorbereitung sollten die Brechungsindices von Luft, $\ce{CO}$ und $\ce{CO_2}$ recherchiert werden. Der Brechungsindex von Luft ist $1,000292$ \cite{Luft},
+ der von $\ce{CO}$ ist $1,0003$ \cite{CO}
+und der von $\ce{CO_2}$ ist $1,0004$ \cite{CO_2}. 
