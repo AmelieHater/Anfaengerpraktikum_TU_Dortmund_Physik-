@@ -1,0 +1,18 @@
+#Aufgenommen bei 2,3 A Beschleunigungsstrom und 5 Volt Heizspannung
+#U in Volt; I in milliAmpere
+15      0.052
+30      0.128
+45      0.214
+60      0.306
+75      0.402
+90      0.491
+105     0.557
+120     0.609
+135     0.644
+150     0.667
+165     0.683
+180     0.694
+195     0.702
+210     0.709
+225     0.714
+240     0.719
