@@ -1,4 +1,4 @@
-#Aufgenommen bei 2,3 A Beschleunigungsstrom und 5 Volt Heizspannung
+#Aufgenommen bei 2,3 A Heizstrom und 5 Volt Heizspannung
 #U in Volt; I in milliAmpere
 15      0.052
 30      0.128

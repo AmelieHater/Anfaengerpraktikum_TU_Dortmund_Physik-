@@ -1,4 +1,4 @@
-#Aufgenommen bei 2 A Beschleunigungsstrom und 4 Volt Heizspannung (kleine Veränderung2)
+#Aufgenommen bei 2 A Heizstrom und 4 Volt Heizspannung
 #U in Volt; I in milliAmpere
 10      0.013
 20      0.029
