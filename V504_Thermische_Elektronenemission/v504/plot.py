@@ -15,10 +15,10 @@ U_V_4, I_mA_4 = np.genfromtxt("content/Messdaten/Kennlinie_4.txt", unpack = True
 U_V_5, I_mA_5 = np.genfromtxt("content/Messdaten/Kennlinie_5.txt", unpack = True) 
 
 fig, (ax1) = plt.subplots(1, 1, layout="constrained")
-ax1.plot(U_V_1, I_mA_1, "x",  label="Kennlinie 1")
-ax1.plot(U_V_2, I_mA_2, "x", label="Kennlinie 2")
-ax1.plot(U_V_3, I_mA_3, "x", label="Kennlinie 3")
-ax1.plot(U_V_4, I_mA_4, "x", label="Kennlinie 4")
+ax1.plot(U_V_1, I_mA_1, "x", label="bei $I_{Heiz} = 2$")
+ax1.plot(U_V_2, I_mA_2, "x", label="bei $I_{Heiz} = 2,1$")
+ax1.plot(U_V_3, I_mA_3, "x", label="bei $I_{Heiz} = 2,2$")
+ax1.plot(U_V_4, I_mA_4, "x", label="bei $I_{Heiz} = 2,3$")
 ax1.set_xlabel(r"$U \,\,[\text{V}]$")
 ax1.set_ylabel(r"$A \,\,[\text{mA}]$")
 ax1.legend(loc="best")
@@ -27,7 +27,7 @@ fig.savefig("plot_1.pdf")
 
 
 fig, (ax2) = plt.subplots(1, 1, layout="constrained")
-ax2.plot(U_V_5, I_mA_5, "x",  label="Kennlinie 5")
+ax2.plot(U_V_5, I_mA_5, "x",  label="bei $I_{Heiz} = 2,4$")
 ax2.set_xlabel(r"$U \,\,[\text{V}]$")
 ax2.set_ylabel(r"$A \,\,[\text{mA}]$")
 ax2.legend(loc="best")
