@@ -8,3 +8,16 @@ $$\Delta \bar{x} = \sqrt{\frac{1}{n \cdot (n - 1)} \cdot \sum_{i = 1}^{n}(x_i - 
 
 Gauß:
 $$\Delta f = \sqrt{\sum_{i = 1}^{n} \left( \frac{\partial f}{\partial x_i} \right)^2 \cdot \left(\Delta x_i \right)^2}$$
+
+f(E)\approx \exp\left( \frac{\xi - E}{k_{\text{B}}T}\right)
+    \label{eqn:Wahrscheinlichkeit_hoheEnergie}
+
+j_{\text{S}}(T)= 4 \pi \frac{e_0 m_0 k_{\text{B}^2}}{h^3} T^2 \exp \left( \frac{-e_0 \phi}{k_{\text{B}}T}\right)
+    \label{eqn:RichardsonGleichung}
+
+j(V)=j_0 \exp \left( -\frac{e_0 \phi_{\text{A}}+e_0V}{k_{\text{B}T}}\right) = \text{const}\,\exp \left(-\frac{e_0V}{k_{\text{B}}T}\right)\,.
+    \label{eqn:Anlaufstrom}
+
+j = \frac{4}{9}\varepsilon_0 \sqrt{2 \frac{e_0}{m_0}}\frac{V^{\sfrac{3}{2}}}{a^2}
+    \label{eqn:Raumladungsgesetz}
+
