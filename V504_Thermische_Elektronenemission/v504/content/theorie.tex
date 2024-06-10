@@ -74,5 +74,13 @@ größer als die Austrittsarbeit $\phi_{\text{A}}$ ist. Das Raumladungsgebiet wi
 beschrieben. In dem Raumladungsgebiet werden nicht alle emittierten Elektronen vom Anodenfeld erfasst, wodurch der gemessene Diodenstrom kleiner als der Sättigugnsstrom ist. 
 Hierbei ist die Geschwindigkeit der Elektronen nicht konstant und die Raumladugnsdichte $\rho$ der Elektronen nimmt zur Anhode hin ab. 
 Da die Raumladugnsdichte den Verlauf der Feldstärke zwischen der Anode und Kathode beschreibt, reichen die Feldlinien, die von der Anode ausgehen, nicht mehr vollständig bis zur Kathode.
-Zuletzt ist in der Kennlinie der Sättigungsstromgebiet gekennzeichnet, der in \ref{sec:Sättigungsstromdichte} erläutert wird. Mithilfe von Ausschnitten der Kennlinie können die Kathodentemperatur sowie
-die Austrittsarbeit der Kathode bestimmt werden. 
+Zuletzt ist in der Kennlinie der Sättigungsstromgebiet gekennzeichnet, der in \ref{sec:Sättigungsstromdichte} erläutert wird. Mithilfe von Ausschnitten der Kennlinie können die Kathodentemperatur $T$ sowie
+die Austrittsarbeit der Kathode bestimmt werden.\\
+Die Kathodentemperatur kann mithilfe aus der Leistungsbilanz des Heizstromfadens berechnet werden. Hier lautet die zugeführte Leistung lautet $N_{\text{zu}}=V_{\text{f}} I_{\text{f}}$.
+Diese wird über Wärmestrahlung und Wärmeleitung der Fadenhalterung wieder abgegeben. Hier kann für die Wärmeleitung zu $N_{\text{WL}}=0,9 - 1\,\unit{\watt}$ abgeschätzt werden. Nach dem Stefan-Boltzmannschen Gesetzt ergibt sich für die
+Strahlungsleistung $N_{\text{W}} = f\eta \sigma T^4$, wobei $\sigma = 5,7 \cdot 10^{-12}\,\sfrac{\unit{\watt}}{\unit{\centi\metre^2 \kelvin ^4}}$ gilt. $f$ ist die emittierende Kathodenoberfläche und $\eta =0,28$ der Emissionsgrad der Oberfläche.
+Aus dem Energiesatz ergibt sich 
+\begin{equation}
+    I_{\text{f}}U_{\text{f}} = f \eta \sigma T^4 + N_{\text{WL}}\,.
+    \label{eqn:aufWunschvonAmelie}
+\end{equation}
