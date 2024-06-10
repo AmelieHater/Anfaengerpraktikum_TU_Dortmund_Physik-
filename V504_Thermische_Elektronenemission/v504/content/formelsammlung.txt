@@ -21,3 +21,5 @@ j(V)=j_0 \exp \left( -\frac{e_0 \phi_{\text{A}}+e_0V}{k_{\text{B}T}}\right) = \t
 j = \frac{4}{9}\varepsilon_0 \sqrt{2 \frac{e_0}{m_0}}\frac{V^{\sfrac{3}{2}}}{a^2}
     \label{eqn:Raumladungsgesetz}
 
+I_{\text{f}}U_{\text{f}} = f \eta \sigma T^4 + N_{\text{WL}}
+    \label{eqn:aufWunschvonAmelie}
