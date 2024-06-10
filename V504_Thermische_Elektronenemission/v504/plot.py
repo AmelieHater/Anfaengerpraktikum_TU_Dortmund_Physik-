@@ -120,3 +120,8 @@ print(phi)
 #Mittelwert der Austrittsarbeiten bestimmen 
 phi_mean = ufloat(np.mean(phi), sp.stats.sem(phi))
 print(phi_mean) #Output: 5.150+/-0.032
+
+#Relative Abweichung bestimmen
+print("Abweichung zu 3/2: ", rel_Abweichung(1.26, 3/2))
+print("Abweichung der Kathodentemperatur: ", rel_Abweichung(1500, 2131.90))
+print("Abweichung der Austrittsarbeit: ", rel_Abweichung(5.15, 4.54))
