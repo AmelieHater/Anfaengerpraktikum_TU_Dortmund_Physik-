@@ -1,6 +1,6 @@
 # Blaue Linie
 # Spannung U[V] Photostrom I[A]
--1.05   2e-11
+-1.05   0
 -1      3e-11
 -0.96   3.8e-11
 -0.94   5.2e-11
