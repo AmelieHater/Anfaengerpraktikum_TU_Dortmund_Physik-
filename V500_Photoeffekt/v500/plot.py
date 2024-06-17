@@ -7,6 +7,7 @@ import scipy.constants as const
 from scipy.optimize import curve_fit
 
 def rel_Abweichung(exp, theo):
+    exp = np.abs(unp.nominal_values(exp))
     return (np.abs(exp-theo)/(theo)*100) #ist schon in Prozent
 
 def linear(x, m, b):
@@ -206,7 +207,7 @@ ax6.plot(
 )
 ax6.legend(loc='best')
 ax6.set_ylabel(r'$U_{\text{G}}\,$[eV]')
-ax6.set_xlabel(r'$f\,$[Hz]')
+ax6.set_xlabel(r'$\nu\,$[Hz]')
 ax6.grid()
 ax6.set_xlim([0, 8e14])
 ax6.set_ylim([-1.20, 1.5])
@@ -236,7 +237,7 @@ ax7.plot(
 )
 ax7.legend(loc='best')
 ax7.set_ylabel(r'$U_{\text{G}}\,$[eV]')
-ax7.set_xlabel(r'$f\,$[Hz]')
+ax7.set_xlabel(r'$\nu\,$[Hz]')
 ax7.grid()
 ax7.set_xlim([0, 8e14])
 ax7.set_ylim([-1.1, 1.4])
@@ -245,8 +246,9 @@ fig7.savefig('Plots/planck_gemessen.pdf')
 print(f'm und b von f-U Diagramm gemessen {params6}')
 
 h = const.h/const.e
-phi_a = 4.50
-phi_a2 = 4.81
+phi_a = 4.05
+phi_a2 = 4.6
+phi_a_Ka = 2.25
 print(f'e = {const.e}')
 print(f'h = {h} eVs')
 print(f'f g, o, b, v: {f_all}')
@@ -260,8 +262,14 @@ phi_rel_gemessen = rel_Abweichung(params6[1], phi_a)
 phi_rel_berechnet = rel_Abweichung(params5[1], phi_a)
 phi_rel_gemessen2 = rel_Abweichung(params6[1], phi_a2)
 phi_rel_berechnet2 = rel_Abweichung(params5[1], phi_a2)
+phi_rel_gemessen_Ka = rel_Abweichung(params6[1], phi_a_Ka)
+phi_rel_berechnet_Ka = rel_Abweichung(params5[1], phi_a_Ka)
 
 print(f'Abweichung h gemessen = {h_rel_gemessen}')
 print(f'Abweichung h berechnet = {h_rel_berechnet}')
-print(f'Abweichung phi gemessen = {phi_rel_gemessen2} - {phi_rel_gemessen}')
-print(f'Abweichung phi berechnet = {phi_rel_berechnet2} - {phi_rel_berechnet}')
+print(f'Abweichung Ag phi gemessen = {phi_rel_gemessen2} - {phi_rel_gemessen}')
+print(f'Abweichung Ag phi berechnet = {phi_rel_berechnet2} - {phi_rel_berechnet}')
+print(f'Abweichung Ka phi gemessen = {phi_rel_gemessen_Ka}')
+print(f'Abweichung Ka phi berechnet = {phi_rel_berechnet_Ka}')
+print(params6)
+print(params5)

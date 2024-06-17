@@ -8,12 +8,12 @@
 Die gemessenen Photoströme und die zugehörigen Spannungen bei vollsändiger Beleuchtungsstärke sind in der Tabelle (\ref{tab:Strom-Spannung}) aufgelistet. 
 Zusätzlich sind die Photströme bei einer halben Beleuchtungsstärke in der Tabelle (\ref{tab:halbe-Stärke}) aufgeführt.
 Für die Auswertung werden allerdings diese und die folgenden Spannungen der Messungen mit (-1) multipliziert, damit für die Berechnung der Planck-Konstante 
-das richtige Vorzeichen herauskommt. Jedoch wird durch das wechselnde Vorzeichen der Spannungen die weitere Auswertung qualitativ nicht benachteiligt. Diese
-Umrechnung wäre durch umschalten des Schaltbilds nicht nötig gewesen. \\
+das richtige Vorzeichen herauskommt. Jedoch wird durch das wechselnde Vorzeichen der Spannungen die weitere Auswertung qualitativ nicht beeinträchtigt. Diese
+Umrechnung hätte durch umschalten des Schaltbilds verhindert werden können. \\
 Mithilfe der beiden Messreihen werden zwei Strom-Spannungs Kennlinien in der Abbildung (\ref{fig:Plot1}) graphisch dargestellt. Der Verlauf dieser beiden
-Messreihen entspricht den Erwartungen. Bei einer höheren Beschleunigungsspannung nähert sich der Photostrom asymptotisch den Maximum an. Wenn die Spannung sich
-der Grenzspannung annähert, nimmt der Photostrom quadratitisch ab. Dieser Verlauf wird in der Abbildung (\ref{fig:blau}) genauer dargestellt. Außerdem ist anhand der Abbildung (\ref{fig:Plot1})
-zu erkennen, dass der Photostrom sich mit einem kleinem Spalt bzw. mit einer kleineren Belecuhtungsstärke, ebenfalls verkleinert. 
+Messreihen entspricht den Erwartungen. Bei einer höheren Beschleunigungsspannung nähert sich der Photostrom asymptotisch dem Maximum an. Wenn die Spannung sich
+der Grenzspannung annähert, nimmt der Photostrom quadratisch ab. Dieser Verlauf wird in der Abbildung (\ref{fig:blau}) genauer dargestellt. Außerdem ist anhand der Abbildung (\ref{fig:Plot1})
+zu erkennen, dass der Photostrom sich mit einem kleinem Spalt bzw. mit einer kleineren Beleuchtungsstärke, ebenfalls verkleinert, was ebenfalls den Erwartungen entspricht. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Plots/Plot1.pdf}
@@ -22,7 +22,7 @@ zu erkennen, dass der Photostrom sich mit einem kleinem Spalt bzw. mit einer kle
 \end{figure}
 \begin{table}[H]
     \centering
-    \caption{Gemessene Photoströme in Abhängigkeit der Spannung bei ganzer Beleuchtungsstärke.}
+    \caption{Gemessene Photoströme in Abhängigkeit der Spannung bei ganzer Beleuchtungsstärke für die blaue Linie.}
     \label{tab:Strom-Spannung}
     \begin{tblr}{colspec ={c c || c c || c c}}
         \toprule
@@ -43,7 +43,7 @@ zu erkennen, dass der Photostrom sich mit einem kleinem Spalt bzw. mit einer kle
 \end{table}
 \begin{table}[H]
     \centering
-    \caption{Gemessene Photoströme in Abhängigkeit der Spannung bei halber Beleuchtungsstärke.}
+    \caption{Gemessene Photoströme in Abhängigkeit der Spannung bei halber Beleuchtungsstärke für die blaue Linie.}
     \label{tab:halbe-Stärke}
     \begin{tblr}{colspec ={c c || c c }}
         \toprule
@@ -157,13 +157,13 @@ Demnach ergeben sich die folgenden Grenzspannungen
 \subsection{Planck-Konstante und Austrittsarbeit des Kathodenmaterials}
 Um die Plank-Konstante und die Austrittsarbeit zu bestimmen, werden die Grenzspannungen benötigt.
 Zunächst werden die Grenzspannungen betrachtet, welche anhand der jeweiligen Tabellen abgelesen werden. 
-Diese werden anschließend gegen die Frequenz $f$ aufgetragen und eine Ausgleichsgerade wird eingezeichnet.
+Diese werden anschließend gegen die Frequenz $\nu$ aufgetragen und eine Ausgleichsgerade wird eingezeichnet.
 Die zugehörigen Frequenzen sind in der Tabelle (\ref{tab:Wellenlaengen}) aufgeführt.
-Die Ausgleichsgerade ergibt sich aus den Gleichungen (\ref{eqn:}) und (\ref{eqn:}), weswegen die Steigung der Planck-Konstante in 
-\unit{\eV\second} und der Betrag vom $y$-Achsen Abschnitt der Austrittsarbeit $\phi_{\text{A}}$ in \unit{\eV} entspricht. Daraus folgt
+Die Ausgleichsgerade ergibt sich aus den Gleichungen (\ref{eqn:E_gamma}) und (\ref{eqn:E_gamma2}), weswegen die Steigung der Planck-Konstante in 
+\unit{\eV\second} und der Betrag vom $y$-Achsen Abschnitt der Austrittsarbeit $\Phi_{\text{A}}$ in \unit{\eV} entspricht. Daraus folgt
 \begin{align*}
     h_{\text{exp,}1} &= (2,95 \pm 0,25)\,\unit{\eV\second}\\
-    \phi_{\text{A,exp,}1} &= (1,03 \pm 0,16) \, \unit{\eV}\,.\\
+    \Phi_{\text{A,exp,}1} &= (1,03 \pm 0,16) \, \unit{\eV}\,.\\
 \end{align*}
 \begin{figure}[H]
     \centering
@@ -172,11 +172,11 @@ Die Ausgleichsgerade ergibt sich aus den Gleichungen (\ref{eqn:}) und (\ref{eqn:
     \label{fig:Planck_gemessen}
 \end{figure}
 Bei der zweiten Methode wird die Planck-Konstante sowie die Austrittsarbeit mithilfe der berechneten Grenzspannungen
-aus den Ausgelichsgeraden in (\ref{sec:Grenzspannungen}) berechnnet. Damit werden wie bei der ersten Methode die Grenzspannungen
+aus den Ausgleichsgeraden in (\ref{sec:Grenzspannungen}) berechnnet. Damit werden wie bei der ersten Methode die Grenzspannungen
 gegen die Frequenz aufgetragen und eine Ausgleichsgerade durchgezogen. Durch die Ausgleichsgerade ergeben sich die Werte 
 \begin{align*}
     h_{\text{exp,}2} &= (3,219 \pm 0,098)\,\unit{\eV\second}\\
-    \phi_{\text{A,exp,}2} &= (1,14 \pm 0,06) \, \unit{\eV}\,.\\
+    \Phi_{\text{A,exp,}2} &= (1,14 \pm 0,06) \, \unit{\eV}\,.\\
 \end{align*}
 \begin{figure}[H]
     \centering
