@@ -96,14 +96,18 @@ print("T = ",T)
 #T =  1484.179499962159
 
 #Bestimmung der Kathodentemperaturen und der Austrittsarbeit von Wolfram
-sigma = 5.7 * 10**(-12) # in W/(cm² K⁴)
-f = 0.32 #in cm²
+sigma = 5.670374419e-08 #5.7 * 10**(-12) # in W/(cm² K⁴)
+h = 6.62607015e-34 #von Fritz
+k = 1.380649e-23 #von Fritz
+m_0 = 9.1093837015e-31 #von Fritz
+e_0 = 1.602176634e-19 # auch von Fritz
+f = 3.2e-05 #0.32 #in cm²
 eta = 0.28 #Emissionsgrad der Oberfläche 
 N_WL = 0.95 #in Watt
 I_Heiz = (2,2.1,2.2,2.3,2.4)
 U_Heiz = (4,4,4.5,5,5)
 T_array = ((np.multiply(I_Heiz, U_Heiz) - N_WL)/(f*eta*sigma))**(1/4)
-print(T_array)
+print("T_array: ",T_array)
 #Output: [1927.53184987 1954.30953913 2046.0207907  2131.90279307 2156.72540037]
 
 #Austrittsarbeit damit berechnen
@@ -112,10 +116,11 @@ print(T_array)
 #3.Kennlinie = 0.319
 #4.Kennlinie = 0.719
 #5.Kennlinie = 1.356
-I_S = np.array([0.060, 0.140, 0.319, 0.719, 1.356]) #ist wahrscheinlich der Sättigungsstrom
-phi = - (const.Boltzmann * T_array)/(const.elementary_charge) * np.log(I_S * (const.Planck)**3 /(4 * np.pi * f * const.electron_mass * const.elementary_charge * (const.Boltzmann)**2 * T_array**2))
-print(const.Planck)
-print(phi)
+I_S = np.array([60e-6, 140e-6, 319e-6, 719e-6, 1356e-6])  #([0.060, 0.140, 0.319, 0.719, 1.356]) #ist wahrscheinlich der Sättigungsstrom
+#phi = - (const.Boltzmann * T_array)/(const.elementary_charge) * np.log(I_S * (const.Planck)**3 /(4 * np.pi * f * const.electron_mass * const.elementary_charge * (const.Boltzmann)**2 * T_array**2))
+phi = -k*T_array*(np.log(I_S*h**3/(4*np.pi*e_0*m_0*k**2*f*T_array**2)))/e_0
+#print(const.Planck)
+#print(phi)
 #Output phi = [5.11614313 5.04917175 5.15708723 5.23936631 5.18676248]
 #Mittelwert der Austrittsarbeiten bestimmen 
 phi_mean = ufloat(np.mean(phi), sp.stats.sem(phi))
@@ -123,8 +128,8 @@ print(phi_mean) #Output: 5.150+/-0.032
 
 #Relative Abweichung bestimmen
 print("Abweichung zu 3/2: ", rel_Abweichung(1.26, 3/2))
-print("Abweichung der Kathodentemperatur: ", rel_Abweichung(1500, 2131.90))
-print("Abweichung der Austrittsarbeit: ", rel_Abweichung(5.15, 4.54))
+print("Abweichung der Kathodentemperatur: ", rel_Abweichung(1500, 2134.68))
+print("Abweichung der Austrittsarbeit: ", rel_Abweichung(4.75, 4.54))
 
 #Abweichung zu 3/2:  16.0
 #Abweichung der Kathodentemperatur:  29.640227027534127
