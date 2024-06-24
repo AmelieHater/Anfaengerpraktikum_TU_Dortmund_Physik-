@@ -29,11 +29,15 @@ delta_x = delta_x_alt * (0.4/10) #delta_x in Volt
 Steigung_01 = delta_y/delta_x
 U_Kaestchen = np.array([5,15,25,35,45,55,65,75,85,95,105,115,125,135,145,155,165,175,182.5,187.5,192.5,197.5,202.5,207.5,215,225,235])
 U_01 = U_Kaestchen * (0.4/10)
+print("U_01: ", U_01)
+print("Steigung_01: ", Steigung_01)
 
 fig, (ax1) = plt.subplots(1, 1, layout="constrained")
 ax1.plot(U_01, Steigung_01,"x", label="Lokale Steigung")
+ax1.vlines(U_01[np.argmax(Steigung_01)], -1, 18.2, "k", linestyle ="--")
 ax1.set_xlabel(r"$U \left[ \text{V}\right]$")
 ax1.set_ylabel(r"$I/U \left[ \text{nA/V}\right]$")
+ax1.set_ylim(-1)
 ax1.legend(loc="best")
 fig.savefig("plot1.pdf")
 
@@ -58,9 +62,12 @@ ax2.set_xlabel(r"$U \left[ \text{V}\right]$")
 ax2.set_ylabel(r"$I/U \left[ \text{nA/V}\right]$")
 ax2.legend(loc="best")
 fig.savefig("plot2.pdf")
+print("U_01_2: ", U_01_2)
+print("Steigung_01_2: ", Steigung_01_2)
 
 #Kontaktpotential berechnen:(durch Kurve bei 22,6 °C)
 U_kontakt = 11 - U_01[np.argmax(Steigung_01)] #(U_Beschleunigung - U_höchste_Steigungsänderung)
+print("U_01[np.argmax(Steigung_01)]: ", U_01[np.argmax(Steigung_01)])
 print(U_kontakt) #2.9000000000000004
 
 #Maxima der Kurve nehmen
@@ -89,6 +96,8 @@ ax3.set_xlabel(r"$\text{N-tes Maximum}$")
 ax3.set_ylabel(r"$ U \left[ \text{V}\right]$")
 ax3.legend(loc="best")
 fig.savefig("plot3.pdf")
+print("U_max_position_Volt",U_max_position_Volt)
+print("U_dummy",U_dummy)
 
 #Berechnung des korresponderienden Wellenlänge
 h = 4.1356676969e-15 #eV·s           #6.62607015e-34 #J s
