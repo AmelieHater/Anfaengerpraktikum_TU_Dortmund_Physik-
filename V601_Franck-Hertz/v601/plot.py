@@ -8,6 +8,7 @@ def rel_Abweichung(exp, theo):
 #Mittlere freie Weglänge berechnen: 
 T_Celsium = np.array([22.6, 150, 160, 171, 178, 180])
 T_Kelvin = T_Celsium + 273.15
+print(T_Kelvin)
 w_mittel_cm = (29/55000)*10**(-7)*np.exp((6876/T_Kelvin))
 w_mittel_m = w_mittel_cm * 10**(-2)
 #print("w_mittel_m ist: ",w_mittel_m) # w_mittel_m ist:  [6.59335831e-03 6.01351227e-06 4.13240884e-06 2.78907059e-06 2.19350942e-06 2.05081157e-06]
