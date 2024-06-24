@@ -1,0 +1,8 @@
+#Kurve, die bei 180 °C aufgenommen wurde, Voltdiff der Maxima in Kästchen
+18
+20
+21
+23
+21
+23
+24

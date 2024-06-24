@@ -1,0 +1,25 @@
+#Energieverlauf bei einer Temperatur von 150 °C, U_B = 11 V  diff I in Kästchen       diff U in Kästchen
+9           10
+11          10
+12          10
+11          10
+11          10
+11          10
+10          10
+10          10
+13          12
+5           8
+8           10
+7           10
+6           10
+4           10
+4           10
+2           10
+0           10
+0           10
+0           10
+0           10
+0           10
+0           10
+0           10
+0           10
